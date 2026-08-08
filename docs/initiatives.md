@@ -35,18 +35,28 @@ initiative about ends, not means.
 
 ## Where an initiative comes from
 
-Initiatives rarely spring up fully formed. Most begin as **discovery** — a project in `Idea`
-or `Scoping`, investigating whether there's an outcome worth committing to. A project at that
-stage legitimately has no parent and no Key Results yet; it's where the thinking is recorded.
+Initiatives rarely spring up fully formed. There are **three ways one starts** — and the
+question behind all of them is the same: *what evidence is this outcome built on?*
 
-When discovery shows the outcome is big enough to stand on its own, the project **graduates**:
-it seeds a new initiative (which then declares the Key Results below), or links to an existing
-one. The `Planned` gate is where that decision is made — so the exploratory work has a home
-from day one, rather than waiting for the initiative to exist.
+```kroki-d2
+@from_file:diagrams/initiative-origin.d2
+```
 
-When you graduate into a **new** initiative, the `linear-initiative` skill asks whether it
-comes from a discovery project and, if so, draws on that project's findings to ground the
-objective and the KR baselines — and links the two so the lineage is recorded.
+- **Spontaneous** — a fresh strategic bet with no project behind it. Leadership names an
+  outcome directly. Legitimate, but it still has to earn its Key Results like any other.
+- **Graduation** — a single **discovery project** (`Idea`/`Scoping`) matures into an outcome
+  big enough to stand on its own. At the [`Planned` gate](projects.md#discovery-phase-is-there-something-here-idea-scoping)
+  it seeds a new initiative or links to an existing one. Most initiatives arrive this way.
+- **Aggregation** — several discovery projects turn out to be facets of one larger outcome;
+  their findings **combine** into a single initiative that then coordinates them.
+
+However it starts, the initiative **declares its Key Results** (below), and the projects that
+fed it either continue as delivery projects beneath it or close once their discovery job is
+done — so the exploratory work always has a home.
+
+When it comes from project work, the `linear-initiative` skill asks whether it draws on **one
+or more** discovery projects and, if so, grounds the objective and the KR baselines in their
+findings — linking each so the lineage is recorded.
 
 ---
 

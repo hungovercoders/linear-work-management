@@ -1,87 +1,56 @@
 # Project lifecycle: how one project starts, graduates and delivers.
 # Rendered inline on the Projects page via Kroki (```kroki-d2```).
-# Distinct from model.d2 (which shows relationships): this shows the flow through
-# the states. One object, three phases: discovery -> «Planned gate» -> delivery -> closed.
+# Distinct from model.d2 (relationships): this is the flow through the states.
+# Deliberately flat + acyclic (no nested containers, no back-edges) so the layout
+# engine keeps it a clean vertical spine rather than tangling.
 
 direction: down
 
-# ---------- DISCOVERY phase ----------
-discovery: "DISCOVERY  ·  is there something here?" {
-  grid-rows: 1
-  grid-gap: 60
-  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
-  idea: "Idea\nparentless & KR-less is fine\nnamed lead from day one" {
-    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  scoping: "Scoping\ncost & value under investigation" {
-    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  idea -> scoping
+# ---- discovery ----
+idea: "Idea\nDISCOVERY · parentless & KR-less is fine · named lead from day one" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+scoping: "Scoping\nDISCOVERY · cost & value under investigation" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
 }
 
-# ---------- the Planned gate ----------
-gate: "«Planned gate»\ndiscovery resolves into one of three" {
+# ---- the gate ----
+gate: "«Planned gate» — discovery resolves into one of three" {
   style: {fill: "#FBF6EC"; stroke: "#B7791F"; border-radius: 8; bold: true; font-color: "#7A5312"}
 }
 
-outcomes: "" {
-  grid-columns: 3
-  grid-gap: 44
-  style: {fill: transparent; stroke: transparent}
-  graduate: "GRADUATE\nlink an existing initiative,\nor seed a new one" {
-    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  standalone: "STANDALONE\nno initiative —\nallowed, but questioned" {
-    style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 8}
-  }
-  drop: "DROP\nCancelled · reason recorded" {
-    style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8}
-  }
+# ---- the three outcomes ----
+graduate: "GRADUATE\nlink an existing initiative, or seed a new one" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+standalone: "STANDALONE\nno initiative — allowed, but questioned" {
+  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 8}
+}
+drop: "DROP\nCancelled · reason recorded" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8}
 }
 
-# ---------- DELIVERY phase ----------
-delivery: "DELIVERY  ·  committed to an outcome — rules 2 · 4 · 5 bite" {
-  grid-rows: 1
-  grid-gap: 50
-  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
-  planned: "Planned\nagreed, dated, resourced\nnames KR(s) + delta" {
-    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  inprogress: "In Progress\nbeing built" {
-    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  launching: "Launching\nbuilt · rolling out" {
-    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  paused: "Paused\nstopped, with a reason\n& a review date" {
-    style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 8; stroke-dash: 3}
-  }
-  planned -> inprogress -> launching
-  inprogress -> paused: {style.stroke-dash: 3}
-  paused -> inprogress: resume {style.stroke-dash: 3}
+# ---- delivery ----
+planned: "Planned\nDELIVERY · agreed, dated, resourced · names KR(s) + delta" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+inprogress: "In Progress\nDELIVERY · being built  (Paused pauses here, with a reason)" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+launching: "Launching\nDELIVERY · built · rolling out" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
 }
 
-# ---------- CLOSED phase ----------
-closed: "CLOSED" {
-  grid-columns: 2
-  grid-gap: 44
-  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
-  completed: "Completed\ndelivered AND the KR delta observed" {
-    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  cancelled: "Cancelled\nstopped for good · reason recorded" {
-    style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8}
-  }
+# ---- closed ----
+completed: "Completed\nCLOSED · delivered AND the KR delta observed" {
+  style: {fill: "#DCE9DC"; stroke: "#2F6B3A"; border-radius: 8; bold: true; font-color: "#1E4426"}
 }
 
-# ---------- flow ----------
-discovery.scoping -> gate {style.stroke: "#B7791F"}
-gate -> outcomes.graduate {style.stroke: "#3D4C6B"}
-gate -> outcomes.standalone {style.stroke: "#A9B2C4"}
-gate -> outcomes.drop {style.stroke: "#8C2F39"}
-
-outcomes.graduate -> delivery.planned {style.stroke: "#3D4C6B"}
-outcomes.standalone -> delivery.planned {style.stroke: "#A9B2C4"}
-outcomes.drop -> closed.cancelled {style.stroke: "#8C2F39"}
-
-delivery.launching -> closed.completed {style.stroke: "#3D4C6B"}
+# ---- the spine (acyclic, top-to-bottom) ----
+idea -> scoping -> gate
+gate -> graduate {style.stroke: "#3D4C6B"}
+gate -> standalone {style.stroke: "#A9B2C4"}
+gate -> drop {style.stroke: "#8C2F39"}
+graduate -> planned {style.stroke: "#3D4C6B"}
+standalone -> planned {style.stroke: "#A9B2C4"}
+planned -> inprogress -> launching -> completed

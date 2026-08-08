@@ -28,35 +28,59 @@ fields, and post updates.
 - Carries the *what & how* — the milestones, dependencies and scope — never the *why* (that's
   the initiative's) and never the individual tasks (those are its issues).
 
-## Phase decides how hard the rules bite
+## The phase decides which rules apply
 
-- **Discovery** (`Idea` / `Scoping`) — exploring whether there's an outcome worth committing to.
-  It may have **no initiative and no KR yet**, but it **always has a named lead** (rule 4 from
-  day one). Don't force a KR onto an idea.
-- **The `Planned` gate** — discovery resolves into **graduate** (link an existing initiative or
-  seed a new one), **standalone** (questioned), or **drop** (Cancelled). From here rules 2 and 5
-  bite: name the KR + delta, set the dates.
-- **Delivery** (`Planned` / `In Progress` / `Launching`) — committed and linked.
+A project can enter the model at any point and move on its own timeline, so the skill's **first**
+job is to locate it on the lifecycle — that's what decides which rules bite, not a fixed
+checklist run every time:
+
+- **Discovery** (`Idea` / `Scoping`) — needs only a **single named lead** (rule 4, from day one)
+  and a description of what's being explored. **No KR, no dates, no initiative required.** Don't
+  force them onto an idea.
+- **The `Planned` gate** — crossing into delivery is where rules **2** (KR + delta) and **5**
+  (dates) switch on, and where the initiative decision is made: **graduate** (link an existing
+  initiative or seed a new one), **standalone** (allowed, questioned), or **drop** (`Cancelled`).
+- **Delivery** (`Planned` / `In Progress` / `Launching`) — fully committed; every rule applies.
+
+So the flow **forks up front** into the three ways a project actually shows up, rather than
+assuming a create-from-scratch path.
 
 ## Flow
 
-1. **Phase** — ask: *is this an idea to explore, or committed delivery?* An `Idea`/`Scoping`
-   project needs a lead and a description, but not yet a KR or dates — stop there if that's what
-   it is. Otherwise carry on to name the outcome.
-2. **Outcome it serves** — which initiative(s)? If it's graduating from discovery, link the
-   initiative it matures under (or, for a brand-new outcome, hand off to the `linear-initiative`
-   skill to seed one, then link it). Standalone → note it's questioned.
-3. **Key Result(s) + delta** — for each initiative it serves, name **which** KR and the delta it
-   expects (baseline → target). This is rule 2.
-4. **Lead** — one named person, the deliverer.
-5. **Dates** — start + target-end, from `Planned` onward.
-6. **Priority & labels** — a priority (Urgent → Low) to sequence it; `spend/*` (capex/opex) set
-   at planning; `product/*` for the product it serves (it carries onto the issues).
-7. **Create it in Linear.** Set the **lead**, **status**, **start + target-end dates**,
-   **priority**, **initiative link(s)** and the **`spend/*`** / **`product/*`** labels as the
-   project's native Linear fields — never as text — and connect the **`#proj-<slug>`** Slack
-   channel so updates post there. Put only the **description body** (what & how · KR(s) + delta ·
-   milestones · out of scope) from [`template.md`](template.md) into the description.
+**1. Locate it.** Ask two things — *new or existing?* and *which phase is it in, or entering?* —
+then take one of three routes.
+
+**Route A · a new idea (enters discovery).** Create the project in `Idea` (or `Scoping`) with a
+**single named lead** and a description of the question it's exploring. Set nothing else — no KR,
+no dates, no initiative. It crosses the gate later, via Route B. **Stop here.**
+
+**Route B · graduate an existing project (crossing the `Planned` gate).** The project already
+exists in discovery; this is a **transition, not a creation**. Decide its fate at the gate:
+
+- Read the project and its issues / findings (`get_project`, `list_issues`).
+- **Graduate** → link the initiative it matures under (`save_project` → `addInitiatives`); for a
+  brand-new outcome, run `linear-initiative` to seed one *from those findings*, then link it.
+  **Standalone** → proceed with no initiative, note it's questioned. **Drop** → move to
+  `Cancelled`, record why, **stop**.
+- Then run the **gate checklist** below and move the status to `Planned`.
+
+**Route C · a new delivery project (born committed).** The outcome is already known, so it skips
+discovery. Create it and run the **gate checklist** straight away.
+
+**The gate checklist (Routes B & C — rules 2 · 4 · 5):**
+
+- **Key Result(s) + delta** — for each initiative served, name **which** KR and the delta
+  (baseline → target). This is rule 2. Serving several initiatives → a row per initiative.
+- **Lead** — one named deliverer (rule 4).
+- **Dates** — start + target-end (rule 5).
+- **Priority & labels** — a priority (Urgent → Low) to sequence it; `spend/*` (capex/opex) at
+  planning; `product/*` for the product it serves (carries onto its issues).
+
+**Final · create or update it in Linear.** Set the **lead**, **status**, **dates**, **priority**,
+**initiative link(s)** and the **`spend/*`** / **`product/*`** labels as the project's native
+Linear fields — never as text — and connect the **`#proj-<slug>`** Slack channel so updates post
+there. Put only the **description body** (what & how · KR(s) + delta · milestones · out of scope)
+from [`template.md`](template.md) into the description.
 
 ## The project template
 
