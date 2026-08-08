@@ -107,16 +107,15 @@ cross-team insight breaks.
 Labels come in **groups** that behave like enums — pick **one value per group**, so they
 filter and report cleanly.
 
-| Applies to | Group | Answers |
-|---|---|---|
-| Issues | `type/*` | What kind of work is this? |
-| Issues | `flow/*` | How did it arrive? (inbound, no project) |
-| Projects | `spend/*` | Capex or opex? (set at planning) |
-| Projects & issues | `product/*` | Which product? — **grows over time** |
+| Applies to | Group | Answers | Values |
+|---|---|---|---|
+| Issues | `type/*` | What kind of work is this? | feature · defect · chore · spike |
+| Issues | `flow/*` | How did it arrive? (inbound, no project) | incident · defect · vulnerability · compliance · support · toil |
+| Projects | `spend/*` | Capex or opex? (set at planning) | capex · opex |
+| Projects & issues | `product/*` | Which product? (**grows over time**) | hungovercoders · dogadopt · woolwitch · cheeserater · … |
 
-`product/*` values are your live products (`hungovercoders` · `dogadopt` · `woolwitch` ·
-`cheeserater` · …). A label only exists if it's filtered or reported on; the fixed groups'
-canonical values live in the Labels reference (GRI-73).
+A label only exists if it's filtered or reported on. The canonical set lives in the Labels
+reference (GRI-73); `product/*` grows as products are added.
 
 ---
 
