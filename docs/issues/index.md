@@ -13,7 +13,7 @@ tool as the strategy above it — no boundary between *why* and the task in your
 
 ---
 
-## What an issue is
+## :material-checkbox-marked-circle-outline: What an issue is
 
 An issue is a **discrete task, understood before it starts** — small enough for one person to
 pick up and finish, clear enough that "done" isn't ambiguous. Two things are true of **every**
@@ -31,9 +31,13 @@ Keep the issue about *the task* — the *why* belongs to the [initiative](../ini
 
 ---
 
-## The shared lifecycle
+## :material-timer-sand: The shared lifecycle
 
 Every issue moves through the **same states**, whichever path it came from:
+
+```kroki-d2
+@from_file:diagrams/issue-lifecycle.d2
+```
 
 | State | Means |
 |---|---|
@@ -61,7 +65,7 @@ honest — everything in it was understood before it began.
 
 ---
 
-## The body is the prompt
+## :material-robot-outline: The body is the prompt
 
 An issue's description is written to be **acted on directly** — by a person or an agent. That's
 the *agent-plan convention*, and it splits into **two moments**:
@@ -79,7 +83,7 @@ picked up.
 
 ---
 
-## Native fields, not prose
+## :material-table: Native fields, not prose
 
 Everything Linear models as a field is a **native field**, never text in the description — the
 same on both paths:
@@ -99,7 +103,7 @@ fills it.
 
 ---
 
-## Which work is it?
+## :material-signpost-split: Which work is it?
 
 Every issue is exactly **one of two kinds**, set by how it's classified ([rule 3](../hard-rules.md)).
 Pick your path — each page is written for the people who live on it:

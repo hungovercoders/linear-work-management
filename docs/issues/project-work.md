@@ -14,7 +14,7 @@ gate](index.md#backlog-vs-todo-the-readiness-gate).
 
 ---
 
-## Labels — `type/*` and `product/*`
+## :material-tag-outline: Labels — `type/*` and `product/*`
 
 One **`type/*`** label says what kind of work it is; **`product/*`** carries down from the
 project unchanged. **`action` is the default** — reach for `feature`, `bug`, `analysis` or
@@ -48,14 +48,14 @@ issue. `flow/*` never appears on a project issue — that's the [triage](triage.
     arrive **inbound** (as `flow/analysis`) when someone asks for a number or a report outside any
     project. See [Triage work](triage.md).
 
-## Priority
+## :material-sort-variant: Priority
 
 Every issue carries a **priority** (Urgent → Low) that orders it within the project — what gets
 picked up next when someone frees up. It's a native field, not a line in the description.
 
 ---
 
-## The templates — one per `type/*`
+## :material-file-document-multiple-outline: The templates — one per `type/*`
 
 The [`linear-issue`](../skills/index.md) skill writes the description body from the template that
 matches the type. Every template keeps the same non-negotiables — a native-fields header, a
@@ -72,7 +72,7 @@ middle:
 
 ---
 
-## Create one
+## :material-plus-circle-outline: Create one
 
 The description body is the only thing that lives as text; everything else is a
 [native field](index.md#native-fields-not-prose).

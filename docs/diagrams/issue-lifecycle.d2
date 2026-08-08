@@ -1,0 +1,47 @@
+# Issue lifecycle: how one issue moves from arrival to done.
+# Rendered inline on the Issues overview page via Kroki (```kroki-d2```).
+# Companion to project-lifecycle.d2. Flat + acyclic so the layout stays a clean vertical spine.
+# Triage's five outcomes live on the Triage page (triage-outcomes.d2), not here.
+
+direction: down
+
+# ---- entry: inbound arrives at Triage ----
+triage: "Triage\nINBOUND enters here · awaiting a routing decision" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
+}
+
+# ---- backlog: project work is created here ----
+backlog: "Backlog\naccepted, not yet refined · PROJECT work is created here" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+
+# ---- the readiness gate ----
+gate: "«Readiness gate» — refine: sharpen, define done, size, unblock" {
+  style: {fill: "#FBF6EC"; stroke: "#B7791F"; border-radius: 8; bold: true; font-color: "#7A5312"}
+}
+
+# ---- ready and moving ----
+todo: "Todo\nrefined, actionable — can be picked up now" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+inprogress: "In Progress\nbeing worked" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+inreview: "In Review\nwork done; under review" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+
+# ---- closed ----
+done: "Done\nshipped and accepted" {
+  style: {fill: "#DCE9DC"; stroke: "#2F6B3A"; border-radius: 8; bold: true; font-color: "#1E4426"}
+}
+dropped: "Cancelled / Duplicate\nwon't do / superseded — reason recorded" {
+  style: {fill: "#FCFCFD"; stroke: "#8C2F39"; border-radius: 8}
+}
+
+# ---- the spine (acyclic, top-to-bottom) ----
+triage -> backlog: accepted {style.stroke: "#8C2F39"}
+backlog -> gate
+gate -> todo
+todo -> inprogress -> inreview -> done
+backlog -> dropped: won't do {style.stroke: "#A9B2C4"}

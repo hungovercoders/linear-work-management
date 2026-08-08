@@ -14,7 +14,7 @@ a product.
 
 ---
 
-## Labels — `flow/*`
+## :material-tag-outline: Labels — `flow/*`
 
 Exactly **one** `flow/*` label, and no `type/*` (that's the [project-work](project-work.md) group):
 
@@ -30,10 +30,14 @@ Exactly **one** `flow/*` label, and no `type/*` (that's the [project-work](proje
 
 ---
 
-## The front door — Triage
+## :material-door-open: The front door — Triage
 
 Inbound work enters through **Triage**, where a named **duty rota** gives each item a fast
 routing decision — one of **five outcomes** ("leave it sitting there" isn't one):
+
+```kroki-d2
+@from_file:diagrams/triage-outcomes.d2
+```
 
 | Outcome | What it means |
 |---|---|
@@ -43,7 +47,7 @@ routing decision — one of **five outcomes** ("leave it sitting there" isn't on
 | Merge | Merge into an existing issue |
 | Decline | Close with a reason |
 
-## Two clocks
+## :material-timer-outline: Two clocks
 
 Inbound work runs on **two clocks** — a **decision** clock (route it) then, for some, a
 **resolution** clock (fix it):
@@ -69,7 +73,7 @@ Priority set at triage can drive the SLA, and Linear can require it before an it
 
 ---
 
-## Create one
+## :material-plus-circle-outline: Create one
 
 The description body is the only thing that lives as text; everything else is a
 [native field](index.md#native-fields-not-prose).
