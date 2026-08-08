@@ -51,7 +51,7 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 | 2 | Project | **Names the Key Result(s) it moves, and by how much** — one or more, across the initiative(s) it serves. No KR named, no project. |
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
 | 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
-| 5 | Time-bounds | **Active initiatives are time-bound; projects carry start + end dates from `Planned` onward.** Undated work can't be prioritised or sequenced. |
+| 5 | Time-bounds | **Dated from `Planned` onward** — initiatives carry a target date, projects a start + end. Set when agreed, so work can be prioritised and sequenced before it starts. |
 
 !!! tip "The deal"
     If a rule and a convenience ever conflict, the rule wins — that's what keeps the model
@@ -97,7 +97,7 @@ You own an **outcome**, not a task list. Keep initiatives about *what & why*; le
 |---|---|
 | Declare Key Results | Measurable outcomes with targets, before any project — [rule 1](hard-rules.md) |
 | Name yourself owner | One person, strategic seniority — [rule 4](hard-rules.md) |
-| Time-bound it when active | A target date once work starts — [rule 5](hard-rules.md) |
+| Set the target date | From `Planned` onward, so it can be prioritised — [rule 5](hard-rules.md) |
 | Post the update | Monthly to `#initiatives` while active |
 
 **States** (a fixed set — Linear doesn't let you customise these):
@@ -105,13 +105,13 @@ You own an **outcome**, not a task list. Keep initiatives about *what & why*; le
 | State | Means |
 |---|---|
 | Proposed | Being considered; not yet agreed |
-| Planned | Agreed & prioritised, owner named, KRs written — not yet started |
-| Active | Underway — projects are moving its KRs; time-bound |
+| Planned | Agreed & prioritised — owner named, KRs written, target date set — but not yet started |
+| Active | Work is underway against the target date; projects are moving its KRs |
 | Completed | KRs achieved, or the timeframe closed and scored |
 | Canceled | Dropped; reason recorded |
 
-**Proposed → Planned** is the *strategic agreement gate* (leadership agrees, owner + KRs);
-**Planned → Active** is when work starts and the initiative becomes time-bound.
+**Proposed → Planned** is the *strategic agreement gate* (leadership agrees; owner, KRs and
+target date set); **Planned → Active** is when work actually starts against that date.
 
 ---
 

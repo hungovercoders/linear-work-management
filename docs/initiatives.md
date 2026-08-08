@@ -61,8 +61,11 @@ not two people sharing it. The owner is accountable for the outcome, not for bui
 
 ## Time-bound it
 
-**[Hard rule 5](hard-rules.md):** once an initiative is **Active**, it carries a target
-date. Undated strategy can't be prioritised or sequenced against anything else.
+**[Hard rule 5](hard-rules.md):** an initiative carries a target date from **`Planned`**
+onward — set when it's agreed, alongside the owner and KRs. You need it then, because
+prioritising and sequencing happen *before* any work starts. Reaching **`Active`** doesn't
+add the date; it means work is now underway against it. Undated strategy can't be
+prioritised or sequenced against anything else.
 
 Set the timeframe to the **outcome, not a calendar habit**:
 
@@ -80,8 +83,8 @@ each with a plain definition of done:
 | State | Means | Move on when |
 |---|---|---|
 | Proposed | Being considered; not yet agreed | Leadership agrees it's worth doing |
-| Planned | Agreed & prioritised, owner named, KRs written — not started | Work is ready to begin |
-| Active | Underway — projects are moving its KRs; time-bound | KRs are achieved, or the window closes |
+| Planned | Agreed & prioritised — owner named, KRs written, target date set — not yet started | Work actually begins |
+| Active | Work is underway against the target date; projects are moving its KRs | KRs are achieved, or the window closes |
 | Completed | KRs achieved, or the timeframe closed and scored | — |
 | Canceled | Dropped; reason recorded | — |
 
@@ -89,8 +92,8 @@ Two transitions carry real weight:
 
 | Gate | From → To | What has to be true |
 |---|---|---|
-| **Strategic agreement** | Proposed → Planned | Leadership agrees; a single owner is named; the KR table is written |
-| **Kick-off** | Planned → Active | Work starts and the initiative becomes time-bound (target date set) |
+| **Strategic agreement** | Proposed → Planned | Leadership agrees; a single owner is named; the KR table **and the target date** are set |
+| **Kick-off** | Planned → Active | Work actually starts against the date already set at `Planned` |
 
 Everything after Active is bookkeeping: score the KRs and mark it **Completed**, or record
 why and mark it **Canceled**.
