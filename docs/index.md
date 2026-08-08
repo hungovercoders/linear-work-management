@@ -131,7 +131,8 @@ target date set); **Planned → Active** is when work actually starts against th
 
 A project is **what you'll do and how**. Every project moves through the same lifecycle; its
 states group into phases — **discovery** while there's still a question to answer, **delivery**
-once it's committed — and the `Planned` gate divides the two. See
+once it's committed — and the `Planned` gate divides the two. Full guidance, the lifecycle
+diagram and a template: **[Projects](projects.md)**. See
 [all projects in Linear](https://linear.app/happydevs/projects/all).
 
 **States** (full lifecycle):
@@ -279,7 +280,7 @@ Top-down — find your row:
 | You are… | Start with |
 |---|---|
 | Owning an initiative | This page, then **[Initiatives](initiatives.md)** — write your KR table before your first project |
-| Leading a project | This page, then **Projects** — know your KR |
+| Leading a project | This page, then **[Projects](projects.md)** — know your KR |
 | Delivering on a team | This page, then **Issues → Project issues** |
 | On triage duty | This page, then **Issues → Inbound issues** |
 | Responsible for Linear workflows | Run [`linear-doctor`](skills/index.md) — it reports drift; it doesn't fix |
