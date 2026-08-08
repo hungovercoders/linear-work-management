@@ -35,18 +35,28 @@ initiative about ends, not means.
 
 ## Where an initiative comes from
 
-Initiatives rarely spring up fully formed. Most begin as **discovery** — a project in `Idea`
-or `Scoping`, investigating whether there's an outcome worth committing to. A project at that
-stage legitimately has no parent and no Key Results yet; it's where the thinking is recorded.
+Initiatives rarely spring up fully formed. There are **three ways one starts** — and the
+question behind all of them is the same: *what evidence is this outcome built on?*
 
-When discovery shows the outcome is big enough to stand on its own, the project **graduates**:
-it seeds a new initiative (which then declares the Key Results below), or links to an existing
-one. The `Planned` gate is where that decision is made — so the exploratory work has a home
-from day one, rather than waiting for the initiative to exist.
+```kroki-d2
+@from_file:diagrams/initiative-origin.d2
+```
 
-When you graduate into a **new** initiative, the `linear-initiative` skill asks whether it
-comes from a discovery project and, if so, draws on that project's findings to ground the
-objective and the KR baselines — and links the two so the lineage is recorded.
+- **Spontaneous** — a fresh strategic bet with no project behind it. Leadership names an
+  outcome directly. Legitimate, but it still has to earn its Key Results like any other.
+- **Graduation** — a single **discovery project** (`Idea`/`Scoping`) matures into an outcome
+  big enough to stand on its own. At the [`Planned` gate](projects.md#discovery-phase-is-there-something-here-idea-scoping)
+  it seeds a new initiative or links to an existing one. Most initiatives arrive this way.
+- **Aggregation** — several discovery projects turn out to be facets of one larger outcome;
+  their findings **combine** into a single initiative that then coordinates them.
+
+However it starts, the initiative **declares its Key Results** (below), and the projects that
+fed it either continue as delivery projects beneath it or close once their discovery job is
+done — so the exploratory work always has a home.
+
+When it comes from project work, the `linear-initiative` skill asks whether it draws on **one
+or more** discovery projects and, if so, grounds the objective and the KR baselines in their
+findings — linking each so the lineage is recorded.
 
 ---
 
@@ -157,7 +167,7 @@ own slice of the KR table.
 ## Keep everyone posted
 
 While an initiative is **Active**, its owner ensures a **monthly update** reaches
-`#initiatives` — KR movement, health, and any risks. Health is a claim with evidence, not a
+`#initiative-updates` — KR movement, health, and any risks. Health is a claim with evidence, not a
 colour someone picked.
 
 !!! warning "An initiative is only as current as its projects"
@@ -169,7 +179,7 @@ colour someone picked.
 Post it either way:
 
 - **Linear's initiative update UI** — write the status update on the initiative and set its
-  health; it flows to the connected `#initiatives` channel.
+  health; it flows to the connected `#initiative-updates` channel.
 - **The `linear-initiative-update` skill** — it drafts the standard update (KR movement +
   health + risks) and posts it for you. In the [Skills](skills/index.md) catalogue.
 
@@ -181,7 +191,7 @@ The full cadence lives in the Communication guide.
 
 Both ways hold the same standard. Set the **owner**, **status** and **target date** as the
 initiative's own **Linear fields** — not in the description — and connect the
-**`#initiatives` Slack channel** so updates post there. The **description** carries only the
+**`#initiative-updates` Slack channel** so updates post there. The **description** carries only the
 *why*, the **Key Results** and *out of scope*; that part is the template.
 
 1. **Use the `linear-initiative` skill — preferred.** It coaches you through the outcome, the
@@ -190,7 +200,7 @@ initiative's own **Linear fields** — not in the description — and connect th
    [Skills](skills/index.md) catalogue.
 2. **By hand.** Create a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
    set its **owner**, **status** (`Proposed`) and **target date** as fields, connect the
-   **`#initiatives`** Slack channel, then paste
+   **`#initiative-updates`** Slack channel, then paste
    [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/template.md)
    into the description and fill it in. It's the same file the skill uses.
 

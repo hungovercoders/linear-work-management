@@ -110,7 +110,7 @@ You own an **outcome**, not a task list. Keep initiatives about *what & why*; le
 | Declare Key Results | Measured or committed, before any project — [rule 1](hard-rules.md) |
 | Name yourself owner | One person, strategic seniority — [rule 4](hard-rules.md) |
 | Set the target date | From `Planned` onward, so it can be prioritised — [rule 5](hard-rules.md) |
-| Post the update | Monthly to `#initiatives` while active |
+| Post the update | Monthly to `#initiative-updates` while active |
 
 **States** (a fixed set — Linear doesn't let you customise these):
 
@@ -131,7 +131,8 @@ target date set); **Planned → Active** is when work actually starts against th
 
 A project is **what you'll do and how**. Every project moves through the same lifecycle; its
 states group into phases — **discovery** while there's still a question to answer, **delivery**
-once it's committed — and the `Planned` gate divides the two. See
+once it's committed — and the `Planned` gate divides the two. Full guidance, the lifecycle
+diagram and a template: **[Projects](projects.md)**. See
 [all projects in Linear](https://linear.app/happydevs/projects/all).
 
 **States** (full lifecycle):
@@ -172,7 +173,7 @@ Committed and linked to an outcome. Now the rules bite:
 | Set start + end dates | From `Planned` onward — [rule 5](hard-rules.md) |
 | Draw dependencies | So sequencing and risk are visible |
 | Set a priority | To sequence projects against each other |
-| Post the update | Weekly to `#proj-<slug>` while In Progress or Launching |
+| Post the update | Weekly to `#project-updates` while In Progress or Launching |
 
 **Labels** — two groups, both set on the project:
 
@@ -279,7 +280,7 @@ Top-down — find your row:
 | You are… | Start with |
 |---|---|
 | Owning an initiative | This page, then **[Initiatives](initiatives.md)** — write your KR table before your first project |
-| Leading a project | This page, then **Projects** — know your KR |
+| Leading a project | This page, then **[Projects](projects.md)** — know your KR |
 | Delivering on a team | This page, then **Issues → Project issues** |
 | On triage duty | This page, then **Issues → Inbound issues** |
 | Responsible for Linear workflows | Run [`linear-doctor`](skills/index.md) — it reports drift; it doesn't fix |

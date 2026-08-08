@@ -24,8 +24,8 @@ post updates.
 - **Rule 4** — one named owner with strategic seniority. Not a team, not two people.
 - **Rule 5** — a target date, set now (from `Planned` onward), so it can be prioritised.
 - Carries the *why* and *how it's judged*, never the *how it's built* — that's the projects'.
-- If it **graduated from a discovery project**, it's grounded in that project's findings and
-  linked back to it.
+- If it came from **project work** — one project graduating, or several aggregating — it's
+  grounded in those findings and linked back to each.
 
 ## Key Results come in two kinds
 
@@ -47,12 +47,18 @@ Challenge each one:
 
 ## Flow
 
-1. **Origin** — ask: *is this initiative graduating from a discovery project?* If yes, read
-   that project (`get_project` + its issues) and use its findings to ground the objective, the
-   *why*, and the KR baselines — don't start from a blank page. Record the lineage: link the
-   discovery project to the new initiative (`save_project` → `addInitiatives`), and let it
-   continue as a delivery project under it or close once its discovery job is done. If it's a
-   fresh idea with no project behind it, that's fine — carry on.
+1. **Origin** — ask: *does this outcome come from project work — one discovery project, or
+   several?* Three cases:
+   - **Graduation (one project)** — read it (`get_project` + its issues) and ground the
+     objective, the *why* and the KR baselines in its findings.
+   - **Aggregation (several projects)** — read each; the initiative is the larger outcome their
+     findings share. Ground the KRs across all of them, and note which project moves which KR.
+   - **Spontaneous (no project)** — a fresh strategic bet; that's fine, carry on from a blank
+     objective.
+   For any project origin, **record the lineage**: link each discovery project to the new
+   initiative (`save_project` → `addInitiatives`), and let each continue as a delivery project
+   under it or close once its discovery job is done. Don't start from a blank page when there's
+   project evidence to build on.
 2. **Objective** — "What's the inspiring objective, and why does it matter?" A qualitative
    direction is right for the name (e.g. "Make onboarding effortless"). It isn't an initiative
    until it has Key Results (step 3), so don't stop at the objective.
@@ -64,7 +70,7 @@ Challenge each one:
    KRs and date are all set. (`Active` comes later, when work starts against the date.)
 7. **Create it in Linear.** Set the **name** (the outcome), **owner/lead**, **status** and
    **target date** as the initiative's native Linear fields — never as text — and connect the
-   **`#initiatives` Slack channel** so updates post there. Put only the **description body**
+   **`#initiative-updates` Slack channel** so updates post there. Put only the **description body**
    (why · Key Results · out of scope) from [`template.md`](template.md) into the description.
    Hand the filled body to the user to create the initiative.
 

@@ -3,7 +3,7 @@
        • Owner / Lead → one named person, strategic seniority
        • Status       → Proposed (or Planned once agreed)
        • Target date  → the timeframe (add a start date too, from Planned onward)
-       • Slack        → connect the #initiatives channel (updates post there) -->
+       • Slack        → connect the #initiative-updates channel (updates post there) -->
 
 ## Why this matters
 <the strategic reason; what changes if we succeed>

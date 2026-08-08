@@ -1,0 +1,36 @@
+# Where an initiative comes from: three origins converging on one outcome.
+# Rendered inline on the Initiatives page via Kroki (```kroki-d2```).
+# Companion to project-lifecycle.d2. Flat + acyclic so the layout stays a clean funnel.
+
+direction: down
+
+# ---- the three origins ----
+strat: "Strategic idea\nSPONTANEOUS · no project behind it" {
+  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 8}
+}
+grad: "Discovery project\nGRADUATION · one project matures into an outcome" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+agg1: "Idea project\nAGGREGATION" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+agg2: "Idea project\nAGGREGATION" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+
+# ---- the initiative ----
+initiative: "INITIATIVE\ndeclares Key Results (measured / committed)\none owner · target date" {
+  style: {fill: "#E4EAF6"; stroke: "#3D4C6B"; border-radius: 8; bold: true; stroke-width: 2}
+}
+
+# ---- what happens next ----
+delivery: "Projects deliver its KRs\ngraduated / aggregated projects continue here, or close" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+
+# ---- the funnel (acyclic, top-to-bottom) ----
+strat -> initiative: spontaneous {style.stroke: "#A9B2C4"}
+grad -> initiative: graduate {style.stroke: "#3D4C6B"}
+agg1 -> initiative: aggregate {style.stroke: "#3D4C6B"}
+agg2 -> initiative: aggregate {style.stroke: "#3D4C6B"}
+initiative -> delivery {style.stroke: "#3D4C6B"}

@@ -1,6 +1,6 @@
 ---
 name: linear-initiative-update
-description: Post the monthly status update for an active Linear initiative to #initiatives — Key Result movement, a health claim (on track / at risk / off track) backed by evidence, and any risks. Uses Linear's initiative status updates. Use monthly while an initiative is Active.
+description: Post the monthly status update for an active Linear initiative to #initiative-updates — Key Result movement, a health claim (on track / at risk / off track) backed by evidence, and any risks. Uses Linear's initiative status updates. Use monthly while an initiative is Active.
 ---
 
 # linear-initiative-update
@@ -10,7 +10,7 @@ colour someone picked — the Key Result movement is the evidence.
 
 **Requires:** the **Linear MCP server** connected — to read the initiative and post the update.
 
-> The update posts to the **`#initiatives`** Slack channel automatically, as long as that
+> The update posts to the **`#initiative-updates`** Slack channel automatically, as long as that
 > channel is connected to the initiative (done when the initiative is created).
 
 ## What to gather
