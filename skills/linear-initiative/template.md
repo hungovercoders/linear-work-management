@@ -2,7 +2,8 @@
        • Name        → the initiative title, phrased as the outcome
        • Owner / Lead → one named person, strategic seniority
        • Status       → Proposed (or Planned once agreed)
-       • Target date  → the timeframe (add a start date too, from Planned onward) -->
+       • Target date  → the timeframe (add a start date too, from Planned onward)
+       • Slack        → connect the #initiatives channel (updates post there) -->
 
 ## Why this matters
 <the strategic reason; what changes if we succeed>

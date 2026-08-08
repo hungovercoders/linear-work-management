@@ -54,9 +54,10 @@ Challenge each one:
 5. **State** — `Proposed` if not yet agreed; `Planned` once leadership agrees and the owner,
    KRs and date are all set. (`Active` comes later, when work starts against the date.)
 6. **Create it in Linear.** Set the **name** (the outcome), **owner/lead**, **status** and
-   **target date** as the initiative's native Linear fields — never as text. Put only the
-   **description body** (why · Key Results · out of scope) from [`template.md`](template.md)
-   into the description. Hand the filled body to the user to create the initiative.
+   **target date** as the initiative's native Linear fields — never as text — and connect the
+   **`#initiatives` Slack channel** so updates post there. Put only the **description body**
+   (why · Key Results · out of scope) from [`template.md`](template.md) into the description.
+   Hand the filled body to the user to create the initiative.
 
 ## The initiative template
 

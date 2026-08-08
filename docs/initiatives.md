@@ -134,25 +134,33 @@ own slice of the KR table.
 
 ## Keep everyone posted
 
-While an initiative is **Active**, its owner ensures a **monthly update** goes to
-`#initiatives` — KR movement and any risks. Health is a claim with evidence, not a colour
-someone picked. The standard formats and the full cadence live in the Communication guide.
+While an initiative is **Active**, its owner ensures a **monthly update** reaches
+`#initiatives` — KR movement, health, and any risks. Health is a claim with evidence, not a
+colour someone picked. Post it either way:
+
+- **Linear's initiative update UI** — write the status update on the initiative and set its
+  health; it flows to the connected `#initiatives` channel.
+- **The `linear-initiative-update` skill** — it drafts the standard update (KR movement +
+  health + risks) and posts it for you. In the [Skills](skills/index.md) catalogue.
+
+The full cadence lives in the Communication guide.
 
 ---
 
 ## Create one
 
 Both ways hold the same standard. Set the **owner**, **status** and **target date** as the
-initiative's own **Linear fields** — not in the description — so Linear can filter, sort and
-report on them. The **description** carries only the *why*, the **Key Results** and *out of
-scope*; that part is the template.
+initiative's own **Linear fields** — not in the description — and connect the
+**`#initiatives` Slack channel** so updates post there. The **description** carries only the
+*why*, the **Key Results** and *out of scope*; that part is the template.
 
 1. **Use the `linear-initiative` skill — preferred.** It coaches you through the outcome, the
    KR table(s) (measured and/or committed), the owner, status and timeframe, keeps the native
    fields native, and gives you the description body to drop in. Find it in the
    [Skills](skills/index.md) catalogue.
 2. **By hand.** Create a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
-   set its **owner**, **status** (`Proposed`) and **target date** as fields, then paste
+   set its **owner**, **status** (`Proposed`) and **target date** as fields, connect the
+   **`#initiatives`** Slack channel, then paste
    [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/template.md)
    into the description and fill it in. It's the same file the skill uses.
 
