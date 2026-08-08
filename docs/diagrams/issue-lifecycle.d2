@@ -5,13 +5,18 @@
 
 direction: down
 
-# ---- entry: inbound arrives at Triage ----
-triage: "Triage\nINBOUND enters here · awaiting a routing decision" {
+# ---- two entry points, converging on Backlog ----
+# Triage is a state (inbound waits here for a decision); Project work is not a
+# state, just where planned work enters — shown dashed to mark it an entry, not a state.
+triage: "Triage\nINBOUND arrives here · awaiting a routing decision" {
   style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
 }
+projectwork: "Project work\nPLANNED work starts here · created straight in a project" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; stroke-dash: 4; border-radius: 8; bold: true}
+}
 
-# ---- backlog: project work is created here ----
-backlog: "Backlog\naccepted, not yet refined · PROJECT work is created here" {
+# ---- backlog: where both paths converge ----
+backlog: "Backlog\nboth paths converge here · accepted, not yet refined" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
 }
 
@@ -41,6 +46,7 @@ dropped: "Cancelled / Duplicate\nwon't do / superseded — reason recorded" {
 
 # ---- the spine (acyclic, top-to-bottom) ----
 triage -> backlog: accepted {style.stroke: "#8C2F39"}
+projectwork -> backlog: created {style.stroke: "#3D4C6B"}
 backlog -> gate
 gate -> todo
 todo -> inprogress -> inreview -> done
