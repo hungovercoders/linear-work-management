@@ -89,7 +89,7 @@ project unchanged.
 | `type/*` | For | The template emphasises |
 |---|---|---|
 | `feature` | A new capability | The change and its acceptance criteria |
-| `defect` | Something's broken | Steps to reproduce, expected vs actual |
+| `bug` | Something's broken | Steps to reproduce, expected vs actual |
 | `action` | Maintenance, upkeep, proactive improvements | The change and why now |
 | `spike` | A time-boxed investigation | The question and the time box |
 
@@ -130,7 +130,7 @@ Everything Linear models as a field is a **native field**, never text in the des
 | Priority | Urgent → Low |
 | Status | The lifecycle state above |
 | Project **or** `flow/*` | The classification (rule 3) — one, never both |
-| `type/*` | Project issues only — feature / defect / action / spike |
+| `type/*` | Project issues only — feature / bug / action / spike |
 | `product/*` | Inherited from the project |
 
 The **description** carries only the *problem* and the *agent plan* — that part, and only that

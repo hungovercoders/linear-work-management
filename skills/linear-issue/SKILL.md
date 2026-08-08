@@ -24,7 +24,7 @@ create the issue and store the plan against it.
   both, never neither. This is the first decision; it picks the whole rest of the shape.
 - **Understood before it starts.** The problem and what "done" means are clear enough to hand to
   someone (or something) without a follow-up question.
-- **A `type/*` (project issues).** `feature` · `defect` · `action` · `spike` — what kind of work.
+- **A `type/*` (project issues).** `feature` · `bug` · `action` · `spike` — what kind of work.
 - **A priority.** Urgent → Low, so it orders against the others.
 - **`product/*` inherited** from the project, unchanged.
 - **The body is the prompt**, and the **plan is stored against the issue** — so the approach is
@@ -48,13 +48,13 @@ issue or an inbound issue. One or the other, never both.
 **2a. Project issue.**
 
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
-- Pick the **`type/*`** — `feature`, `defect`, `action` or `spike`.
+- Pick the **`type/*`** — `feature`, `bug`, `action` or `spike`.
 - Write the **body** from [`template.md`](template.md): the problem and what "done" looks like,
   as a prompt. `product/*` inherits from the project.
 
 **2b. Inbound issue.**
 
-- Pick the single **`flow/*`** label (`incident` · `vulnerability` · `defect` · `compliance` ·
+- Pick the single **`flow/*`** label (`incident` · `vulnerability` · `bug` · `compliance` ·
   `support` · `toil`). **No project, no `type/*`.**
 - Write the same body — the problem and what "done" looks like. Triage decides its fate; see
   Flow & Triage.

@@ -223,7 +223,7 @@ Live inside a **project** and ladder to its KR.
 | `type/*` | For |
 |---|---|
 | feature | A new capability |
-| defect | Something's broken |
+| bug | Something's broken |
 | action | Maintenance, upkeep, dependency bumps, proactive improvements |
 | spike | A time-boxed investigation |
 
@@ -239,7 +239,7 @@ Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** lab
 |---|---|
 | incident | Something's down or degraded — needs a response now |
 | vulnerability | A security weakness to remediate (severity drives the SLA) |
-| defect | A fault reported from outside any project |
+| bug | A fault reported from outside any project |
 | compliance | A regulatory or policy obligation to meet |
 | support | A user or customer request |
 | toil | Recurring manual work worth capturing |
@@ -262,7 +262,7 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 |---|---|
 | `flow/incident` | Immediately |
 | `flow/vulnerability` · `flow/support` | 1 working day |
-| `flow/compliance` · `flow/defect` · `flow/toil` | 2 working days |
+| `flow/compliance` · `flow/bug` · `flow/toil` | 2 working days |
 
 | Resolution — `flow/vulnerability` by severity | Remediate within |
 |---|---|
