@@ -5,6 +5,7 @@
        • Priority     → Urgent → Low, to sequence against other projects
        • Initiatives  → link the initiative(s) it serves (many-to-many)
        • Labels       → spend/* (capex|opex) and product/* (the product it serves)
+       • Milestones   → dated checkpoints as native project milestones, not prose
        • Slack        → connect the #project-updates channel (updates post there) -->
 
 ## What we're doing and how
@@ -18,8 +19,8 @@
 |------------|------------|---------------------------|
 | <initiative> | <KR it moves> | <from → to> |
 
-## Milestones
-<the checkpoints that mark progress; leave to the milestone field if you prefer>
-
 ## Out of scope
 <what this project is deliberately not doing, so it doesn't sprawl>
+
+## Context
+<background, constraints, decisions, caveats — any notes needed that don't fit above>

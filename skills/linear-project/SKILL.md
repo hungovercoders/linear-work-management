@@ -77,10 +77,11 @@ discovery. Create it and run the **gate checklist** straight away.
   planning; `product/*` for the product it serves (carries onto its issues).
 
 **Final · create or update it in Linear.** Set the **lead**, **status**, **dates**, **priority**,
-**initiative link(s)** and the **`spend/*`** / **`product/*`** labels as the project's native
-Linear fields — never as text — and connect the **`#project-updates`** Slack channel so updates post
-there. Put only the **description body** (what & how · KR(s) + delta · milestones · out of scope)
-from [`template.md`](template.md) into the description.
+**initiative link(s)**, the **`spend/*`** / **`product/*`** labels and any **milestones** (dated
+checkpoints) as the project's native Linear fields — never as text — and connect the
+**`#project-updates`** Slack channel so updates post there. Put only the **description body**
+(what & how · KR(s) + delta · out of scope · context) from [`template.md`](template.md) into the
+description.
 
 ## The project template
 
@@ -88,6 +89,6 @@ from [`template.md`](template.md) into the description.
 **description body**. Fill each placeholder using the flow above; add a KR + delta row per
 initiative served.
 
-The **lead, status, dates, priority, initiative link(s) and labels are native Linear fields** —
-set them on the project itself, never in the description text. Keeping them native is what lets
-Linear filter, sort and roll them up, and what lets `linear-doctor` check them.
+The **lead, status, dates, priority, initiative link(s), labels and milestones are native Linear
+fields** — set them on the project itself, never in the description text. Keeping them native is
+what lets Linear filter, sort and roll them up, and what lets `linear-doctor` check them.

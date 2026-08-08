@@ -192,7 +192,7 @@ That's the whole cadence for initiatives: monthly, to `#initiative-updates`, whi
 Both ways hold the same standard. Set the **owner**, **status** and **target date** as the
 initiative's own **Linear fields** — not in the description — and connect the
 **`#initiative-updates` Slack channel** so updates post there. The **description** carries only the
-*why*, the **Key Results** and *out of scope*; that part is the template.
+*why*, the **Key Results**, *out of scope* and *context*; that part is the template.
 
 1. **Use the `linear-initiative` skill — preferred.** It coaches you through the outcome, the
    KR table(s) (measured and/or committed), the owner, status and timeframe, keeps the native

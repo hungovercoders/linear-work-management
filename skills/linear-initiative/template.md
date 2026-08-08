@@ -26,3 +26,6 @@
 
 ## Out of scope
 <what this initiative is deliberately not doing, so projects don't sprawl>
+
+## Context
+<background, constraints, decisions, caveats — any notes needed that don't fit above>

@@ -71,15 +71,15 @@ Challenge each one:
 7. **Create it in Linear.** Set the **name** (the outcome), **owner/lead**, **status** and
    **target date** as the initiative's native Linear fields — never as text — and connect the
    **`#initiative-updates` Slack channel** so updates post there. Put only the **description body**
-   (why · Key Results · out of scope) from [`template.md`](template.md) into the description.
+   (why · Key Results · out of scope · context) from [`template.md`](template.md) into the description.
    Hand the filled body to the user to create the initiative.
 
 ## The initiative template
 
 [`template.md`](template.md) beside this skill is the single source of truth for the
-**description body** — the *why*, the Key Result table(s) and *out of scope*. Fill each
-placeholder using the flow above, omit whichever KR table is unused, and keep **3–5 KRs
-total**.
+**description body** — the *why*, the Key Result table(s), *out of scope* and *context* (free-text
+background that can grow as needed). Fill each placeholder using the flow above, omit whichever
+KR table is unused, and keep **3–5 KRs total**.
 
 The **name, owner, status and target date are native Linear fields** — set them on the
 initiative itself, never in the description text. Keeping them native is what lets Linear
