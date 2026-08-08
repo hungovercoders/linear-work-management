@@ -70,8 +70,9 @@ Undated work can't be prioritised or sequenced. Dates are what make **dependency
 and **on-track delivery** possible — upcoming work can see what it depends on and whether
 that will land in time.
 
-- **Initiatives:** once **active**, carry a timeframe / target date (OKR-style — e.g. a
-  quarter). A `New` initiative that hasn't been agreed yet is exempt until it activates.
+- **Initiatives:** once **active**, carry a timeframe / target date (OKR-style — often a
+  quarter, but some run a year or more). A `Proposed` initiative that hasn't been agreed
+  yet is exempt until it activates.
 - **Projects:** from **`Planned`** onward carry a **start** and a **target end** date.
   `Idea` and `Scoping` projects are still being shaped, so dates firm up as they commit —
   which is exactly what `Planned` means ("agreed, dated, resourced").
