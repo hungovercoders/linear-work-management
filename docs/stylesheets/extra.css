@@ -1,0 +1,66 @@
+/* Linear Ways of Working — visual polish.
+   Ties the site to the operating-model diagram's palette:
+   slate = strategic / planned path, ox-red = inbound / flow path. */
+
+:root {
+  --lwm-strategic: #3d4c6b;
+  --lwm-inbound:   #8c2f39;
+}
+[data-md-color-scheme="slate"] {
+  --lwm-strategic: #9db0d6;
+  --lwm-inbound:   #e39aa3;
+}
+
+/* Hero lead line under the H1 */
+.md-typeset .lwm-lead {
+  font-size: 1.12rem;
+  line-height: 1.65;
+  color: var(--md-default-fg-color--light);
+  border-left: .3rem solid var(--lwm-strategic);
+  padding: .1rem 0 .1rem .9rem;
+  margin: .5rem 0 1.4rem;
+}
+.md-typeset .lwm-lead strong { color: var(--md-default-fg-color); }
+
+/* Section headings: accent bar + coloured icon */
+.md-typeset h2 {
+  border-left: .3rem solid var(--lwm-strategic);
+  padding-left: .6rem;
+  margin-top: 2.6rem;
+}
+.md-typeset h2 .twemoji {
+  color: var(--lwm-strategic);
+  margin-right: .3rem;
+  vertical-align: -.12em;
+}
+.md-typeset h2 .twemoji svg { fill: currentColor; }
+
+/* Tables: softer, branded header, gentle zebra + hover */
+.md-typeset table:not([class]) {
+  border: none;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .07);
+}
+.md-typeset table:not([class]) th {
+  background: var(--md-default-fg-color--lightest);
+  color: var(--lwm-strategic);
+  font-weight: 700;
+  border: none;
+  border-bottom: 2px solid var(--lwm-strategic);
+}
+.md-typeset table:not([class]) td { border: none; }
+.md-typeset table:not([class]) tbody tr:nth-child(2n) td {
+  background: var(--md-default-fg-color--lightest);
+}
+.md-typeset table:not([class]) tbody tr:hover td {
+  background: color-mix(in srgb, var(--lwm-strategic) 8%, transparent);
+}
+
+/* Reusable path colour language */
+.lwm-strat   { color: var(--lwm-strategic); font-weight: 700; }
+.lwm-inbound { color: var(--lwm-inbound);   font-weight: 700; }
+
+/* Give the model diagram a little room + centring */
+.md-typeset p > img[alt="Kroki"],
+.md-typeset .kroki-image { display: block; margin: .5rem auto 1rem; }
