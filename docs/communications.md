@@ -18,6 +18,24 @@ health and launches **without asking**, and nobody drowns in noise.
 The **lead is responsible** for their update happening — the skills draft it, the channel
 carries it, but the obligation is a person's, by name.
 
+### Making the cadence stick
+
+The cadence doesn't live in anyone's memory:
+
+- **Linear's native update reminders** do the nudging — configure in workspace settings
+  (weekly, day/time of your choosing): leads of In Progress projects and owners of Active
+  initiatives get the prompt, follow-up nudges land after 1 and 2 working days, and an
+  overdue project shows **Update Missing** with its health icon greying as silence grows.
+  Individual projects can override or opt out via the bell icon.
+- **The skills pre-gather the delta** — [`linear-project-update`](skills/index.md) reads what
+  moved *since the last update*, [`linear-initiative-update`](skills/index.md) reads which
+  feeding projects reported. Answering the reminder is verify-judge-post, not archaeology.
+  A scheduled agent (e.g. a weekly Claude Code routine invoking the update skill per
+  In Progress project) can hand the lead a ready draft.
+- **Silence escalates** — the [team digest](#the-cadence) and `task doctor` both flag stale
+  updates (project >10 days, initiative >35), so a missed cadence is visible in the same
+  views as any other drift.
+
 ---
 
 ## Health is a claim with evidence

@@ -26,9 +26,11 @@ with evidence, not a colour someone picked — the issue and cycle progress is t
 ## Flow
 
 1. Identify the project and read its KR(s), dates and last update (`list`/`get`).
-2. **Check the movement underneath.** List the project's issues and their states / cycle
-   (`list_issues`, `list_cycles`). Note whether work is progressing or **stalled** — no issues
-   moved, or the cycle slipped.
+2. **Check the movement underneath — since the last update.** Take the last update's
+   timestamp as the window: list the project's issues updated since it (`list_issues` with
+   `updatedAt`) plus the cycle (`list_cycles`). "What changed" is exactly that delta —
+   pre-gathered, not remembered. Note **stalled** — nothing moved in the window, or the
+   cycle slipped.
 3. Fill the update body from [`template.md`](template.md) — what changed, KR/delta progress,
    risks, and the **progress-reporting** note (stalled work or a slipped cycle, or that it's on
    track).
