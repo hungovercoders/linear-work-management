@@ -1,9 +1,11 @@
 # Initiatives
 
 <div class="lwm-lead" markdown>
-For strategic leadership. An initiative is a **measurable outcome** — the *why* behind a
-body of work and *how we'll know it worked*. It is never a task list, and never the *how
-it's built*: that lives in the [projects](index.md) beneath it.
+For strategic leadership. An **initiative** — one of [Linear](https://linear.app/happydevs/initiatives)'s
+own objects — is a **defined outcome**: the *why* behind a body of work and *how we'll know
+it worked*. Never a task list, never the *how it's built* (that's the [projects](index.md)
+beneath it). It lives in Linear next to the projects and issues it drives — one tool from
+strategy to delivery.
 </div>
 
 This page expands the [cheat sheet](index.md)'s Initiatives section. If the two ever
@@ -149,7 +151,8 @@ understand *what* an initiative is and *why*; run the skill to produce *one*.
 The skill coaches you through the same standard this page describes and hands back an
 initiative description ready to create in Linear — a **why** line, the **owner**, the
 **timeframe**, the **KR table(s)** (measured and/or committed), and an **out-of-scope**
-note. It's in the [Skills](skills/index.md) catalogue.
+note, ready to paste into a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives).
+It's in the [Skills](skills/index.md) catalogue.
 
 ---
 

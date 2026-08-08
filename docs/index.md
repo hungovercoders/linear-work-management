@@ -12,6 +12,11 @@ use Linear** — see also **[the hard rules](hard-rules.md)** and the
     they're delivering the value expected of them, and why. That connection is the benefit;
     the rules just keep it intact.
 
+    And it all lives in **one tool — [Linear](https://linear.app/happydevs)** — from strategy
+    to execution. Not strategy in Notion, delivery in a spreadsheet and status in Slack: one
+    place, so no tool boundary ever breaks the line. **Initiative**, **project** and **issue**
+    below are Linear's own objects — this is how we use them.
+
 ---
 
 ## :material-sitemap: How it fits together
@@ -33,6 +38,9 @@ just one.
 Neither path is superior or exceptional. Some teams (product, platform) live mostly on the
 strategic path; others (customer support, operations) live mostly on the inbound path; most
 do both.
+
+See it live in Linear: [initiatives](https://linear.app/happydevs/initiatives) ·
+[projects](https://linear.app/happydevs/projects/all).
 
 !!! danger "The one failure"
     An issue on **neither** path is *unclassified* — invisible work, and the defect the
@@ -91,7 +99,7 @@ The sections below tell each owner exactly what to do. **Read the one that's you
 
 You own an **outcome**, not a task list. Keep initiatives about *what & why*; leave the
 *how* to the projects beneath them. Full guidance, states and a template:
-**[Initiatives](initiatives.md)**.
+**[Initiatives](initiatives.md)**. Open [your initiatives in Linear](https://linear.app/happydevs/initiatives).
 
 | Your job | Detail |
 |---|---|
@@ -118,7 +126,8 @@ target date set); **Planned → Active** is when work actually starts against th
 ## :material-clipboard-check-outline: Projects — for delivery leads (and the strategy that funds them)
 
 A project is **what you'll do and how**, in service of the Key Result(s) of the
-initiative(s) it belongs to — usually one, sometimes several.
+initiative(s) it belongs to — usually one, sometimes several. See
+[all projects in Linear](https://linear.app/happydevs/projects/all).
 
 | Your job | Detail |
 |---|---|
