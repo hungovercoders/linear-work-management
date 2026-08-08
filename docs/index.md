@@ -78,6 +78,21 @@ an initiative, either the work is wrong or the initiative is missing.
 
 ## :material-traffic-light-outline: States at a glance
 
+**Initiatives** — a limited, fixed set (Linear doesn't let you customise these):
+
+| State | Means |
+|---|---|
+| Proposed | Being considered; not yet agreed |
+| Planned | Agreed & prioritised, owner named, KRs written — not yet started |
+| Active | Underway — projects are moving its KRs; time-bound |
+| Completed | KRs achieved, or the timeframe closed and scored |
+| Canceled | Dropped; reason recorded |
+
+Two transitions matter: **Proposed → Planned** is the *strategic agreement gate* — leadership
+agrees it's worth doing, an owner is named and KRs are written ([rule 1](hard-rules.md));
+**Planned → Active** is when work starts and the initiative becomes **time-bound**
+([rule 5](hard-rules.md)).
+
 **Projects** run a full lifecycle:
 
 | State | Means |
@@ -104,8 +119,9 @@ an initiative, either the work is wrong or the initiative is missing.
 | Cancelled | Won't do; reason recorded |
 | Duplicate | Superseded by another issue |
 
+Initiative statuses are **fixed by Linear**; project and issue statuses are ours to shape.
 Fuller definitions and the Linear status-type mapping live in the States reference (GRI-73).
-Teams may **add** states locally, never rename or remove the shared ones — otherwise
+Teams may **add** issue states locally, never rename or remove the shared ones — otherwise
 cross-team insight breaks.
 
 ---
