@@ -109,7 +109,7 @@ questioned — there's nothing for the work to ladder up to.
 |---|---|
 | Be the single named lead | One person accountable — the deliverer, eng lead or product owner — [rule 4](hard-rules.md) |
 | Set start + target-end dates | From `Planned` onward — [rule 5](hard-rules.md); dependencies only tell you about risk once both ends are dated |
-| Draw dependencies | At the project level, so sequencing and risk are visible |
+| Draw dependencies | With Linear's native project relations — [how, below](#dependencies-native-never-prose) |
 | Set a priority | Urgent → Low, to sequence projects against each other |
 | Post the update | Weekly to `#project-updates` while In Progress or Launching |
 
@@ -125,6 +125,22 @@ launched but didn't move its measure isn't done; it's a lesson.
 
 `type/*` and `flow/*` are *issue*-level groups, not project ones — see
 [Issues](issues/index.md).
+
+### Dependencies — native, never prose
+
+Dependencies between projects use **Linear's native project relations** — **Blocked by** /
+**Blocking** — the same native-field rule as everything else. Prose dependencies in a
+description rot; native ones show up in views and warn you.
+
+- **Draw them at the `Planned` gate**, when both projects have dates — a dependency only tells
+  you about risk once both ends are dated — and review them whenever dates move.
+- **How**: on the project, `⌘K` → *Dependencies* → *Blocked by… / Blocking…*; or on the
+  [timeline view](https://linear.app/happydevs/projects/all), drag from the end of one project's
+  bar to another.
+- **What you get**: the relation on both projects' overview panels, and connector lines on the
+  timeline — **blue** while the dates work, **red** when the dependency is violated (the
+  blocking project's end now lands after the blocked project's start). A red line is a
+  sequencing conversation, not a decoration.
 
 ---
 
