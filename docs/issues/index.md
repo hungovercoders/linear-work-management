@@ -103,7 +103,7 @@ fills it.
 
 ---
 
-## :material-signpost-split: Which work is it?
+## :material-directions-fork: Which work is it?
 
 Every issue is exactly **one of two kinds**, set by how it's classified ([rule 3](../hard-rules.md)).
 Pick your path — each page is written for the people who live on it:
