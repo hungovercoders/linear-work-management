@@ -144,9 +144,10 @@ Everything Linear models as a field is a **native field**, never text in the des
 | Project **or** `flow/*` | The classification (rule 3) — one, never both |
 | `type/*` | Project issues only — feature / bug / action / spike |
 | `product/*` | Inherited from the project |
+| Links | Resources — docs, designs, logs, prior art, related issues — attached, not pasted into the body |
 
-The **description** carries only the *problem* and the *agent plan* — that part, and only that
-part, is the [template](#create-one).
+The **description** carries only the *what / why / when* and, later, the *plan* — that part, and
+only that part, is the [template](#create-one). Resources are **native Links**, not a section.
 
 ---
 

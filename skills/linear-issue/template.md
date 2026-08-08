@@ -5,8 +5,10 @@
        • Classify   → in a PROJECT (project issue) OR one flow/* label (inbound) — rule 3, never both
        • type/*     → project issues only: feature | bug | action | spike
        • product/*  → inherited from the project, unchanged
+       • Links      → attach resources (docs, designs, logs, prior art, related issues) as the
+                      issue's native Links/attachments — NOT a body section
 
-     Fill What / Why / When / Resources at capture; leave Plan for pickup.
+     Fill What / Why / When at capture; leave Plan for pickup.
      Each section carries per-type cues — keep the ones that fit the type/*.
      A `spike` is free-wheeling: the body is a scratchpad for context and planning — fill the
      sections only as far as they help; the time box in "When is it done?" is what bounds it. -->
@@ -26,11 +28,6 @@
      · action: the change complete and verified · spike: question answered + findings written,
      within the time box -->
 <how we'll know it's finished — not merely shipped>
-
-## Resources
-<!-- feature/action: docs, designs, the area or system touched · bug: logs, screenshots, the
-     failing case · spike: prior art and starting points to explore · any related issues -->
-<links and references that help whoever picks it up>
 
 ## Plan
 <!-- LEFT EMPTY AT CREATION. The reserved home for the plan for HOW; filled later, when the

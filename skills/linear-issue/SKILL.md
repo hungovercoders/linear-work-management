@@ -50,7 +50,8 @@ issue or an inbound issue. One or the other, never both.
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
 - Pick the **`type/*`** — `feature`, `bug`, `action` or `spike`.
 - Write the **body** from [`template.md`](template.md): what needs doing, why, and when it's
-  done, plus any resources. `product/*` inherits from the project.
+  done. Attach any resources (docs, designs, logs, related issues) as the issue's native
+  **Links**, not a body section. `product/*` inherits from the project.
 - **`spike` is the free-wheeling one** — a scratchpad for gathering context, notes and planning a
   backlog before the work is understood. Fill the sections only as far as they help; the **time
   box** in *When is it done?* is what bounds it. Follow-ups become new issues in the project.
@@ -79,9 +80,9 @@ in this skill:
 ## The issue template
 
 [`template.md`](template.md) beside this skill is the single source of truth for the issue
-**description body** at capture — What needs doing / Why / When it's done / Resources, with a
-per-type note on what to emphasise. The `## Plan` section is left empty; it's filled at pickup.
-Everything else is a native field.
+**description body** at capture — What needs doing / Why / When it's done, with a per-type note
+on what to emphasise. The `## Plan` section is left empty; it's filled at pickup. Everything else
+— including **resources, as native Links** — is a native field.
 
 The **assignee, priority, status, project / `flow/*` classification and `type/*` / `product/*`
 labels are native Linear fields** — set them on the issue, never in the description text. Keeping
