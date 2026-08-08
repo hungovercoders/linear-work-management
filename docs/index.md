@@ -12,12 +12,18 @@ use Linear — see also **[the three hard rules](hard-rules.md)** and the
 @from_file:diagrams/model.d2
 ```
 
-Three layers, top to bottom. **Teams cut across all of them** — a team owns issues,
-a project can draw on several teams but has exactly one lead.
+Three layers, top to bottom, and **two ways work reaches them**. Teams cut across all
+layers — a team owns issues, a project can draw on several teams but has exactly one lead.
 
-The right-hand lane is the one people forget. Work that arrives unplanned is not a
-failure of planning; it is a permanent category with its own front door. Both paths
-are legitimate. What isn't legitimate is an issue on neither path.
+- **The strategic path** (left): planned work. An initiative sets the outcome, projects
+  move it, issues do it.
+- **The inbound path** (right): work that *arrives* — incidents, requests, compliance,
+  support, toil — and is triaged.
+
+Neither path is superior or exceptional. Some teams (product, platform) live mostly on the
+strategic path; others (customer support, operations) live mostly on the inbound path; most
+do both. What isn't legitimate is an issue on **neither** path — that's the *unclassified*
+defect the doctor chases.
 
 ---
 
@@ -44,7 +50,6 @@ Detail and rationale: **[The Three Hard Rules](hard-rules.md)**.
 | A bounded piece of work that moves one of those measures | **Project** under it |
 | A discrete task within that work | **Issue** in the project |
 | Something broke, arrived, or was reported | **Issue** via **Triage** |
-| Recurring inbound that keeps costing us | Raise a **promotion** — turn the theme into a project |
 | Genuinely standalone work with no initiative | Project, but expect to justify it |
 
 Orphaned projects aren't banned — they're **questioned**. If it doesn't ladder to

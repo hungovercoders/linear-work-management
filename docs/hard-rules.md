@@ -29,9 +29,8 @@ Every issue is **classified**. Two ways are valid; two are failures.
 | ✗ | Both at once | Pick one, drop the other |
 | ✗ | Neither | **Unclassified** — invisible work, the defect the system chases |
 
-`flow/*` is how unplanned work stays visible without faking a project around it.
-Recurring flow themes get **promoted** into a project. The `linear-doctor` skill
-reports every unclassified issue.
+`flow/*` is how inbound work stays visible without faking a project around it. The
+`linear-doctor` skill reports every unclassified issue.
 
 ---
 
