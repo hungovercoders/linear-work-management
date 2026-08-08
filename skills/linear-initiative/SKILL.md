@@ -24,6 +24,8 @@ post updates.
 - **Rule 4** — one named owner with strategic seniority. Not a team, not two people.
 - **Rule 5** — a target date, set now (from `Planned` onward), so it can be prioritised.
 - Carries the *why* and *how it's judged*, never the *how it's built* — that's the projects'.
+- If it **graduated from a discovery project**, it's grounded in that project's findings and
+  linked back to it.
 
 ## Key Results come in two kinds
 
@@ -45,16 +47,22 @@ Challenge each one:
 
 ## Flow
 
-1. **Objective** — "What's the inspiring objective, and why does it matter?" A qualitative
+1. **Origin** — ask: *is this initiative graduating from a discovery project?* If yes, read
+   that project (`get_project` + its issues) and use its findings to ground the objective, the
+   *why*, and the KR baselines — don't start from a blank page. Record the lineage: link the
+   discovery project to the new initiative (`save_project` → `addInitiatives`), and let it
+   continue as a delivery project under it or close once its discovery job is done. If it's a
+   fresh idea with no project behind it, that's fine — carry on.
+2. **Objective** — "What's the inspiring objective, and why does it matter?" A qualitative
    direction is right for the name (e.g. "Make onboarding effortless"). It isn't an initiative
-   until it has Key Results (step 2), so don't stop at the objective.
-2. **Key Results** — 3–5. For each, ask measured or committed, then prompt for
+   until it has Key Results (step 3), so don't stop at the objective.
+3. **Key Results** — 3–5. For each, ask measured or committed, then prompt for
    baseline → target (measured) or the Definition of Done (committed), plus an evidence source.
-3. **Owner** — one named person, strategic seniority.
-4. **Timeframe** — a target date. Often a quarter; some run a year or more. Set it now.
-5. **State** — `Proposed` if not yet agreed; `Planned` once leadership agrees and the owner,
+4. **Owner** — one named person, strategic seniority.
+5. **Timeframe** — a target date. Often a quarter; some run a year or more. Set it now.
+6. **State** — `Proposed` if not yet agreed; `Planned` once leadership agrees and the owner,
    KRs and date are all set. (`Active` comes later, when work starts against the date.)
-6. **Create it in Linear.** Set the **name** (the outcome), **owner/lead**, **status** and
+7. **Create it in Linear.** Set the **name** (the outcome), **owner/lead**, **status** and
    **target date** as the initiative's native Linear fields — never as text — and connect the
    **`#initiatives` Slack channel** so updates post there. Put only the **description body**
    (why · Key Results · out of scope) from [`template.md`](template.md) into the description.

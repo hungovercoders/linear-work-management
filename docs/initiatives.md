@@ -44,6 +44,10 @@ it seeds a new initiative (which then declares the Key Results below), or links 
 one. The `Planned` gate is where that decision is made — so the exploratory work has a home
 from day one, rather than waiting for the initiative to exist.
 
+When you graduate into a **new** initiative, the `linear-initiative` skill asks whether it
+comes from a discovery project and, if so, draws on that project's findings to ground the
+objective and the KR baselines — and links the two so the lineage is recorded.
+
 ---
 
 ## Declare the Key Results first

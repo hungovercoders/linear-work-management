@@ -33,8 +33,8 @@ aspiration into something checkable.
 
 **Work starts as a project in `Idea`.** That's the entry point for planned work — no
 initiative or KR needed to begin. `Idea` and `Scoping` are *discovery*, where a project may
-legitimately have **no parent and no named KR**; it's also where the work of *forming* an
-initiative gets recorded. **The rule bites from `Planned`**, where discovery resolves into one
+legitimately have **no parent and no named KR** (though it still has a named lead — rule 4
+applies throughout); it's also where the work of *forming* an initiative gets recorded. **The rule bites from `Planned`**, where discovery resolves into one
 of three:
 
 - **Graduate** — mature from discovery into delivery, attached to an outcome: either **linked

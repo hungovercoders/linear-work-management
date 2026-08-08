@@ -150,8 +150,9 @@ once it's committed — and the `Planned` gate divides the two. See
 ### Discovery phase — is there something here? (`Idea` · `Scoping`)
 
 Explore cheaply. A project in discovery may have **no parent initiative and no named KR** —
-that's legitimate; it's where an initiative's groundwork gets recorded. At the **`Planned`**
-gate, it resolves into one of three:
+that's legitimate; it's where an initiative's groundwork gets recorded. It still has a
+**single named lead** ([rule 4](hard-rules.md)) — ownership applies from day one; only the KR
+and dates wait for `Planned`. At the **`Planned`** gate, it resolves into one of three:
 
 | Outcome | What it means |
 |---|---|
