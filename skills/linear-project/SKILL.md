@@ -91,6 +91,3 @@ initiative served.
 The **lead, status, dates, priority, initiative link(s) and labels are native Linear fields** —
 set them on the project itself, never in the description text. Keeping them native is what lets
 Linear filter, sort and roll them up, and what lets `linear-doctor` check them.
-
-See [`skills/README.md`](https://github.com/hungovercoders/linear-work-management/tree/main/skills)
-for the conventions every skill here follows.

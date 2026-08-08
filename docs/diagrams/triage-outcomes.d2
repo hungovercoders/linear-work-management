@@ -1,0 +1,38 @@
+# Triage outcomes: the five decisions the duty rota can make on inbound work.
+# Rendered inline on the Triage work page via Kroki (```kroki-d2```).
+# Companion to issue-lifecycle.d2. Flat + acyclic fan-out; inbound (red) palette.
+
+direction: down
+
+inbound: "Inbound work\none flow/* label · no project" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
+}
+
+decision: "«Triage decision»\nnamed duty rota · on a clock" {
+  style: {fill: "#FBF6EC"; stroke: "#B7791F"; border-radius: 8; bold: true; font-color: "#7A5312"}
+}
+
+# ---- the five outcomes ----
+accept_project: "Accept into a project\nbecomes a project issue (gets type/*)" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7; bold: true}
+}
+accept_flow: "Accept as flow\nstays inbound · one flow/* label" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 7}
+}
+redirect: "Redirect\nto the right team's triage" {
+  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 7}
+}
+merge: "Merge\ninto an existing issue" {
+  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 7}
+}
+decline: "Decline\nclose with a reason" {
+  style: {fill: "#FCFCFD"; stroke: "#8C2F39"; border-radius: 7}
+}
+
+# ---- the fan-out (acyclic) ----
+inbound -> decision
+decision -> accept_project: {style.stroke: "#3D4C6B"}
+decision -> accept_flow: {style.stroke: "#8C2F39"}
+decision -> redirect: {style.stroke: "#A9B2C4"}
+decision -> merge: {style.stroke: "#A9B2C4"}
+decision -> decline: {style.stroke: "#8C2F39"}

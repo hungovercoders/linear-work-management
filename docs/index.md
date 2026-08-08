@@ -189,7 +189,9 @@ section below.
 
 ## :material-checkbox-marked-circle-outline: Issues — the work itself
 
-An issue is a **discrete task**, understood before it starts. Two things are true of
+An issue is a **discrete task**, understood before it starts. Full guidance, the states, the
+`type/*` templates and the agent-plan convention: **[Issues](issues/index.md)**. See
+[all issues in Linear](https://linear.app/happydevs/team/GRI/all). Two things are true of
 **every** issue, whichever path it came from:
 
 - It is **classified** — in a project *or* carrying one `flow/*` label, never both, never
@@ -220,9 +222,10 @@ Live inside a **project** and ladder to its KR.
 
 | `type/*` | For |
 |---|---|
+| action | **The default** — any work that needs doing, from a code change to a reminder |
 | feature | A new capability |
-| defect | Something's broken |
-| chore | Maintenance, upkeep, dependency bumps |
+| bug | Something's broken |
+| analysis | A data question to answer or a report to produce |
 | spike | A time-boxed investigation |
 
 `product/*` carries down automatically — same value as the project. Refined from `Backlog`
@@ -230,14 +233,15 @@ to `Todo` before work starts — that's the readiness gate.
 
 ### <span class="lwm-inbound">Inbound issues</span> — flow work (for the triage duty rota)
 
-Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** label (no
-`type/*` — that's a project-issue group):
+Arrive through **Triage** — Linear's built-in per-team inbox for incoming work — carry **no
+project** and exactly one **`flow/*`** label (no `type/*` — that's a project-issue group):
 
 | `flow/*` | For |
 |---|---|
 | incident | Something's down or degraded — needs a response now |
 | vulnerability | A security weakness to remediate (severity drives the SLA) |
-| defect | A fault reported from outside any project |
+| bug | A fault reported from outside any project |
+| analysis | A data question or report requested ad-hoc from outside a project |
 | compliance | A regulatory or policy obligation to meet |
 | support | A user or customer request |
 | toil | Recurring manual work worth capturing |
@@ -260,7 +264,7 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 |---|---|
 | `flow/incident` | Immediately |
 | `flow/vulnerability` · `flow/support` | 1 working day |
-| `flow/compliance` · `flow/defect` · `flow/toil` | 2 working days |
+| `flow/compliance` · `flow/bug` · `flow/toil` · `flow/analysis` | 2 working days |
 
 | Resolution — `flow/vulnerability` by severity | Remediate within |
 |---|---|
@@ -281,6 +285,6 @@ Top-down — find your row:
 |---|---|
 | Owning an initiative | This page, then **[Initiatives](initiatives.md)** — write your KR table before your first project |
 | Leading a project | This page, then **[Projects](projects.md)** — know your KR |
-| Delivering on a team | This page, then **Issues → Project issues** |
-| On triage duty | This page, then **Issues → Inbound issues** |
+| Delivering on a team | This page, then **[Issues → Project work](issues/project-work.md)** |
+| On triage duty | This page, then **[Issues → Triage work](issues/triage.md)** |
 | Responsible for Linear workflows | Run [`linear-doctor`](skills/index.md) — it reports drift; it doesn't fix |

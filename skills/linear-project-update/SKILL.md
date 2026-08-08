@@ -42,6 +42,3 @@ with evidence, not a colour someone picked — the issue and cycle progress is t
 [`template.md`](template.md) beside this skill is the single source of truth for the update
 **body**. **Health** is a native field on the status update — set it there, backed by the
 movement shown in the body, never as a line of prose instead.
-
-See [`skills/README.md`](https://github.com/hungovercoders/linear-work-management/tree/main/skills)
-for the conventions every skill here follows.

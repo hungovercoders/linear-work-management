@@ -65,7 +65,13 @@ def main() -> int:
         "| ----- | ------------ | ----- |",
     ]
     for s in skills:
-        guide = f"[{s['doc'].split('/')[-1].replace('.md','')}](../{s['doc']})" if s["doc"] else "—"
+        if s["doc"]:
+            parts = s["doc"].split("/")
+            # An index.md page is named by its folder (e.g. issues/index.md -> "issues").
+            label = parts[-2] if parts[-1] == "index.md" and len(parts) > 1 else parts[-1].replace(".md", "")
+            guide = f"[{label}](../{s['doc']})"
+        else:
+            guide = "—"
         src = f"[`{s['name']}`](https://github.com/hungovercoders/linear-work-management/tree/main/{s['dir']})"
         lines.append(f"| {src} | {s['description']} | {guide} |")
 
