@@ -31,7 +31,7 @@ The doctor **reports; it does not fix** — it hands you a list, you decide.
 
 1. Read the workspace with the Linear MCP tools (`list_projects`, `list_issues`,
    initiatives, labels).
-2. Apply the three checks above.
+2. Apply the five checks above.
 3. Report each violation with a direct link to the offending entity, grouped by rule.
    Do **not** mutate anything.
 
