@@ -1,7 +1,7 @@
 # The Cheat Sheet
 
 One page. If you read nothing else, read this. The single source of truth for how we
-use Linear — see also **[the three hard rules](hard-rules.md)** and the
+use Linear — see also **[the hard rules](hard-rules.md)** and the
 **[skills](skills/index.md)** that apply them for you.
 
 ---
@@ -27,18 +27,20 @@ defect the doctor chases.
 
 ---
 
-## The three hard rules
+## The hard rules
 
-1. **Every project names the Key Result it moves, and by how much.** This is what
-   makes "projects are the how" enforceable instead of aspirational. No KR named,
+One per level, plus ownership.
+
+1. **Every initiative declares its Key Results** — measurable outcomes with targets,
+   before any project sits under it. An initiative is a result, not a theme.
+2. **Every project names the Key Result it moves, and by how much.** No KR named,
    no project.
-2. **Every issue is either in a project *or* carries one `flow/*` label.** Never
-   neither, never both. "Neither" is the defect the system chases — we call it
-   *unclassified*, and the doctor reports it.
-3. **One named human owns each initiative and each project.** Not a team, not two
+3. **Every issue is either in a project *or* carries one `flow/*` label.** Never
+   neither (the *unclassified* defect the doctor chases), never both.
+4. **One named human owns each initiative and each project.** Not a team, not two
    people. Names, not squads.
 
-Detail and rationale: **[The Three Hard Rules](hard-rules.md)**.
+Detail and rationale: **[The Hard Rules](hard-rules.md)**.
 
 ---
 
@@ -70,44 +72,41 @@ an initiative, either the work is wrong or the initiative is missing.
 
 ## States at a glance
 
-**Projects** — full lifecycle, idea to closed:
+**Projects** run a full lifecycle:
 
-| Status | Type | Means |
-|---|---|---|
-| Idea | Backlog | Someone's thought of it. Nothing committed. |
-| Scoping | Backlog | Being shaped. Cost and value under investigation. |
-| Planned | Planned | Agreed, dated, resourced. Not started. |
-| In Progress | Started | Being built. |
-| Launching | Started | Built, rolling out. |
-| Paused | Started | Deliberately stopped, with a reason and a review date. |
-| Completed | Completed | Delivered *and* the KR delta observed. |
-| Cancelled | Cancelled | Stopped for good. Reason recorded. |
+`Idea → Scoping → Planned → In Progress → Launching → Completed` — plus `Paused` and `Cancelled`
 
-**Issues** — minimal and measurable:
+**Issues** stay minimal:
 
-`Triage` → `Backlog` → `Todo` → `In Progress` → `In Review` → `Done`
-(plus `Cancelled`, `Duplicate`)
+`Triage → Backlog → Todo → In Progress → In Review → Done` — plus `Cancelled` and `Duplicate`
 
-Teams may **add** states locally. They may not rename or remove shared ones —
+What each state means (and how it maps to Linear's status types) is in the States reference
+(GRI-73). Teams may **add** states locally, never rename or remove the shared ones —
 otherwise cross-team insight breaks.
 
 ---
 
 ## Labels at a glance
 
-Labels come in **groups** that behave like enums: pick **exactly one value per group**,
-so they filter and report cleanly.
+Labels come in **groups** that behave like enums — pick **one value per group**, so they
+filter and report cleanly. Separate them by where they apply.
 
-| Group | Answers | Applies to |
-|---|---|---|
-| `type/*` | What kind of work is this? | Every issue |
-| `flow/*` | How did it arrive? | Inbound issues (no project) |
-| `spend/*` | Capex or opex? | Projects, decided at planning |
-| `risk/*` | How much release care? | Optional |
+**On issues:**
 
-The **groups** are the stable idea; their **values** are a canonical set defined in the
-Labels reference (GRI-73) and can evolve over time. Two rules that don't: one value per
-group, and a label only exists if it's filtered or reported on.
+- `type/*` — what kind of work is this?
+- `flow/*` — how did it arrive? (inbound issues, no project)
+
+**On projects:**
+
+- `spend/*` — capex or opex? (decided at planning)
+
+**Across projects and issues:**
+
+- `product/*` — which product? (`hungovercoders` · `dogadopt` · `woolwitch` ·
+  `cheeserater` · …) — the one group that **grows over time** as products are added.
+
+A label only exists if it's filtered or reported on. The fixed groups' canonical values
+live in the Labels reference (GRI-73).
 
 ---
 

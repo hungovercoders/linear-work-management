@@ -19,14 +19,15 @@ This repo is that place.
 
 ---
 
-## The three hard rules
+## The hard rules
 
-1. Every project names the Key Result it moves, and by how much.
-2. Every issue is either in a project or carries one `flow/*` label. Never both,
+1. Every initiative declares its Key Results (measurable outcomes with targets).
+2. Every project names the Key Result it moves, and by how much.
+3. Every issue is either in a project or carries one `flow/*` label. Never both,
    never neither.
-3. One named human owns each initiative and each project.
+4. One named human owns each initiative and each project.
 
-Everything else here is elaboration on those — see **[The Three Hard Rules](docs/hard-rules.md)**.
+Everything else here is elaboration on those — see **[The Hard Rules](docs/hard-rules.md)**.
 
 ---
 
@@ -36,7 +37,7 @@ Everything else here is elaboration on those — see **[The Three Hard Rules](do
 |---|---|
 | [`docs/index.md`](docs/index.md) | The cheat sheet — hierarchy, hard rules, states, labels, SLAs, cadence. |
 | [`docs/diagrams/model.d2`](docs/diagrams/model.d2) | The operating model as a D2 source, rendered inline on the site. |
-| [`docs/hard-rules.md`](docs/hard-rules.md) | The three hard rules, expanded. |
+| [`docs/hard-rules.md`](docs/hard-rules.md) | The hard rules, expanded. |
 | `skills/` | Claude Code skills — the source of the installable plugin. |
 | `scripts/` | Shared helpers used by skills, `Taskfile.yml` and CI (no duplication). |
 
@@ -50,7 +51,7 @@ Uses [Task](https://taskfile.dev); everything humans, agents and CI run goes thr
 task serve         # live-preview the docs at http://127.0.0.1:8000
 task build         # strict static build into ./site
 task skills:index  # regenerate docs/skills/index.md from skills/*/SKILL.md
-task doctor        # audit the workspace against the three hard rules
+task doctor        # audit the workspace against the hard rules
 ```
 
 Diagrams are **D2** via ` ```kroki-d2 ` fences (rendered inline as SVG through Kroki);

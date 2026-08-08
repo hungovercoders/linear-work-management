@@ -1,15 +1,29 @@
-# The Three Hard Rules
+# The Hard Rules
 
-Everything else in this guide is elaboration on these three. If a rule and a
-convenience conflict, the rule wins — that is what makes the model hold.
+Everything else in this guide is elaboration on these. If a rule and a convenience
+conflict, the rule wins — that is what makes the model hold. **One rule per level, plus
+ownership.**
 
 ---
 
-## 1. Every project names the Key Result it moves, and by how much
+## 1. Every initiative declares its Key Results
 
-A project exists to move a measure on an initiative. Name **which** KR and the
-**delta** you expect (e.g. "activation 22% → 30%"). This turns "projects are the how"
-from an aspiration into something checkable.
+An initiative is a **measurable outcome, not a theme**. State its Key Results — the
+metrics that will move and the targets they move to — before any project sits beneath it.
+It carries the *why* and *how it's measured*, never the *how it's built*.
+
+- **No Key Results, no initiative** — it's a wish, not an initiative.
+- Those KRs are exactly what the projects below will name and move (rule 2). This is the
+  measurement chain: initiatives *declare* KRs → projects *name which one* → issues *do
+  the work*.
+
+---
+
+## 2. Every project names the Key Result it moves, and by how much
+
+A project exists to move a measure on an initiative. Name **which** KR and the **delta**
+you expect (e.g. "activation 22% → 30%"). This turns "projects are the how" from an
+aspiration into something checkable.
 
 - **No KR named, no project.** Scoping can start; committed delivery cannot.
 - **Completed** means delivered *and* the KR delta observed — not merely shipped.
@@ -18,7 +32,7 @@ from an aspiration into something checkable.
 
 ---
 
-## 2. Every issue is in a project *or* carries one `flow/*` label — never both, never neither
+## 3. Every issue is in a project *or* carries one `flow/*` label — never both, never neither
 
 Every issue is **classified**. Two ways are valid; two are failures.
 
@@ -34,7 +48,7 @@ Every issue is **classified**. Two ways are valid; two are failures.
 
 ---
 
-## 3. One named human owns each initiative and each project
+## 4. One named human owns each initiative and each project
 
 Ownership is singular and named. **Not a team, not two people — a person.**
 
@@ -47,5 +61,5 @@ Ownership is singular and named. **Not a team, not two people — a person.**
 
 ---
 
-These three are what the [`linear-doctor`](skills/index.md) skill checks first, and
-what every other page here assumes. Back to the [cheat sheet](index.md).
+These are what the [`linear-doctor`](skills/index.md) skill checks first, and what every
+other page here assumes. Back to the [cheat sheet](index.md).

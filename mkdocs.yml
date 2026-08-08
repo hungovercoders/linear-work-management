@@ -65,5 +65,5 @@ plugins:
 
 nav:
   - The Cheat Sheet: index.md
-  - The Three Hard Rules: hard-rules.md
+  - The Hard Rules: hard-rules.md
   - Skills: skills/index.md
