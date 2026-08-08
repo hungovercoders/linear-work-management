@@ -156,8 +156,8 @@ Everything Linear models as a field is a **native field**, never text in the des
 | Links | Resources — docs, designs, logs, prior art, related issues — attached, not pasted into the body |
 
 The **description** carries only the *what / why / when*, any *context*, and — later — the
-*plan*; that, and only that, is the [template](#create-one). Resources are **native Links**, not
-a section.
+*plan*; that, and only that, is the [template](#create-one) — one per `type/*`. Resources are
+**native Links**, not a section.
 
 ---
 
@@ -167,12 +167,13 @@ The description body is the only thing that lives as text; everything else is a 
 (above).
 
 1. **Use the [`linear-issue`](skills/index.md) skill — preferred.** It asks which kind (project
-   issue or inbound), picks the `type/*` or `flow/*`, writes the body from the template, and
-   sets the native fields — assignee, priority, status, project/label — for you.
+   issue or inbound), picks the `type/*` or `flow/*`, writes the body from the **template for that
+   type**, and sets the native fields — assignee, priority, status, project/label — for you.
 2. **By hand.** Create the issue in the [team's Linear view](https://linear.app/happydevs/team/GRI/all),
-   set the classification and labels the kind calls for (above), then paste
-   [`template.md`](https://github.com/hungovercoders/linear-work-management/blob/main/skills/linear-issue/template.md)
-   into the description and fill it in. It's the same file the skill uses.
+   set the classification and labels the kind calls for (above), then paste the **template for the
+   `type/*`** — one each for `action`, `feature`, `bug`, `analysis` and `spike`, in the
+   [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue)
+   — into the description and fill it in. They're the same files the skill uses.
 
 Refine it **Backlog → Todo** before anyone starts — that's the readiness gate.
 

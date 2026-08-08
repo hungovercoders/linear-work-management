@@ -53,21 +53,26 @@ issue or an inbound issue. One or the other, never both.
   `bug`, `analysis` (a data question to answer or report to produce) or `spike` when the work is
   specifically that. `analysis` is distinct from `spike`: it delivers an answer/report, not a
   build decision.
-- Write the **body** from [`template.md`](template.md): what needs doing, why, when it's done,
-  and any **context** (notes, background, constraints). Attach resources (docs, designs, logs,
-  related issues) as the issue's native **Links**, not a body section. `product/*` inherits from
-  the project.
+- Write the **body** from the template **for that `type/*`** — one per type, beside this skill:
+  [`template-action.md`](template-action.md) (default/base) ·
+  [`template-feature.md`](template-feature.md) · [`template-bug.md`](template-bug.md) ·
+  [`template-analysis.md`](template-analysis.md) · [`template-spike.md`](template-spike.md).
+  Attach resources (docs, designs, logs, related issues) as the issue's native **Links**, not a
+  body section. `product/*` inherits from the project.
 - **`spike` is the free-wheeling one** — a scratchpad for gathering context, notes and planning a
   backlog before the work is understood. Fill the sections only as far as they help; the **time
-  box** in *When is it done?* is what bounds it. Follow-ups become new issues in the project.
+  box** is what bounds it. Follow-ups become new issues in the project.
 
 **2b. Inbound issue.**
 
 - Pick the single **`flow/*`** label (`incident` · `vulnerability` · `bug` · `analysis` ·
   `compliance` · `support` · `toil`). **No project, no `type/*`.** (`flow/analysis` is an ad-hoc
   data question or report requested from outside a project.)
-- Write the same body — what needs doing, why, and when it's done. Triage decides its fate; see
-  Flow & Triage.
+- Write the body from the template that matches the **kind** where one exists —
+  [`template-bug.md`](template-bug.md) for `flow/bug`, [`template-analysis.md`](template-analysis.md)
+  for `flow/analysis`; otherwise the general [`template-action.md`](template-action.md). (Bespoke
+  shapes for incident/vulnerability/etc. land with **Flow & Triage** (GRI-74).) Triage decides its
+  fate; see Flow & Triage.
 
 **3. Set the native fields.** On the issue itself, never in the description: **assignee**,
 **priority** (Urgent → Low), **status** (**Backlog** for new work), the **project *or* `flow/*`**
@@ -83,12 +88,22 @@ in this skill:
   out the *how* and stores it in the description's **`## Plan`** section — left empty at creation,
   so the approach is reviewable before the code is.
 
-## The issue template
+## The issue templates
 
-[`template.md`](template.md) beside this skill is the single source of truth for the issue
-**description body** at capture — What needs doing / Why / When it's done / Context, with a
-per-type note on what to emphasise. The `## Plan` section is left empty; it's filled at pickup.
-Everything else — including **resources, as native Links** — is a native field.
+One template per `type/*` beside this skill is the source of truth for the issue **description
+body** at capture — pick the one matching the type:
+
+| `type/*` | Template | Body |
+|---|---|---|
+| `action` (default/base) | [`template-action.md`](template-action.md) | What needs doing? / Why? / When is it done? / Context / Plan |
+| `feature` | [`template-feature.md`](template-feature.md) | What needs doing? / Why (user value) / Acceptance criteria / Context / Plan |
+| `bug` | [`template-bug.md`](template-bug.md) | What's broken? / Steps to reproduce / Expected vs actual / Impact / Context / Plan |
+| `analysis` | [`template-analysis.md`](template-analysis.md) | The question / Why it's needed / When it's answered / Context / Plan |
+| `spike` | [`template-spike.md`](template-spike.md) | The question / Why (what it unblocks) / Time box / Notes / Plan |
+
+`action` is the base and also serves inbound kinds with no bespoke template. Every template keeps
+the same non-negotiables: the native-fields header, a **why**, and the **`## Plan`** section left
+**empty at creation** and filled at pickup. Resources go in native **Links**, never a body section.
 
 The **assignee, priority, status, project / `flow/*` classification and `type/*` / `product/*`
 labels are native Linear fields** — set them on the issue, never in the description text. Keeping
