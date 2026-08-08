@@ -3,7 +3,7 @@
        • Priority   → Urgent → Low, so it orders against the others
        • Status     → Backlog (new) → Todo once refined; nothing starts from Backlog
        • Classify   → in a PROJECT (project issue) OR one flow/* label (inbound) — rule 3, never both
-       • type/*     → project issues only: feature | bug | action | spike
+       • type/*     → project issues only: action (DEFAULT) | feature | bug | spike
        • product/*  → inherited from the project, unchanged
        • Links      → attach resources (docs, designs, logs, prior art, related issues) as the
                       issue's native Links/attachments — NOT a body section

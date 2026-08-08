@@ -222,9 +222,9 @@ Live inside a **project** and ladder to its KR.
 
 | `type/*` | For |
 |---|---|
+| action | **The default** — any work that needs doing, from a code change to a reminder |
 | feature | A new capability |
 | bug | Something's broken |
-| action | Maintenance, upkeep, dependency bumps, proactive improvements |
 | spike | A time-boxed investigation |
 
 `product/*` carries down automatically — same value as the project. Refined from `Backlog`

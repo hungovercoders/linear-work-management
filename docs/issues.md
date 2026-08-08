@@ -84,13 +84,14 @@ groups and a priority.
 ### Labels — `type/*` and `product/*`
 
 One **`type/*`** label says what kind of work it is; **`product/*`** carries down from the
-project unchanged.
+project unchanged. **`action` is the default** — reach for `feature`, `bug` or `spike` only when
+the work is specifically one of those.
 
 | `type/*` | For | The template emphasises |
 |---|---|---|
+| `action` | **The default** — any work that needs doing, from a code change to upkeep to a reminder to yourself | What needs doing, and when it's done |
 | `feature` | A new capability | The change and its acceptance criteria |
 | `bug` | Something's broken | Steps to reproduce, expected vs actual |
-| `action` | Maintenance, upkeep, proactive improvements | The change and why now |
 | `spike` | A time-boxed investigation — and the free-wheeling home for context, notes and planning | The question and the time box |
 
 `product/*` (`hungovercoders` · `dogadopt` · `woolwitch` · …) is **inherited from the project** —

@@ -24,7 +24,8 @@ and create the issue.
   both, never neither. This is the first decision; it picks the whole rest of the shape.
 - **Understood before it starts.** The problem and what "done" means are clear enough to hand to
   someone (or something) without a follow-up question.
-- **A `type/*` (project issues).** `feature` · `bug` · `action` · `spike` — what kind of work.
+- **A `type/*` (project issues).** `action` is the **default** (any work that needs doing);
+  `feature` · `bug` · `spike` when it's specifically that.
 - **A priority.** Urgent → Low, so it orders against the others.
 - **`product/*` inherited** from the project, unchanged.
 - **The body reads as a prompt** — the problem and what "done" means, enough to act on. The plan
@@ -48,7 +49,8 @@ issue or an inbound issue. One or the other, never both.
 **2a. Project issue.**
 
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
-- Pick the **`type/*`** — `feature`, `bug`, `action` or `spike`.
+- Pick the **`type/*`** — default to **`action`** (any work that needs doing); use `feature`,
+  `bug` or `spike` when the work is specifically that.
 - Write the **body** from [`template.md`](template.md): what needs doing, why, and when it's
   done. Attach any resources (docs, designs, logs, related issues) as the issue's native
   **Links**, not a body section. `product/*` inherits from the project.
