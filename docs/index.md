@@ -1,12 +1,14 @@
 # The Cheat Sheet
 
-One page. If you read nothing else, read this. The single source of truth for how we
-use Linear — see also **[the hard rules](hard-rules.md)** and the
+<div class="lwm-lead" markdown>
+One page. If you read nothing else, read this. The single source of truth for **how we
+use Linear** — see also **[the hard rules](hard-rules.md)** and the
 **[skills](skills/index.md)** that apply them for you.
+</div>
 
 ---
 
-## How it fits together
+## :material-sitemap: How it fits together
 
 ```kroki-d2
 @from_file:diagrams/model.d2
@@ -17,17 +19,20 @@ layers — a team owns issues, a project can draw on several teams but has exact
 
 | Path | Flows | What it is |
 |---|---|---|
-| **Strategic** (left) | Initiative → Project → Issues | Planned work toward an outcome |
-| **Inbound** (right) | Triage → Issue (`flow/*`) | Work that arrives: incidents, requests, compliance, support, toil |
+| <span class="lwm-strat">Strategic</span> (left) | Initiative → Project → Issues | Planned work toward an outcome |
+| <span class="lwm-inbound">Inbound</span> (right) | Triage → Issue (`flow/*`) | Work that arrives: incidents, requests, compliance, support, toil |
 
 Neither path is superior or exceptional. Some teams (product, platform) live mostly on the
 strategic path; others (customer support, operations) live mostly on the inbound path; most
-do both. What isn't legitimate is an issue on **neither** path — that's the *unclassified*
-defect the doctor chases.
+do both.
+
+!!! danger "The one failure"
+    An issue on **neither** path is *unclassified* — invisible work, and the defect the
+    whole system is built to chase. `linear-doctor` reports every one.
 
 ---
 
-## The hard rules
+## :material-gavel: The hard rules
 
 One per level, plus ownership.
 
@@ -38,11 +43,13 @@ One per level, plus ownership.
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
 | 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
 
-Detail and rationale: **[The Hard Rules](hard-rules.md)**.
+!!! tip "The deal"
+    If a rule and a convenience ever conflict, the rule wins — that's what keeps the model
+    honest. Detail and rationale: **[The Hard Rules](hard-rules.md)**.
 
 ---
 
-## What am I making?
+## :material-shape-plus: What am I making?
 
 | Situation | Make a… |
 |---|---|
@@ -57,7 +64,7 @@ an initiative, either the work is wrong or the initiative is missing.
 
 ---
 
-## Who owns what
+## :material-account-check: Who owns what
 
 | Layer | Owner | Answers |
 |---|---|---|
@@ -68,7 +75,7 @@ an initiative, either the work is wrong or the initiative is missing.
 
 ---
 
-## States at a glance
+## :material-traffic-light-outline: States at a glance
 
 **Projects** run a full lifecycle:
 
@@ -102,7 +109,7 @@ cross-team insight breaks.
 
 ---
 
-## Labels at a glance
+## :material-label-multiple-outline: Labels at a glance
 
 Labels come in **groups** that behave like enums — pick **one value per group**, so they
 filter and report cleanly.
@@ -119,7 +126,7 @@ reference (GRI-73); `product/*` grows as products are added.
 
 ---
 
-## Service levels
+## :material-timer-outline: Service levels
 
 | Thing | Within |
 |---|---|
@@ -135,7 +142,7 @@ redirect, merge, decline. "Leave it sitting there" is not one of them.
 
 ---
 
-## Comms cadence
+## :material-bullhorn-outline: Comms cadence
 
 | Who | Gets | When | Where |
 |---|---|---|---|
@@ -144,11 +151,12 @@ redirect, merge, decline. "Leave it sitting there" is not one of them.
 | Team | Cycle summary, triage digest | Weekly | Team channel |
 | Everyone | Launches, incidents | On event | `#announcements` |
 
-Health is a claim with evidence attached, not a colour someone picked.
+!!! quote
+    Health is a claim with evidence attached — not a colour someone picked.
 
 ---
 
-## Getting started
+## :material-rocket-launch-outline: Getting started
 
 | You are… | Start with |
 |---|---|
