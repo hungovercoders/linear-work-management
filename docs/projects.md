@@ -140,6 +140,7 @@ If the work isn't moving the measure, the health says so, however much shipped.
 
 While a project is **In Progress** or **Launching**, its lead ensures a **weekly update** reaches
 the shared **`#project-updates`** Slack channel — what changed, the health claim, and any risks.
+The full cadence and formats live in [Communications](communications.md).
 
 !!! warning "A project update is only as current as its issues"
     The weekly update **rolls up from the issue and cycle progress** beneath it — the same

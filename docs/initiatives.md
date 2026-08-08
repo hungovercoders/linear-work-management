@@ -167,8 +167,9 @@ own slice of the KR table.
 ## Keep everyone posted
 
 While an initiative is **Active**, its owner ensures a **monthly update** reaches
-`#initiative-updates` — KR movement, health, and any risks. Health is a claim with evidence, not a
-colour someone picked.
+`#initiative-updates` — KR movement, health, and any risks. The full cadence and formats live in
+[Communications](communications.md); health is a claim with evidence, not a colour someone
+picked.
 
 !!! warning "An initiative is only as current as its projects"
     The monthly update **rolls up from the weekly project updates** beneath it — the KR
@@ -182,8 +183,6 @@ Post it either way:
   health; it flows to the connected `#initiative-updates` channel.
 - **The `linear-initiative-update` skill** — it drafts the standard update (KR movement +
   health + risks) and posts it for you. In the [Skills](skills/index.md) catalogue.
-
-That's the whole cadence for initiatives: monthly, to `#initiative-updates`, while Active.
 
 ---
 
