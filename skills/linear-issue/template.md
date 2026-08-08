@@ -8,7 +8,7 @@
        • Links      → attach resources (docs, designs, logs, prior art, related issues) as the
                       issue's native Links/attachments — NOT a body section
 
-     Fill What / Why / When at capture; leave Plan for pickup.
+     Fill What / Why / When / Context at capture; leave Plan for pickup.
      Each section carries per-type cues — keep the ones that fit the type/*.
      A `spike` is free-wheeling: the body is a scratchpad for context and planning — fill the
      sections only as far as they help; the time box in "When is it done?" is what bounds it. -->
@@ -28,6 +28,12 @@
      · action: the change complete and verified · spike: question answered + findings written,
      within the time box -->
 <how we'll know it's finished — not merely shipped>
+
+## Context
+<!-- Background, constraints, decisions, caveats — any additional notes or information needed
+     that don't fit above. For a `spike`, this is the scratchpad. Attach files/URLs as native
+     Links rather than pasting them here. -->
+<additional notes and information needed>
 
 ## Plan
 <!-- LEFT EMPTY AT CREATION. The reserved home for the plan for HOW; filled later, when the

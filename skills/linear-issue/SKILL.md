@@ -51,9 +51,10 @@ issue or an inbound issue. One or the other, never both.
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
 - Pick the **`type/*`** — default to **`action`** (any work that needs doing); use `feature`,
   `bug` or `spike` when the work is specifically that.
-- Write the **body** from [`template.md`](template.md): what needs doing, why, and when it's
-  done. Attach any resources (docs, designs, logs, related issues) as the issue's native
-  **Links**, not a body section. `product/*` inherits from the project.
+- Write the **body** from [`template.md`](template.md): what needs doing, why, when it's done,
+  and any **context** (notes, background, constraints). Attach resources (docs, designs, logs,
+  related issues) as the issue's native **Links**, not a body section. `product/*` inherits from
+  the project.
 - **`spike` is the free-wheeling one** — a scratchpad for gathering context, notes and planning a
   backlog before the work is understood. Fill the sections only as far as they help; the **time
   box** in *When is it done?* is what bounds it. Follow-ups become new issues in the project.
@@ -82,9 +83,9 @@ in this skill:
 ## The issue template
 
 [`template.md`](template.md) beside this skill is the single source of truth for the issue
-**description body** at capture — What needs doing / Why / When it's done, with a per-type note
-on what to emphasise. The `## Plan` section is left empty; it's filled at pickup. Everything else
-— including **resources, as native Links** — is a native field.
+**description body** at capture — What needs doing / Why / When it's done / Context, with a
+per-type note on what to emphasise. The `## Plan` section is left empty; it's filled at pickup.
+Everything else — including **resources, as native Links** — is a native field.
 
 The **assignee, priority, status, project / `flow/*` classification and `type/*` / `product/*`
 labels are native Linear fields** — set them on the issue, never in the description text. Keeping
