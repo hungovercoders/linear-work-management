@@ -9,24 +9,24 @@ bottom.
 </div>
 
 **[Every issue in Linear, on one screen.](https://linear.app/happydevs/team/GRI/all)** Same
-tool as the strategy above it — no boundary between *why* and the task in your cycle.
+tool as the strategy above it: no boundary between *why* and the task in your cycle.
 
 ---
 
 ## :material-checkbox-marked-circle-outline: What an issue is
 
-An issue is a **discrete task, understood before it starts** — small enough for one person to
-pick up and finish, clear enough that "done" isn't ambiguous. Two things are true of **every**
+An issue is a **discrete task, understood before it starts**: small enough for one person to
+pick up and finish, clear enough that "done" isn't ambiguous. Two things are true of every
 issue, whichever path it arrived on:
 
 - **It's classified** — in a project *or* carrying exactly one `flow/*` label, never both,
   never neither ([rule 3](../hard-rules.md)). An issue that is neither is *unclassified*:
-  invisible work, the defect the whole model chases.
+  invisible work.
 - **Its body is the prompt** — the description says what to do and what "done" means, well
   enough that a person *or an agent* can act on it (the [agent-plan convention](#the-body-is-the-prompt)
   below). It carries a **priority** (Urgent → Low) that orders it.
 
-Keep the issue about *the task* — the *why* belongs to the [initiative](../initiatives.md), the
+Keep the issue about *the task*: the *why* belongs to the [initiative](../initiatives.md), the
 *what & how* to the [project](../projects.md) above it.
 
 ---
@@ -61,21 +61,21 @@ The line between **Backlog** and **Todo** is the one distinction worth being str
 
 Moving an issue **Backlog → Todo is refinement**: sharpen the problem, define what "done" is,
 size it, clear blockers. **Nothing starts from Backlog.** That gate is what keeps *In Progress*
-honest — everything in it was understood before it began.
+honest: everything in it was understood before it began.
 
 ---
 
 ## :material-robot-outline: The body is the prompt
 
 An issue's description is written to be **acted on directly** — by a person or an agent. That's
-the *agent-plan convention*, and it splits into **two moments**:
+the *agent-plan convention*, and it splits into two moments:
 
 - **At capture — the body is the prompt.** State the problem and what "done" looks like clearly
-  enough that the reader needs nothing else to start. Write it for whoever — or whatever — picks
+  enough that the reader needs nothing else to start. Write it for whoever (or whatever) picks
   it up. This is all the creation step does: get the task down.
 - **At pickup — store the plan against the issue.** *Later*, when the issue is picked up and an
   agent (or a person) works out *how*, that plan is captured in the issue's **`## Plan`** section
-  — left empty at creation — so the approach is reviewable before code is, and the issue stays
+  (left empty at creation) so the approach is reviewable before code is, and the issue stays
   the single record of the task.
 
 Keep the two apart: capturing an issue is *getting it down*; planning the how happens when it's
@@ -85,8 +85,8 @@ picked up.
 
 ## :material-table: Native fields, not prose
 
-Everything Linear models as a field is a **native field**, never text in the description — the
-same on both paths:
+Everything Linear models as a field is a **native field**, never text in the description. The
+same holds on both paths:
 
 | Native field | Set to |
 |---|---|
@@ -94,19 +94,19 @@ same on both paths:
 | Priority | Urgent → Low |
 | Status | The lifecycle state above |
 | Project **or** `flow/*` | The classification (rule 3) — one, never both |
-| Links | Resources — docs, designs, logs, prior art, related issues — attached, not pasted into the body |
+| Links | Resources (docs, designs, logs, prior art, related issues) attached, not pasted into the body |
 
 The kind-specific labels (`type/*`, `product/*` for project work; `flow/*` for triage) are on
-the two pages below. The **description** carries only the *what / why / when*, any *context*,
-and — later — the *plan*: that's the template, and the [`linear-issue`](../skills/index.md) skill
+the two pages below. The description carries only the *what / why / when*, any *context*,
+and, later, the *plan*: that's the template, and the [`linear-issue`](../skills/index.md) skill
 fills it.
 
 ---
 
 ## :material-directions-fork: Which work is it?
 
-Every issue is exactly **one of two kinds**, set by how it's classified ([rule 3](../hard-rules.md)).
-Pick your path — each page is written for the people who live on it:
+Every issue is exactly one of two kinds, set by how it's classified ([rule 3](../hard-rules.md)).
+Pick your path; each page is written for the people who live on it:
 
 <div class="grid cards" markdown>
 

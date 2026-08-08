@@ -1,23 +1,23 @@
 # Triage work
 
 <div class="lwm-lead" markdown>
-For the triage duty rota. An **inbound issue** arrived rather than being planned — an incident, a
+For the triage duty rota. An **inbound issue** arrived rather than being planned: an incident, a
 request, a reported bug, an ad-hoc analysis. It carries **no project** and exactly **one
-`flow/*`** label ([rule 3](../hard-rules.md)), and **no `type/*`**. This page covers inbound work;
-the [shared issue model](index.md) — the lifecycle, the body-as-prompt, native fields — applies
+`flow/*`** label ([rule 3](../hard-rules.md)), and no `type/*`. This page covers inbound work;
+the [shared issue model](index.md) (the lifecycle, the body-as-prompt, native fields) applies
 underneath.
 </div>
 
-!!! info "Triage is a Linear feature — not something we bolt on"
+!!! info "Triage is a native Linear feature"
     **Triage** is Linear's built-in, per-team **inbox**: incoming issues — from integrations,
     customer requests, Slack, or the API — land there *before* they enter the workflow, so
     someone makes a routing decision instead of the work dropping straight into a backlog. It's
-    turned on in the team's settings and has its own view in Linear. Everything below — the rota,
-    the five outcomes, the clocks — is simply *how we use that native feature* as the front door
+    turned on in the team's settings and has its own view in Linear. Everything below (the rota,
+    the five outcomes, the clocks) is simply how we use that native feature as the front door
     for inbound work.
 
 `flow/*` is how inbound work stays visible without faking a project around it. `product/*` is
-**optional** here — there's no project to inherit from, so set it only if the work clearly serves
+optional here: there's no project to inherit from, so set it only if the work clearly serves
 a product.
 
 ---
@@ -28,18 +28,18 @@ Exactly **one** `flow/*` label, and no `type/*` (that's the [project-work](proje
 
 | `flow/*` | For |
 |---|---|
-| `incident` | Something's down or degraded — needs a response now |
+| `incident` | Something's down or degraded; needs a response now |
 | `vulnerability` | A security weakness to remediate (severity drives the SLA) |
 | `defect` | A fault reported from outside any project |
 | `query` | A data question or report requested ad-hoc from outside a project |
-
-!!! note "Why `defect` and `query`, not `bug` and `analysis`?"
-    Linear label names are **unique across the whole workspace, even between groups** — so the
-    `type/*` group already owns `bug` and `analysis`. Inbound uses `defect` (a fault reported
-    from outside) and `query` (an ad-hoc data ask). Same idea, different door.
 | `compliance` | A regulatory or policy obligation to meet |
 | `support` | A user or customer request |
 | `toil` | Recurring manual work worth capturing |
+
+!!! note "Why `defect` and `query`, not `bug` and `analysis`?"
+    Linear label names are unique across the whole workspace, even between groups, so the
+    `type/*` group already owns `bug` and `analysis`. Inbound uses `defect` (a fault reported
+    from outside) and `query` (an ad-hoc data ask). Same idea, different door.
 
 ---
 
@@ -54,8 +54,8 @@ routing decision — one of **five outcomes** ("leave it sitting there" isn't on
 
 | Outcome | What it means |
 |---|---|
-| Accept into a project | Becomes a **[project issue](project-work.md)** — gets a `type/*`, joins a project |
-| Accept as flow | Stays here — one `flow/*` label, no project |
+| Accept into a project | Becomes a **[project issue](project-work.md)**: gets a `type/*`, joins a project |
+| Accept as flow | Stays here: one `flow/*` label, no project |
 | Redirect | Route it to the right team's triage |
 | Merge | Merge into an existing issue |
 | Decline | Close with a reason |
@@ -64,13 +64,13 @@ routing decision — one of **five outcomes** ("leave it sitting there" isn't on
     Ask: **does an open project already own the thing this touches?** A bug in a project's
     scope, a request the project will deliver anyway → accept it there. Self-contained work
     that just arrived — an incident, a one-off query, upkeep — stays **flow**. If the same
-    flow theme keeps recurring, that's a signal to *propose* a project — never silently
+    flow theme keeps recurring, that's a signal to *propose* a project, never to silently
     promote.
 
 ### Each outcome is a native Triage action
 
-The decision uses the buttons **already in Linear's Triage view** — we don't reinvent them, we
-just say which to reach for:
+The decision uses the buttons already in Linear's Triage view. We don't reinvent them, just
+say which to reach for:
 
 | Our outcome | Native Triage action | Then |
 |---|---|---|
@@ -90,35 +90,35 @@ inbox in its sidebar, separate from the backlog. Route inbound work into it:
 - **Customer requests** and the **API / forms** — external reports arrive here too.
 - **Manually** — anyone can move a stray issue into Triage for a decision.
 
-**Triage Intelligence** (Linear's built-in AI) can suggest a label, flag likely **duplicates**, and
-propose the right team or assignee. Treat it as a fast first pass — accept or override its
-suggestion; it speeds the decision, it doesn't make it.
+**Triage Intelligence** (Linear's built-in AI) can suggest a label, flag likely duplicates, and
+propose the right team or assignee. Treat it as a fast first pass: accept or override its
+suggestion. It speeds the decision; it doesn't make it.
 
 ## :material-account-clock-outline: The duty rota
 
-One named person owns the Triage inbox at a time — the **duty rota** — so every item gets a fast
+One named person owns the Triage inbox at a time (the **duty rota**), so every item gets a fast
 decision and nothing sits. Use Linear's **Triage responsibility** to assign the current owner and
-**rotate** it on a schedule, so the front door is always staffed. The duty is to **decide** — accept,
+rotate it on a schedule, so the front door is always staffed. The duty is to **decide** — accept,
 route, merge or decline within the [decision clock](#two-clocks) — not necessarily to do the work.
 
-On duty, the **[`linear-triage`](../skills/index.md)** skill walks the inbox with you — reading the
+On duty, the **[`linear-triage`](../skills/index.md)** skill walks the inbox with you, reading the
 queue and applying each decision (the `flow/*` label, a priority, and the outcome) to standard.
 
 ## :material-label-outline: Accept as flow — and there's no "promotion"
 
 **Accept as flow** keeps the issue inbound: **one `flow/*` label, no project**. From there it lives
 in the team's normal workflow (Backlog → … → Done) and stays visible through `flow/*` filters and
-dashboards — flow work is first-class, not a lesser queue.
+dashboards; flow work is first-class, not a lesser queue.
 
 When a *kind* of flow work keeps recurring — the same support theme, the same toil every cycle —
 that's a signal to **plan** it, not to invent a shortcut. Propose a normal
 [project](../projects.md) (or [initiative](../initiatives.md)) through the front door and let it
 ladder to an outcome. There is **no "promotion"** mechanism that fast-tracks a flow theme into a
-project — the front door is the only door.
+project: the front door is the only door.
 
 ## :material-timer-outline: Two clocks
 
-Inbound work runs on **two clocks** — a **decision** clock (route it) then, for some, a
+Inbound work runs on two clocks: a **decision** clock (route it) then, for some, a
 **resolution** clock (fix it):
 
 | Decision — set by `flow/*` | Decide within |
@@ -138,23 +138,23 @@ Priority set at triage can drive the SLA, and Linear can require it before an it
 ### Wire them up — the two clocks aren't the same mechanism
 
 Linear's **native SLA rules** measure time *to completion*, so they fit the **resolution** clock
-but **not** the decision clock — you can't natively SLA "decide within X". Wire each accordingly:
+but not the decision clock: you can't natively SLA "decide within X". Wire each accordingly:
 
 - **Decision clock — the rota + visibility, not an SLA.** Keep the front door prompt with
-  **Triage Responsibility** (the duty rota — it integrates PagerDuty / Opsgenie / Incident.io) and
-  the **time-in-status** display on the Triage state, so a lingering item is obvious. Linear can
-  also **require a priority** before an issue leaves Triage.
+  **Triage Responsibility** (the duty rota; it integrates PagerDuty / Opsgenie / Incident.io) and
+  the time-in-status display on the Triage state, so a lingering item is obvious. Linear can
+  also require a priority before an issue leaves Triage.
 - **Resolution clock — a native SLA rule.** On **Business/Enterprise**, add an SLA rule
   (*Settings → Issues → SLAs*) filtered by the **`flow/vulnerability`** label (with severity via
-  priority) and **business-day** durations: **Critical 7 days · High 30 · Medium 90**. Rules apply
-  on create/update (not retroactively); **first matching rule wins**, so order most-urgent first;
+  priority) and business-day durations: **Critical 7 days · High 30 · Medium 90**. Rules apply
+  on create/update (not retroactively); first matching rule wins, so order most-urgent first;
   an issue can have an SLA **or** a due date, not both. **Triage Rules** can auto-apply the label
   on arrival, which is what triggers the SLA.
 
 Not on Business/Enterprise (or want it deterministic)? The
 **[`linear-triage`](../skills/index.md)** skill sets the issue's `slaBreachesAt` directly per the
-`flow/*` mapping. Either way, every issue carries native SLA fields —
-**started · medium-risk · high-risk · breaches** — that dashboards and
+`flow/*` mapping. Either way, every issue carries native SLA fields
+(started · medium-risk · high-risk · breaches) that dashboards and
 [`linear-doctor`](../skills/index.md) watch for.
 
 ---
@@ -165,7 +165,7 @@ The description body is the only thing that lives as text; everything else is a
 [native field](index.md#native-fields-not-prose).
 
 1. **Use the [`linear-issue`](../skills/index.md) skill — preferred.** It sets the single
-   `flow/*` label (no project, no `type/*`), writes the body, and sets the native fields for you —
+   `flow/*` label (no project, no `type/*`), writes the body, and sets the native fields for you,
    using the matching template (`template-bug` for `defect`, `template-analysis` for `query`),
    else the base `action` template.
 2. **By hand.** Create the issue in the [team's Linear view](https://linear.app/happydevs/team/GRI/all),

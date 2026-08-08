@@ -10,7 +10,7 @@ description: Draft or refine a Linear project to the Ways of Working standard �
 Draft or refine a Linear project to the Ways of Working standard: what you'll do and how, the
 Key Result(s) it moves and by how much, a single named lead, dates from `Planned` onward.
 
-**Requires:** the **Linear MCP server** connected — to read the workspace, link initiatives, set
+**Requires:** the **Linear MCP server** connected, to read the workspace, link initiatives, set
 fields, and post updates.
 
 > A project can be created directly in Linear (unlike initiatives). This skill coaches it to
@@ -20,7 +20,7 @@ fields, and post updates.
 ## What good looks like
 
 - **Rule 2** — names the Key Result(s) it moves and the **delta** (e.g. "activation 22% → 30%").
-  No KR named, no project — once it's past discovery.
+  No KR named, no project (once it's past discovery).
 - **Rule 4** — one named lead, the deliverer. Not a team, not two people.
 - **Rule 5** — start + target-end dates from `Planned` onward, so it can be sequenced.
 - Serves **one or more** initiatives (many-to-many); names the KR + delta on **each**.
@@ -31,7 +31,7 @@ fields, and post updates.
 ## The phase decides which rules apply
 
 A project can enter the model at any point and move on its own timeline, so the skill's **first**
-job is to locate it on the lifecycle — that's what decides which rules bite, not a fixed
+job is to locate it on the lifecycle; that's what decides which rules bite, not a fixed
 checklist run every time:
 
 - **Discovery** (`Idea` / `Scoping`) — needs only a **single named lead** (rule 4, from day one)
@@ -47,7 +47,7 @@ assuming a create-from-scratch path.
 
 ## Flow
 
-**1. Locate it.** Ask two things — *new or existing?* and *which phase is it in, or entering?* —
+**1. Locate it.** Ask two things (*new or existing?* and *which phase is it in, or entering?*),
 then take one of three routes.
 
 **Route A · a new idea (enters discovery).** Create the project in `Idea` (or `Scoping`) with a
@@ -76,11 +76,11 @@ discovery. Create it and run the **gate checklist** straight away.
 - **Priority & labels** — a priority (Urgent → Low) to sequence it; `spend/*` (capex/opex) at
   planning; `product/*` for the product it serves (carries onto its issues).
 - **Dependencies** — any Blocked by / Blocking relations to other projects, as **native project
-  relations** (never prose) — now that both ends have dates, the timeline can warn on conflicts.
+  relations** (never prose); now that both ends have dates, the timeline can warn on conflicts.
 
 **Final · create or update it in Linear.** Set the **lead**, **status**, **dates**, **priority**,
 **initiative link(s)**, the **`spend/*`** / **`product/*`** labels and any **milestones** (dated
-checkpoints) as the project's native Linear fields — never as text — and connect the
+checkpoints) as the project's native Linear fields, never as text, and connect the
 **`#project-updates`** Slack channel so updates post there. Put only the **description body**
 (what & how · KR(s) + delta · out of scope · context) from [`template.md`](template.md) into the
 description.
@@ -92,5 +92,5 @@ description.
 initiative served.
 
 The **lead, status, dates, priority, initiative link(s), labels and milestones are native Linear
-fields** — set them on the project itself, never in the description text. Keeping them native is
+fields**: set them on the project itself, never in the description text. Keeping them native is
 what lets Linear filter, sort and roll them up, and what lets `linear-doctor` check them.

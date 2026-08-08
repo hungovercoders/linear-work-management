@@ -38,7 +38,7 @@ Slack `#initiative-updates` connected. The description body:
 > Consent from each rescue is part of the bar — scraping without it is a relationship and
 > legal risk, so onboarding includes a consent step.
 
-Rule 1 ✓ (KRs declared, measured, with evidence sources — two honestly marked TBD, which is
+Rule 1 ✓ (KRs declared, measured, with evidence sources — two marked TBD, which is
 a dependency, not a pass). Rule 4 ✓ (one owner). Rule 5 ✓ (target date set).
 
 ---
@@ -71,7 +71,7 @@ Slack `#project-updates` connected. The body:
 > 12 rescues on the ADCH register at last count — the denominator may move; recount at each
 > update.
 
-Rule 2 ✓ (KR + delta named). Dependencies: **Blocked by** the *Consent process* project —
+Rule 2 ✓ (KR + delta named). Dependencies: **Blocked by** the *Consent process* project,
 drawn as a [native relation](projects.md#dependencies-native-never-prose), visible on the
 timeline.
 
@@ -87,7 +87,7 @@ acceptance criteria listing the observable behaviours, `product/dogadopt` inheri
 actual, impact ("listings shrink silently — trust risk"). `Urgent`, picked up next.
 
 **A `type/action`, picked up — with its Plan filled.** At capture the body was the prompt
-(What / Why / When it's done). At pickup, the assignee added the plan — the approach is
+(What / Why / When it's done). At pickup, the assignee added the plan, so the approach is
 reviewable before the code:
 
 > **## What needs doing?**
@@ -113,7 +113,7 @@ reviewable before the code:
 > Service) → confirmation hits a Worker route stamping `last_confirmed` → coverage report
 > reads the stamp. No login needed; link is signed, 14-day expiry.
 
-All three: rule 3 ✓ — in the project, one `type/*`, no `flow/*`.
+All three: rule 3 ✓ (in the project, one `type/*`, no `flow/*`).
 
 ---
 
@@ -124,7 +124,7 @@ An email lands: *"Your site shows a dog we rehomed last week."* Whoever's on
 
 - **Kind**: `flow/defect` — a fault reported from outside any project's scope.
 - **Outcome**: **accept into a project** — it's the refresh pipeline's bug, so it becomes a
-  `type/bug` in the onboarding project (the `flow/*` label comes off — rule 3, never both).
+  `type/bug` in the onboarding project (the `flow/*` label comes off; rule 3, never both).
 - **Priority**: High — a trust issue, not an outage (that would be `flow/incident`, decided
   immediately).
 

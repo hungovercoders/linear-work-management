@@ -3,12 +3,12 @@
 <div class="lwm-lead" markdown>
 For strategic leadership. An **initiative** in [Linear](https://linear.app/happydevs/initiatives)
 is a **defined outcome**: the *why* behind a body of work and *how we'll know it worked*.
-Never a task list, never the *how it's built* (that's the [projects](index.md) beneath it).
+Not a task list, and not the *how it's built* (that's the [projects](index.md) beneath it).
 It sits alongside the projects and issues it drives, in the same tool.
 </div>
 
 **[Every initiative in Linear, on one screen.](https://linear.app/happydevs/initiatives)**
-This is the whole of our strategy in one place — every outcome we're betting on, who owns it,
+This is the whole of our strategy in one place: every outcome we're betting on, who owns it,
 and how it's tracking. Scan it to see where the organisation is pointed, what's active versus
 still proposed, and that your own work ladders up to one of them.
 
@@ -29,13 +29,13 @@ initiative about ends, not means.
     The name should be an **inspiring objective** — "Make onboarding effortless" is a good
     one. On its own, though, that's just a theme: it becomes an initiative only once it
     declares the **Key Results** that make it measurable (next section). Inspiring objective
-    in the name, Key Results underneath — you need both.
+    in the name, Key Results underneath: you need both.
 
 ---
 
 ## Where an initiative comes from
 
-Initiatives rarely spring up fully formed. There are **three ways one starts** — and the
+Initiatives rarely spring up fully formed. There are three ways one starts, and the
 question behind all of them is the same: *what evidence is this outcome built on?*
 
 ```kroki-d2
@@ -48,20 +48,20 @@ question behind all of them is the same: *what evidence is this outcome built on
   big enough to stand on its own. At the [`Planned` gate](projects.md#discovery-phase-is-there-something-here-idea-scoping)
   it seeds a new initiative or links to an existing one. Most initiatives arrive this way.
 - **Aggregation** — several discovery projects turn out to be facets of one larger outcome;
-  their findings **combine** into a single initiative that then coordinates them.
+  their findings combine into a single initiative that then coordinates them.
 
 However it starts, the initiative **declares its Key Results** (below), and the projects that
 fed it either continue as delivery projects beneath it or close once their discovery job is
-done — so the exploratory work always has a home.
+done, so the exploratory work always has a home.
 
-When it comes from project work, the `linear-initiative` skill asks whether it draws on **one
-or more** discovery projects and, if so, grounds the objective and the KR baselines in their
-findings — linking each so the lineage is recorded.
+When it comes from project work, the `linear-initiative` skill asks whether it draws on one
+or more discovery projects and, if so, grounds the objective and the KR baselines in their
+findings, linking each so the lineage is recorded.
 
 !!! tip "New initiative, or extend an existing one?"
     Ask: **would this work move a Key Result an existing initiative already declares?** Yes →
-    link the project there; no new initiative needed. Only when the outcome is genuinely new —
-    no existing KR captures it — does it earn its own. Fewer, sharper initiatives beat a
+    link the project there; no new initiative needed. Only when the outcome is genuinely new
+    (no existing KR captures it) does it earn its own. Fewer, sharper initiatives beat a
     landscape of near-duplicates.
 
 ---
@@ -71,12 +71,12 @@ findings — linking each so the lineage is recorded.
 **[Hard rule 1](hard-rules.md):** every initiative declares its Key Results *before* any
 project sits beneath it. Write them into the initiative's description.
 
-A Key Result comes in one of two kinds — use whichever fits, and don't force a number where
+A Key Result comes in one of two kinds. Use whichever fits, and don't force a number where
 one doesn't belong:
 
 - **Measured** — a metric with a **baseline → target**. Scored on how far it moved. Use it
   for outcomes you can quantify.
-- **Committed** — a **binary deliverable** with a **Definition of Done**. Done or not-done —
+- **Committed** — a binary deliverable with a **Definition of Done**. Done or not-done,
   for work that just needs to happen (compliance, contracted, hard-deadline).
 
 | Measured KR | Baseline | Target | Evidence |
@@ -88,7 +88,7 @@ one doesn't belong:
 |---|---|---|
 | SOC 2 Type II | Report issued with no exceptions | Auditor's signed report |
 
-Those Key Results are exactly what the projects below will **name and move** — that's
+Those Key Results are exactly what the projects below will name and move; that's
 [rule 2](hard-rules.md). The chain is: initiatives *declare* KRs → projects *name which
 one(s) and the delta* → issues *do the work*. Every issue in your cycle should trace back up
 this line.
@@ -109,13 +109,13 @@ not two people sharing it. The owner is accountable for the outcome, not for bui
 
 ## Time-bound it
 
-**[Hard rule 5](hard-rules.md):** an initiative carries a target date from **`Planned`**
-onward — set when it's agreed, alongside the owner and KRs. You need it then, because
-prioritising and sequencing happen *before* any work starts. Reaching **`Active`** doesn't
+**[Hard rule 5](hard-rules.md):** an initiative carries a target date from `Planned`
+onward, set when it's agreed, alongside the owner and KRs. You need it then, because
+prioritising and sequencing happen *before* any work starts. Reaching `Active` doesn't
 add the date; it means work is now underway against it. Undated strategy can't be
 prioritised or sequenced against anything else.
 
-Set the timeframe to the **outcome, not a calendar habit**:
+Set the timeframe to the outcome, not a calendar habit:
 
 - Many initiatives fit a **quarter** — a clean OKR rhythm.
 - Some run a **year or more** — a large programme, a multi-phase bet. That's fine; give it
@@ -125,13 +125,13 @@ Set the timeframe to the **outcome, not a calendar habit**:
 
 ## States and the two gates
 
-Initiative states are a **fixed set** — Linear doesn't let you customise them. Five states,
+Initiative states are a fixed set; Linear doesn't let you customise them. Five states,
 each with a plain definition of done:
 
 | State | Means | Move on when |
 |---|---|---|
 | Proposed | Being considered; not yet agreed | Leadership agrees it's worth doing |
-| Planned | Agreed & prioritised — owner named, KRs written, target date set — not yet started | Work actually begins |
+| Planned | Agreed & prioritised (owner named, KRs written, target date set); not yet started | Work actually begins |
 | Active | Work is underway against the target date; projects are moving its KRs | KRs are achieved, or the window closes |
 | Completed | KRs achieved, or the timeframe closed and scored | — |
 | Canceled | Dropped; reason recorded | — |
@@ -154,7 +154,7 @@ why and mark it **Canceled**.
     Sub-initiatives are only available on Linear's **Enterprise** plan. If you're not on it,
     keep the model flat: **initiative → project**. Nothing below is required.
 
-When a programme is large or long-running, you can **nest** initiatives — a parent with
+When a programme is large or long-running, you can nest initiatives — a parent with
 sub-initiatives beneath it, up to five levels deep. A parent automatically rolls up all the
 projects and progress of its children, so you get one view of the whole programme while each
 sub-initiative stays independently owned and scored.
@@ -172,13 +172,13 @@ own slice of the KR table.
 
 ## Keep everyone posted
 
-While an initiative is **Active**, its owner ensures a **monthly update** reaches
-`#initiative-updates` — KR movement, health, and any risks. The full cadence and formats live in
-[Communications](communications.md); health is a claim with evidence, not a colour someone
-picked.
+While an initiative is **Active**, its owner sees that a **monthly update** reaches
+`#initiative-updates`: KR movement, health, and any risks. The full cadence and formats live in
+[Communications](communications.md); health is
+[a claim with evidence](communications.md#health-is-a-claim-with-evidence).
 
 !!! warning "An initiative is only as current as its projects"
-    The monthly update **rolls up from the weekly project updates** beneath it — the KR
+    The monthly update **rolls up from the weekly project updates** beneath it, so the KR
     movement is only as trustworthy as those. If a feeding project hasn't reported, or its
     update is stale, say so and don't claim a health greener than the evidence. The
     `linear-initiative-update` skill flags missing or stale project updates for you.
@@ -195,8 +195,8 @@ Post it either way:
 ## Create one
 
 Both ways hold the same standard. Set the **owner**, **status** and **target date** as the
-initiative's own **Linear fields** — not in the description — and connect the
-**`#initiative-updates` Slack channel** so updates post there. The **description** carries only the
+initiative's own Linear fields, not in the description, and connect the
+**`#initiative-updates`** Slack channel so updates post there. The description carries only the
 *why*, the **Key Results**, *out of scope* and *context*; that part is the template.
 
 1. **Use the `linear-initiative` skill — preferred.** It coaches you through the outcome, the

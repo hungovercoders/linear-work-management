@@ -9,10 +9,10 @@ description: Draft the weekly team digest for a Linear team — current-cycle pr
 
 Draft the **weekly team digest**: what the cycle achieved, what's in flight, and what came
 through the front door. The team-level rhythm in the
-[cadence](https://linear-work-management.pages.dev/communications/) — project and initiative
-updates have their own skills; this one is the team's.
+[cadence](https://linear-work-management.pages.dev/communications/); project and initiative
+updates have their own skills — this one is the team's.
 
-**Requires:** the **Linear MCP server** connected — to read the team's cycle and Triage state.
+**Requires:** the **Linear MCP server** connected, to read the team's cycle and Triage state.
 
 ## What to gather
 
@@ -21,7 +21,7 @@ updates have their own skills; this one is the team's.
   since last digest).
 - **Triage activity**: issues that **arrived** in Triage this week, how they were **routed**
   (accepted into a project · accepted as flow · redirected · merged · declined), and what's
-  **still waiting** — with the oldest item's age (the decision clock is watching).
+  **still waiting**, with the oldest item's age (the decision clock is watching).
 - Anything the team should flag upward: a slipped milestone, a blocked dependency.
 
 ## Flow

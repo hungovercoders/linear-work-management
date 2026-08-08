@@ -1,21 +1,21 @@
 # :material-bullhorn: Communications
 
-The **single home for update cadence**. Every rhythm in the model is stated here, once — the
+The **single home for update cadence**. Every rhythm in the model is stated here, once; the
 other pages point at this one. The aim: the right audience hears about KR movement, project
-health and launches **without asking**, and nobody drowns in noise.
+health and launches without asking, and nobody drowns in noise.
 
 ---
 
 ## The cadence
 
-| What | Where | When | Who ensures it |
+| What | Where | When | Whose job |
 |---|---|---|---|
 | **Initiative update** — KR movement, health, risks | `#initiative-updates` | **Monthly**, while Active | The initiative **owner** |
 | **Project update** — what changed, health, risks | `#project-updates` | **Weekly**, while In Progress / Launching | The project **lead** |
 | **Team digest** — cycle summary + triage digest | The team's channel | **Weekly** | The team |
 | **Launches / incidents** | `#announcements` | On event | Whoever ships / responds |
 
-The **lead is responsible** for their update happening — the skills draft it, the channel
+The **lead is responsible** for their update happening: the skills draft it, the channel
 carries it, but the obligation is a person's, by name.
 
 ### Making the cadence stick
@@ -40,7 +40,7 @@ The cadence doesn't live in anyone's memory:
 
 ## Health is a claim with evidence
 
-Every update carries a health call — **on track · at risk · off track** — and the call is a
+Every update carries a health call (**on track · at risk · off track**), and the call is a
 **claim you can defend**, not a colour someone picked:
 
 - A **project's** evidence is its issue and cycle movement, and the KR delta it's chasing.
@@ -48,10 +48,10 @@ Every update carries a health call — **on track · at risk · off track** — 
 
 !!! warning "The roll-up dependency"
     Initiative updates **depend on** project updates. If a feeding project hasn't reported, or
-    its update is stale, the initiative update says so — and its health is **tempered**
+    its update is stale, the initiative update says so, and its health is tempered
     accordingly. A green initiative sitting on silent projects is a lie.
 
-The standard formats live as templates beside the update skills —
+The standard formats live as templates beside the update skills:
 [`linear-initiative-update`](skills/index.md) (KR movement table + risks + project-reporting
 note) and [`linear-project-update`](skills/index.md) (what changed + KR progress + risks). Post
 via Linear's native status-update UI or let the skill draft and post for you; both flow to the
@@ -69,7 +69,7 @@ delivered to your Inbox (and audio playback, if you'd rather listen).
 Use them together: leads still post to the cadence (Pulse has nothing to show without those
 updates); everyone else catches up through [Pulse](https://linear.app/happydevs/pulse) instead
 of scrolling channels. Pulse is available on **all Linear plans**; a workspace admin enables it
-in Settings and sets the default digest cadence — subscribe to any project to pull it into
+in Settings and sets the default digest cadence; subscribe to any project to pull it into
 your feed.
 
 ---
@@ -78,7 +78,7 @@ your feed.
 
 - **One channel per audience, not per object** — a single `#project-updates` for all projects;
   people who need one project's detail follow it in Linear (or via Pulse).
-- Channel messages come **from the connected updates**, not ad-hoc posting — the update *is*
+- Channel messages come **from the connected updates**, not ad-hoc posting: the update *is*
   the message.
 - Escalations and launches go to `#announcements` **on event** — a channel that's quiet unless
   it matters stays read.

@@ -2,7 +2,7 @@
 
 The AI-ready skills that create and maintain Linear work to the
 [Ways of Working](https://linear-work-management.pages.dev/) operating model. They ship as a
-Claude Code plugin and are the executable half of the guide — every skill has a human-readable
+Claude Code plugin and are the executable half of the guide; every skill has a human-readable
 companion page in the docs.
 
 Each skill lives in `skills/<name>/` and follows the conventions below. New skills conform to
@@ -18,13 +18,13 @@ skills/<name>/
 ```
 
 Most skills ship a single `template.md`. Where the artefact's shape genuinely differs by a
-native field, a skill ships **one template per value** instead — `linear-issue` has one per
+native field, a skill ships **one template per value** instead: `linear-issue` has one per
 `type/*` (`template-action.md` is the default/base, then `feature` · `bug` · `analysis` · `spike`).
-Skills that produce a **decision or a report** rather than a description carry **no template** at
-all — `linear-doctor` (a drift report) and `linear-triage` (a routing decision) are `SKILL.md`-only.
+Skills that produce a **decision or a report** rather than a description carry no template at
+all: `linear-doctor` (a drift report) and `linear-triage` (a routing decision) are `SKILL.md`-only.
 
 The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` by
-`scripts/gen_skill_index.py` (`task skills:index`) — never hand-edit it.
+`scripts/gen_skill_index.py` (`task skills:index`); never hand-edit it.
 
 ## The conventions
 

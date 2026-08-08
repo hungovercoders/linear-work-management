@@ -2,14 +2,14 @@
 
 <div class="lwm-lead" markdown>
 For delivery teams. A **project issue** lives **inside a [project](../projects.md)** and moves
-its Key Result — planned work on the strategic path. This page covers what's specific to project
-issues; the [shared issue model](index.md) — the lifecycle, the body-as-prompt, native fields —
+its Key Result: planned work on the strategic path. This page covers what's specific to project
+issues; the [shared issue model](index.md) (the lifecycle, the body-as-prompt, native fields)
 applies underneath.
 </div>
 
 A project issue sits **in a project** ([rule 3](../hard-rules.md) classification), inherits that
 project's `product/*`, carries one `type/*`, and ladders to the project's KR. Like every issue,
-it's refined **Backlog → Todo** before anyone starts — that's the [readiness
+it's refined **Backlog → Todo** before anyone starts; that's the [readiness
 gate](index.md#backlog-vs-todo-the-readiness-gate).
 
 ---
@@ -17,7 +17,7 @@ gate](index.md#backlog-vs-todo-the-readiness-gate).
 ## :material-tag-outline: Labels — `type/*` and `product/*`
 
 One **`type/*`** label says what kind of work it is; **`product/*`** carries down from the
-project unchanged. **`action` is the default** — reach for `feature`, `bug`, `analysis` or
+project unchanged. **`action` is the default**: reach for `feature`, `bug`, `analysis` or
 `spike` only when the work is specifically one of those.
 
 | `type/*` | For | The template emphasises |
@@ -30,17 +30,17 @@ project unchanged. **`action` is the default** — reach for `feature`, `bug`, `
 
 `product/*` (`hungovercoders` · `dogadopt` · `woolwitch` · …) is **inherited from the project** —
 same value, so work stays attributable to the product it serves without re-deciding it per
-issue. `flow/*` never appears on a project issue — that's the [triage](triage.md) group.
+issue. `flow/*` never appears on a project issue; that's the [triage](triage.md) group.
 
 !!! tip "Feature or action?"
     One question: **does someone get a new capability when this ships?** Yes → `feature`
-    (acceptance criteria earn their keep). No — it's upkeep, a change, a chore, a reminder —
+    (acceptance criteria earn their keep). No (it's upkeep, a change, a chore, a reminder)
     → `action`. When in doubt, `action`: it's the default for a reason, and mislabelling
     costs nothing but a relabel.
 
 ## :material-sort-variant: Priority
 
-Every issue carries a **priority** (Urgent → Low) that orders it within the project — what gets
+Every issue carries a **priority** (Urgent → Low) that orders it within the project: what gets
 picked up next when someone frees up. It's a native field, not a line in the description.
 
 ---
@@ -48,8 +48,8 @@ picked up next when someone frees up. It's a native field, not a line in the des
 ## :material-file-document-multiple-outline: The templates — one per `type/*`
 
 The [`linear-issue`](../skills/index.md) skill writes the description body from the template that
-matches the type. Every template keeps the same non-negotiables — a native-fields header, a
-**why**, and a **`## Plan`** section left empty at creation and filled at pickup — and varies the
+matches the type. Every template keeps the same non-negotiables (a native-fields header, a
+why, and a `## Plan` section left empty at creation and filled at pickup) and varies the
 middle:
 
 | `type/*` | Body |
@@ -68,8 +68,8 @@ The description body is the only thing that lives as text; everything else is a
 [native field](index.md#native-fields-not-prose).
 
 1. **Use the [`linear-issue`](../skills/index.md) skill — preferred.** It picks the `type/*`,
-   writes the body from the template for that type, and sets the native fields — assignee,
-   priority, status, project, labels — for you.
+   writes the body from the template for that type, and sets the native fields (assignee,
+   priority, status, project, labels) for you.
 2. **By hand.** Create the issue in the [project's Linear view](https://linear.app/happydevs/projects/all),
    set the project, `type/*` and inherited `product/*`, then paste the **template for the `type/*`**
    from the

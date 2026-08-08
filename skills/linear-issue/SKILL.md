@@ -12,10 +12,10 @@ problem and what "done" means — classified correctly, with the native fields s
 Backlog. This is **capture, not planning**: the *how* (the agent plan) is worked out later, when
 the issue is picked up.
 
-**Requires:** the **Linear MCP server** connected — to read the project, set the native fields
+**Requires:** the **Linear MCP server** connected, to read the project, set the native fields
 and create the issue.
 
-> Issues have **no status-update object** — progress shows through **state and cycle**, so there's
+> Issues have **no status-update object**: progress shows through state and cycle, so there's
 > no update skill. Create and edit issues with `save_issue`.
 
 ## What good looks like
@@ -33,17 +33,17 @@ and create the issue.
 
 ## The kind decides the shape
 
-The skill's **first** job is to classify — that fork decides everything after it:
+The skill's **first** job is to classify; that fork decides everything after it:
 
 - **Project issue** — sits **in a project**, ladders to its KR. Gets a **`type/*`**, inherits the
   project's **`product/*`**, no `flow/*`.
 - **Inbound issue** — arrived through Triage; carries **one `flow/*`** label and **no project**,
   no `type/*`. The front door, the five outcomes and the SLA clocks live in **Flow & Triage**
-  (GRI-74) — this skill just sets it up correctly.
+  (GRI-74); this skill just sets it up correctly.
 
 ## Flow
 
-**1. Classify it (rule 3).** Ask *is this planned project work, or did it arrive?* — a project
+**1. Classify it (rule 3).** Ask *is this planned project work, or did it arrive?*: a project
 issue or an inbound issue. One or the other, never both.
 
 **2a. Project issue.**
@@ -67,7 +67,7 @@ issue or an inbound issue. One or the other, never both.
 
 - Pick the single **`flow/*`** label (`incident` · `vulnerability` · `defect` · `query` ·
   `compliance` · `support` · `toil`). **No project, no `type/*`.** (`flow/defect` is a fault
-  reported from outside; `flow/query` an ad-hoc data question or report from outside a project —
+  reported from outside; `flow/query` an ad-hoc data question or report from outside a project:
   the inbound counterparts of `type/bug` and `type/analysis`, named differently because Linear
   label names are unique across groups.)
 - Write the body from the template that matches the **kind** where one exists —
@@ -84,7 +84,7 @@ classification, the **`type/*`** (project issues) and the inherited **`product/*
 **That's capture — stop here.** The issue is down and classified. Two things happen *later*, not
 in this skill:
 
-- **Refine to Todo.** Sharpen the problem, define done, size it, clear blockers — the
+- **Refine to Todo.** Sharpen the problem, define done, size it, clear blockers: the
   **Backlog → Todo** readiness gate. **Nothing starts from Backlog.**
 - **Write the plan.** When the issue is **picked up**, whoever works it (person or agent) works
   out the *how* and stores it in the description's **`## Plan`** section — left empty at creation,
@@ -108,6 +108,6 @@ the same non-negotiables: the native-fields header, a **why**, and the **`## Pla
 **empty at creation** and filled at pickup. Resources go in native **Links**, never a body section.
 
 The **assignee, priority, status, project / `flow/*` classification and `type/*` / `product/*`
-labels are native Linear fields** — set them on the issue, never in the description text. Keeping
+labels are native Linear fields**: set them on the issue, never in the description text. Keeping
 them native is what lets Linear filter, sort and cycle them, and what lets `linear-doctor` check
 classification.
