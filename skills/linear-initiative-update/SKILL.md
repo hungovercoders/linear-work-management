@@ -18,16 +18,23 @@ colour someone picked — the Key Result movement is the evidence.
 - The initiative and its Key Results (their targets).
 - The current value of each KR (measured) or done / not-done (committed), and the trend since
   the last update.
+- The **projects under the initiative** and each one's **latest status update** — the KR
+  movement rolls up from these.
 - What materially changed; any risks; anything you need from leadership.
 
 ## Flow
 
 1. Identify the initiative and read its Key Results and last update (`list`/`get`).
-2. Fill the update body from [`template.md`](template.md) — the KR movement table, what
-   changed, and risks & asks.
-3. Decide **health** — on track / at risk / off track — justified by the KR movement, not a
-   gut feel.
-4. Post with `save_status_update` (`type: initiative`, `initiative: <name or id>`, `health`,
+2. **Check the feeding projects.** List the initiative's projects and each one's latest
+   status update (`get_status_updates`, `type: project`). Note any project with **no update**
+   or a **stale** one (older than its weekly cadence).
+3. Fill the update body from [`template.md`](template.md) — the KR movement table, what
+   changed, risks & asks, and the **project-reporting** note (which projects are missing or
+   stale, or that all reported).
+4. Decide **health** — on track / at risk / off track — justified by the KR movement. **An
+   initiative can't be greener than the projects moving its KRs**: if feeding projects are
+   silent or stale, temper the health and say why.
+5. Post with `save_status_update` (`type: initiative`, `initiative: <name or id>`, `health`,
    `body`).
 
 ## The update template

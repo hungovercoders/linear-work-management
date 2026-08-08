@@ -7,7 +7,10 @@ Never a task list, never the *how it's built* (that's the [projects](index.md) b
 It sits alongside the projects and issues it drives, in the same tool.
 </div>
 
-Here are [all the current initiatives in Linear](https://linear.app/happydevs/initiatives).
+**[Every initiative in Linear, on one screen.](https://linear.app/happydevs/initiatives)**
+This is the whole of our strategy in one place — every outcome we're betting on, who owns it,
+and how it's tracking. Scan it to see where the organisation is pointed, what's active versus
+still proposed, and that your own work ladders up to one of them.
 
 ---
 
@@ -136,7 +139,15 @@ own slice of the KR table.
 
 While an initiative is **Active**, its owner ensures a **monthly update** reaches
 `#initiatives` — KR movement, health, and any risks. Health is a claim with evidence, not a
-colour someone picked. Post it either way:
+colour someone picked.
+
+!!! warning "An initiative is only as current as its projects"
+    The monthly update **rolls up from the weekly project updates** beneath it — the KR
+    movement is only as trustworthy as those. If a feeding project hasn't reported, or its
+    update is stale, say so and don't claim a health greener than the evidence. The
+    `linear-initiative-update` skill flags missing or stale project updates for you.
+
+Post it either way:
 
 - **Linear's initiative update UI** — write the status update on the initiative and set its
   health; it flows to the connected `#initiatives` channel.

@@ -9,5 +9,11 @@
 ## What changed
 <the substantive progress since the last update>
 
+## Project reporting
+<!-- The KR movement rolls up from the initiative's projects' weekly updates. List any project
+     with no update or a stale one, or state that all reported this cycle. An initiative can't
+     be greener than its projects. -->
+<missing / stale projects, or "all projects reported this cycle">
+
 ## Risks & asks
 <what could derail it; anything you need from leadership>
