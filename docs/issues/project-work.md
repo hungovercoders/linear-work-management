@@ -32,22 +32,6 @@ project unchanged. **`action` is the default** — reach for `feature`, `bug`, `
 same value, so work stays attributable to the product it serves without re-deciding it per
 issue. `flow/*` never appears on a project issue — that's the [triage](triage.md) group.
 
-!!! note "`spike` is the free-wheeling one"
-    A `spike` is where thinking happens **before** the work is understood — gather context, keep
-    running notes, sketch a backlog. It's deliberately loose: fill the template sections **as far
-    as they help and no further**; the body is a scratchpad. What keeps it honest isn't structure
-    but the **time box** — a spike is bounded even when its content isn't. Follow-up work it turns
-    up becomes **new issues in the project**, linked back to the spike. (A whole body of work with
-    its own backlog outgrows a spike — that's a [discovery
-    project](../projects.md#discovery-phase-is-there-something-here-idea-scoping).)
-
-!!! note "`analysis` vs `spike`"
-    Both produce understanding, but the **deliverable** differs: a `spike` reduces uncertainty to
-    decide *how to build*; `analysis` answers a data question or produces a report as the outcome
-    itself. Analysis happens in **discovery or delivery** — and, like `bug`, the same work can
-    arrive **inbound** (as `flow/analysis`) when someone asks for a number or a report outside any
-    project. See [Triage work](triage.md).
-
 ## :material-sort-variant: Priority
 
 Every issue carries a **priority** (Urgent → Low) that orders it within the project — what gets
