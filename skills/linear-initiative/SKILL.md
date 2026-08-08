@@ -10,7 +10,7 @@ description: Draft or refine a Linear initiative to the Ways of Working standard
 Draft or refine a Linear initiative to the Ways of Working standard: a defined outcome with
 declared Key Results, a single named owner, and a target date from `Planned` onward.
 
-**Requires:** the **Linear MCP server** connected — to read the workspace, link projects, and
+**Requires:** the **Linear MCP server** connected, to read the workspace, link projects, and
 post updates.
 
 > Linear's API can't create initiatives directly, so this skill coaches the initiative and
@@ -23,7 +23,7 @@ post updates.
 - **Rule 1** — declares its Key Results before any project. A result, not a theme.
 - **Rule 4** — one named owner with strategic seniority. Not a team, not two people.
 - **Rule 5** — a target date, set now (from `Planned` onward), so it can be prioritised.
-- Carries the *why* and *how it's judged*, never the *how it's built* — that's the projects'.
+- Carries the *why* and *how it's judged*, never the *how it's built* (that's the projects').
 - If it came from **project work** — one project graduating, or several aggregating — it's
   grounded in those findings and linked back to each.
 
@@ -33,8 +33,8 @@ Allow both, and don't force a number where one doesn't belong:
 
 - **Measured** (aspirational) — a metric with a **baseline → target** (e.g. "activation
   22% → 30%"). Scored on how far it moved (~0.7 = success). Use for outcomes you can quantify.
-- **Committed** — a **binary deliverable** with a **Definition of Done** (e.g. "SOC 2 Type II
-  report issued"). Done or not-done. Use for work that *just needs to happen* — compliance,
+- **Committed** — a binary deliverable with a **Definition of Done** (e.g. "SOC 2 Type II
+  report issued"). Done or not-done. Use for work that *just needs to happen*: compliance,
   contracted deliverables, hard-deadline ships.
 
 Challenge each one:
@@ -47,8 +47,8 @@ Challenge each one:
 
 ## Flow
 
-1. **Origin** — ask: *does this outcome come from project work — one discovery project, or
-   several?* Three cases:
+1. **Origin** — ask: *does this outcome come from project work (one discovery project, or
+   several)?* Three cases:
    - **Graduation (one project)** — read it (`get_project` + its issues) and ground the
      objective, the *why* and the KR baselines in its findings.
    - **Aggregation (several projects)** — read each; the initiative is the larger outcome their
@@ -69,7 +69,7 @@ Challenge each one:
 6. **State** — `Proposed` if not yet agreed; `Planned` once leadership agrees and the owner,
    KRs and date are all set. (`Active` comes later, when work starts against the date.)
 7. **Create it in Linear.** Set the **name** (the outcome), **owner/lead**, **status** and
-   **target date** as the initiative's native Linear fields — never as text — and connect the
+   **target date** as the initiative's native Linear fields, never as text, and connect the
    **`#initiative-updates` Slack channel** so updates post there. Put only the **description body**
    (why · Key Results · out of scope · context) from [`template.md`](template.md) into the description.
    Hand the filled body to the user to create the initiative.
@@ -77,10 +77,10 @@ Challenge each one:
 ## The initiative template
 
 [`template.md`](template.md) beside this skill is the single source of truth for the
-**description body** — the *why*, the Key Result table(s), *out of scope* and *context* (free-text
+**description body**: the *why*, the Key Result table(s), *out of scope* and *context* (free-text
 background that can grow as needed). Fill each placeholder using the flow above, omit whichever
 KR table is unused, and keep **3–5 KRs total**.
 
-The **name, owner, status and target date are native Linear fields** — set them on the
+The **name, owner, status and target date are native Linear fields**: set them on the
 initiative itself, never in the description text. Keeping them native is what lets Linear
 filter, sort and roll them up, and keeps the workspace auditable.

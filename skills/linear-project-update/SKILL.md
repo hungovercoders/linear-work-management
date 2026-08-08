@@ -8,9 +8,9 @@ description: Post the weekly status update for an active Linear project to the s
 # linear-project-update
 
 Post the weekly update for a project that's **In Progress** or **Launching**. Health is a claim
-with evidence, not a colour someone picked — the issue and cycle progress is the evidence.
+with evidence; the issue and cycle progress is the evidence.
 
-**Requires:** the **Linear MCP server** connected — to read the project and post the update.
+**Requires:** the **Linear MCP server** connected, to read the project and post the update.
 
 > The update posts to the shared **`#project-updates`** Slack channel automatically, as long as
 > that channel is connected to the project (done when the project is created).
@@ -29,12 +29,12 @@ with evidence, not a colour someone picked — the issue and cycle progress is t
 2. **Check the movement underneath — since the last update.** Take the last update's
    timestamp as the window: list the project's issues updated since it (`list_issues` with
    `updatedAt`) plus the cycle (`list_cycles`). "What changed" is exactly that delta —
-   pre-gathered, not remembered. Note **stalled** — nothing moved in the window, or the
-   cycle slipped.
+   pre-gathered, not remembered. Note **stalled** (nothing moved in the window, or the
+   cycle slipped).
 3. Fill the update body from [`template.md`](template.md) — what changed, KR/delta progress,
    risks, and the **progress-reporting** note (stalled work or a slipped cycle, or that it's on
    track).
-4. Decide **health** — on track / at risk / off track — justified by that movement. **A project
+4. Decide **health** (on track / at risk / off track), justified by that movement. **A project
    can't be greener than the issues moving its KR**: if work has stalled or the cycle slipped,
    temper the health and say why.
 5. Post with `save_status_update` (`type: project`, `project: <name or id>`, `health`, `body`).
@@ -42,5 +42,5 @@ with evidence, not a colour someone picked — the issue and cycle progress is t
 ## The update template
 
 [`template.md`](template.md) beside this skill is the single source of truth for the update
-**body**. **Health** is a native field on the status update — set it there, backed by the
+**body**. **Health** is a native field on the status update: set it there, backed by the
 movement shown in the body, never as a line of prose instead.

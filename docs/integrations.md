@@ -1,7 +1,7 @@
 # :material-connection: Integrations
 
-Linear stays honest only if it's wired to where work and conversation actually happen. Two
-integrations carry the model: **GitHub** keeps issue state in sync with code, **Slack**
+Linear only reflects reality if it's wired to where work and conversation actually happen.
+Two integrations carry the model: **GitHub** keeps issue state in sync with code, **Slack**
 carries the [cadence](communications.md). Both are configured once in
 [Linear settings → Integrations](https://linear.app/happydevs/settings/integrations).
 
@@ -42,19 +42,19 @@ Slack carries the [communication cadence](communications.md); the wiring is per-
 
 **Noise conventions** — the integration is configured to carry *updates*, not everything:
 
-- Channel messages come from **status updates**, not per-issue activity — nobody needs a
-  Slack ping for every state change. Per-issue notifications stay **personal** (your Linear
+- Channel messages come from **status updates**, not per-issue activity: nobody needs a
+  Slack ping for every state change. Per-issue notifications stay personal (your Linear
   Inbox, or Slack DMs if you opt in).
 - One channel per **audience**, not per object — projects share `#project-updates`; follow an
   individual project in Linear (or [Pulse](communications.md)) for more.
-- If a thread starts in Slack, the decision lands back on the issue — Slack is where
+- If a thread starts in Slack, the decision lands back on the issue: Slack is where
   conversation happens, Linear is where it's remembered.
 
 !!! warning "Setup still needed"
     The Slack integration isn't connected yet. Enabling it is a one-time OAuth in
     [settings → Integrations](https://linear.app/happydevs/settings/integrations), then
     connect the two shared channels to their initiatives/projects as they're created.
-    **Linear Asks** (create issues from Slack requests) is Business/Enterprise — not
+    **Linear Asks** (create issues from Slack requests) is Business/Enterprise, not
     available on the current plan; requests arrive via [Triage](issues/triage.md) instead.
 
 ---

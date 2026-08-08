@@ -1,11 +1,11 @@
 # :material-clipboard-check: Setup checklist
 
 Everything Linear needs configured to run the
-[Ways of Working](index.md) — one place to self-check readiness. The checklist **summarises**;
-each item links to the page that owns the why. This is the **one-time setup**; ongoing drift
+[Ways of Working](index.md): one place to self-check readiness. The checklist summarises;
+each item links to the page that owns the why. This is the one-time setup; ongoing drift
 belongs to the [doctor and the dashboards](dashboards.md).
 
-Current `happydevs` state is reflected below — ticked items are done.
+Current `happydevs` state is reflected below; ticked items are done.
 
 ---
 
@@ -15,7 +15,7 @@ Current `happydevs` state is reflected below — ticked items are done.
 
 - [x] **Project statuses**: Idea → Scoping → Planned → In Progress → Launching →
       Completed / Canceled ([settings](https://linear.app/happydevs/settings/projects))
-- [ ] **Paused** project status added (API can't create `paused`-type — one click in settings)
+- [ ] **Paused** project status added (API can't create `paused`-type; one click in settings)
 - [x] **Initiative statuses**: Proposed / Planned / Active / Completed / Canceled —
       Linear-native, nothing to configure
 
@@ -81,7 +81,7 @@ Current `happydevs` state is reflected below — ticked items are done.
 
 ## Verify it
 
-- Run **`task doctor`** (headless, whole workspace) — a clean bill of health means the
+- Run **`task doctor`** (headless, whole workspace): a clean bill of health means the
   invariants hold; findings tell you exactly which box above is lying.
 - Glance at the [drift views](dashboards.md) — empty is the goal.
 

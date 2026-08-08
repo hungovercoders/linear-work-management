@@ -20,7 +20,7 @@
 | <initiative> | <KR it moves> | <from → to> |
 
 ## Out of scope
-<what this project is deliberately not doing, so it doesn't sprawl>
+<what this project is deliberately not doing, so scope stays bounded>
 
 ## Context
 <background, constraints, decisions, caveats — any notes needed that don't fit above>

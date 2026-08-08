@@ -8,15 +8,15 @@ description: Audit a scoped slice of the Linear workspace for drift from the Way
 # linear-doctor
 
 Report drift from the [Ways of Working](https://linear-work-management.pages.dev/) model.
-The doctor **reports; it does not fix** — it hands you a list, you decide.
+The doctor **reports; it does not fix**. It hands you a list, you decide.
 
-**Requires:** the **Linear MCP server** connected — to read the slice being audited.
+**Requires:** the **Linear MCP server** connected, to read the slice being audited.
 
 > **Two doctors, one rulebook.** This skill is the **interactive, scoped** audit — a team, a
 > project, a filter. The **whole-workspace sweep** is the headless
 > `task doctor` (`scripts/linear_doctor.py` against the Linear API): it paginates in code,
 > doesn't blow up a model context, and runs in CI. Don't point this skill at a large
-> workspace — that's what the script is for.
+> workspace; that's what the script is for.
 
 ## What it checks
 
@@ -53,10 +53,10 @@ Plus the operational layer:
 ## How to run it
 
 1. **Scope first.** Ask (or infer) the slice: a team, a project, or a filter. Never "everything".
-2. **Read minimally.** `list_projects` / `list_issues` with only the fields each check needs —
-   the MCP has a query-complexity cap (~10k): over-fetching nested fields (lead + members +
-   teams + labels + initiatives together) trips it. **Paginate** explicitly; filter issues to
-   **non-terminal** states.
+2. **Read minimally.** `list_projects` / `list_issues` with only the fields each check needs:
+   the MCP has a query-complexity cap (~10k), and over-fetching nested fields (lead + members +
+   teams + labels + initiatives together) trips it. Paginate explicitly; filter issues to
+   non-terminal states.
 3. Apply the checks above to the slice.
 4. Report each finding with a direct link to the offending entity, grouped by rule, and state
    what this run could *not* check. Do **not** mutate anything.
