@@ -46,7 +46,7 @@ def main() -> int:
     # Two passes — the nested initiative→project fan-out trips Linear's complexity cap.
     data = query(
         """query { initiatives(first: 50) {
-             nodes { id name status targetDate description url
+             nodes { id name status targetDate description content url
                      owner { displayName }
                      updates: initiativeUpdates(first: 1) { nodes { health createdAt } } }
            } }"""
@@ -79,7 +79,7 @@ def main() -> int:
         print(f"**{ini['status']}** · {latest_health(ini['updates']['nodes'])} · "
               f"owner {ini['owner']['displayName'] if ini['owner'] else '—'} · "
               f"target {ini['targetDate'] or '—'}\n")
-        desc = ini["description"] or ""
+        desc = (ini["content"] or ini["description"] or "")
         in_kr = False
         for line in desc.splitlines():  # lift the KR tables straight from the description
             if line.lower().startswith("## key results"):

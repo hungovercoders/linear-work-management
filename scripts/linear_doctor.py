@@ -111,7 +111,7 @@ def main() -> int:
     # ---- Initiatives (rules 1, 4, 5 + stale updates) ----------------------------------
     initiatives = paginate(
         """query($after: String) { initiatives(first: 50, after: $after) {
-             nodes { name url status targetDate description
+             nodes { name url status targetDate description content
                      owner { displayName }
                      lastUpdate: initiativeUpdates(first: 1) { nodes { createdAt } } }
              pageInfo { hasNextPage endCursor } } }""",
@@ -119,7 +119,9 @@ def main() -> int:
     )
     for ini in initiatives:
         label = f"{ini['name']} <{ini['url']}>"
-        if not has_key_results(ini["description"]):
+        # Linear splits the short `description` from the markdown `content` body.
+        ini_body = ini["content"] or ini["description"]
+        if not has_key_results(ini_body):
             flag("rule 1 — initiatives declare Key Results", label)
         if not ini["owner"]:
             flag("rule 4 — single named owner", f"initiative {label}")
@@ -129,13 +131,13 @@ def main() -> int:
             updates = ini["lastUpdate"]["nodes"]
             if days_ago(updates[0]["createdAt"] if updates else None) > INITIATIVE_STALE_DAYS:
                 flag("stale updates", f"initiative (monthly while Active): {label}")
-        if ini["description"] and NATIVE_FIELD_PROSE.search(ini["description"]):
+        if ini_body and NATIVE_FIELD_PROSE.search(ini_body):
             flag("native fields in prose", f"initiative {label}")
 
     # ---- Projects (rules 2, 4, 5 + stale updates) -------------------------------------
     projects = paginate(
         """query($after: String) { projects(first: 50, after: $after) {
-             nodes { name url startDate targetDate description
+             nodes { name url startDate targetDate description content
                      status { name type } lead { displayName }
                      lastUpdate: projectUpdates(first: 1) { nodes { createdAt } } }
              pageInfo { hasNextPage endCursor } } }""",
@@ -144,8 +146,9 @@ def main() -> int:
     for p in projects:
         label = f"{p['name']} <{p['url']}>"
         stype = p["status"]["type"]
+        p_body = p["content"] or p["description"]
         if stype in PROJECT_DELIVERY_STATUSES:
-            if not has_kr_delta(p["description"]):
+            if not has_kr_delta(p_body):
                 flag("rule 2 — projects name a KR + delta", label)
             if not p["startDate"] or not p["targetDate"]:
                 flag("rule 5 — time-bounds", f"{p['status']['name']} project missing dates: {label}")
@@ -155,7 +158,7 @@ def main() -> int:
             updates = p["lastUpdate"]["nodes"]
             if days_ago(updates[0]["createdAt"] if updates else None) > PROJECT_STALE_DAYS:
                 flag("stale updates", f"project (weekly while In Progress/Launching): {label}")
-        if p["description"] and NATIVE_FIELD_PROSE.search(p["description"]):
+        if p_body and NATIVE_FIELD_PROSE.search(p_body):
             flag("native fields in prose", f"project {label}")
 
     # ---- Issues (rule 3) --------------------------------------------------------------
