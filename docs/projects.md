@@ -160,9 +160,9 @@ Post it either way:
 
 What you set depends on the **phase** (above). Either way, one rule holds: everything Linear
 models as a field — lead, status, dates, priority, initiative link(s), `spend/*` / `product/*`
-labels, connected `#project-updates` channel — is a **native field**, never prose. The
-**description** carries only the *what & how*, any **KR(s) + delta**, milestones and *out of
-scope* — that part is the template.
+labels, milestones, connected `#project-updates` channel — is a **native field**, never prose. The
+**description** carries only the *what & how*, any **KR(s) + delta**, *out of scope* and
+*context* — that part is the template.
 
 - **An idea** (`Idea` / `Scoping`) needs only a **lead**, a **status**, and a description of the
   question it's exploring. No KR, no dates, no initiative yet.
