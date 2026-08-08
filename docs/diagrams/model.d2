@@ -19,12 +19,12 @@ strategy: "STRATEGY  ·  leadership owns" {
 # ---------- DELIVERY band ----------
 delivery: "DELIVERY  ·  one named lead" {
   grid-rows: 1
-  grid-gap: 60
+  grid-gap: 220
   style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
   project: "PROJECT\nwhat we do and how · names one KR + the delta\none lead · milestones · dates · spend/*" {
     style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
   }
-  triage: "TRIAGE — the front door for unplanned work\n(it breaks · is reported · is legally due — arrives from outside)\nnamed duty rota · five outcomes on a clock:\ninto a project · as flow work · redirect · merge · decline" {
+  triage: "TRIAGE — the front door for unplanned work\n(arrives from outside · it breaks · is reported · is legally due)\nnamed duty rota · a decision on a clock\nfive outcomes — three close it here: redirect · merge · decline" {
     style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
   }
 }
@@ -71,4 +71,4 @@ delivery.project -> execution.issue2: {style.stroke: "#3D4C6B"}
 
 delivery.triage -> delivery.project: into a project {style.stroke: "#8C2F39"}
 delivery.triage -> execution.flowissue: as flow work {style.stroke: "#8C2F39"}
-execution.flowissue -> delivery.project: promoted when the theme recurs {style: {stroke: "#8C2F39"; stroke-dash: 4}}
+execution.flowissue -> delivery.project: promoted to a project when it recurs {style: {stroke: "#8C2F39"; stroke-dash: 4}}
