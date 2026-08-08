@@ -1,0 +1,9 @@
+{
+  "name": "linear-work-management",
+  "version": "0.1.0",
+  "description": "AI-ready skills for running work in Linear to the documented operating model. Companion to the published guide.",
+  "author": {
+    "name": "Richard Griffiths"
+  },
+  "homepage": "https://linear-work-management.pages.dev/"
+}

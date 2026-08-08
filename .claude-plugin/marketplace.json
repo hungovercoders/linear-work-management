@@ -1,0 +1,14 @@
+{
+  "name": "linear-work-management",
+  "owner": {
+    "name": "Richard Griffiths",
+    "url": "https://github.com/dataGriff"
+  },
+  "plugins": [
+    {
+      "name": "linear-work-management",
+      "source": "./",
+      "description": "Skills that create and maintain Linear work to the documented operating model (initiatives, projects, issues, triage, comms, drift detection)."
+    }
+  ]
+}

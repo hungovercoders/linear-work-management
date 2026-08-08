@@ -1,0 +1,87 @@
+site_name: Linear Work Management
+site_description: Guidelines, expectations and AI-ready skills for running work in Linear.
+site_url: https://linear-work-management.pages.dev/
+repo_url: https://github.com/dataGriff/linear-work-management
+repo_name: linear-work-management
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  icon:
+    logo: material/sitemap
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  # D2/PlantUML/GraphViz/Excalidraw etc render via Kroki as ```kroki-<type>``` fences.
+  # Mermaid renders client-side via the Material superfence above (```mermaid```).
+  - kroki:
+      server_url: !ENV [KROKI_SERVER_URL, "https://kroki.io"]
+      fence_prefix: "kroki-"
+      file_types:
+        - svg
+      # Inline the SVG so the published page has no runtime dependency on kroki.io.
+      tag_format: svg
+
+nav:
+  - Home: index.md
+  - Concepts:
+      - Hierarchy: concepts/hierarchy.md
+      - Initiatives: concepts/initiatives.md
+      - Projects: concepts/projects.md
+      - Issues: concepts/issues.md
+      - Teams: concepts/teams.md
+      - States: concepts/states.md
+      - Labels: concepts/labels.md
+      - Triage: concepts/triage.md
+      - SLAs: concepts/slas.md
+  - Operating:
+      - Communication: operating/communication.md
+      - Dashboards: operating/dashboards.md
+      - Integrations: operating/integrations.md
+  - Templates: issue-templates/index.md
+  - Skills: skills/index.md
