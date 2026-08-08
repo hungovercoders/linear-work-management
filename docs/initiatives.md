@@ -201,7 +201,7 @@ initiative's own **Linear fields** — not in the description — and connect th
 2. **By hand.** Create a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
    set its **owner**, **status** (`Proposed`) and **target date** as fields, connect the
    **`#initiative-updates`** Slack channel, then paste
-   [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/template.md)
+   [`template.md`](https://github.com/hungovercoders/linear-work-management/blob/main/skills/linear-initiative/template.md)
    into the description and fill it in. It's the same file the skill uses.
 
 ---

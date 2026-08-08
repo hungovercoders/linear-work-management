@@ -43,5 +43,5 @@ with evidence, not a colour someone picked — the issue and cycle progress is t
 **body**. **Health** is a native field on the status update — set it there, backed by the
 movement shown in the body, never as a line of prose instead.
 
-See [`skills/README.md`](https://github.com/dataGriff/linear-work-management/tree/main/skills)
+See [`skills/README.md`](https://github.com/hungovercoders/linear-work-management/tree/main/skills)
 for the conventions every skill here follows.

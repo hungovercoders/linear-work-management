@@ -174,7 +174,7 @@ scope* — that part is the template.
    needs, keeps the native fields native, and gives you the description body to drop in.
 2. **By hand.** Create a new project in the [Linear projects view](https://linear.app/happydevs/projects/all),
    set the fields the phase calls for (above), connect the **`#project-updates`** Slack channel,
-   then paste [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-project/template.md)
+   then paste [`template.md`](https://github.com/hungovercoders/linear-work-management/blob/main/skills/linear-project/template.md)
    into the description and fill it in. It's the same file the skill uses.
 
 ---
