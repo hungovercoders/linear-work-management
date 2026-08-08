@@ -10,14 +10,9 @@ direction: down
 # ---------- STRATEGY band ----------
 strategy: "STRATEGY  ·  leadership owns" {
   grid-rows: 1
-  grid-gap: 90
   style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
   initiative: "INITIATIVE\nObjective + Key Results\nwhy it matters · how it's measured" {
     style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
-  }
-  inbound: "INBOUND — work nobody planned:\nit breaks · it's reported · it's legally due" {
-    shape: text
-    style: {font-color: "#8C2F39"; italic: true}
   }
 }
 
@@ -29,7 +24,7 @@ delivery: "DELIVERY  ·  one named lead" {
   project: "PROJECT\nwhat we do and how · names one KR + the delta\none lead · milestones · dates · spend/*" {
     style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
   }
-  triage: "TRIAGE\nnamed duty rota · five outcomes on a clock\ninto a project · as flow work · redirect · merge · decline" {
+  triage: "TRIAGE — the front door for unplanned work\n(it breaks · is reported · is legally due — arrives from outside)\nnamed duty rota · five outcomes on a clock:\ninto a project · as flow work · redirect · merge · decline" {
     style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
   }
 }
@@ -74,7 +69,6 @@ strategy.initiative -> delivery.project: contains {style.stroke: "#3D4C6B"}
 delivery.project -> execution.issue1: {style.stroke: "#3D4C6B"}
 delivery.project -> execution.issue2: {style.stroke: "#3D4C6B"}
 
-strategy.inbound -> delivery.triage: {style.stroke: "#8C2F39"}
 delivery.triage -> delivery.project: into a project {style.stroke: "#8C2F39"}
 delivery.triage -> execution.flowissue: as flow work {style.stroke: "#8C2F39"}
 execution.flowissue -> delivery.project: promoted when the theme recurs {style: {stroke: "#8C2F39"; stroke-dash: 4}}
