@@ -16,16 +16,20 @@ active project ladders up to an outcome.
 
 ## What a project is
 
-A project is the **how**. It takes a Key Result an initiative declared and moves it by a stated
-amount — that's its whole reason to exist. It carries:
+A project is a **bounded body of work with one named lead** — the *what & how* between the
+outcome above it and the tasks below. Two things hold across its whole life; a third arrives
+when it commits:
 
-- **What we're doing and how** — the shape of the work, its milestones and dependencies.
-- **Which measure it moves, and by how much** — the Key Result(s) and the delta.
-- **One named lead** — the person accountable for landing it.
+- **One named lead** — named from the moment it exists, at `Idea` (rule 4). Always.
+- **A defined scope** — what we're doing and how: the shape of the work, its milestones and
+  dependencies.
+- **A Key Result it moves, and by how much** — the measure it takes from an initiative and the
+  delta it promises. This is the point of a project in **delivery**; in **discovery** that
+  measure is exactly what it's still trying to find, so it isn't required yet.
 
 Everything about *why the outcome matters* belongs to the [initiative](initiatives.md) above;
 everything about *the individual tasks* belongs to the [issues](index.md#issues-the-work-itself)
-beneath. Keep the project about means and delivery.
+beneath. Keep the project about means, not ends.
 
 ---
 
@@ -154,19 +158,23 @@ Post it either way:
 
 ## Create one
 
-Both ways hold the same standard. Set the **lead**, **dates**, **priority**, **status**,
-**initiative link(s)** and the **`spend/*`** / **`product/*`** labels as the project's own
-**Linear fields** — not in the description — and connect the **`#project-updates`** Slack channel so
-updates post there. The **description** carries only the *what & how*, the **Key Result(s) it
-moves + delta**, milestones and *out of scope*; that part is the template.
+What you set depends on the **phase** (above). Either way, one rule holds: everything Linear
+models as a field — lead, status, dates, priority, initiative link(s), `spend/*` / `product/*`
+labels, connected `#project-updates` channel — is a **native field**, never prose. The
+**description** carries only the *what & how*, any **KR(s) + delta**, milestones and *out of
+scope* — that part is the template.
 
-1. **Use the [`linear-project`](skills/index.md) skill — preferred.** It coaches you through the
-   outcome it serves, the KR(s) + delta, the lead, dates, priority and labels, keeps the native
-   fields native, and gives you the description body to drop in.
+- **An idea** (`Idea` / `Scoping`) needs only a **lead**, a **status**, and a description of the
+  question it's exploring. No KR, no dates, no initiative yet.
+- **A delivery project** (`Planned`+) also needs the **KR(s) + delta**, **initiative link(s)**,
+  **start + target-end dates**, a **priority** and the **`spend/*`** / **`product/*`** labels.
+
+1. **Use the [`linear-project`](skills/index.md) skill — preferred.** It routes on entry point
+   (new idea · graduate an existing project · born committed), asks only for what the phase
+   needs, keeps the native fields native, and gives you the description body to drop in.
 2. **By hand.** Create a new project in the [Linear projects view](https://linear.app/happydevs/projects/all),
-   set its **lead**, **status**, **start + target-end dates**, **priority**, **initiative
-   link(s)** and **labels** as fields, connect the **`#project-updates`** Slack channel, then paste
-   [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-project/template.md)
+   set the fields the phase calls for (above), connect the **`#project-updates`** Slack channel,
+   then paste [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-project/template.md)
    into the description and fill it in. It's the same file the skill uses.
 
 ---
