@@ -12,6 +12,11 @@ use Linear** — see also **[the hard rules](hard-rules.md)** and the
     they're delivering the value expected of them, and why. That connection is the benefit;
     the rules just keep it intact.
 
+    All of it lives in **[Linear](https://linear.app/happydevs)** — strategy, delivery and
+    execution in one place, rather than strategy in Notion, delivery in a spreadsheet and
+    status in Slack, so no tool boundary breaks the line. The **initiatives**, **projects**
+    and **issues** below are the ones in Linear; this page is how we use them.
+
 ---
 
 ## :material-sitemap: How it fits together
@@ -34,6 +39,9 @@ Neither path is superior or exceptional. Some teams (product, platform) live mos
 strategic path; others (customer support, operations) live mostly on the inbound path; most
 do both.
 
+See it live in Linear: [initiatives](https://linear.app/happydevs/initiatives) ·
+[projects](https://linear.app/happydevs/projects/all).
+
 !!! danger "The one failure"
     An issue on **neither** path is *unclassified* — invisible work, and the defect the
     whole system is built to chase. `linear-doctor` reports every one.
@@ -47,11 +55,11 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 
 | # | Level | Rule |
 |---|---|---|
-| 1 | Initiative | **Declares its Key Results** — measurable outcomes with targets, before any project sits under it. A result, not a theme. |
+| 1 | Initiative | **Declares its Key Results** before any project — **measured** (baseline → target) or **committed** (a deliverable, done/not-done). A result, not a theme. |
 | 2 | Project | **Names the Key Result(s) it moves, and by how much** — one or more, across the initiative(s) it serves. No KR named, no project. |
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
 | 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
-| 5 | Time-bounds | **Active initiatives are time-bound; projects carry start + end dates from `Planned` onward.** Undated work can't be prioritised or sequenced. |
+| 5 | Time-bounds | **Dated from `Planned` onward** — initiatives carry a target date, projects a start + end. Set when agreed, so work can be prioritised and sequenced before it starts. |
 
 !!! tip "The deal"
     If a rule and a convenience ever conflict, the rule wins — that's what keeps the model
@@ -90,13 +98,14 @@ The sections below tell each owner exactly what to do. **Read the one that's you
 ## :material-target: Initiatives — for strategic leadership
 
 You own an **outcome**, not a task list. Keep initiatives about *what & why*; leave the
-*how* to the projects beneath them.
+*how* to the projects beneath them. Full guidance, states and a template:
+**[Initiatives](initiatives.md)**. Open [your initiatives in Linear](https://linear.app/happydevs/initiatives).
 
 | Your job | Detail |
 |---|---|
-| Declare Key Results | Measurable outcomes with targets, before any project — [rule 1](hard-rules.md) |
+| Declare Key Results | Measured or committed, before any project — [rule 1](hard-rules.md) |
 | Name yourself owner | One person, strategic seniority — [rule 4](hard-rules.md) |
-| Time-bound it when active | A target date once work starts — [rule 5](hard-rules.md) |
+| Set the target date | From `Planned` onward, so it can be prioritised — [rule 5](hard-rules.md) |
 | Post the update | Monthly to `#initiatives` while active |
 
 **States** (a fixed set — Linear doesn't let you customise these):
@@ -104,20 +113,21 @@ You own an **outcome**, not a task list. Keep initiatives about *what & why*; le
 | State | Means |
 |---|---|
 | Proposed | Being considered; not yet agreed |
-| Planned | Agreed & prioritised, owner named, KRs written — not yet started |
-| Active | Underway — projects are moving its KRs; time-bound |
+| Planned | Agreed & prioritised — owner named, KRs written, target date set — but not yet started |
+| Active | Work is underway against the target date; projects are moving its KRs |
 | Completed | KRs achieved, or the timeframe closed and scored |
 | Canceled | Dropped; reason recorded |
 
-**Proposed → Planned** is the *strategic agreement gate* (leadership agrees, owner + KRs);
-**Planned → Active** is when work starts and the initiative becomes time-bound.
+**Proposed → Planned** is the *strategic agreement gate* (leadership agrees; owner, KRs and
+target date set); **Planned → Active** is when work actually starts against that date.
 
 ---
 
 ## :material-clipboard-check-outline: Projects — for delivery leads (and the strategy that funds them)
 
 A project is **what you'll do and how**, in service of the Key Result(s) of the
-initiative(s) it belongs to — usually one, sometimes several.
+initiative(s) it belongs to — usually one, sometimes several. See
+[all projects in Linear](https://linear.app/happydevs/projects/all).
 
 | Your job | Detail |
 |---|---|
@@ -249,7 +259,7 @@ Top-down — find your row:
 
 | You are… | Start with |
 |---|---|
-| Owning an initiative | This page, then **Initiatives** — write your KR table before your first project |
+| Owning an initiative | This page, then **[Initiatives](initiatives.md)** — write your KR table before your first project |
 | Leading a project | This page, then **Projects** — know your KR |
 | Delivering on a team | This page, then **Issues → Project issues** |
 | On triage duty | This page, then **Issues → Inbound issues** |

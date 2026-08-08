@@ -8,9 +8,15 @@ two cross-cutting invariants: ownership and time-bounds.**
 
 ## 1. Every initiative declares its Key Results
 
-An initiative is a **measurable outcome, not a theme**. State its Key Results — the
-metrics that will move and the targets they move to — before any project sits beneath it.
-It carries the *why* and *how it's measured*, never the *how it's built*.
+An initiative is a **defined outcome, not a theme**. State its Key Results before any
+project sits beneath it. It carries the *why* and *how it's judged*, never the *how it's
+built*. A Key Result is either:
+
+- **Measured** — a metric with a baseline and the target it moves to; or
+- **Committed** — a binary deliverable with a Definition of Done, for work that just needs
+  to happen (compliance, contracted, hard-deadline).
+
+Then:
 
 - **No Key Results, no initiative** — it's a wish, not an initiative.
 - Those KRs are exactly what the projects below will name and move (rule 2). This is the
@@ -64,15 +70,18 @@ Ownership is singular and named. **Not a team, not two people — a person.**
 
 ---
 
-## 5. Active initiatives are time-bound; projects carry start + end dates from `Planned` onward
+## 5. Initiatives and projects carry dates from `Planned` onward
 
 Undated work can't be prioritised or sequenced. Dates are what make **dependency mapping**
 and **on-track delivery** possible — upcoming work can see what it depends on and whether
-that will land in time.
+that will land in time. Because prioritisation happens *before* work starts, the date is set
+when the work is **agreed**, not when it becomes active.
 
-- **Initiatives:** once **active**, carry a timeframe / target date (OKR-style — often a
-  quarter, but some run a year or more). A `Proposed` initiative that hasn't been agreed
-  yet is exempt until it activates.
+- **Initiatives:** from **`Planned`** onward, carry a timeframe / target date (OKR-style —
+  often a quarter, but some run a year or more), set alongside the owner and KRs when the
+  initiative is agreed. `Active` means work is now **underway against that date** — not that
+  the date appears for the first time. A `Proposed` initiative that isn't agreed yet is
+  exempt until it's planned.
 - **Projects:** from **`Planned`** onward carry a **start** and a **target end** date.
   `Idea` and `Scoping` projects are still being shaped, so dates firm up as they commit —
   which is exactly what `Planned` means ("agreed, dated, resourced").
