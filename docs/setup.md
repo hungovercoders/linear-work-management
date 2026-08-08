@@ -39,6 +39,11 @@ Current `happydevs` state is reflected below — ticked items are done.
       (check the channel spelling first)
 - [ ] `#announcements` channel exists for launches/incidents
 
+**Update reminders** — [Communications](communications.md#making-the-cadence-stick)
+
+- [ ] Native update reminders enabled (workspace settings): weekly, targeting project leads +
+      initiative owners
+
 **SLAs** — [Triage work](issues/triage.md)
 
 - [x] The `slaBreachesAt` fallback (the `linear-triage` skill) — works on every plan
