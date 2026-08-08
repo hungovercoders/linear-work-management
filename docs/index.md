@@ -95,8 +95,8 @@ an initiative, either the work is wrong or the initiative is missing.
 | State | Means |
 |---|---|
 | Triage | Arrived; awaiting a routing decision |
-| Backlog | Accepted; not yet scheduled |
-| Todo | Scheduled and ready to start |
+| Backlog | Accepted, but not yet refined enough to start |
+| Todo | Understood and ready to go — refined, actionable, can be picked up now |
 | In Progress | Being worked |
 | In Review | Work done; under review |
 | Done | Shipped and accepted |
