@@ -43,6 +43,8 @@ markdown_extensions:
   - toc:
       permalink: true
   - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -79,4 +81,5 @@ nav:
   - Communications: communications.md
   - Dashboards: dashboards.md
   - Integrations: integrations.md
+  - Setup checklist: setup.md
   - Skills: skills/index.md
