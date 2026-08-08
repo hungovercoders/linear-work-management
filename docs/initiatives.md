@@ -7,8 +7,7 @@ Never a task list, never the *how it's built* (that's the [projects](index.md) b
 It sits alongside the projects and issues it drives, in the same tool.
 </div>
 
-This page expands the [cheat sheet](index.md)'s Initiatives section. If the two ever
-disagree, the cheat sheet wins and this page is wrong — tell us.
+Here are [all the current initiatives in Linear](https://linear.app/happydevs/initiatives).
 
 ---
 
