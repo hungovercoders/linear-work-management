@@ -89,6 +89,9 @@ decision and nothing sits. Use Linear's **Triage responsibility** to assign the 
 **rotate** it on a schedule, so the front door is always staffed. The duty is to **decide** — accept,
 route, merge or decline within the [decision clock](#two-clocks) — not necessarily to do the work.
 
+On duty, the **[`linear-triage`](../skills/index.md)** skill walks the inbox with you — reading the
+queue and applying each decision (the `flow/*` label, a priority, and the outcome) to standard.
+
 ## :material-label-outline: Accept as flow — and there's no "promotion"
 
 **Accept as flow** keeps the issue inbound: **one `flow/*` label, no project**. From there it lives
@@ -120,11 +123,21 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 
 Priority set at triage can drive the SLA, and Linear can require it before an item leaves Triage.
 
-!!! note "The clocks are the policy — SLAs is the wiring"
-    The two clocks above are the *policy*. How they're implemented as **native Linear SLAs** — by
-    `flow/*` label, vulnerability severity and priority, with the escalation timings — is
-    operationalised in **SLAs**. A **`linear-triage`** skill to run the decision straight from the
-    inbox arrives with the skills work.
+### Wire them as native Linear SLAs
+
+The clocks above are the *policy*; Linear enforces them with its **native SLA** feature. Every
+issue carries SLA fields — **started · medium-risk · high-risk · breaches** — that Linear counts
+down and surfaces in views, so the rota can see what's about to breach. Set the per-team SLA rules
+so each clock maps onto them:
+
+- **Decision clock** — starts when an issue **enters Triage**, targeting the duration for its
+  kind (immediate / 1 / 2 working days). Because the `flow/*` label may not be set on arrival,
+  drive it from the **priority** required at triage (Urgent → the tightest tier, down to Low).
+- **Resolution clock** — an SLA on **`flow/vulnerability`**, keyed to **severity** (encoded via
+  priority or a severity label): **Critical 7 days · High 30 · Medium 90**.
+
+Choose **all** vs **business-day** counting per rule (`slaType`) to match the obligation. Breaches
+and near-breaches are what a dashboard and [`linear-doctor`](../skills/index.md) watch for.
 
 ---
 
