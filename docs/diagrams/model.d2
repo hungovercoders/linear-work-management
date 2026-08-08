@@ -1,45 +1,80 @@
 # Canonical operating-model diagram. Edit this, not the rendered SVG.
 # Rendered inline on the cheat sheet via Kroki (```kroki-d2```).
-# initiative -> project -> issue, with the inbound/flow lane through triage.
+# Bands stack TOP-TO-BOTTOM as swimlanes; the drive is INITIATIVE -> PROJECT -> ISSUE
+# down the left, with the inbound/flow lane down the right through TRIAGE.
 
+grid-columns: 1
+grid-gap: 70
 direction: down
 
-initiative: "INITIATIVE — Objective + Key Results\n(why it matters, how it's measured · leadership owns)" {
-  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+# ---------- STRATEGY band ----------
+strategy: "STRATEGY  ·  leadership owns" {
+  grid-rows: 1
+  grid-gap: 90
+  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
+  initiative: "INITIATIVE\nObjective + Key Results\nwhy it matters · how it's measured" {
+    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+  }
+  inbound: "INBOUND — work nobody planned:\nit breaks · it's reported · it's legally due" {
+    shape: text
+    style: {font-color: "#8C2F39"; italic: true}
+  }
 }
 
-project: "PROJECT — what we do and how\nnames one KR + the delta · one lead · dates · spend/*\n(delivery owns)" {
-  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
-}
-project2: "PROJECT — another slice of the same objective" {
-  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; stroke-dash: 4; border-radius: 8}
-}
-
-issue1: "ISSUE — type/feature\n(a team owns it)" {
-  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
-}
-issue2: "ISSUE — type/spike\nagent plan attached" {
-  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
-}
-
-inbound: "INBOUND — work nobody planned:\nit breaks, it's reported, it's legally due" {
-  shape: text
-  style: {font-color: "#8C2F39"}
-}
-triage: "TRIAGE — named duty rota, five outcomes on a clock:\ninto a project · as flow work · redirect · merge · decline" {
-  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8}
-}
-flowissue: "ISSUE — no project, and that's fine\nflow/vulnerability" {
-  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 7}
+# ---------- DELIVERY band ----------
+delivery: "DELIVERY  ·  one named lead" {
+  grid-rows: 1
+  grid-gap: 60
+  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
+  project: "PROJECT\nwhat we do and how · names one KR + the delta\none lead · milestones · dates · spend/*" {
+    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+  }
+  triage: "TRIAGE\nnamed duty rota · five outcomes on a clock\ninto a project · as flow work · redirect · merge · decline" {
+    style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
+  }
 }
 
-initiative -> project: contains
-initiative -> project2: contains
-project2 -> project: depends on {style.stroke-dash: 4}
-project -> issue1
-project -> issue2
+# ---------- EXECUTION band ----------
+execution: "EXECUTION  ·  teams own" {
+  grid-rows: 1
+  grid-gap: 60
+  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
+  issue1: "ISSUE\ntype/feature" {
+    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+  }
+  issue2: "ISSUE\ntype/spike · agent plan attached" {
+    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+  }
+  flowissue: "ISSUE\nno project, and that's fine\nflow/vulnerability" {
+    style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 7}
+  }
+}
 
-inbound -> triage
-triage -> project: into a project {style.stroke: "#8C2F39"}
-triage -> flowissue: as flow work {style.stroke: "#8C2F39"}
-flowissue -> project: promoted when the theme recurs {style: {stroke: "#8C2F39"; stroke-dash: 4}}
+# ---------- classification rule strip ----------
+rule: "EVERY ISSUE IS CLASSIFIED — two ways are valid, two are failures" {
+  grid-rows: 1
+  grid-gap: 30
+  style: {fill: "#FFFFFF"; stroke: "#DCE0E8"; font-color: "#1B2030"}
+  ok_project: "✓ In a project\nplanned work" {
+    style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+  }
+  ok_flow: "✓ flow/*\ninbound work, no project" {
+    style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 7}
+  }
+  bad_both: "✗ Both at once\npick one, drop the other" {
+    style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 7}
+  }
+  bad_neither: "✗ Neither\nunclassified · invisible work" {
+    style: {fill: "#FCFCFD"; stroke: "#8C2F39"; stroke-width: 2; border-radius: 7}
+  }
+}
+
+# ---------- the top-to-bottom drive + the flow lane ----------
+strategy.initiative -> delivery.project: contains {style.stroke: "#3D4C6B"}
+delivery.project -> execution.issue1: {style.stroke: "#3D4C6B"}
+delivery.project -> execution.issue2: {style.stroke: "#3D4C6B"}
+
+strategy.inbound -> delivery.triage: {style.stroke: "#8C2F39"}
+delivery.triage -> delivery.project: into a project {style.stroke: "#8C2F39"}
+delivery.triage -> execution.flowissue: as flow work {style.stroke: "#8C2F39"}
+execution.flowissue -> delivery.project: promoted when the theme recurs {style: {stroke: "#8C2F39"; stroke-dash: 4}}
