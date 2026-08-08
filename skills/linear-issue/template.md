@@ -6,23 +6,29 @@
        • type/*     → project issues only: feature | bug | action | spike
        • product/*  → inherited from the project, unchanged
 
-     Fill What / Why / When / Resources at capture. Emphasis by type:
-       • feature → the change and its acceptance criteria
-       • bug     → steps to reproduce, expected vs actual
-       • action  → the change and why now
-       • spike   → the question to answer and the time box -->
+     Fill What / Why / When / Resources at capture; leave Plan for pickup.
+     Each section carries per-type cues — keep the ones that fit the type/*. -->
 
 ## What needs doing?
-<the task itself. Bug: steps to reproduce, expected vs actual. Spike: the question to answer.>
+<!-- feature: the capability to add · bug: what's broken, with steps to reproduce + expected vs
+     actual · action: the upkeep or change to make · spike: the question to investigate -->
+<the task itself>
 
 ## Why does it need doing?
-<the value or problem behind it — what changes once it's done. Action: why now.>
+<!-- feature: the user value it delivers · bug: the impact while it's broken · action: why now —
+     the risk or debt of leaving it · spike: what decision the answer unblocks -->
+<the value or problem behind it>
 
 ## When is it done?
-<the acceptance criteria — how we'll know it's finished, not merely shipped. Spike: the time box.>
+<!-- feature: acceptance criteria met · bug: fixed and no longer reproducible (regression covered)
+     · action: the change complete and verified · spike: question answered + findings written,
+     within the time box -->
+<how we'll know it's finished — not merely shipped>
 
 ## Resources
-<links, prior art, docs, related issues — anything that helps whoever picks it up>
+<!-- feature/action: docs, designs, the area or system touched · bug: logs, screenshots, the
+     failing case · spike: prior art and starting points to explore · any related issues -->
+<links and references that help whoever picks it up>
 
 ## Plan
 <!-- LEFT EMPTY AT CREATION. The reserved home for the plan for HOW; filled later, when the
