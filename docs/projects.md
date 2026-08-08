@@ -51,7 +51,7 @@ states group into three phases, and the **`Planned` gate** divides exploration f
 | Launching | Delivery | Built; rolling out |
 | Paused | Delivery | Deliberately stopped, with a reason and a review date |
 | Completed | Closed | Delivered **and** the KR delta observed |
-| Cancelled | Closed | Stopped for good; reason recorded |
+| Canceled | Closed | Stopped for good; reason recorded |
 
 **A project can enter at either phase.** Most start in `Idea` and cross the gate as they mature
 (discovery, below). But one whose outcome is **already agreed** can be created **straight into

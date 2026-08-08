@@ -41,7 +41,7 @@ of three:
   to an existing initiative** or **seeding a new one** (a deliberate strategic step, distinct
   from the flow *promotion* we don't do). Name the KR + delta it moves.
 - Proceed **standalone** — allowed, but questioned (nothing to ladder to);
-- **Drop** it (Cancelled).
+- **Drop** it (Canceled).
 
 - A project can belong to **more than one initiative** — when it does, name the KR and delta
   it moves on **each**. Every committed KR carries a named delta.

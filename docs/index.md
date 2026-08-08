@@ -146,7 +146,7 @@ diagram and a template: **[Projects](projects.md)**. See
 | Launching | Delivery | Built; rolling out |
 | Paused | Delivery | Deliberately stopped, with a reason and a review date |
 | Completed | Closed | Delivered **and** the KR delta observed |
-| Cancelled | Closed | Stopped for good; reason recorded |
+| Canceled | Closed | Stopped for good; reason recorded |
 
 ### Discovery phase — is there something here? (`Idea` · `Scoping`)
 
@@ -209,7 +209,7 @@ An issue is a **discrete task**, understood before it starts. Full guidance, the
 | In Progress | Being worked |
 | In Review | Work done; under review |
 | Done | Shipped and accepted |
-| Cancelled | Won't do; reason recorded |
+| Canceled | Won't do; reason recorded |
 | Duplicate | Superseded by another issue |
 
 From here every issue is **one of two kinds** — and only one.
