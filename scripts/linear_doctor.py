@@ -78,7 +78,9 @@ def has_key_results(description: str | None) -> bool:
 def has_kr_delta(description: str | None) -> bool:
     if not description:
         return False
-    return "→" in description or "->" in description
+    # Measured KRs carry a delta arrow; committed KRs a Definition of Done — both satisfy rule 2.
+    return ("→" in description or "->" in description
+            or re.search(r"committed|definition of done", description, re.IGNORECASE) is not None)
 
 
 def main() -> int:
