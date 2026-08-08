@@ -189,7 +189,9 @@ section below.
 
 ## :material-checkbox-marked-circle-outline: Issues — the work itself
 
-An issue is a **discrete task**, understood before it starts. Two things are true of
+An issue is a **discrete task**, understood before it starts. Full guidance, the states, the
+`type/*` templates and the agent-plan convention: **[Issues](issues.md)**. See
+[all issues in Linear](https://linear.app/happydevs/team/GRI/all). Two things are true of
 **every** issue, whichever path it came from:
 
 - It is **classified** — in a project *or* carrying one `flow/*` label, never both, never
@@ -281,6 +283,6 @@ Top-down — find your row:
 |---|---|
 | Owning an initiative | This page, then **[Initiatives](initiatives.md)** — write your KR table before your first project |
 | Leading a project | This page, then **[Projects](projects.md)** — know your KR |
-| Delivering on a team | This page, then **Issues → Project issues** |
-| On triage duty | This page, then **Issues → Inbound issues** |
+| Delivering on a team | This page, then **[Issues → Project issues](issues.md#project-issues-planned-work)** |
+| On triage duty | This page, then **[Issues → Inbound issues](issues.md#two-kinds-of-issue-and-only-one)** |
 | Responsible for Linear workflows | Run [`linear-doctor`](skills/index.md) — it reports drift; it doesn't fix |

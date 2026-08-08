@@ -46,4 +46,5 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 | `linear-initiative-update` | The monthly `#initiative-updates` update | [Initiatives](https://linear-work-management.pages.dev/initiatives/) |
 | `linear-project` | A project description (what & how + KR delta) | [Projects](https://linear-work-management.pages.dev/projects/) |
 | `linear-project-update` | The weekly `#project-updates` update | [Projects](https://linear-work-management.pages.dev/projects/) |
+| `linear-issue` | An issue description (problem + agent plan) | [Issues](https://linear-work-management.pages.dev/issues/) |
 | `linear-doctor` | A drift report against the hard rules | [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/) |
