@@ -15,8 +15,8 @@ agent — can act on directly.
 create the issue and store the plan against it.
 
 > Issues have **no status-update object** — progress shows through **state and cycle**, so there's
-> no update skill. Create and edit issues with `save_issue`; store the agent plan with
-> `save_comment` (or in the description).
+> no update skill. Create and edit issues with `save_issue`; the agent plan lives in the
+> description's `## Agent plan` section.
 
 ## What good looks like
 
@@ -24,7 +24,7 @@ create the issue and store the plan against it.
   both, never neither. This is the first decision; it picks the whole rest of the shape.
 - **Understood before it starts.** The problem and what "done" means are clear enough to hand to
   someone (or something) without a follow-up question.
-- **A `type/*` (project issues).** `feature` · `defect` · `chore` · `spike` — what kind of work.
+- **A `type/*` (project issues).** `feature` · `defect` · `action` · `spike` — what kind of work.
 - **A priority.** Urgent → Low, so it orders against the others.
 - **`product/*` inherited** from the project, unchanged.
 - **The body is the prompt**, and the **plan is stored against the issue** — so the approach is
@@ -48,7 +48,7 @@ issue or an inbound issue. One or the other, never both.
 **2a. Project issue.**
 
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
-- Pick the **`type/*`** — `feature`, `defect`, `chore` or `spike`.
+- Pick the **`type/*`** — `feature`, `defect`, `action` or `spike`.
 - Write the **body** from [`template.md`](template.md): the problem and what "done" looks like,
   as a prompt. `product/*` inherits from the project.
 
@@ -64,8 +64,8 @@ issue or an inbound issue. One or the other, never both.
 **`type/*`** (project issues) and the inherited **`product/*`**. Use `save_issue`.
 
 **4. Store the plan against the issue.** The body is the prompt; when the *how* is worked out,
-capture that plan on the issue — an `## Agent plan` section in the description or a comment
-(`save_comment`) — so it's reviewable before the work is.
+capture that plan in the issue's **`## Agent plan`** section — so it's reviewable before the
+work is.
 
 **5. Refine before it starts.** New project issues land in **Backlog**; sharpen the problem,
 define done, size it and clear blockers to move it to **Todo**. **Nothing starts from Backlog** —
@@ -81,6 +81,3 @@ The **assignee, priority, status, project / `flow/*` classification and `type/*`
 labels are native Linear fields** — set them on the issue, never in the description text. Keeping
 them native is what lets Linear filter, sort and cycle them, and what lets `linear-doctor` check
 classification.
-
-See [`skills/README.md`](https://github.com/hungovercoders/linear-work-management/tree/main/skills)
-for the conventions every skill here follows.

@@ -224,7 +224,7 @@ Live inside a **project** and ladder to its KR.
 |---|---|
 | feature | A new capability |
 | defect | Something's broken |
-| chore | Maintenance, upkeep, dependency bumps |
+| action | Maintenance, upkeep, dependency bumps, proactive improvements |
 | spike | A time-boxed investigation |
 
 `product/*` carries down automatically — same value as the project. Refined from `Backlog`

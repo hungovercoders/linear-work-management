@@ -90,7 +90,7 @@ project unchanged.
 |---|---|---|
 | `feature` | A new capability | The change and its acceptance criteria |
 | `defect` | Something's broken | Steps to reproduce, expected vs actual |
-| `chore` | Maintenance, upkeep, dependency bumps | The upkeep and why now |
+| `action` | Maintenance, upkeep, proactive improvements | The change and why now |
 | `spike` | A time-boxed investigation | The question and the time box |
 
 `product/*` (`hungovercoders` · `dogadopt` · `woolwitch` · …) is **inherited from the project** —
@@ -112,9 +112,8 @@ the *agent-plan convention*:
 - **The body is the prompt.** State the problem and what "done" looks like clearly enough that
   the reader needs nothing else to start. Write it for whoever — or whatever — picks it up.
 - **Store the plan against the issue.** When an agent (or a person) works out *how*, that plan
-  is captured on the issue — as an `## Agent plan` section in the description or as a comment —
-  so the approach is reviewable before code is, and the issue stays the single record of the
-  task.
+  is captured in the issue's **`## Agent plan`** section — so the approach is reviewable before
+  code is, and the issue stays the single record of the task.
 
 This is why the body is the template's whole job (below): everything Linear can model as a
 field is set as one, and the description is left to carry the *prompt* and the *plan*.
@@ -131,7 +130,7 @@ Everything Linear models as a field is a **native field**, never text in the des
 | Priority | Urgent → Low |
 | Status | The lifecycle state above |
 | Project **or** `flow/*` | The classification (rule 3) — one, never both |
-| `type/*` | Project issues only — feature / defect / chore / spike |
+| `type/*` | Project issues only — feature / defect / action / spike |
 | `product/*` | Inherited from the project |
 
 The **description** carries only the *problem* and the *agent plan* — that part, and only that
