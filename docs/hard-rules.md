@@ -31,13 +31,21 @@ A project exists to move a measure on an initiative. Name **which** KR and the *
 you expect (e.g. "activation 22% → 30%"). This turns "projects are the how" from an
 aspiration into something checkable.
 
-- A project can belong to **more than one initiative** — when it does, name the KR and the
-  delta it moves on **each**. The minimum is one; the rule is that every KR it claims has a
-  named delta.
-- **No KR named, no project.** Scoping can start; committed delivery cannot.
+**Work starts as a project in `Idea`.** That's the entry point for planned work — no
+initiative or KR needed to begin. `Idea` and `Scoping` are *discovery*, where a project may
+legitimately have **no parent and no named KR** (though it still has a named lead — rule 4
+applies throughout); it's also where the work of *forming* an initiative gets recorded. **The rule bites from `Planned`**, where discovery resolves into one
+of three:
+
+- **Graduate** — mature from discovery into delivery, attached to an outcome: either **linked
+  to an existing initiative** or **seeding a new one** (a deliberate strategic step, distinct
+  from the flow *promotion* we don't do). Name the KR + delta it moves.
+- Proceed **standalone** — allowed, but questioned (nothing to ladder to);
+- **Drop** it (Cancelled).
+
+- A project can belong to **more than one initiative** — when it does, name the KR and delta
+  it moves on **each**. Every committed KR carries a named delta.
 - **Completed** means delivered *and* the KR delta observed — not merely shipped.
-- Genuinely standalone work is allowed but **questioned**: if it ladders to no
-  initiative, either the work is wrong or the initiative is missing.
 
 ---
 
