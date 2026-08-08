@@ -3,7 +3,7 @@ name: linear-issue
 description: Capture a Linear issue to the Ways of Working standard — one discrete task got down clearly (the problem and what "done" means), classified in a project or under one flow/* label (never both), with a type/*, a priority and the product/* it inherits. Sets the native fields and lands it in Backlog, ready to refine. Use when capturing planned project work or writing up an inbound item. The how — the agent plan — comes later, when the issue is picked up.
 ---
 
-<!-- doc: issues.md -->
+<!-- doc: issues/index.md -->
 
 # linear-issue
 

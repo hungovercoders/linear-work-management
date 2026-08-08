@@ -190,7 +190,7 @@ section below.
 ## :material-checkbox-marked-circle-outline: Issues — the work itself
 
 An issue is a **discrete task**, understood before it starts. Full guidance, the states, the
-`type/*` templates and the agent-plan convention: **[Issues](issues.md)**. See
+`type/*` templates and the agent-plan convention: **[Issues](issues/index.md)**. See
 [all issues in Linear](https://linear.app/happydevs/team/GRI/all). Two things are true of
 **every** issue, whichever path it came from:
 
@@ -285,6 +285,6 @@ Top-down — find your row:
 |---|---|
 | Owning an initiative | This page, then **[Initiatives](initiatives.md)** — write your KR table before your first project |
 | Leading a project | This page, then **[Projects](projects.md)** — know your KR |
-| Delivering on a team | This page, then **[Issues → Project issues](issues.md#project-issues-planned-work)** |
-| On triage duty | This page, then **[Issues → Inbound issues](issues.md#two-kinds-of-issue-and-only-one)** |
+| Delivering on a team | This page, then **[Issues → Project work](issues/project-work.md)** |
+| On triage duty | This page, then **[Issues → Triage work](issues/triage.md)** |
 | Responsible for Linear workflows | Run [`linear-doctor`](skills/index.md) — it reports drift; it doesn't fix |

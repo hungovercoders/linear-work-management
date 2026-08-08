@@ -28,7 +28,7 @@ when it commits:
   measure is exactly what it's still trying to find, so it isn't required yet.
 
 Everything about *why the outcome matters* belongs to the [initiative](initiatives.md) above;
-everything about *the individual tasks* belongs to the [issues](issues.md)
+everything about *the individual tasks* belongs to the [issues](issues/index.md)
 beneath. Keep the project about means, not ends.
 
 ---
@@ -124,7 +124,7 @@ launched but didn't move its measure isn't done; it's a lesson.
 | `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · … (grows over time) | Which product it serves — **also carried onto its issues** |
 
 `type/*` and `flow/*` are *issue*-level groups, not project ones — see
-[Issues](issues.md).
+[Issues](issues/index.md).
 
 ---
 
