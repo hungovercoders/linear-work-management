@@ -79,9 +79,10 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 | Genuinely standalone work with no initiative | Project, but expect to justify it |
 
 **How work starts:** the cheapest way in is a **project in `Idea`** — discovery, no initiative
-or KR required. By `Planned` it resolves: link to an initiative, **graduate** into a new one,
-go standalone (questioned), or drop. A parentless project is fine while it's an idea; only from
-`Planned` on is orphaning **questioned**.
+or KR required. By `Planned` it resolves: **graduate** into delivery under an outcome (an
+existing initiative or a new one it seeds), go **standalone** (questioned), or **drop**. A
+parentless project is fine while it's an idea; only from `Planned` on is orphaning
+**questioned**.
 
 ---
 
@@ -128,35 +129,52 @@ target date set); **Planned → Active** is when work actually starts against th
 
 ## :material-clipboard-check-outline: Projects — for delivery leads (and the strategy that funds them)
 
-A project is **what you'll do and how**, in service of the Key Result(s) of the
-initiative(s) it belongs to — usually one, sometimes several. See
+A project is **what you'll do and how**. It runs in one of two modes as it moves through its
+lifecycle — **discovery** while there's still a question to answer, **delivery** once it's
+committed — and the `Planned` gate is the switch. See
 [all projects in Linear](https://linear.app/happydevs/projects/all).
+
+**States** (full lifecycle):
+
+| State | Mode | Means |
+|---|---|---|
+| Idea | Discovery | Someone's thought of it; nothing committed |
+| Scoping | Discovery | Being shaped; cost and value under investigation |
+| Planned | Delivery | Agreed, dated, resourced; not started |
+| In Progress | Delivery | Being built |
+| Launching | Delivery | Built; rolling out |
+| Paused | — | Deliberately stopped, with a reason and a review date |
+| Completed | — | Delivered **and** the KR delta observed |
+| Cancelled | — | Stopped for good; reason recorded |
+
+!!! quote
+    Health is a claim with evidence attached — not a colour someone picked.
+
+### Discovery projects — is there something here? (`Idea` · `Scoping`)
+
+Explore cheaply. A discovery project may have **no parent initiative and no named KR** —
+that's legitimate; it's where an initiative's groundwork gets recorded. At the **`Planned`**
+gate, it resolves into one of three:
+
+| Outcome | What it means |
+|---|---|
+| **Graduate** | Mature into delivery under an outcome — link an existing initiative, or seed a new one |
+| **Standalone** | Proceed with no initiative — allowed, but questioned |
+| **Drop** | Cancel it; reason recorded |
+
+### Delivery projects — build the committed outcome (`Planned` · `In Progress` · `Launching`)
+
+Committed and linked to an outcome. Now the rules bite:
 
 | Your job | Detail |
 |---|---|
-| Name the KR(s) it moves + delta | e.g. "activation 22% → 30%" — [rule 2](hard-rules.md); one or more, no KR means no project |
+| Name the KR(s) it moves + delta | e.g. "activation 22% → 30%" — [rule 2](hard-rules.md); one or more, across the initiative(s) it serves |
 | Link it to one or more initiatives | Standalone is the exception, and gets questioned |
 | Be the single named lead | One person accountable — [rule 4](hard-rules.md) |
 | Set start + end dates | From `Planned` onward — [rule 5](hard-rules.md) |
 | Draw dependencies | So sequencing and risk are visible |
 | Set a priority | To sequence projects against each other |
 | Post the update | Weekly to `#proj-<slug>` while In Progress or Launching |
-
-**States** (full lifecycle):
-
-| State | Means |
-|---|---|
-| Idea | Someone's thought of it; nothing committed |
-| Scoping | Being shaped; cost and value under investigation |
-| Planned | Agreed, dated, resourced; not started |
-| In Progress | Being built |
-| Launching | Built; rolling out |
-| Paused | Deliberately stopped, with a reason and a review date |
-| Completed | Delivered **and** the KR delta observed |
-| Cancelled | Stopped for good; reason recorded |
-
-!!! quote
-    Health is a claim with evidence attached — not a colour someone picked.
 
 **Labels** — two groups, both set on the project:
 

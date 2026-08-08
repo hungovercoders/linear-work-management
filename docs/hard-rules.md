@@ -35,11 +35,11 @@ aspiration into something checkable.
 initiative or KR needed to begin. `Idea` and `Scoping` are *discovery*, where a project may
 legitimately have **no parent and no named KR**; it's also where the work of *forming* an
 initiative gets recorded. **The rule bites from `Planned`**, where discovery resolves into one
-of four:
+of three:
 
-- **Link** to an existing initiative (and name the KR + delta it moves);
-- **Graduate** into — or seed — a **new** initiative (a deliberate strategic step, distinct
-  from the flow *promotion* we don't do);
+- **Graduate** — mature from discovery into delivery, attached to an outcome: either **linked
+  to an existing initiative** or **seeding a new one** (a deliberate strategic step, distinct
+  from the flow *promotion* we don't do). Name the KR + delta it moves.
 - Proceed **standalone** — allowed, but questioned (nothing to ladder to);
 - **Drop** it (Cancelled).
 
