@@ -1,0 +1,69 @@
+site_name: Linear Ways of Working
+site_description: The single source of truth for how we use Linear — guidelines, expectations and the AI skills that go with them.
+site_url: https://linear-work-management.pages.dev/
+repo_url: https://github.com/dataGriff/linear-work-management
+repo_name: linear-work-management
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  icon:
+    logo: material/sitemap
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  # D2 (and any Kroki type) render as ```kroki-d2``` fences, inlined as SVG.
+  # Mermaid renders client-side via the Material superfence above.
+  - kroki:
+      server_url: !ENV [KROKI_SERVER_URL, "https://kroki.io"]
+      fence_prefix: "kroki-"
+      file_types:
+        - svg
+      tag_format: svg
+
+nav:
+  - The Cheat Sheet: index.md
+  - The Three Hard Rules: hard-rules.md
+  - Skills: skills/index.md

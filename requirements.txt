@@ -1,0 +1,4 @@
+mkdocs-material>=9.5
+mkdocs-kroki-plugin>=0.9
+pymdown-extensions>=10.7
+pyyaml>=6.0

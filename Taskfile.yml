@@ -1,0 +1,52 @@
+version: "3"
+
+# Single source of tasks invoked identically by humans, AI agents, and CI.
+# Keeps tooling and versions consistent across contexts.
+
+env:
+  DISABLE_MKDOCS_2_WARNING: "true"
+
+vars:
+  VENV: .venv
+  PY: "{{.VENV}}/bin/python"
+  PIP: "{{.VENV}}/bin/pip"
+  MKDOCS: "{{.VENV}}/bin/mkdocs"
+  CF_PAGES_PROJECT: linear-work-management
+
+tasks:
+  setup:
+    desc: Create the virtualenv and install docs tooling.
+    cmds:
+      - python3 -m venv {{.VENV}}
+      - "{{.PIP}} install -U pip"
+      - "{{.PIP}} install -r requirements.txt"
+    status:
+      - test -x {{.MKDOCS}}
+
+  skills:index:
+    desc: Regenerate docs/skills/index.md from skills/*/SKILL.md (single source).
+    cmds:
+      - "{{.PY}} scripts/gen_skill_index.py"
+
+  serve:
+    desc: Live-preview the docs site locally.
+    deps: [setup, skills:index]
+    cmds:
+      - "{{.MKDOCS}} serve"
+
+  build:
+    desc: Build the static site into ./site (fails on warnings).
+    deps: [setup, skills:index]
+    cmds:
+      - "{{.MKDOCS}} build --strict"
+
+  deploy:
+    desc: Deploy ./site to Cloudflare Pages (needs wrangler + CF creds).
+    deps: [build]
+    cmds:
+      - npx wrangler pages deploy site --project-name={{.CF_PAGES_PROJECT}}
+
+  doctor:
+    desc: Audit the Linear workspace against the documented rules (see GRI-77).
+    cmds:
+      - "{{.PY}} scripts/linear_doctor.py"

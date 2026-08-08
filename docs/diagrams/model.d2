@@ -1,0 +1,45 @@
+# Canonical operating-model diagram. Edit this, not the rendered SVG.
+# Rendered inline on the cheat sheet via Kroki (```kroki-d2```).
+# initiative -> project -> issue, with the inbound/flow lane through triage.
+
+direction: down
+
+initiative: "INITIATIVE — Objective + Key Results\n(why it matters, how it's measured · leadership owns)" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+
+project: "PROJECT — what we do and how\nnames one KR + the delta · one lead · dates · spend/*\n(delivery owns)" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+project2: "PROJECT — another slice of the same objective" {
+  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; stroke-dash: 4; border-radius: 8}
+}
+
+issue1: "ISSUE — type/feature\n(a team owns it)" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+}
+issue2: "ISSUE — type/spike\nagent plan attached" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+}
+
+inbound: "INBOUND — work nobody planned:\nit breaks, it's reported, it's legally due" {
+  shape: text
+  style: {font-color: "#8C2F39"}
+}
+triage: "TRIAGE — named duty rota, five outcomes on a clock:\ninto a project · as flow work · redirect · merge · decline" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8}
+}
+flowissue: "ISSUE — no project, and that's fine\nflow/vulnerability" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 7}
+}
+
+initiative -> project: contains
+initiative -> project2: contains
+project2 -> project: depends on {style.stroke-dash: 4}
+project -> issue1
+project -> issue2
+
+inbound -> triage
+triage -> project: into a project {style.stroke: "#8C2F39"}
+triage -> flowissue: as flow work {style.stroke: "#8C2F39"}
+flowissue -> project: promoted when the theme recurs {style: {stroke: "#8C2F39"; stroke-dash: 4}}
