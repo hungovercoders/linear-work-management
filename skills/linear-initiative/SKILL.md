@@ -52,15 +52,22 @@ Challenge each one:
 4. **Timeframe** — a target date. Often a quarter; some run a year or more. Set it now.
 5. **State** — `Proposed` if not yet agreed; `Planned` once leadership agrees and the owner,
    KRs and date are all set. (`Active` comes later, when work starts against the date.)
-6. **Produce** the description from the template below and hand it to the user to create the
-   initiative in Linear.
+6. **Create it in Linear.** Set the **name** (the outcome), **owner/lead**, **status** and
+   **target date** as the initiative's native Linear fields — never as text. Put only the
+   **description body** (why · Key Results · out of scope) from [`template.md`](template.md)
+   into the description. Hand the filled body to the user to create the initiative.
 
 ## The initiative template
 
-The template lives in **[`template.md`](template.md)** beside this skill — its single source
-of truth, referenced by both this skill and the docs. Read it, fill each placeholder using
-the flow above, omit whichever KR table is unused, and keep **3–5 KRs total**. Hand the
-completed description to the user to create the initiative in Linear.
+[`template.md`](template.md) beside this skill is the single source of truth for the
+**description body** — the *why*, the Key Result table(s) and *out of scope*. Fill each
+placeholder using the flow above, omit whichever KR table is unused, and keep **3–5 KRs
+total**.
+
+The **name, owner, status and target date are native Linear fields** — set them on the
+initiative itself, never in the description text. Keeping them native is what lets Linear
+filter, sort and roll them up, and lets [`linear-doctor`](../linear-doctor/SKILL.md) check
+them.
 
 ## Related
 

@@ -1,9 +1,11 @@
-# <Initiative name — the outcome, not the theme>
+<!-- The initiative DESCRIPTION only. Set these as native Linear fields, NOT in this text:
+       • Name        → the initiative title, phrased as the outcome
+       • Owner / Lead → one named person, strategic seniority
+       • Status       → Proposed (or Planned once agreed)
+       • Target date  → the timeframe (add a start date too, from Planned onward) -->
 
-**Why this matters:** <the strategic reason; what changes if we succeed>
-**Owner:** <one named person, strategic seniority>
-**Timeframe:** <target date — a quarter, or longer>
-**State:** <Proposed | Planned>
+## Why this matters
+<the strategic reason; what changes if we succeed>
 
 ## Key Results
 

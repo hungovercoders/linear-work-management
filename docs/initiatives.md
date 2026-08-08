@@ -143,17 +143,19 @@ someone picked. The standard formats and the full cadence live in the Communicat
 
 ## Create one
 
-Both ways hold the same standard; the template lives in the **`linear-initiative`** skill as
-its single source of truth.
+Both ways hold the same standard. Set the **owner**, **status** and **target date** as the
+initiative's own **Linear fields** — not in the description — so Linear can filter, sort and
+report on them. The **description** carries only the *why*, the **Key Results** and *out of
+scope*; that part is the template.
 
-1. **Use the `linear-initiative` skill — preferred.** It coaches you through everything this
-   page describes — the outcome, the KR table(s) (measured and/or committed), the owner and
-   the timeframe — and hands back a description ready to paste into a new initiative. Find it
-   in the [Skills](skills/index.md) catalogue.
-2. **Copy the template by hand.** Grab [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/template.md)
-   from the skill, paste it into a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
-   and fill it in as this page describes. It's the same file the skill uses — the skill just
-   walks you through it.
+1. **Use the `linear-initiative` skill — preferred.** It coaches you through the outcome, the
+   KR table(s) (measured and/or committed), the owner, status and timeframe, keeps the native
+   fields native, and gives you the description body to drop in. Find it in the
+   [Skills](skills/index.md) catalogue.
+2. **By hand.** Create a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
+   set its **owner**, **status** (`Proposed`) and **target date** as fields, then paste
+   [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/template.md)
+   into the description and fill it in. It's the same file the skill uses.
 
 ---
 
