@@ -15,10 +15,10 @@ use Linear — see also **[the hard rules](hard-rules.md)** and the
 Three layers, top to bottom, and **two ways work reaches them**. Teams cut across all
 layers — a team owns issues, a project can draw on several teams but has exactly one lead.
 
-- **The strategic path** (left): planned work. An initiative sets the outcome, projects
-  move it, issues do it.
-- **The inbound path** (right): work that *arrives* — incidents, requests, compliance,
-  support, toil — and is triaged.
+| Path | Flows | What it is |
+|---|---|---|
+| **Strategic** (left) | Initiative → Project → Issues | Planned work toward an outcome |
+| **Inbound** (right) | Triage → Issue (`flow/*`) | Work that arrives: incidents, requests, compliance, support, toil |
 
 Neither path is superior or exceptional. Some teams (product, platform) live mostly on the
 strategic path; others (customer support, operations) live mostly on the inbound path; most
@@ -31,14 +31,12 @@ defect the doctor chases.
 
 One per level, plus ownership.
 
-1. **Every initiative declares its Key Results** — measurable outcomes with targets,
-   before any project sits under it. An initiative is a result, not a theme.
-2. **Every project names the Key Result it moves, and by how much.** No KR named,
-   no project.
-3. **Every issue is either in a project *or* carries one `flow/*` label.** Never
-   neither (the *unclassified* defect the doctor chases), never both.
-4. **One named human owns each initiative and each project.** Not a team, not two
-   people. Names, not squads.
+| # | Level | Rule |
+|---|---|---|
+| 1 | Initiative | **Declares its Key Results** — measurable outcomes with targets, before any project sits under it. A result, not a theme. |
+| 2 | Project | **Names the Key Result it moves, and by how much.** No KR named, no project. |
+| 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
+| 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
 
 Detail and rationale: **[The Hard Rules](hard-rules.md)**.
 
@@ -74,39 +72,51 @@ an initiative, either the work is wrong or the initiative is missing.
 
 **Projects** run a full lifecycle:
 
-`Idea → Scoping → Planned → In Progress → Launching → Completed` — plus `Paused` and `Cancelled`
+| State | Means |
+|---|---|
+| Idea | Someone's thought of it; nothing committed |
+| Scoping | Being shaped; cost and value under investigation |
+| Planned | Agreed, dated, resourced; not started |
+| In Progress | Being built |
+| Launching | Built; rolling out |
+| Paused | Deliberately stopped, with a reason and a review date |
+| Completed | Delivered **and** the KR delta observed |
+| Cancelled | Stopped for good; reason recorded |
 
 **Issues** stay minimal:
 
-`Triage → Backlog → Todo → In Progress → In Review → Done` — plus `Cancelled` and `Duplicate`
+| State | Means |
+|---|---|
+| Triage | Arrived; awaiting a routing decision |
+| Backlog | Accepted; not yet scheduled |
+| Todo | Scheduled and ready to start |
+| In Progress | Being worked |
+| In Review | Work done; under review |
+| Done | Shipped and accepted |
+| Cancelled | Won't do; reason recorded |
+| Duplicate | Superseded by another issue |
 
-What each state means (and how it maps to Linear's status types) is in the States reference
-(GRI-73). Teams may **add** states locally, never rename or remove the shared ones —
-otherwise cross-team insight breaks.
+Fuller definitions and the Linear status-type mapping live in the States reference (GRI-73).
+Teams may **add** states locally, never rename or remove the shared ones — otherwise
+cross-team insight breaks.
 
 ---
 
 ## Labels at a glance
 
 Labels come in **groups** that behave like enums — pick **one value per group**, so they
-filter and report cleanly. Separate them by where they apply.
+filter and report cleanly.
 
-**On issues:**
+| Applies to | Group | Answers |
+|---|---|---|
+| Issues | `type/*` | What kind of work is this? |
+| Issues | `flow/*` | How did it arrive? (inbound, no project) |
+| Projects | `spend/*` | Capex or opex? (set at planning) |
+| Projects & issues | `product/*` | Which product? — **grows over time** |
 
-- `type/*` — what kind of work is this?
-- `flow/*` — how did it arrive? (inbound issues, no project)
-
-**On projects:**
-
-- `spend/*` — capex or opex? (decided at planning)
-
-**Across projects and issues:**
-
-- `product/*` — which product? (`hungovercoders` · `dogadopt` · `woolwitch` ·
-  `cheeserater` · …) — the one group that **grows over time** as products are added.
-
-A label only exists if it's filtered or reported on. The fixed groups' canonical values
-live in the Labels reference (GRI-73).
+`product/*` values are your live products (`hungovercoders` · `dogadopt` · `woolwitch` ·
+`cheeserater` · …). A label only exists if it's filtered or reported on; the fixed groups'
+canonical values live in the Labels reference (GRI-73).
 
 ---
 
@@ -141,9 +151,9 @@ Health is a claim with evidence attached, not a colour someone picked.
 
 ## Getting started
 
-- **Joining a team?** Read this page, then the issue templates.
-- **Leading a project?** Read this page, then the project guidelines. Know your KR.
-- **Owning an initiative?** Read this page, then the initiative guidelines. Write
-  your KR table before your first project exists.
-- **Something feels off?** Run [`linear-doctor`](skills/index.md). It reports; it
-  doesn't fix.
+| You are… | Start with |
+|---|---|
+| Joining a team | This page, then the issue templates |
+| Leading a project | This page, then the project guidelines — know your KR |
+| Owning an initiative | This page, then the initiative guidelines — write your KR table before your first project |
+| Seeing something off | Run [`linear-doctor`](skills/index.md) — it reports, it doesn't fix |
