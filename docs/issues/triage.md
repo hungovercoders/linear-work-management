@@ -60,6 +60,13 @@ routing decision — one of **five outcomes** ("leave it sitting there" isn't on
 | Merge | Merge into an existing issue |
 | Decline | Close with a reason |
 
+!!! tip "Into a project, or stays as flow?"
+    Ask: **does an open project already own the thing this touches?** A bug in a project's
+    scope, a request the project will deliver anyway → accept it there. Self-contained work
+    that just arrived — an incident, a one-off query, upkeep — stays **flow**. If the same
+    flow theme keeps recurring, that's a signal to *propose* a project — never silently
+    promote.
+
 ### Each outcome is a native Triage action
 
 The decision uses the buttons **already in Linear's Triage view** — we don't reinvent them, we

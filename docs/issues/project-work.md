@@ -32,6 +32,12 @@ project unchanged. **`action` is the default** — reach for `feature`, `bug`, `
 same value, so work stays attributable to the product it serves without re-deciding it per
 issue. `flow/*` never appears on a project issue — that's the [triage](triage.md) group.
 
+!!! tip "Feature or action?"
+    One question: **does someone get a new capability when this ships?** Yes → `feature`
+    (acceptance criteria earn their keep). No — it's upkeep, a change, a chore, a reminder —
+    → `action`. When in doubt, `action`: it's the default for a reason, and mislabelling
+    costs nothing but a relabel.
+
 ## :material-sort-variant: Priority
 
 Every issue carries a **priority** (Urgent → Low) that orders it within the project — what gets

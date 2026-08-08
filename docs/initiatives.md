@@ -58,6 +58,12 @@ When it comes from project work, the `linear-initiative` skill asks whether it d
 or more** discovery projects and, if so, grounds the objective and the KR baselines in their
 findings — linking each so the lineage is recorded.
 
+!!! tip "New initiative, or extend an existing one?"
+    Ask: **would this work move a Key Result an existing initiative already declares?** Yes →
+    link the project there; no new initiative needed. Only when the outcome is genuinely new —
+    no existing KR captures it — does it earn its own. Fewer, sharper initiatives beat a
+    landscape of near-duplicates.
+
 ---
 
 ## Declare the Key Results first
