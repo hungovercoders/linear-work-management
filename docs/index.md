@@ -240,8 +240,8 @@ project** and exactly one **`flow/*`** label (no `type/*` — that's a project-i
 |---|---|
 | incident | Something's down or degraded — needs a response now |
 | vulnerability | A security weakness to remediate (severity drives the SLA) |
-| bug | A fault reported from outside any project |
-| analysis | A data question or report requested ad-hoc from outside a project |
+| defect | A fault reported from outside any project |
+| query | A data question or report requested ad-hoc from outside a project |
 | compliance | A regulatory or policy obligation to meet |
 | support | A user or customer request |
 | toil | Recurring manual work worth capturing |
@@ -264,7 +264,7 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 |---|---|
 | `flow/incident` | Immediately |
 | `flow/vulnerability` · `flow/support` | 1 working day |
-| `flow/compliance` · `flow/bug` · `flow/toil` · `flow/analysis` | 2 working days |
+| `flow/compliance` · `flow/defect` · `flow/toil` · `flow/query` | 2 working days |
 
 | Resolution — `flow/vulnerability` by severity | Remediate within |
 |---|---|

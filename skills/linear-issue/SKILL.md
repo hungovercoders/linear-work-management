@@ -65,12 +65,14 @@ issue or an inbound issue. One or the other, never both.
 
 **2b. Inbound issue.**
 
-- Pick the single **`flow/*`** label (`incident` · `vulnerability` · `bug` · `analysis` ·
-  `compliance` · `support` · `toil`). **No project, no `type/*`.** (`flow/analysis` is an ad-hoc
-  data question or report requested from outside a project.)
+- Pick the single **`flow/*`** label (`incident` · `vulnerability` · `defect` · `query` ·
+  `compliance` · `support` · `toil`). **No project, no `type/*`.** (`flow/defect` is a fault
+  reported from outside; `flow/query` an ad-hoc data question or report from outside a project —
+  the inbound counterparts of `type/bug` and `type/analysis`, named differently because Linear
+  label names are unique across groups.)
 - Write the body from the template that matches the **kind** where one exists —
-  [`template-bug.md`](template-bug.md) for `flow/bug`, [`template-analysis.md`](template-analysis.md)
-  for `flow/analysis`; otherwise the general [`template-action.md`](template-action.md). (Bespoke
+  [`template-bug.md`](template-bug.md) for `flow/defect`, [`template-analysis.md`](template-analysis.md)
+  for `flow/query`; otherwise the general [`template-action.md`](template-action.md). (Bespoke
   shapes for incident/vulnerability/etc. land with **Flow & Triage** (GRI-74).) Triage decides its
   fate; see Flow & Triage.
 
