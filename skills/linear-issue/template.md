@@ -14,18 +14,19 @@
      sections only as far as they help; the time box in "When is it done?" is what bounds it. -->
 
 ## What needs doing?
-<!-- feature: the capability to add · bug: what's broken, with steps to reproduce + expected vs
-     actual · action: the upkeep or change to make · spike: the question to investigate -->
+<!-- action: the work to do — a change, upkeep, or a reminder · feature: the capability to add ·
+     bug: what's broken, with steps to reproduce + expected vs actual · spike: the question to
+     investigate -->
 <the task itself>
 
 ## Why does it need doing?
-<!-- feature: the user value it delivers · bug: the impact while it's broken · action: why now —
-     the risk or debt of leaving it · spike: what decision the answer unblocks -->
+<!-- action: why it's needed / why now · feature: the user value it delivers · bug: the impact
+     while it's broken · spike: what decision the answer unblocks -->
 <the value or problem behind it>
 
 ## When is it done?
-<!-- feature: acceptance criteria met · bug: fixed and no longer reproducible (regression covered)
-     · action: the change complete and verified · spike: question answered + findings written,
+<!-- action: the work complete and verified · feature: acceptance criteria met · bug: fixed and
+     no longer reproducible (regression covered) · spike: question answered + findings written,
      within the time box -->
 <how we'll know it's finished — not merely shipped>
 
