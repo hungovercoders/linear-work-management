@@ -14,7 +14,7 @@ It carries the *why* and *how it's measured*, never the *how it's built*.
 
 - **No Key Results, no initiative** — it's a wish, not an initiative.
 - Those KRs are exactly what the projects below will name and move (rule 2). This is the
-  measurement chain: initiatives *declare* KRs → projects *name which one* → issues *do
+  measurement chain: initiatives *declare* KRs → projects *name which one(s)* → issues *do
   the work*.
 
 ---
@@ -25,6 +25,9 @@ A project exists to move a measure on an initiative. Name **which** KR and the *
 you expect (e.g. "activation 22% → 30%"). This turns "projects are the how" from an
 aspiration into something checkable.
 
+- A project can belong to **more than one initiative** — when it does, name the KR and the
+  delta it moves on **each**. The minimum is one; the rule is that every KR it claims has a
+  named delta.
 - **No KR named, no project.** Scoping can start; committed delivery cannot.
 - **Completed** means delivered *and* the KR delta observed — not merely shipped.
 - Genuinely standalone work is allowed but **questioned**: if it ladders to no

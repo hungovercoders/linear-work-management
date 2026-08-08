@@ -22,6 +22,8 @@ use Linear** — see also **[the hard rules](hard-rules.md)** and the
 
 Three layers, top to bottom, and **two ways work reaches them**. Teams cut across all
 layers — a team owns issues, a project can draw on several teams but has exactly one lead.
+A project serves **one or more** initiatives — it can move Key Results across several, not
+just one.
 
 | Path | Flows | What it is |
 |---|---|---|
@@ -46,7 +48,7 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 | # | Level | Rule |
 |---|---|---|
 | 1 | Initiative | **Declares its Key Results** — measurable outcomes with targets, before any project sits under it. A result, not a theme. |
-| 2 | Project | **Names the Key Result it moves, and by how much.** No KR named, no project. |
+| 2 | Project | **Names the Key Result(s) it moves, and by how much** — one or more, across the initiative(s) it serves. No KR named, no project. |
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
 | 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
 | 5 | Time-bounds | **Active initiatives are time-bound; projects carry start + end dates from `Planned` onward.** Undated work can't be prioritised or sequenced. |
@@ -62,7 +64,7 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 | Situation | Make a… |
 |---|---|
 | A strategic outcome we want by a date, with measures | **Initiative** |
-| A bounded piece of work that moves one of those measures | **Project** under it |
+| A bounded piece of work that moves one or more of those measures | **Project** under the initiative(s) it serves |
 | A discrete task within that work | **Issue** in the project |
 | Something broke, arrived, or was reported | **Issue** via **Triage** |
 | Genuinely standalone work with no initiative | Project, but expect to justify it |
@@ -114,12 +116,13 @@ You own an **outcome**, not a task list. Keep initiatives about *what & why*; le
 
 ## :material-clipboard-check-outline: Projects — for delivery leads (and the strategy that funds them)
 
-A project is **what you'll do and how**, in service of one initiative's Key Result.
+A project is **what you'll do and how**, in service of the Key Result(s) of the
+initiative(s) it belongs to — usually one, sometimes several.
 
 | Your job | Detail |
 |---|---|
-| Name the KR it moves + delta | e.g. "activation 22% → 30%" — [rule 2](hard-rules.md); no KR, no project |
-| Link it to an initiative | Standalone is the exception, and gets questioned |
+| Name the KR(s) it moves + delta | e.g. "activation 22% → 30%" — [rule 2](hard-rules.md); one or more, no KR means no project |
+| Link it to one or more initiatives | Standalone is the exception, and gets questioned |
 | Be the single named lead | One person accountable — [rule 4](hard-rules.md) |
 | Set start + end dates | From `Planned` onward — [rule 5](hard-rules.md) |
 | Draw dependencies | So sequencing and risk are visible |
