@@ -233,8 +233,8 @@ to `Todo` before work starts — that's the readiness gate.
 
 ### <span class="lwm-inbound">Inbound issues</span> — flow work (for the triage duty rota)
 
-Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** label (no
-`type/*` — that's a project-issue group):
+Arrive through **Triage** — Linear's built-in per-team inbox for incoming work — carry **no
+project** and exactly one **`flow/*`** label (no `type/*` — that's a project-issue group):
 
 | `flow/*` | For |
 |---|---|

@@ -8,6 +8,14 @@ the [shared issue model](index.md) — the lifecycle, the body-as-prompt, native
 underneath.
 </div>
 
+!!! info "Triage is a Linear feature — not something we bolt on"
+    **Triage** is Linear's built-in, per-team **inbox**: incoming issues — from integrations,
+    customer requests, Slack, or the API — land there *before* they enter the workflow, so
+    someone makes a routing decision instead of the work dropping straight into a backlog. It's
+    turned on in the team's settings and has its own view in Linear. Everything below — the rota,
+    the five outcomes, the clocks — is simply *how we use that native feature* as the front door
+    for inbound work.
+
 `flow/*` is how inbound work stays visible without faking a project around it. `product/*` is
 **optional** here — there's no project to inherit from, so set it only if the work clearly serves
 a product.

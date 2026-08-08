@@ -41,7 +41,7 @@ Every issue moves through the **same states**, whichever path it came from:
 
 | State | Means |
 |---|---|
-| Triage | Arrived through the front door; awaiting a routing decision |
+| Triage | In **Linear's built-in Triage inbox**; awaiting a routing decision (see [Triage work](triage.md)) |
 | Backlog | Accepted, but **not yet refined** enough to start |
 | Todo | **Refined, actionable, can be picked up now** |
 | In Progress | Being worked |
