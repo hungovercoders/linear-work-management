@@ -147,9 +147,6 @@ once it's committed — and the `Planned` gate divides the two. See
 | Completed | Closed | Delivered **and** the KR delta observed |
 | Cancelled | Closed | Stopped for good; reason recorded |
 
-!!! quote
-    Health is a claim with evidence attached — not a colour someone picked.
-
 ### Discovery phase — is there something here? (`Idea` · `Scoping`)
 
 Explore cheaply. A project in discovery may have **no parent initiative and no named KR** —
