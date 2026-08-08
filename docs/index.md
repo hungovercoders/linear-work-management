@@ -127,6 +127,25 @@ reference (GRI-73); `product/*` grows as products are added.
 
 ---
 
+## :material-flag-outline: Priority
+
+Priority is **how urgent** work is to us — it drives ordering, and (via SLAs) deadlines.
+Set it once the work is understood: at **triage** for inbound, at **planning** for project
+work. Linear can require a priority before an issue leaves Triage.
+
+| Priority | Use for |
+|---|---|
+| Urgent | Drop-everything — breaking or time-critical |
+| High | Important; next up |
+| Medium | Normal, planned work |
+| Low | Nice-to-have; do when there's slack |
+| No priority | Not yet decided — triage should resolve this |
+
+Priority is distinct from a vulnerability's **severity** (Critical/High/Medium), though the
+two usually track together. Full conventions land in **Issues (GRI-72)**.
+
+---
+
 ## :material-timer-outline: Service levels
 
 Inbound work runs on **two clocks**: a **decision** clock (how fast triage routes it) and,
@@ -140,15 +159,18 @@ for some types, a **resolution** clock (how fast it's fixed once accepted).
 | `flow/vulnerability` · `flow/support` | 1 working day |
 | `flow/compliance` · `flow/defect` · `flow/toil` | 2 working days |
 
-**2. Resolution** — time to fix once accepted (today, just vulnerabilities, by severity):
+**2. Resolution** — time to fix a `flow/vulnerability` once accepted, by **severity**:
 
-| Work | Resolve within |
+| Severity | Remediate within |
 |---|---|
-| `flow/vulnerability` — remediated or risk accepted | Critical 7d · High 30d · Medium 90d |
+| Critical | 7 days |
+| High | 30 days |
+| Medium | 90 days |
 
-So a vulnerability is **routed** within a working day, then **remediated** within its
-severity window — two clocks, not a repeat. This is why triage **labels every inbound
-item**: the `flow/*` label sets both.
+So a vulnerability is **routed** within a working day (decision clock), then **remediated**
+within its **severity** window (resolution clock) — two clocks, not a repeat. Severity here
+is distinct from Linear *priority*, though the two usually track together; how it's encoded
+and wired to an SLA is decided in **SLAs (GRI-78)**.
 
 !!! note "How the clock is enforced"
     Linear maps a `flow/*` label to a deadline automatically via **SLA rules** (Settings →
