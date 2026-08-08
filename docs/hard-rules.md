@@ -8,9 +8,15 @@ two cross-cutting invariants: ownership and time-bounds.**
 
 ## 1. Every initiative declares its Key Results
 
-An initiative is a **measurable outcome, not a theme**. State its Key Results — the
-metrics that will move and the targets they move to — before any project sits beneath it.
-It carries the *why* and *how it's measured*, never the *how it's built*.
+An initiative is a **defined outcome, not a theme**. State its Key Results before any
+project sits beneath it. It carries the *why* and *how it's judged*, never the *how it's
+built*. A Key Result is either:
+
+- **Measured** — a metric with a baseline and the target it moves to; or
+- **Committed** — a binary deliverable with a Definition of Done, for work that just needs
+  to happen (compliance, contracted, hard-deadline).
+
+Then:
 
 - **No Key Results, no initiative** — it's a wish, not an initiative.
 - Those KRs are exactly what the projects below will name and move (rule 2). This is the

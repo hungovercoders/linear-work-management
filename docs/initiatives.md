@@ -31,14 +31,24 @@ initiative about ends, not means.
 ## Declare the Key Results first
 
 **[Hard rule 1](hard-rules.md):** every initiative declares its Key Results *before* any
-project sits beneath it. A Key Result is a metric with a target — the number that will move
-and where it moves to. Write them as a table in the initiative's description.
+project sits beneath it. Write them into the initiative's description.
 
-| Key Result | Baseline | Target | How it's measured |
+A Key Result comes in one of two kinds — use whichever fits, and don't force a number where
+one doesn't belong:
+
+- **Measured** — a metric with a **baseline → target**. Scored on how far it moved. Use it
+  for outcomes you can quantify.
+- **Committed** — a **binary deliverable** with a **Definition of Done**. Done or not-done —
+  for work that just needs to happen (compliance, contracted, hard-deadline).
+
+| Measured KR | Baseline | Target | Evidence |
 |---|---|---|---|
 | Activation rate | 22% | 30% | Signups reaching first value in 7 days |
 | Weekly active teams | 140 | 200 | Teams with ≥1 active member per week |
-| Support load per team | 1.8 tickets/wk | < 1.0 | Triage volume ÷ active teams |
+
+| Committed KR | Definition of Done | Evidence |
+|---|---|---|
+| SOC 2 Type II | Report issued with no exceptions | Auditor's signed report |
 
 Those Key Results are exactly what the projects below will **name and move** — that's
 [rule 2](hard-rules.md). The chain is: initiatives *declare* KRs → projects *name which
@@ -46,7 +56,7 @@ one(s) and the delta* → issues *do the work*. Every issue in your cycle should
 this line.
 
 !!! abstract "The KR table is the contract"
-    No KR table, no initiative — it's a wish. Once written, it's what your delivery leads
+    No KRs, no initiative — it's a wish. Once written, they're what your delivery leads
     commit against and what you'll score at the end.
 
 ---
@@ -130,26 +140,16 @@ someone picked. The standard formats and the full cadence live in the Communicat
 
 ---
 
-## The initiative template
+## Create one — the `linear-initiative` skill
 
-Paste this into a new Linear initiative's description and fill it in. It captures the four
-things an initiative must state: **why, the KR table, the owner, and the timeframe**.
+The template and the authoring flow live in the **`linear-initiative`** skill, which is
+their single source of truth. This page is its human-readable companion: read here to
+understand *what* an initiative is and *why*; run the skill to produce *one*.
 
-```markdown
-# <Initiative name — the outcome, not the theme>
-
-**Why this matters:** <the strategic reason; what changes if we succeed>
-**Owner:** <one named person, strategic seniority>
-**Timeframe:** <target date — a quarter, or longer>
-
-## Key Results
-| Key Result | Baseline | Target | How it's measured |
-|------------|----------|--------|-------------------|
-| <metric>   | <from>   | <to>   | <the query/report that proves it> |
-
-## Out of scope
-<what this initiative is deliberately not doing, so projects don't sprawl>
-```
+The skill coaches you through the same standard this page describes and hands back an
+initiative description ready to create in Linear — a **why** line, the **owner**, the
+**timeframe**, the **KR table(s)** (measured and/or committed), and an **out-of-scope**
+note. It's in the [Skills](skills/index.md) catalogue.
 
 ---
 

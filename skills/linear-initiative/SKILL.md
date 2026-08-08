@@ -1,0 +1,89 @@
+---
+name: linear-initiative
+description: Draft or refine a Linear initiative to the Ways of Working standard — a defined outcome with declared Key Results (measured or committed), a single named owner, and a target date set from Planned onward. Coaches the KR table and produces the initiative description ready to create in the happydevs workspace. Use when starting a new initiative or tidying an existing one.
+---
+
+<!-- doc: initiatives.md -->
+
+# linear-initiative
+
+Draft an initiative that satisfies the hard rules and the
+[Initiatives guide](https://linear-work-management.pages.dev/initiatives/). This skill is the
+**source of truth for the initiative template**; the Initiatives page is its human-readable
+companion — read that to understand *why*, run this to produce *one*.
+
+> Linear's API can't create initiatives directly, so this skill coaches the initiative and
+> hands back a description ready to paste into a **new initiative** in Linear. Once it
+> exists, link projects with `save_project` (`addInitiatives`) and post updates with
+> `save_status_update` (`type: initiative`).
+
+## What good looks like
+
+- **Rule 1** — declares its Key Results before any project. A result, not a theme.
+- **Rule 4** — one named owner with strategic seniority. Not a team, not two people.
+- **Rule 5** — a target date, set now (from `Planned` onward), so it can be prioritised.
+- Carries the *why* and *how it's judged*, never the *how it's built* — that's the projects'.
+
+## Key Results come in two kinds
+
+Allow both, and don't force a number where one doesn't belong:
+
+- **Measured** (aspirational) — a metric with a **baseline → target** (e.g. "activation
+  22% → 30%"). Scored on how far it moved (~0.7 = success). Use for outcomes you can quantify.
+- **Committed** — a **binary deliverable** with a **Definition of Done** (e.g. "SOC 2 Type II
+  report issued"). Done or not-done. Use for work that *just needs to happen* — compliance,
+  contracted deliverables, hard-deadline ships.
+
+Challenge each one:
+
+- A measured KR written as an output ("launch X", "build Y") is usually a **committed** KR —
+  or the metric it's meant to move is the better KR.
+- A committed KR whose real purpose is to move a number should be **measured** instead.
+- Every KR names where it's evidenced (dashboard/query for measured; PR/ticket/doc for
+  committed). No source yet → that's a dependency; note it.
+
+## Flow
+
+1. **Outcome** — "What outcome, and why does it matter?" Reject themes ("improve
+   onboarding"); push for something you can tell whether you hit.
+2. **Key Results** — 3–5. For each, ask measured or committed, then prompt for
+   baseline → target (measured) or the Definition of Done (committed), plus an evidence source.
+3. **Owner** — one named person, strategic seniority.
+4. **Timeframe** — a target date. Often a quarter; some run a year or more. Set it now.
+5. **State** — `Proposed` if not yet agreed; `Planned` once leadership agrees and the owner,
+   KRs and date are all set. (`Active` comes later, when work starts against the date.)
+6. **Produce** the description from the template below and hand it to the user to create the
+   initiative in Linear.
+
+## The initiative template (source of truth)
+
+```markdown
+# <Initiative name — the outcome, not the theme>
+
+**Why this matters:** <the strategic reason; what changes if we succeed>
+**Owner:** <one named person, strategic seniority>
+**Timeframe:** <target date — a quarter, or longer>
+**State:** <Proposed | Planned>
+
+## Key Results
+
+### Measured
+| Key Result | Baseline | Target | Evidence |
+|------------|----------|--------|----------|
+| <metric>   | <from>   | <to>   | <dashboard/query, or TBD> |
+
+### Committed
+| Key Result    | Definition of Done                       | Evidence |
+|---------------|------------------------------------------|----------|
+| <deliverable> | <concrete criteria that prove it shipped>| <PR/ticket/doc, or TBD> |
+
+## Out of scope
+<what this initiative is deliberately not doing, so projects don't sprawl>
+```
+
+Omit whichever KR table is unused. Keep **3–5 KRs total** across both.
+
+## Related
+
+- [Initiatives guide](https://linear-work-management.pages.dev/initiatives/) — the human-readable companion
+- [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/) — rules 1, 4, 5

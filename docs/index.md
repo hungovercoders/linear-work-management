@@ -47,7 +47,7 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 
 | # | Level | Rule |
 |---|---|---|
-| 1 | Initiative | **Declares its Key Results** — measurable outcomes with targets, before any project sits under it. A result, not a theme. |
+| 1 | Initiative | **Declares its Key Results** before any project — **measured** (baseline → target) or **committed** (a deliverable, done/not-done). A result, not a theme. |
 | 2 | Project | **Names the Key Result(s) it moves, and by how much** — one or more, across the initiative(s) it serves. No KR named, no project. |
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
 | 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
@@ -95,7 +95,7 @@ You own an **outcome**, not a task list. Keep initiatives about *what & why*; le
 
 | Your job | Detail |
 |---|---|
-| Declare Key Results | Measurable outcomes with targets, before any project — [rule 1](hard-rules.md) |
+| Declare Key Results | Measured or committed, before any project — [rule 1](hard-rules.md) |
 | Name yourself owner | One person, strategic seniority — [rule 4](hard-rules.md) |
 | Set the target date | From `Planned` onward, so it can be prioritised — [rule 5](hard-rules.md) |
 | Post the update | Monthly to `#initiatives` while active |
