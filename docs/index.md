@@ -178,8 +178,23 @@ and wired to an SLA is decided in **SLAs (GRI-78)**.
     templates / Linear Asks ensure the label is set on intake. Exact wiring (and the
     decision-vs-resolution nuance) lands in **SLAs (GRI-78)**.
 
-Triage has **five** outcomes, never four: accept into a project, accept as flow,
-redirect, merge, decline. "Leave it sitting there" is not one of them.
+---
+
+## :material-call-split: Triage outcomes
+
+Every triaged item leaves triage with a **decision** — five of them, never four.
+"Leave it sitting there" isn't one.
+
+| Outcome | What it means |
+|---|---|
+| Accept into a project | Planned-type work — attach it to a project; it becomes an issue there |
+| Accept as flow | Inbound work that stays projectless — keep it with one `flow/*` label |
+| Redirect | Not ours — route it to the right team's triage |
+| Merge | A duplicate of existing work — merge into that issue |
+| Decline | We won't do it — close with a reason |
+
+In Linear these map to the built-in **Triage actions** (accept · mark duplicate · decline ·
+move to team). Detail in **Flow & Triage (GRI-74)**.
 
 ---
 
