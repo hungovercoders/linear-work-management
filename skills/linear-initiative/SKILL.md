@@ -55,33 +55,12 @@ Challenge each one:
 6. **Produce** the description from the template below and hand it to the user to create the
    initiative in Linear.
 
-## The initiative template (source of truth)
+## The initiative template
 
-```markdown
-# <Initiative name — the outcome, not the theme>
-
-**Why this matters:** <the strategic reason; what changes if we succeed>
-**Owner:** <one named person, strategic seniority>
-**Timeframe:** <target date — a quarter, or longer>
-**State:** <Proposed | Planned>
-
-## Key Results
-
-### Measured
-| Key Result | Baseline | Target | Evidence |
-|------------|----------|--------|----------|
-| <metric>   | <from>   | <to>   | <dashboard/query, or TBD> |
-
-### Committed
-| Key Result    | Definition of Done                       | Evidence |
-|---------------|------------------------------------------|----------|
-| <deliverable> | <concrete criteria that prove it shipped>| <PR/ticket/doc, or TBD> |
-
-## Out of scope
-<what this initiative is deliberately not doing, so projects don't sprawl>
-```
-
-Omit whichever KR table is unused. Keep **3–5 KRs total** across both.
+The template lives in **[`template.md`](template.md)** beside this skill — its single source
+of truth, referenced by both this skill and the docs. Read it, fill each placeholder using
+the flow above, omit whichever KR table is unused, and keep **3–5 KRs total**. Hand the
+completed description to the user to create the initiative in Linear.
 
 ## Related
 

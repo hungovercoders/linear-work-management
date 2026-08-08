@@ -150,10 +150,10 @@ its single source of truth.
    page describes — the outcome, the KR table(s) (measured and/or committed), the owner and
    the timeframe — and hands back a description ready to paste into a new initiative. Find it
    in the [Skills](skills/index.md) catalogue.
-2. **Copy the template by hand.** Grab the [initiative template](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/SKILL.md#the-initiative-template-source-of-truth),
-   paste it into a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
-   and fill it in as this page describes. It's the same template the skill uses — the skill
-   just walks you through it.
+2. **Copy the template by hand.** Grab [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/template.md)
+   from the skill, paste it into a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
+   and fill it in as this page describes. It's the same file the skill uses — the skill just
+   walks you through it.
 
 ---
 
