@@ -129,30 +129,30 @@ target date set); **Planned → Active** is when work actually starts against th
 
 ## :material-clipboard-check-outline: Projects — for delivery leads (and the strategy that funds them)
 
-A project is **what you'll do and how**. It runs in one of two modes as it moves through its
-lifecycle — **discovery** while there's still a question to answer, **delivery** once it's
-committed — and the `Planned` gate is the switch. See
+A project is **what you'll do and how**. Every project moves through the same lifecycle; its
+states group into phases — **discovery** while there's still a question to answer, **delivery**
+once it's committed — and the `Planned` gate divides the two. See
 [all projects in Linear](https://linear.app/happydevs/projects/all).
 
 **States** (full lifecycle):
 
-| State | Mode | Means |
+| State | Phase | Means |
 |---|---|---|
 | Idea | Discovery | Someone's thought of it; nothing committed |
 | Scoping | Discovery | Being shaped; cost and value under investigation |
 | Planned | Delivery | Agreed, dated, resourced; not started |
 | In Progress | Delivery | Being built |
 | Launching | Delivery | Built; rolling out |
-| Paused | — | Deliberately stopped, with a reason and a review date |
-| Completed | — | Delivered **and** the KR delta observed |
-| Cancelled | — | Stopped for good; reason recorded |
+| Paused | Delivery | Deliberately stopped, with a reason and a review date |
+| Completed | Closed | Delivered **and** the KR delta observed |
+| Cancelled | Closed | Stopped for good; reason recorded |
 
 !!! quote
     Health is a claim with evidence attached — not a colour someone picked.
 
-### Discovery projects — is there something here? (`Idea` · `Scoping`)
+### Discovery phase — is there something here? (`Idea` · `Scoping`)
 
-Explore cheaply. A discovery project may have **no parent initiative and no named KR** —
+Explore cheaply. A project in discovery may have **no parent initiative and no named KR** —
 that's legitimate; it's where an initiative's groundwork gets recorded. At the **`Planned`**
 gate, it resolves into one of three:
 
@@ -162,7 +162,7 @@ gate, it resolves into one of three:
 | **Standalone** | Proceed with no initiative — allowed, but questioned |
 | **Drop** | Cancel it; reason recorded |
 
-### Delivery projects — build the committed outcome (`Planned` · `In Progress` · `Launching`)
+### Delivery phase — build the committed outcome (`Planned` · `In Progress` · `Launching`)
 
 Committed and linked to an outcome. Now the rules bite:
 
