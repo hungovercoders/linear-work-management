@@ -7,15 +7,16 @@ description: Draft or refine a Linear initiative to the Ways of Working standard
 
 # linear-initiative
 
-Draft an initiative that satisfies the hard rules and the
-[Initiatives guide](https://linear-work-management.pages.dev/initiatives/). This skill is the
-**source of truth for the initiative template**; the Initiatives page is its human-readable
-companion — read that to understand *why*, run this to produce *one*.
+Draft or refine a Linear initiative to the Ways of Working standard: a defined outcome with
+declared Key Results, a single named owner, and a target date from `Planned` onward.
+
+**Requires:** the **Linear MCP server** connected — to read the workspace, link projects, and
+post updates.
 
 > Linear's API can't create initiatives directly, so this skill coaches the initiative and
-> hands back a description ready to paste into a **new initiative** in Linear. Once it
-> exists, link projects with `save_project` (`addInitiatives`) and post updates with
-> `save_status_update` (`type: initiative`).
+> hands back a description to paste into a **new initiative** in Linear. Once it exists, link
+> projects with `save_project` (`addInitiatives`) and post updates with `save_status_update`
+> (`type: initiative`).
 
 ## What good looks like
 
@@ -66,10 +67,4 @@ total**.
 
 The **name, owner, status and target date are native Linear fields** — set them on the
 initiative itself, never in the description text. Keeping them native is what lets Linear
-filter, sort and roll them up, and lets [`linear-doctor`](../linear-doctor/SKILL.md) check
-them.
-
-## Related
-
-- [Initiatives guide](https://linear-work-management.pages.dev/initiatives/) — the human-readable companion
-- [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/) — rules 1, 4, 5
+filter, sort and roll them up, and keeps the workspace auditable.
