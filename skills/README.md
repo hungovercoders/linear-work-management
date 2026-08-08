@@ -58,3 +58,4 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 | `linear-triage` | A routing decision per inbound issue (five outcomes) | [Triage work](https://linear-work-management.pages.dev/issues/triage/) |
 | `linear-team-digest` | The weekly team digest (cycle + triage roll-up) | [Communications](https://linear-work-management.pages.dev/communications/) |
 | `linear-doctor` | A drift report — hard rules, taxonomy, stale updates | [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/) |
+| `linear-stakeholder-deck` | A Marp slide deck of the live portfolio | [Communications](https://linear-work-management.pages.dev/communications/) |

@@ -50,3 +50,8 @@ tasks:
     desc: Audit the Linear workspace against the documented rules (see GRI-77).
     cmds:
       - "{{.PY}} scripts/linear_doctor.py"
+
+  deck:
+    desc: Emit a Marp stakeholder deck from live Linear state (see GRI-81).
+    cmds:
+      - "{{.PY}} scripts/linear_deck.py"
