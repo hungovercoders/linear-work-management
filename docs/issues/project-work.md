@@ -26,7 +26,7 @@ project unchanged. **`action` is the default** — reach for `feature`, `bug`, `
 | `feature` | A new capability | The change and its acceptance criteria |
 | `bug` | Something's broken | Steps to reproduce, expected vs actual |
 | `analysis` | A data question to answer or a report to produce — the deliverable is the answer, not shipped code | The question, and the answer/report |
-| `spike` | A time-boxed investigation — and the free-wheeling home for context, notes and planning | The question and the time box |
+| `spike` | A time-boxed investigation | The question and the time box |
 
 `product/*` (`hungovercoders` · `dogadopt` · `woolwitch` · …) is **inherited from the project** —
 same value, so work stays attributable to the product it serves without re-deciding it per
