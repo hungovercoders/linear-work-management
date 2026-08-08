@@ -49,14 +49,14 @@ issue or an inbound issue. One or the other, never both.
 
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
 - Pick the **`type/*`** — `feature`, `bug`, `action` or `spike`.
-- Write the **body** from [`template.md`](template.md): the problem and what "done" looks like.
-  `product/*` inherits from the project.
+- Write the **body** from [`template.md`](template.md): what needs doing, why, and when it's
+  done, plus any resources. `product/*` inherits from the project.
 
 **2b. Inbound issue.**
 
 - Pick the single **`flow/*`** label (`incident` · `vulnerability` · `bug` · `compliance` ·
   `support` · `toil`). **No project, no `type/*`.**
-- Write the same body — the problem and what "done" looks like. Triage decides its fate; see
+- Write the same body — what needs doing, why, and when it's done. Triage decides its fate; see
   Flow & Triage.
 
 **3. Set the native fields.** On the issue itself, never in the description: **assignee**,
@@ -69,16 +69,16 @@ in this skill:
 
 - **Refine to Todo.** Sharpen the problem, define done, size it, clear blockers — the
   **Backlog → Todo** readiness gate. **Nothing starts from Backlog.**
-- **Write the agent plan.** When the issue is **picked up**, whoever works it (person or agent)
-  works out the *how* and stores that plan in the description's **`## Agent plan`** section — left
-  empty at creation, so the approach is reviewable before the code is.
+- **Write the plan.** When the issue is **picked up**, whoever works it (person or agent) works
+  out the *how* and stores it in the description's **`## Plan`** section — left empty at creation,
+  so the approach is reviewable before the code is.
 
 ## The issue template
 
 [`template.md`](template.md) beside this skill is the single source of truth for the issue
-**description body** at capture — the same body for every `type/*`, with a per-type note on what
-to emphasise. The `## Agent plan` section is left empty; it's filled at pickup. Everything else
-is a native field.
+**description body** at capture — What needs doing / Why / When it's done / Resources, with a
+per-type note on what to emphasise. The `## Plan` section is left empty; it's filled at pickup.
+Everything else is a native field.
 
 The **assignee, priority, status, project / `flow/*` classification and `type/*` / `product/*`
 labels are native Linear fields** — set them on the issue, never in the description text. Keeping
