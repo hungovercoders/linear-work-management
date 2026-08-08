@@ -74,7 +74,7 @@ an initiative, either the work is wrong or the initiative is missing.
 | Issue | The assignee | Is it done? |
 | Triage | Named duty rota, one person per cycle | Does this belong to us, and where does it go? |
 
-The four sections below tell each owner exactly what to do. **Read the one that's you.**
+The sections below tell each owner exactly what to do. **Read the one that's you.**
 
 ---
 
@@ -140,22 +140,17 @@ A project is **what you'll do and how**, in service of one initiative's Key Resu
 
 ---
 
-## :material-checkbox-marked-circle-outline: Issues — for the team doing the work
+## :material-checkbox-marked-circle-outline: Issues — the work itself
 
-An issue is a **discrete task**, understood before it starts. Every issue is classified —
-in a project *or* one `flow/*` label ([rule 3](hard-rules.md)). The issue body is the
-**prompt**: store the agent's plan against it.
+An issue is a **discrete task**, understood before it starts. Two things are true of
+**every** issue, whichever path it came from:
 
-**Type it** (`type/*`):
+- It is **classified** — in a project *or* carrying one `flow/*` label, never both, never
+  neither ([rule 3](hard-rules.md)).
+- The issue body is the **prompt** — store the agent's plan against it — and it carries a
+  **priority** (Urgent → Low) that orders it.
 
-| `type/*` | For |
-|---|---|
-| feature | A new capability |
-| defect | Something's broken |
-| chore | Maintenance, upkeep, dependency bumps |
-| spike | A time-boxed investigation |
-
-**States** (minimal and measurable):
+**States** — the same lifecycle for every issue:
 
 | State | Means |
 |---|---|
@@ -168,37 +163,38 @@ in a project *or* one `flow/*` label ([rule 3](hard-rules.md)). The issue body i
 | Cancelled | Won't do; reason recorded |
 | Duplicate | Superseded by another issue |
 
-**Priority** — how urgent to us; drives ordering (and, via SLAs, deadlines):
+From here every issue is **one of two kinds** — and only one.
 
-| Priority | Use for |
+### <span class="lwm-strat">Project issues</span> — planned work (for the delivery team)
+
+Live inside a **project** and ladder to its KR. Classified by **`type/*`**:
+
+| `type/*` | For |
 |---|---|
-| Urgent | Drop-everything — breaking or time-critical |
-| High | Important; next up |
-| Medium | Normal, planned work |
-| Low | Nice-to-have; do when there's slack |
-| No priority | Not yet decided |
+| feature | A new capability |
+| defect | Something's broken |
+| chore | Maintenance, upkeep, dependency bumps |
+| spike | A time-boxed investigation |
 
----
+Refined from `Backlog` to `Todo` before work starts — that's the readiness gate.
 
-## :material-call-split: Triage & flow — for the duty rota on the front door
+### <span class="lwm-inbound">Inbound issues</span> — flow work (for the triage duty rota)
 
-Inbound work — incidents, requests, compliance, support, toil — arrives here. Your job:
-**decide fast, classify, route**. Every item leaves with one of five outcomes; "leave it
-sitting there" isn't one.
+Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** label:
+`incident` · `vulnerability` · `defect` · `compliance` · `support` · `toil`. A named **duty
+rota** decides each one, fast — with one of **five outcomes** ("leave it sitting there"
+isn't one):
 
 | Outcome | What it means |
 |---|---|
-| Accept into a project | Planned-type work — attach it to a project; it becomes an issue there |
-| Accept as flow | Inbound work that stays projectless — keep it with one `flow/*` label |
-| Redirect | Not ours — route it to the right team's triage |
-| Merge | A duplicate of existing work — merge into that issue |
-| Decline | We won't do it — close with a reason |
+| Accept into a project | Becomes a **project issue** (above) |
+| Accept as flow | Stays here — one `flow/*` label, no project |
+| Redirect | Route it to the right team's triage |
+| Merge | Merge into an existing issue |
+| Decline | Close with a reason |
 
-**Classify it** (`flow/*`): `incident` · `vulnerability` · `defect` · `compliance` ·
-`support` · `toil`.
-
-Inbound work runs on **two clocks** — a **decision** clock (route it) and, for some types,
-a **resolution** clock (fix it):
+Inbound work runs on **two clocks** — a **decision** clock (route it) then, for some, a
+**resolution** clock (fix it):
 
 | Decision — set by `flow/*` | Decide within |
 |---|---|
@@ -212,9 +208,8 @@ a **resolution** clock (fix it):
 | High | 30 days |
 | Medium | 90 days |
 
-Set a **priority** at triage — it orders the work and can drive the SLA. Linear can require a
-priority before an item leaves Triage. How the label maps to an SLA (and severity is encoded)
-lands in **SLAs (GRI-78)**.
+Priority set at triage can drive the SLA, and Linear can require it before an item leaves
+Triage. How the label maps to an SLA (and severity is encoded) lands in **SLAs (GRI-78)**.
 
 ---
 
@@ -226,6 +221,6 @@ Top-down — find your row:
 |---|---|
 | Owning an initiative | This page, then **Initiatives** — write your KR table before your first project |
 | Leading a project | This page, then **Projects** — know your KR |
-| Delivering on a team | This page, then **Issues** |
-| On triage duty | This page, then **Triage & flow** |
+| Delivering on a team | This page, then **Issues → Project issues** |
+| On triage duty | This page, then **Issues → Inbound issues** |
 | Responsible for Linear workflows | Run [`linear-doctor`](skills/index.md) — it reports drift; it doesn't fix |
