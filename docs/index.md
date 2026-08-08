@@ -40,7 +40,8 @@ do both.
 
 ## :material-gavel: The hard rules
 
-One per level, plus two cross-cutting invariants — ownership and time-bounds.
+One per level, plus two cross-cutting invariants — ownership and time-bounds. These are the
+**org-level minimum to work together**; how each team runs *inside* them is theirs.
 
 | # | Level | Rule |
 |---|---|---|
