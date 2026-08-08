@@ -184,7 +184,9 @@ From here every issue is **one of two kinds** — and only one.
 
 ### <span class="lwm-strat">Project issues</span> — planned work (for the delivery team)
 
-Live inside a **project** and ladder to its KR. Classified by **`type/*`**:
+Live inside a **project** and ladder to its KR.
+
+**Labels** — one `type/*` (what kind of work), plus the `product/*` inherited from the project:
 
 | `type/*` | For |
 |---|---|
@@ -193,11 +195,13 @@ Live inside a **project** and ladder to its KR. Classified by **`type/*`**:
 | chore | Maintenance, upkeep, dependency bumps |
 | spike | A time-boxed investigation |
 
-Refined from `Backlog` to `Todo` before work starts — that's the readiness gate.
+`product/*` carries down automatically — same value as the project. Refined from `Backlog`
+to `Todo` before work starts — that's the readiness gate.
 
 ### <span class="lwm-inbound">Inbound issues</span> — flow work (for the triage duty rota)
 
-Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** label:
+Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** label (no
+`type/*` — that's a project-issue group):
 
 | `flow/*` | For |
 |---|---|
