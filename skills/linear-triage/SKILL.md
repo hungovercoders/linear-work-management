@@ -30,8 +30,8 @@ built-in Triage; it makes the decision to standard, it doesn't replace the nativ
 `state: Triage`). Take the most time-critical first — `flow/incident`, then whatever's nearest its
 decision-clock limit.
 
-**2. Classify the kind.** Pick the single **`flow/*`** — `incident` · `vulnerability` · `bug` ·
-`analysis` · `compliance` · `support` · `toil`.
+**2. Classify the kind.** Pick the single **`flow/*`** — `incident` · `vulnerability` · `defect` ·
+`query` · `compliance` · `support` · `toil`.
 
 **3. Decide the outcome (one of five).**
 
@@ -47,7 +47,7 @@ decision-clock limit.
 priority before an issue leaves Triage).
 
 **5. Respect the clocks.** Decide within the **decision clock** (`incident` immediately;
-`vulnerability`/`support` 1 working day; `compliance`/`bug`/`toil`/`analysis` 2) — the rota and
+`vulnerability`/`support` 1 working day; `compliance`/`defect`/`toil`/`query` 2) — the rota and
 Triage's time-in-status keep that honest (it isn't a native SLA). For **`flow/vulnerability`**, set
 the **resolution** SLA (severity → 7 / 30 / 90 days): a native SLA rule handles it on
 Business/Enterprise, otherwise set **`slaBreachesAt`** directly (with `slaType: onlyBusinessDays`).

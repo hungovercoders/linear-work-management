@@ -1,10 +1,10 @@
-<!-- type/bug issue (also flow/bug, inbound) — something's broken.
+<!-- type/bug issue (also flow/defect, inbound) — something's broken.
      The issue DESCRIPTION only. Set these as native Linear fields, NOT in this text:
        • Assignee   → the one person doing it
        • Priority   → Urgent → Low, so it orders against the others
        • Status     → Backlog (new) → Todo once refined; nothing starts from Backlog
-       • Classify   → in a PROJECT (type/bug) OR flow/bug (inbound) — rule 3, never both
-       • type/*     → bug (or none, if inbound flow/bug)
+       • Classify   → in a PROJECT (type/bug) OR flow/defect (inbound) — rule 3, never both
+       • type/*     → bug (or none, if inbound flow/defect)
        • product/*  → inherited from the project, unchanged
        • Links      → attach logs, screenshots, the failing case as native Links -->
 

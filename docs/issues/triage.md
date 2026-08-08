@@ -30,8 +30,13 @@ Exactly **one** `flow/*` label, and no `type/*` (that's the [project-work](proje
 |---|---|
 | `incident` | Something's down or degraded — needs a response now |
 | `vulnerability` | A security weakness to remediate (severity drives the SLA) |
-| `bug` | A fault reported from outside any project |
-| `analysis` | A data question or report requested ad-hoc from outside a project |
+| `defect` | A fault reported from outside any project |
+| `query` | A data question or report requested ad-hoc from outside a project |
+
+!!! note "Why `defect` and `query`, not `bug` and `analysis`?"
+    Linear label names are **unique across the whole workspace, even between groups** — so the
+    `type/*` group already owns `bug` and `analysis`. Inbound uses `defect` (a fault reported
+    from outside) and `query` (an ad-hoc data ask). Same idea, different door.
 | `compliance` | A regulatory or policy obligation to meet |
 | `support` | A user or customer request |
 | `toil` | Recurring manual work worth capturing |
@@ -113,7 +118,7 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 |---|---|
 | `flow/incident` | Immediately |
 | `flow/vulnerability` · `flow/support` | 1 working day |
-| `flow/compliance` · `flow/bug` · `flow/toil` · `flow/analysis` | 2 working days |
+| `flow/compliance` · `flow/defect` · `flow/toil` · `flow/query` | 2 working days |
 
 | Resolution — `flow/vulnerability` by severity | Remediate within |
 |---|---|
@@ -154,7 +159,8 @@ The description body is the only thing that lives as text; everything else is a
 
 1. **Use the [`linear-issue`](../skills/index.md) skill — preferred.** It sets the single
    `flow/*` label (no project, no `type/*`), writes the body, and sets the native fields for you —
-   using the template that matches the kind (`bug` / `analysis`), else the base `action` template.
+   using the matching template (`template-bug` for `defect`, `template-analysis` for `query`),
+   else the base `action` template.
 2. **By hand.** Create the issue in the [team's Linear view](https://linear.app/happydevs/team/GRI/all),
    set the one `flow/*` label and no project, then paste the matching template from the
    [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue)

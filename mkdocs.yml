@@ -75,4 +75,5 @@ nav:
       - issues/index.md
       - Project work: issues/project-work.md
       - Triage work: issues/triage.md
+  - Teams, states & labels: teams.md
   - Skills: skills/index.md
