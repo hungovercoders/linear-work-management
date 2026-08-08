@@ -1,6 +1,6 @@
 ---
 name: linear-project-update
-description: Post the weekly status update for an active Linear project to its #proj-<slug> channel — what changed, a health claim (on track / at risk / off track) backed by evidence, and any risks. Rolls up from the project's issue and cycle progress and flags stale or missing movement. Uses Linear's project status updates. Use weekly while a project is In Progress or Launching.
+description: Post the weekly status update for an active Linear project to the shared #project-updates channel — what changed, a health claim (on track / at risk / off track) backed by evidence, and any risks. Rolls up from the project's issue and cycle progress and flags stale or missing movement. Uses Linear's project status updates. Use weekly while a project is In Progress or Launching.
 ---
 
 <!-- doc: projects.md -->
@@ -12,7 +12,7 @@ with evidence, not a colour someone picked — the issue and cycle progress is t
 
 **Requires:** the **Linear MCP server** connected — to read the project and post the update.
 
-> The update posts to the project's **`#proj-<slug>`** Slack channel automatically, as long as
+> The update posts to the shared **`#project-updates`** Slack channel automatically, as long as
 > that channel is connected to the project (done when the project is created).
 
 ## What to gather

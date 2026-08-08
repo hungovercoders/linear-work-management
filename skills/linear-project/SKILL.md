@@ -78,7 +78,7 @@ discovery. Create it and run the **gate checklist** straight away.
 
 **Final · create or update it in Linear.** Set the **lead**, **status**, **dates**, **priority**,
 **initiative link(s)** and the **`spend/*`** / **`product/*`** labels as the project's native
-Linear fields — never as text — and connect the **`#proj-<slug>`** Slack channel so updates post
+Linear fields — never as text — and connect the **`#project-updates`** Slack channel so updates post
 there. Put only the **description body** (what & how · KR(s) + delta · milestones · out of scope)
 from [`template.md`](template.md) into the description.
 

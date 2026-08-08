@@ -100,7 +100,7 @@ questioned — there's nothing for the work to ladder up to.
 | Set start + target-end dates | From `Planned` onward — [rule 5](hard-rules.md); dependencies only tell you about risk once both ends are dated |
 | Draw dependencies | At the project level, so sequencing and risk are visible |
 | Set a priority | Urgent → Low, to sequence projects against each other |
-| Post the update | Weekly to `#proj-<slug>` while In Progress or Launching |
+| Post the update | Weekly to `#project-updates` while In Progress or Launching |
 
 **Completed** means delivered **and the KR delta observed** — not merely shipped. A project that
 launched but didn't move its measure isn't done; it's a lesson.
@@ -128,7 +128,7 @@ If the work isn't moving the measure, the health says so, however much shipped.
 ## Keep everyone posted
 
 While a project is **In Progress** or **Launching**, its lead ensures a **weekly update** reaches
-its **`#proj-<slug>`** Slack channel — what changed, the health claim, and any risks.
+the shared **`#project-updates`** Slack channel — what changed, the health claim, and any risks.
 
 !!! warning "A project update is only as current as its issues"
     The weekly update **rolls up from the issue and cycle progress** beneath it — the same
@@ -139,7 +139,7 @@ its **`#proj-<slug>`** Slack channel — what changed, the health claim, and any
 Post it either way:
 
 - **Linear's project update UI** — write the status update on the project and set its health; it
-  flows to the connected `#proj-<slug>` channel.
+  flows to the connected `#project-updates` channel.
 - **The [`linear-project-update`](skills/index.md) skill** — it drafts the standard update (what
   changed + health + risks) and posts it for you.
 
@@ -149,7 +149,7 @@ Post it either way:
 
 Both ways hold the same standard. Set the **lead**, **dates**, **priority**, **status**,
 **initiative link(s)** and the **`spend/*`** / **`product/*`** labels as the project's own
-**Linear fields** — not in the description — and connect the **`#proj-<slug>`** Slack channel so
+**Linear fields** — not in the description — and connect the **`#project-updates`** Slack channel so
 updates post there. The **description** carries only the *what & how*, the **Key Result(s) it
 moves + delta**, milestones and *out of scope*; that part is the template.
 
@@ -158,7 +158,7 @@ moves + delta**, milestones and *out of scope*; that part is the template.
    fields native, and gives you the description body to drop in.
 2. **By hand.** Create a new project in the [Linear projects view](https://linear.app/happydevs/projects/all),
    set its **lead**, **status**, **start + target-end dates**, **priority**, **initiative
-   link(s)** and **labels** as fields, connect the **`#proj-<slug>`** Slack channel, then paste
+   link(s)** and **labels** as fields, connect the **`#project-updates`** Slack channel, then paste
    [`template.md`](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-project/template.md)
    into the description and fill it in. It's the same file the skill uses.
 

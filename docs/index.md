@@ -110,7 +110,7 @@ You own an **outcome**, not a task list. Keep initiatives about *what & why*; le
 | Declare Key Results | Measured or committed, before any project — [rule 1](hard-rules.md) |
 | Name yourself owner | One person, strategic seniority — [rule 4](hard-rules.md) |
 | Set the target date | From `Planned` onward, so it can be prioritised — [rule 5](hard-rules.md) |
-| Post the update | Monthly to `#initiatives` while active |
+| Post the update | Monthly to `#initiative-updates` while active |
 
 **States** (a fixed set — Linear doesn't let you customise these):
 
@@ -173,7 +173,7 @@ Committed and linked to an outcome. Now the rules bite:
 | Set start + end dates | From `Planned` onward — [rule 5](hard-rules.md) |
 | Draw dependencies | So sequencing and risk are visible |
 | Set a priority | To sequence projects against each other |
-| Post the update | Weekly to `#proj-<slug>` while In Progress or Launching |
+| Post the update | Weekly to `#project-updates` while In Progress or Launching |
 
 **Labels** — two groups, both set on the project:
 

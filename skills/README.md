@@ -43,7 +43,7 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 | Skill | Produces | Companion page |
 |-------|----------|----------------|
 | `linear-initiative` | An initiative description (why + Key Results) | [Initiatives](https://linear-work-management.pages.dev/initiatives/) |
-| `linear-initiative-update` | The monthly `#initiatives` update | [Initiatives](https://linear-work-management.pages.dev/initiatives/) |
+| `linear-initiative-update` | The monthly `#initiative-updates` update | [Initiatives](https://linear-work-management.pages.dev/initiatives/) |
 | `linear-project` | A project description (what & how + KR delta) | [Projects](https://linear-work-management.pages.dev/projects/) |
-| `linear-project-update` | The weekly `#proj-<slug>` update | [Projects](https://linear-work-management.pages.dev/projects/) |
+| `linear-project-update` | The weekly `#project-updates` update | [Projects](https://linear-work-management.pages.dev/projects/) |
 | `linear-doctor` | A drift report against the hard rules | [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/) |

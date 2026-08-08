@@ -5,7 +5,7 @@
        • Priority     → Urgent → Low, to sequence against other projects
        • Initiatives  → link the initiative(s) it serves (many-to-many)
        • Labels       → spend/* (capex|opex) and product/* (the product it serves)
-       • Slack        → connect the #proj-<slug> channel (updates post there) -->
+       • Slack        → connect the #project-updates channel (updates post there) -->
 
 ## What we're doing and how
 <the shape of the work; the approach; what "done" looks like>
