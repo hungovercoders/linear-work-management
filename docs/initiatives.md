@@ -141,17 +141,19 @@ someone picked. The standard formats and the full cadence live in the Communicat
 
 ---
 
-## Create one — the `linear-initiative` skill
+## Create one
 
-The template and the authoring flow live in the **`linear-initiative`** skill, which is
-their single source of truth. This page is its human-readable companion: read here to
-understand *what* an initiative is and *why*; run the skill to produce *one*.
+Both ways hold the same standard; the template lives in the **`linear-initiative`** skill as
+its single source of truth.
 
-The skill coaches you through the same standard this page describes and hands back an
-initiative description ready to create in Linear — a **why** line, the **owner**, the
-**timeframe**, the **KR table(s)** (measured and/or committed), and an **out-of-scope**
-note, ready to paste into a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives).
-It's in the [Skills](skills/index.md) catalogue.
+1. **Use the `linear-initiative` skill — preferred.** It coaches you through everything this
+   page describes — the outcome, the KR table(s) (measured and/or committed), the owner and
+   the timeframe — and hands back a description ready to paste into a new initiative. Find it
+   in the [Skills](skills/index.md) catalogue.
+2. **Copy the template by hand.** Grab the [initiative template](https://github.com/dataGriff/linear-work-management/blob/main/skills/linear-initiative/SKILL.md#the-initiative-template-source-of-truth),
+   paste it into a new initiative in the [Linear initiatives view](https://linear.app/happydevs/initiatives),
+   and fill it in as this page describes. It's the same template the skill uses — the skill
+   just walks you through it.
 
 ---
 
