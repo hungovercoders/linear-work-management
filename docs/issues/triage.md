@@ -123,21 +123,27 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 
 Priority set at triage can drive the SLA, and Linear can require it before an item leaves Triage.
 
-### Wire them as native Linear SLAs
+### Wire them up — the two clocks aren't the same mechanism
 
-The clocks above are the *policy*; Linear enforces them with its **native SLA** feature. Every
-issue carries SLA fields — **started · medium-risk · high-risk · breaches** — that Linear counts
-down and surfaces in views, so the rota can see what's about to breach. Set the per-team SLA rules
-so each clock maps onto them:
+Linear's **native SLA rules** measure time *to completion*, so they fit the **resolution** clock
+but **not** the decision clock — you can't natively SLA "decide within X". Wire each accordingly:
 
-- **Decision clock** — starts when an issue **enters Triage**, targeting the duration for its
-  kind (immediate / 1 / 2 working days). Because the `flow/*` label may not be set on arrival,
-  drive it from the **priority** required at triage (Urgent → the tightest tier, down to Low).
-- **Resolution clock** — an SLA on **`flow/vulnerability`**, keyed to **severity** (encoded via
-  priority or a severity label): **Critical 7 days · High 30 · Medium 90**.
+- **Decision clock — the rota + visibility, not an SLA.** Keep the front door prompt with
+  **Triage Responsibility** (the duty rota — it integrates PagerDuty / Opsgenie / Incident.io) and
+  the **time-in-status** display on the Triage state, so a lingering item is obvious. Linear can
+  also **require a priority** before an issue leaves Triage.
+- **Resolution clock — a native SLA rule.** On **Business/Enterprise**, add an SLA rule
+  (*Settings → Issues → SLAs*) filtered by the **`flow/vulnerability`** label (with severity via
+  priority) and **business-day** durations: **Critical 7 days · High 30 · Medium 90**. Rules apply
+  on create/update (not retroactively); **first matching rule wins**, so order most-urgent first;
+  an issue can have an SLA **or** a due date, not both. **Triage Rules** can auto-apply the label
+  on arrival, which is what triggers the SLA.
 
-Choose **all** vs **business-day** counting per rule (`slaType`) to match the obligation. Breaches
-and near-breaches are what a dashboard and [`linear-doctor`](../skills/index.md) watch for.
+Not on Business/Enterprise (or want it deterministic)? The
+**[`linear-triage`](../skills/index.md)** skill sets the issue's `slaBreachesAt` directly per the
+`flow/*` mapping. Either way, every issue carries native SLA fields —
+**started · medium-risk · high-risk · breaches** — that dashboards and
+[`linear-doctor`](../skills/index.md) watch for.
 
 ---
 

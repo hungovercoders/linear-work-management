@@ -47,11 +47,13 @@ decision-clock limit.
 priority before an issue leaves Triage).
 
 **5. Respect the clocks.** Decide within the **decision clock** (`incident` immediately;
-`vulnerability`/`support` 1 working day; `compliance`/`bug`/`toil`/`analysis` 2). For
-`flow/vulnerability`, the **resolution clock** (severity → 7 / 30 / 90 days) starts once accepted.
+`vulnerability`/`support` 1 working day; `compliance`/`bug`/`toil`/`analysis` 2) — the rota and
+Triage's time-in-status keep that honest (it isn't a native SLA). For **`flow/vulnerability`**, set
+the **resolution** SLA (severity → 7 / 30 / 90 days): a native SLA rule handles it on
+Business/Enterprise, otherwise set **`slaBreachesAt`** directly (with `slaType: onlyBusinessDays`).
 
-**6. Apply it.** Use `save_issue` for the state, team, project, `flow/*`/`type/*` labels, priority
-and `duplicateOf`. One decision per item, then move on.
+**6. Apply it.** Use `save_issue` for the state, team, project, `flow/*`/`type/*` labels, priority,
+`duplicateOf` and (for vulnerabilities) `slaBreachesAt`. One decision per item, then move on.
 
 ## No template
 
