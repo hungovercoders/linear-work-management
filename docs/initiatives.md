@@ -25,9 +25,11 @@ rest:
 Everything about *how* the outcome gets built belongs to the projects underneath. Keep the
 initiative about ends, not means.
 
-!!! danger "A theme is not an initiative"
-    "Improve onboarding" is a theme — there's nothing to hit. "Raise activation from 22% to
-    30% by Q4" is an initiative. If you can't tell whether you succeeded, it isn't one yet.
+!!! danger "An objective isn't an initiative until it has Key Results"
+    The name should be an **inspiring objective** — "Make onboarding effortless" is a good
+    one. On its own, though, that's just a theme: it becomes an initiative only once it
+    declares the **Key Results** that make it measurable (next section). Inspiring objective
+    in the name, Key Results underneath — you need both.
 
 ---
 

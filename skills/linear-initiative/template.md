@@ -1,5 +1,5 @@
 <!-- The initiative DESCRIPTION only. Set these as native Linear fields, NOT in this text:
-       • Name        → the initiative title, phrased as the outcome
+       • Name        → an inspiring objective (e.g. "Make onboarding effortless"); the Key Results below make it measurable
        • Owner / Lead → one named person, strategic seniority
        • Status       → Proposed (or Planned once agreed)
        • Target date  → the timeframe (add a start date too, from Planned onward)

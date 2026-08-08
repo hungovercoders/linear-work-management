@@ -45,8 +45,9 @@ Challenge each one:
 
 ## Flow
 
-1. **Outcome** — "What outcome, and why does it matter?" Reject themes ("improve
-   onboarding"); push for something you can tell whether you hit.
+1. **Objective** — "What's the inspiring objective, and why does it matter?" A qualitative
+   direction is right for the name (e.g. "Make onboarding effortless"). It isn't an initiative
+   until it has Key Results (step 2), so don't stop at the objective.
 2. **Key Results** — 3–5. For each, ask measured or committed, then prompt for
    baseline → target (measured) or the Definition of Done (committed), plus an evidence source.
 3. **Owner** — one named person, strategic seniority.
