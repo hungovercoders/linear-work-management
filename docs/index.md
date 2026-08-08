@@ -90,7 +90,8 @@ The sections below tell each owner exactly what to do. **Read the one that's you
 ## :material-target: Initiatives — for strategic leadership
 
 You own an **outcome**, not a task list. Keep initiatives about *what & why*; leave the
-*how* to the projects beneath them.
+*how* to the projects beneath them. Full guidance, states and a template:
+**[Initiatives](initiatives.md)**.
 
 | Your job | Detail |
 |---|---|
@@ -249,7 +250,7 @@ Top-down — find your row:
 
 | You are… | Start with |
 |---|---|
-| Owning an initiative | This page, then **Initiatives** — write your KR table before your first project |
+| Owning an initiative | This page, then **[Initiatives](initiatives.md)** — write your KR table before your first project |
 | Leading a project | This page, then **Projects** — know your KR |
 | Delivering on a team | This page, then **Issues → Project issues** |
 | On triage duty | This page, then **Issues → Inbound issues** |
