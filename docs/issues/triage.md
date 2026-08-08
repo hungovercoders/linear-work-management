@@ -55,6 +55,55 @@ routing decision — one of **five outcomes** ("leave it sitting there" isn't on
 | Merge | Merge into an existing issue |
 | Decline | Close with a reason |
 
+### Each outcome is a native Triage action
+
+The decision uses the buttons **already in Linear's Triage view** — we don't reinvent them, we
+just say which to reach for:
+
+| Our outcome | Native Triage action | Then |
+|---|---|---|
+| Accept into a project | **Accept** | add it to a **project** and give it a `type/*` |
+| Accept as flow | **Accept** | keep the one `flow/*` label, no project |
+| Redirect | **Move to team** | it lands in that team's Triage |
+| Merge | **Merge** / **Mark duplicate** | folds into the existing issue |
+| Decline | **Decline** | closes with a reason |
+
+## :material-cog-outline: Set it up
+
+Triage is enabled **per team** in **Team settings → Triage**. Once on, the team gets a **Triage**
+inbox in its sidebar, separate from the backlog. Route inbound work into it:
+
+- **Integrations** — Sentry, GitHub, Zendesk/Intercom and the like create issues straight into Triage.
+- **Linear Asks** — requests raised from **Slack** land in Triage.
+- **Customer requests** and the **API / forms** — external reports arrive here too.
+- **Manually** — anyone can move a stray issue into Triage for a decision.
+
+**Triage Intelligence** (Linear's built-in AI) can suggest a label, flag likely **duplicates**, and
+propose the right team or assignee. Treat it as a fast first pass — accept or override its
+suggestion; it speeds the decision, it doesn't make it.
+
+## :material-account-clock-outline: The duty rota
+
+One named person owns the Triage inbox at a time — the **duty rota** — so every item gets a fast
+decision and nothing sits. Use Linear's **Triage responsibility** to assign the current owner and
+**rotate** it on a schedule, so the front door is always staffed. The duty is to **decide** — accept,
+route, merge or decline within the [decision clock](#two-clocks) — not necessarily to do the work.
+
+On duty, the **[`linear-triage`](../skills/index.md)** skill walks the inbox with you — reading the
+queue and applying each decision (the `flow/*` label, a priority, and the outcome) to standard.
+
+## :material-label-outline: Accept as flow — and there's no "promotion"
+
+**Accept as flow** keeps the issue inbound: **one `flow/*` label, no project**. From there it lives
+in the team's normal workflow (Backlog → … → Done) and stays visible through `flow/*` filters and
+dashboards — flow work is first-class, not a lesser queue.
+
+When a *kind* of flow work keeps recurring — the same support theme, the same toil every cycle —
+that's a signal to **plan** it, not to invent a shortcut. Propose a normal
+[project](../projects.md) (or [initiative](../initiatives.md)) through the front door and let it
+ladder to an outcome. There is **no "promotion"** mechanism that fast-tracks a flow theme into a
+project — the front door is the only door.
+
 ## :material-timer-outline: Two clocks
 
 Inbound work runs on **two clocks** — a **decision** clock (route it) then, for some, a
@@ -74,10 +123,27 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 
 Priority set at triage can drive the SLA, and Linear can require it before an item leaves Triage.
 
-!!! note "This page grows with Flow & Triage"
-    The issue-level shape lives here; the operational detail — how the SLA clocks are set up
-    natively, how the duty rota runs, and the GitHub/Slack integrations that feed it — is being
-    built out in **Flow & Triage** and **SLAs**.
+### Wire them up — the two clocks aren't the same mechanism
+
+Linear's **native SLA rules** measure time *to completion*, so they fit the **resolution** clock
+but **not** the decision clock — you can't natively SLA "decide within X". Wire each accordingly:
+
+- **Decision clock — the rota + visibility, not an SLA.** Keep the front door prompt with
+  **Triage Responsibility** (the duty rota — it integrates PagerDuty / Opsgenie / Incident.io) and
+  the **time-in-status** display on the Triage state, so a lingering item is obvious. Linear can
+  also **require a priority** before an issue leaves Triage.
+- **Resolution clock — a native SLA rule.** On **Business/Enterprise**, add an SLA rule
+  (*Settings → Issues → SLAs*) filtered by the **`flow/vulnerability`** label (with severity via
+  priority) and **business-day** durations: **Critical 7 days · High 30 · Medium 90**. Rules apply
+  on create/update (not retroactively); **first matching rule wins**, so order most-urgent first;
+  an issue can have an SLA **or** a due date, not both. **Triage Rules** can auto-apply the label
+  on arrival, which is what triggers the SLA.
+
+Not on Business/Enterprise (or want it deterministic)? The
+**[`linear-triage`](../skills/index.md)** skill sets the issue's `slaBreachesAt` directly per the
+`flow/*` mapping. Either way, every issue carries native SLA fields —
+**started · medium-risk · high-risk · breaches** — that dashboards and
+[`linear-doctor`](../skills/index.md) watch for.
 
 ---
 
