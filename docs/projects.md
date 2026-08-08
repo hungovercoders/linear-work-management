@@ -49,6 +49,13 @@ states group into three phases, and the **`Planned` gate** divides exploration f
 | Completed | Closed | Delivered **and** the KR delta observed |
 | Cancelled | Closed | Stopped for good; reason recorded |
 
+**A project can enter at either phase.** Most start in `Idea` and cross the gate as they mature
+(discovery, below). But one whose outcome is **already agreed** can be created **straight into
+`Planned`** — it skips discovery, yet still owes a lead, a named KR + delta and dates from the
+moment it exists. **Graduation** is different again: it's a *transition* of a project that
+already exists in discovery, not a fresh creation. The [`linear-project`](skills/index.md) skill
+routes on exactly this — new idea, graduate an existing one, or born committed.
+
 ---
 
 ## Discovery phase — is there something here? (`Idea` · `Scoping`)
