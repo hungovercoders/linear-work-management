@@ -129,8 +129,15 @@ initiative(s) it belongs to — usually one, sometimes several.
 | Set a priority | To sequence projects against each other |
 | Post the update | Weekly to `#proj-<slug>` while In Progress or Launching |
 
-**Labels:** `spend/*` (`capex` · `opex`, set at planning) and `product/*` (which product —
-`hungovercoders` · `dogadopt` · … — also carried on its issues).
+**Labels** — two groups, both set on the project:
+
+| Group | Values | What it records |
+|---|---|---|
+| `spend/*` | `capex` · `opex` | How the work is funded — set at planning |
+| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · … (grows over time) | Which product it serves — **also carried onto its issues** |
+
+`type/*` and `flow/*` are *issue*-level groups, not project ones — they're in the Issues
+section below.
 
 **States** (full lifecycle):
 
@@ -191,9 +198,18 @@ Refined from `Backlog` to `Todo` before work starts — that's the readiness gat
 ### <span class="lwm-inbound">Inbound issues</span> — flow work (for the triage duty rota)
 
 Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** label:
-`incident` · `vulnerability` · `defect` · `compliance` · `support` · `toil`. A named **duty
-rota** decides each one, fast — with one of **five outcomes** ("leave it sitting there"
-isn't one):
+
+| `flow/*` | For |
+|---|---|
+| incident | Something's down or degraded — needs a response now |
+| vulnerability | A security weakness to remediate (severity drives the SLA) |
+| defect | A fault reported from outside any project |
+| compliance | A regulatory or policy obligation to meet |
+| support | A user or customer request |
+| toil | Recurring manual work worth capturing |
+
+A named **duty rota** decides each one, fast — with one of **five outcomes** ("leave it
+sitting there" isn't one):
 
 | Outcome | What it means |
 |---|---|
