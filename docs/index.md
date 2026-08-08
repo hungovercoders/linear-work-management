@@ -129,14 +129,27 @@ reference (GRI-73); `product/*` grows as products are added.
 
 ## :material-timer-outline: Service levels
 
-| Thing | Within |
+**Triage decision** — how fast we decide where an inbound item goes, set by its `flow/*` label:
+
+| Inbound (`flow/*`) | Decide within |
 |---|---|
-| Triage decision — incident | Immediately |
-| Triage decision — vulnerability, customer support | 1 working day |
-| Triage decision — everything else | 2 working days |
+| `flow/incident` | Immediately |
+| `flow/vulnerability` · `flow/support` | 1 working day |
+| `flow/compliance` · `flow/defect` · `flow/toil` | 2 working days |
+
+**Resolution:**
+
+| Work | Within |
+|---|---|
 | Vulnerability remediated or risk accepted | Critical 7d · High 30d · Medium 90d |
-| Project update posted | Weekly, while In Progress or Launching |
-| Initiative update posted | Monthly, while active |
+
+This is why triage **labels every inbound item** — the `flow/*` label sets the clock.
+
+!!! note "How the clock is enforced"
+    Linear maps a `flow/*` label to a deadline automatically via **SLA rules** (Settings →
+    Issues → SLAs; Business/Enterprise) — no templates needed for the mapping, though
+    templates / Linear Asks ensure the label is set on intake. Exact wiring (and the
+    decision-vs-resolution nuance) lands in **SLAs (GRI-78)**.
 
 Triage has **five** outcomes, never four: accept into a project, accept as flow,
 redirect, merge, decline. "Leave it sitting there" is not one of them.
@@ -145,12 +158,13 @@ redirect, merge, decline. "Leave it sitting there" is not one of them.
 
 ## :material-bullhorn-outline: Comms cadence
 
-| Who | Gets | When | Where |
+The **owner/lead named on the work posts its update** on cadence — it's their job, not left
+to chance.
+
+| Update | Posted by | To | When |
 |---|---|---|---|
-| Leadership | Initiative updates — KR movement, risks | Monthly | `#initiatives` |
-| Stakeholders | Project updates — on track / at risk / off track | Weekly | `#proj-<slug>` |
-| Team | Cycle summary, triage digest | Weekly | Team channel |
-| Everyone | Launches, incidents | On event | `#announcements` |
+| Initiative — KR movement, risks | Initiative owner | `#initiatives` | Monthly, while active |
+| Project — on track / at risk / off track | Project lead | `#proj-<slug>` | Weekly, while In Progress or Launching |
 
 !!! quote
     Health is a claim with evidence attached — not a colour someone picked.
