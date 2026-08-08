@@ -142,16 +142,6 @@ initiative(s) it belongs to — usually one, sometimes several. See
 | Set a priority | To sequence projects against each other |
 | Post the update | Weekly to `#proj-<slug>` while In Progress or Launching |
 
-**Labels** — two groups, both set on the project:
-
-| Group | Values | What it records |
-|---|---|---|
-| `spend/*` | `capex` · `opex` | How the work is funded — set at planning |
-| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · … (grows over time) | Which product it serves — **also carried onto its issues** |
-
-`type/*` and `flow/*` are *issue*-level groups, not project ones — they're in the Issues
-section below.
-
 **States** (full lifecycle):
 
 | State | Means |
@@ -167,6 +157,16 @@ section below.
 
 !!! quote
     Health is a claim with evidence attached — not a colour someone picked.
+
+**Labels** — two groups, both set on the project:
+
+| Group | Values | What it records |
+|---|---|---|
+| `spend/*` | `capex` · `opex` | How the work is funded — set at planning |
+| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · … (grows over time) | Which product it serves — **also carried onto its issues** |
+
+`type/*` and `flow/*` are *issue*-level groups, not project ones — they're in the Issues
+section below.
 
 ---
 
