@@ -129,7 +129,10 @@ reference (GRI-73); `product/*` grows as products are added.
 
 ## :material-timer-outline: Service levels
 
-**Triage decision** — how fast we decide where an inbound item goes, set by its `flow/*` label:
+Inbound work runs on **two clocks**: a **decision** clock (how fast triage routes it) and,
+for some types, a **resolution** clock (how fast it's fixed once accepted).
+
+**1. Decision** — time to route an inbound item, set by its `flow/*` label:
 
 | Inbound (`flow/*`) | Decide within |
 |---|---|
@@ -137,13 +140,15 @@ reference (GRI-73); `product/*` grows as products are added.
 | `flow/vulnerability` · `flow/support` | 1 working day |
 | `flow/compliance` · `flow/defect` · `flow/toil` | 2 working days |
 
-**Resolution:**
+**2. Resolution** — time to fix once accepted (today, just vulnerabilities, by severity):
 
-| Work | Within |
+| Work | Resolve within |
 |---|---|
-| Vulnerability remediated or risk accepted | Critical 7d · High 30d · Medium 90d |
+| `flow/vulnerability` — remediated or risk accepted | Critical 7d · High 30d · Medium 90d |
 
-This is why triage **labels every inbound item** — the `flow/*` label sets the clock.
+So a vulnerability is **routed** within a working day, then **remediated** within its
+severity window — two clocks, not a repeat. This is why triage **labels every inbound
+item**: the `flow/*` label sets both.
 
 !!! note "How the clock is enforced"
     Linear maps a `flow/*` label to a deadline automatically via **SLA rules** (Settings →
