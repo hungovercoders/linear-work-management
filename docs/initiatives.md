@@ -183,7 +183,7 @@ Post it either way:
 - **The `linear-initiative-update` skill** — it drafts the standard update (KR movement +
   health + risks) and posts it for you. In the [Skills](skills/index.md) catalogue.
 
-The full cadence lives in the Communication guide.
+That's the whole cadence for initiatives: monthly, to `#initiative-updates`, while Active.
 
 ---
 

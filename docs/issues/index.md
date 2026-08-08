@@ -47,7 +47,7 @@ Every issue moves through the **same states**, whichever path it came from:
 | In Progress | Being worked |
 | In Review | Work done; under review |
 | Done | Shipped and accepted |
-| Cancelled | Won't do; reason recorded |
+| Canceled | Won't do; reason recorded |
 | Duplicate | Superseded by another issue |
 
 ### Backlog vs Todo — the readiness gate

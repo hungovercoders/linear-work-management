@@ -3,6 +3,8 @@ name: linear-initiative-update
 description: Post the monthly status update for an active Linear initiative to #initiative-updates — Key Result movement, a health claim (on track / at risk / off track) backed by evidence, and any risks. Uses Linear's initiative status updates. Use monthly while an initiative is Active.
 ---
 
+<!-- doc: initiatives.md -->
+
 # linear-initiative-update
 
 Post the monthly update for an **Active** initiative. Health is a claim with evidence, not a

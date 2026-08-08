@@ -39,7 +39,7 @@ checklist run every time:
   force them onto an idea.
 - **The `Planned` gate** — crossing into delivery is where rules **2** (KR + delta) and **5**
   (dates) switch on, and where the initiative decision is made: **graduate** (link an existing
-  initiative or seed a new one), **standalone** (allowed, questioned), or **drop** (`Cancelled`).
+  initiative or seed a new one), **standalone** (allowed, questioned), or **drop** (`Canceled`).
 - **Delivery** (`Planned` / `In Progress` / `Launching`) — fully committed; every rule applies.
 
 So the flow **forks up front** into the three ways a project actually shows up, rather than
@@ -61,7 +61,7 @@ exists in discovery; this is a **transition, not a creation**. Decide its fate a
 - **Graduate** → link the initiative it matures under (`save_project` → `addInitiatives`); for a
   brand-new outcome, run `linear-initiative` to seed one *from those findings*, then link it.
   **Standalone** → proceed with no initiative, note it's questioned. **Drop** → move to
-  `Cancelled`, record why, **stop**.
+  `Canceled`, record why, **stop**.
 - Then run the **gate checklist** below and move the status to `Planned`.
 
 **Route C · a new delivery project (born committed).** The outcome is already known, so it skips
