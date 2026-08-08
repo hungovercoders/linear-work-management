@@ -74,11 +74,23 @@ an initiative, either the work is wrong or the initiative is missing.
 | Issue | The assignee | Is it done? |
 | Triage | Named duty rota, one person per cycle | Does this belong to us, and where does it go? |
 
+The four sections below tell each owner exactly what to do. **Read the one that's you.**
+
 ---
 
-## :material-traffic-light-outline: States at a glance
+## :material-target: Initiatives — for strategic leadership
 
-**Initiatives** — a limited, fixed set (Linear doesn't let you customise these):
+You own an **outcome**, not a task list. Keep initiatives about *what & why*; leave the
+*how* to the projects beneath them.
+
+| Your job | Detail |
+|---|---|
+| Declare Key Results | Measurable outcomes with targets, before any project — [rule 1](hard-rules.md) |
+| Name yourself owner | One person, strategic seniority — [rule 4](hard-rules.md) |
+| Time-bound it when active | A target date once work starts — [rule 5](hard-rules.md) |
+| Post the update | Monthly to `#initiatives` while active |
+
+**States** (a fixed set — Linear doesn't let you customise these):
 
 | State | Means |
 |---|---|
@@ -88,12 +100,29 @@ an initiative, either the work is wrong or the initiative is missing.
 | Completed | KRs achieved, or the timeframe closed and scored |
 | Canceled | Dropped; reason recorded |
 
-Two transitions matter: **Proposed → Planned** is the *strategic agreement gate* — leadership
-agrees it's worth doing, an owner is named and KRs are written ([rule 1](hard-rules.md));
-**Planned → Active** is when work starts and the initiative becomes **time-bound**
-([rule 5](hard-rules.md)).
+**Proposed → Planned** is the *strategic agreement gate* (leadership agrees, owner + KRs);
+**Planned → Active** is when work starts and the initiative becomes time-bound.
 
-**Projects** run a full lifecycle:
+---
+
+## :material-clipboard-check-outline: Projects — for delivery leads (and the strategy that funds them)
+
+A project is **what you'll do and how**, in service of one initiative's Key Result.
+
+| Your job | Detail |
+|---|---|
+| Name the KR it moves + delta | e.g. "activation 22% → 30%" — [rule 2](hard-rules.md); no KR, no project |
+| Link it to an initiative | Standalone is the exception, and gets questioned |
+| Be the single named lead | One person accountable — [rule 4](hard-rules.md) |
+| Set start + end dates | From `Planned` onward — [rule 5](hard-rules.md) |
+| Draw dependencies | So sequencing and risk are visible |
+| Set a priority | To sequence projects against each other |
+| Post the update | Weekly to `#proj-<slug>` while In Progress or Launching |
+
+**Labels:** `spend/*` (`capex` · `opex`, set at planning) and `product/*` (which product —
+`hungovercoders` · `dogadopt` · … — also carried on its issues).
+
+**States** (full lifecycle):
 
 | State | Means |
 |---|---|
@@ -106,7 +135,27 @@ agrees it's worth doing, an owner is named and KRs are written ([rule 1](hard-ru
 | Completed | Delivered **and** the KR delta observed |
 | Cancelled | Stopped for good; reason recorded |
 
-**Issues** stay minimal:
+!!! quote
+    Health is a claim with evidence attached — not a colour someone picked.
+
+---
+
+## :material-checkbox-marked-circle-outline: Issues — for the team doing the work
+
+An issue is a **discrete task**, understood before it starts. Every issue is classified —
+in a project *or* one `flow/*` label ([rule 3](hard-rules.md)). The issue body is the
+**prompt**: store the agent's plan against it.
+
+**Type it** (`type/*`):
+
+| `type/*` | For |
+|---|---|
+| feature | A new capability |
+| defect | Something's broken |
+| chore | Maintenance, upkeep, dependency bumps |
+| spike | A time-boxed investigation |
+
+**States** (minimal and measurable):
 
 | State | Means |
 |---|---|
@@ -119,42 +168,7 @@ agrees it's worth doing, an owner is named and KRs are written ([rule 1](hard-ru
 | Cancelled | Won't do; reason recorded |
 | Duplicate | Superseded by another issue |
 
-Initiative statuses are **fixed by Linear**; project and issue statuses are ours to shape.
-Fuller definitions and the Linear status-type mapping live in the States reference (GRI-73).
-Teams may **add** issue states locally, never rename or remove the shared ones — otherwise
-cross-team insight breaks.
-
----
-
-## :material-label-multiple-outline: Labels at a glance
-
-Labels come in **groups** that behave like enums — pick **one value per group**, so they
-filter and report cleanly.
-
-| Applies to | Group | Answers | Values |
-|---|---|---|---|
-| Issues | `type/*` | What kind of work is this? | feature · defect · chore · spike |
-| Issues | `flow/*` | How did it arrive? (inbound, no project) | incident · defect · vulnerability · compliance · support · toil |
-| Projects | `spend/*` | Capex or opex? (set at planning) | capex · opex |
-| Projects & issues | `product/*` | Which product? (**grows over time**) | hungovercoders · dogadopt · woolwitch · cheeserater · … |
-
-A label only exists if it's filtered or reported on. The canonical set lives in the Labels
-reference (GRI-73); `product/*` grows as products are added.
-
----
-
-## :material-flag-outline: Priority
-
-Priority is **how urgent** work is to us — it drives ordering, and (via SLAs) deadlines.
-It's set on **three things**, each at the moment the work is understood:
-
-| Applies to | Set when | Job it does |
-|---|---|---|
-| Project | At planning | Sequence projects against each other |
-| Project issue | At planning or refinement | Order the work inside a project |
-| Inbound (`flow/*`) issue | At **triage** | Order it — and can drive the SLA |
-
-Linear can require a priority before an issue leaves Triage.
+**Priority** — how urgent to us; drives ordering (and, via SLAs, deadlines):
 
 | Priority | Use for |
 |---|---|
@@ -162,52 +176,15 @@ Linear can require a priority before an issue leaves Triage.
 | High | Important; next up |
 | Medium | Normal, planned work |
 | Low | Nice-to-have; do when there's slack |
-| No priority | Not yet decided — triage should resolve this |
-
-Priority is distinct from a vulnerability's **severity** (Critical/High/Medium), though the
-two usually track together. Full conventions land in **Projects (GRI-71)** and
-**Issues (GRI-72)**.
+| No priority | Not yet decided |
 
 ---
 
-## :material-timer-outline: Service levels
+## :material-call-split: Triage & flow — for the duty rota on the front door
 
-Inbound work runs on **two clocks**: a **decision** clock (how fast triage routes it) and,
-for some types, a **resolution** clock (how fast it's fixed once accepted).
-
-**1. Decision** — time to route an inbound item, set by its `flow/*` label:
-
-| Inbound (`flow/*`) | Decide within |
-|---|---|
-| `flow/incident` | Immediately |
-| `flow/vulnerability` · `flow/support` | 1 working day |
-| `flow/compliance` · `flow/defect` · `flow/toil` | 2 working days |
-
-**2. Resolution** — time to fix a `flow/vulnerability` once accepted, by **severity**:
-
-| Severity | Remediate within |
-|---|---|
-| Critical | 7 days |
-| High | 30 days |
-| Medium | 90 days |
-
-So a vulnerability is **routed** within a working day (decision clock), then **remediated**
-within its **severity** window (resolution clock) — two clocks, not a repeat. Severity here
-is distinct from Linear *priority*, though the two usually track together; how it's encoded
-and wired to an SLA is decided in **SLAs (GRI-78)**.
-
-!!! note "How the clock is enforced"
-    Linear maps a `flow/*` label to a deadline automatically via **SLA rules** (Settings →
-    Issues → SLAs; Business/Enterprise) — no templates needed for the mapping, though
-    templates / Linear Asks ensure the label is set on intake. Exact wiring (and the
-    decision-vs-resolution nuance) lands in **SLAs (GRI-78)**.
-
----
-
-## :material-call-split: Triage outcomes
-
-Every triaged item leaves triage with a **decision** — five of them, never four.
-"Leave it sitting there" isn't one.
+Inbound work — incidents, requests, compliance, support, toil — arrives here. Your job:
+**decide fast, classify, route**. Every item leaves with one of five outcomes; "leave it
+sitting there" isn't one.
 
 | Outcome | What it means |
 |---|---|
@@ -217,31 +194,38 @@ Every triaged item leaves triage with a **decision** — five of them, never fou
 | Merge | A duplicate of existing work — merge into that issue |
 | Decline | We won't do it — close with a reason |
 
-In Linear these map to the built-in **Triage actions** (accept · mark duplicate · decline ·
-move to team). Detail in **Flow & Triage (GRI-74)**.
+**Classify it** (`flow/*`): `incident` · `vulnerability` · `defect` · `compliance` ·
+`support` · `toil`.
 
----
+Inbound work runs on **two clocks** — a **decision** clock (route it) and, for some types,
+a **resolution** clock (fix it):
 
-## :material-bullhorn-outline: Comms cadence
+| Decision — set by `flow/*` | Decide within |
+|---|---|
+| `flow/incident` | Immediately |
+| `flow/vulnerability` · `flow/support` | 1 working day |
+| `flow/compliance` · `flow/defect` · `flow/toil` | 2 working days |
 
-The **owner/lead named on the work posts its update** on cadence — it's their job, not left
-to chance.
+| Resolution — `flow/vulnerability` by severity | Remediate within |
+|---|---|
+| Critical | 7 days |
+| High | 30 days |
+| Medium | 90 days |
 
-| Update | Posted by | To | When |
-|---|---|---|---|
-| Initiative — KR movement, risks | Initiative owner | `#initiatives` | Monthly, while active |
-| Project — on track / at risk / off track | Project lead | `#proj-<slug>` | Weekly, while In Progress or Launching |
-
-!!! quote
-    Health is a claim with evidence attached — not a colour someone picked.
+Set a **priority** at triage — it orders the work and can drive the SLA. Linear can require a
+priority before an item leaves Triage. How the label maps to an SLA (and severity is encoded)
+lands in **SLAs (GRI-78)**.
 
 ---
 
 ## :material-rocket-launch-outline: Getting started
 
+Top-down — find your row:
+
 | You are… | Start with |
 |---|---|
-| Joining a team | This page, then the issue templates |
-| Leading a project | This page, then the project guidelines — know your KR |
-| Owning an initiative | This page, then the initiative guidelines — write your KR table before your first project |
-| Seeing something off | Run [`linear-doctor`](skills/index.md) — it reports, it doesn't fix |
+| Owning an initiative | This page, then **Initiatives** — write your KR table before your first project |
+| Leading a project | This page, then **Projects** — know your KR |
+| Delivering on a team | This page, then **Issues** |
+| On triage duty | This page, then **Triage & flow** |
+| Responsible for Linear workflows | Run [`linear-doctor`](skills/index.md) — it reports drift; it doesn't fix |
