@@ -1,7 +1,8 @@
 # Canonical operating-model diagram. Edit this, not the rendered SVG.
 # Rendered inline on the cheat sheet via Kroki (```kroki-d2```).
-# Bands stack TOP-TO-BOTTOM as swimlanes; the drive is INITIATIVE -> PROJECT -> ISSUE
-# down the left, with the inbound/flow lane down the right through TRIAGE.
+# Two paths, both flowing top-to-bottom through the ownership bands:
+#   strategic:  INITIATIVE -> PROJECT -> ISSUE
+#   external:   TRIAGE -> ISSUE (flow work)
 
 grid-columns: 1
 grid-gap: 70
@@ -19,12 +20,12 @@ strategy: "STRATEGY  ·  leadership owns" {
 # ---------- DELIVERY band ----------
 delivery: "DELIVERY  ·  one named lead" {
   grid-rows: 1
-  grid-gap: 220
+  grid-gap: 90
   style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; stroke-dash: 3; font-color: "#3D4C6B"}
   project: "PROJECT\nwhat we do and how · names one KR + the delta\none lead · milestones · dates · spend/*" {
     style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
   }
-  triage: "TRIAGE — the front door for unplanned work\n(arrives from outside · it breaks · is reported · is legally due)\nnamed duty rota · a decision on a clock\nfive outcomes — three close it here: redirect · merge · decline" {
+  triage: "TRIAGE — the front door for unplanned work\n(arrives from outside · it breaks · is reported · is legally due)\nnamed duty rota · a decision on a clock · five outcomes" {
     style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
   }
 }
@@ -64,11 +65,10 @@ rule: "EVERY ISSUE IS CLASSIFIED — two ways are valid, two are failures" {
   }
 }
 
-# ---------- the top-to-bottom drive + the flow lane ----------
+# ---------- strategic path (blue) ----------
 strategy.initiative -> delivery.project: contains {style.stroke: "#3D4C6B"}
 delivery.project -> execution.issue1: {style.stroke: "#3D4C6B"}
 delivery.project -> execution.issue2: {style.stroke: "#3D4C6B"}
 
-delivery.triage -> delivery.project: into a project {style.stroke: "#8C2F39"}
+# ---------- external path (red) ----------
 delivery.triage -> execution.flowissue: as flow work {style.stroke: "#8C2F39"}
-execution.flowissue -> delivery.project: promoted to a project when it recurs {style: {stroke: "#8C2F39"; stroke-dash: 4}}
