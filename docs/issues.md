@@ -107,16 +107,19 @@ picked up next when someone frees up. It's a native field, not a line in the des
 ## The body is the prompt
 
 An issue's description is written to be **acted on directly** — by a person or an agent. That's
-the *agent-plan convention*:
+the *agent-plan convention*, and it splits into **two moments**:
 
-- **The body is the prompt.** State the problem and what "done" looks like clearly enough that
-  the reader needs nothing else to start. Write it for whoever — or whatever — picks it up.
-- **Store the plan against the issue.** When an agent (or a person) works out *how*, that plan
-  is captured in the issue's **`## Agent plan`** section — so the approach is reviewable before
-  code is, and the issue stays the single record of the task.
+- **At capture — the body is the prompt.** State the problem and what "done" looks like clearly
+  enough that the reader needs nothing else to start. Write it for whoever — or whatever — picks
+  it up. This is all the creation step does: get the task down.
+- **At pickup — store the plan against the issue.** *Later*, when the issue is picked up and an
+  agent (or a person) works out *how*, that plan is captured in the issue's **`## Agent plan`**
+  section — left empty at creation — so the approach is reviewable before code is, and the issue
+  stays the single record of the task.
 
-This is why the body is the template's whole job (below): everything Linear can model as a
-field is set as one, and the description is left to carry the *prompt* and the *plan*.
+Keep the two apart: capturing an issue is *getting it down*; planning the how happens when it's
+picked up. Either way the description carries both — everything Linear can model as a field is set
+as one, leaving the body to hold the *prompt* and, later, the *plan*.
 
 ---
 

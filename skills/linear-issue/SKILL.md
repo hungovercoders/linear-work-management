@@ -1,22 +1,22 @@
 ---
 name: linear-issue
-description: Draft or refine a Linear issue to the Ways of Working standard — one discrete task, understood before it starts, classified in a project or under one flow/* label (never both), with a type/*, a priority and the product/* it inherits. The body is written as a prompt an agent or person can act on, and the plan is stored against the issue. Produces the issue description ready to create in the happydevs workspace. Use when capturing planned project work or writing up an inbound item.
+description: Capture a Linear issue to the Ways of Working standard — one discrete task got down clearly (the problem and what "done" means), classified in a project or under one flow/* label (never both), with a type/*, a priority and the product/* it inherits. Sets the native fields and lands it in Backlog, ready to refine. Use when capturing planned project work or writing up an inbound item. The how — the agent plan — comes later, when the issue is picked up.
 ---
 
 <!-- doc: issues.md -->
 
 # linear-issue
 
-Draft or refine a Linear issue to the Ways of Working standard: one discrete task, understood
-before it starts, correctly classified, with a body written as a prompt that a person — or an
-agent — can act on directly.
+Capture a Linear issue to the Ways of Working standard: get one discrete task **down** — the
+problem and what "done" means — classified correctly, with the native fields set, landed in
+Backlog. This is **capture, not planning**: the *how* (the agent plan) is worked out later, when
+the issue is picked up.
 
-**Requires:** the **Linear MCP server** connected — to read the project, set the native fields,
-create the issue and store the plan against it.
+**Requires:** the **Linear MCP server** connected — to read the project, set the native fields
+and create the issue.
 
 > Issues have **no status-update object** — progress shows through **state and cycle**, so there's
-> no update skill. Create and edit issues with `save_issue`; the agent plan lives in the
-> description's `## Agent plan` section.
+> no update skill. Create and edit issues with `save_issue`.
 
 ## What good looks like
 
@@ -27,8 +27,8 @@ create the issue and store the plan against it.
 - **A `type/*` (project issues).** `feature` · `bug` · `action` · `spike` — what kind of work.
 - **A priority.** Urgent → Low, so it orders against the others.
 - **`product/*` inherited** from the project, unchanged.
-- **The body is the prompt**, and the **plan is stored against the issue** — so the approach is
-  reviewable before the code is.
+- **The body reads as a prompt** — the problem and what "done" means, enough to act on. The plan
+  for *how* is added at pickup, not now.
 
 ## The kind decides the shape
 
@@ -49,8 +49,8 @@ issue or an inbound issue. One or the other, never both.
 
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
 - Pick the **`type/*`** — `feature`, `bug`, `action` or `spike`.
-- Write the **body** from [`template.md`](template.md): the problem and what "done" looks like,
-  as a prompt. `product/*` inherits from the project.
+- Write the **body** from [`template.md`](template.md): the problem and what "done" looks like.
+  `product/*` inherits from the project.
 
 **2b. Inbound issue.**
 
@@ -60,22 +60,25 @@ issue or an inbound issue. One or the other, never both.
   Flow & Triage.
 
 **3. Set the native fields.** On the issue itself, never in the description: **assignee**,
-**priority** (Urgent → Low), **status**, the **project *or* `flow/*`** classification, the
-**`type/*`** (project issues) and the inherited **`product/*`**. Use `save_issue`.
+**priority** (Urgent → Low), **status** (**Backlog** for new work), the **project *or* `flow/*`**
+classification, the **`type/*`** (project issues) and the inherited **`product/*`**. Use
+`save_issue`.
 
-**4. Store the plan against the issue.** The body is the prompt; when the *how* is worked out,
-capture that plan in the issue's **`## Agent plan`** section — so it's reviewable before the
-work is.
+**That's capture — stop here.** The issue is down and classified. Two things happen *later*, not
+in this skill:
 
-**5. Refine before it starts.** New project issues land in **Backlog**; sharpen the problem,
-define done, size it and clear blockers to move it to **Todo**. **Nothing starts from Backlog** —
-that's the readiness gate.
+- **Refine to Todo.** Sharpen the problem, define done, size it, clear blockers — the
+  **Backlog → Todo** readiness gate. **Nothing starts from Backlog.**
+- **Write the agent plan.** When the issue is **picked up**, whoever works it (person or agent)
+  works out the *how* and stores that plan in the description's **`## Agent plan`** section — left
+  empty at creation, so the approach is reviewable before the code is.
 
 ## The issue template
 
 [`template.md`](template.md) beside this skill is the single source of truth for the issue
-**description body** — the same body for every `type/*`, with a per-type note on what to
-emphasise. Everything else is a native field.
+**description body** at capture — the same body for every `type/*`, with a per-type note on what
+to emphasise. The `## Agent plan` section is left empty; it's filled at pickup. Everything else
+is a native field.
 
 The **assignee, priority, status, project / `flow/*` classification and `type/*` / `product/*`
 labels are native Linear fields** — set them on the issue, never in the description text. Keeping

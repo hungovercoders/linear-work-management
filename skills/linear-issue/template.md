@@ -21,6 +21,7 @@
 <the acceptance criteria — how we'll know it's finished, not merely shipped>
 
 ## Agent plan
-<!-- The body above is the prompt. Store the plan for HOW here once worked out, so it's
-     reviewable before the code is. Leave empty until then. -->
-<the approach; the steps; anything the implementer needs to know>
+<!-- LEFT EMPTY AT CREATION. This section is the reserved home for the plan for HOW; it's
+     filled later, when the issue is PICKED UP (not while capturing it), so the approach is
+     reviewable before the code is. -->
+
