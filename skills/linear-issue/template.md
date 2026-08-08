@@ -7,7 +7,9 @@
        • product/*  → inherited from the project, unchanged
 
      Fill What / Why / When / Resources at capture; leave Plan for pickup.
-     Each section carries per-type cues — keep the ones that fit the type/*. -->
+     Each section carries per-type cues — keep the ones that fit the type/*.
+     A `spike` is free-wheeling: the body is a scratchpad for context and planning — fill the
+     sections only as far as they help; the time box in "When is it done?" is what bounds it. -->
 
 ## What needs doing?
 <!-- feature: the capability to add · bug: what's broken, with steps to reproduce + expected vs

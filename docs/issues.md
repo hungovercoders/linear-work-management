@@ -91,11 +91,20 @@ project unchanged.
 | `feature` | A new capability | The change and its acceptance criteria |
 | `bug` | Something's broken | Steps to reproduce, expected vs actual |
 | `action` | Maintenance, upkeep, proactive improvements | The change and why now |
-| `spike` | A time-boxed investigation | The question and the time box |
+| `spike` | A time-boxed investigation — and the free-wheeling home for context, notes and planning | The question and the time box |
 
 `product/*` (`hungovercoders` · `dogadopt` · `woolwitch` · …) is **inherited from the project** —
 same value, so work stays attributable to the product it serves without re-deciding it per
 issue. `flow/*` never appears on a project issue — that's the inbound group.
+
+!!! note "`spike` is the free-wheeling one"
+    A `spike` is where thinking happens **before** the work is understood — gather context, keep
+    running notes, sketch a backlog. It's deliberately loose: fill the template sections **as far
+    as they help and no further**; the body is a scratchpad. What keeps it honest isn't structure
+    but the **time box** in *When is it done?* — a spike is bounded even when its content isn't.
+    Follow-up work it turns up becomes **new issues in the project**, linked back to the spike. (A
+    whole body of work with its own backlog outgrows a spike — that's a [discovery
+    project](projects.md#discovery-phase-is-there-something-here-idea-scoping).)
 
 ### Priority
 

@@ -51,6 +51,9 @@ issue or an inbound issue. One or the other, never both.
 - Pick the **`type/*`** — `feature`, `bug`, `action` or `spike`.
 - Write the **body** from [`template.md`](template.md): what needs doing, why, and when it's
   done, plus any resources. `product/*` inherits from the project.
+- **`spike` is the free-wheeling one** — a scratchpad for gathering context, notes and planning a
+  backlog before the work is understood. Fill the sections only as far as they help; the **time
+  box** in *When is it done?* is what bounds it. Follow-ups become new issues in the project.
 
 **2b. Inbound issue.**
 
