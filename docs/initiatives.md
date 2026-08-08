@@ -33,6 +33,19 @@ initiative about ends, not means.
 
 ---
 
+## Where an initiative comes from
+
+Initiatives rarely spring up fully formed. Most begin as **discovery** — a project in `Idea`
+or `Scoping`, investigating whether there's an outcome worth committing to. A project at that
+stage legitimately has no parent and no Key Results yet; it's where the thinking is recorded.
+
+When discovery shows the outcome is big enough to stand on its own, the project **graduates**:
+it seeds a new initiative (which then declares the Key Results below), or links to an existing
+one. The `Planned` gate is where that decision is made — so the exploratory work has a home
+from day one, rather than waiting for the initiative to exist.
+
+---
+
 ## Declare the Key Results first
 
 **[Hard rule 1](hard-rules.md):** every initiative declares its Key Results *before* any

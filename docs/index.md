@@ -56,7 +56,7 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 | # | Level | Rule |
 |---|---|---|
 | 1 | Initiative | **Declares its Key Results** before any project — **measured** (baseline → target) or **committed** (a deliverable, done/not-done). A result, not a theme. |
-| 2 | Project | **Names the Key Result(s) it moves, and by how much** — one or more, across the initiative(s) it serves. No KR named, no project. |
+| 2 | Project | **Names the Key Result(s) it moves, and by how much** — one or more, across the initiative(s) it serves, **by `Planned`** (`Idea`/`Scoping` may still be exploring). |
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
 | 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
 | 5 | Time-bounds | **Dated from `Planned` onward** — initiatives carry a target date, projects a start + end. Set when agreed, so work can be prioritised and sequenced before it starts. |
@@ -75,10 +75,13 @@ One per level, plus two cross-cutting invariants — ownership and time-bounds. 
 | A bounded piece of work that moves one or more of those measures | **Project** under the initiative(s) it serves |
 | A discrete task within that work | **Issue** in the project |
 | Something broke, arrived, or was reported | **Issue** via **Triage** |
+| An idea to explore before committing | **Project** in `Idea` — no initiative or KR needed yet |
 | Genuinely standalone work with no initiative | Project, but expect to justify it |
 
-Orphaned projects aren't banned — they're **questioned**. If it doesn't ladder to
-an initiative, either the work is wrong or the initiative is missing.
+**How work starts:** the cheapest way in is a **project in `Idea`** — discovery, no initiative
+or KR required. By `Planned` it resolves: link to an initiative, **graduate** into a new one,
+go standalone (questioned), or drop. A parentless project is fine while it's an idea; only from
+`Planned` on is orphaning **questioned**.
 
 ---
 
