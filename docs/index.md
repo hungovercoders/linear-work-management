@@ -95,20 +95,19 @@ otherwise cross-team insight breaks.
 
 ## Labels at a glance
 
-Use label **groups**. Groups are mutually exclusive, so they behave like enums and
-report cleanly.
+Labels come in **groups** that behave like enums: pick **exactly one value per group**,
+so they filter and report cleanly.
 
-| Group | Values | Applies to |
+| Group | Answers | Applies to |
 |---|---|---|
-| `type/*` | feature · defect · chore · spike | Issues — *what the work is* |
-| `flow/*` | incident · defect · vulnerability · compliance · support · toil | Projectless issues — *how it arrived* |
-| `spend/*` | capex · opex | Projects — set at planning, not retrofitted |
-| `risk/*` | low · medium · high | Optional, where release care differs |
+| `type/*` | What kind of work is this? | Every issue |
+| `flow/*` | How did it arrive? | Inbound issues (no project) |
+| `spend/*` | Capex or opex? | Projects, decided at planning |
+| `risk/*` | How much release care? | Optional |
 
-`type/defect` and `flow/defect` are not duplicates. A dependency bump is
-`type/chore` arriving as `flow/vulnerability`.
-
-If a label won't be filtered on or reported on, it shouldn't exist.
+The **groups** are the stable idea; their **values** are a canonical set defined in the
+Labels reference (GRI-73) and can evolve over time. Two rules that don't: one value per
+group, and a label only exists if it's filtered or reported on.
 
 ---
 
