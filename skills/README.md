@@ -56,4 +56,5 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 | `linear-project-update` | The weekly `#project-updates` update | [Projects](https://linear-work-management.pages.dev/projects/) |
 | `linear-issue` | An issue description (problem + agent plan) | [Issues](https://linear-work-management.pages.dev/issues/) |
 | `linear-triage` | A routing decision per inbound issue (five outcomes) | [Triage work](https://linear-work-management.pages.dev/issues/triage/) |
-| `linear-doctor` | A drift report against the hard rules | [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/) |
+| `linear-team-digest` | The weekly team digest (cycle + triage roll-up) | [Communications](https://linear-work-management.pages.dev/communications/) |
+| `linear-doctor` | A drift report — hard rules, taxonomy, stale updates | [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/) |
