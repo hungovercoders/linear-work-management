@@ -130,8 +130,15 @@ reference (GRI-73); `product/*` grows as products are added.
 ## :material-flag-outline: Priority
 
 Priority is **how urgent** work is to us — it drives ordering, and (via SLAs) deadlines.
-Set it once the work is understood: at **triage** for inbound, at **planning** for project
-work. Linear can require a priority before an issue leaves Triage.
+It's set on **three things**, each at the moment the work is understood:
+
+| Applies to | Set when | Job it does |
+|---|---|---|
+| Project | At planning | Sequence projects against each other |
+| Project issue | At planning or refinement | Order the work inside a project |
+| Inbound (`flow/*`) issue | At **triage** | Order it — and can drive the SLA |
+
+Linear can require a priority before an issue leaves Triage.
 
 | Priority | Use for |
 |---|---|
@@ -142,7 +149,8 @@ work. Linear can require a priority before an issue leaves Triage.
 | No priority | Not yet decided — triage should resolve this |
 
 Priority is distinct from a vulnerability's **severity** (Critical/High/Medium), though the
-two usually track together. Full conventions land in **Issues (GRI-72)**.
+two usually track together. Full conventions land in **Projects (GRI-71)** and
+**Issues (GRI-72)**.
 
 ---
 
