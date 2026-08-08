@@ -12,10 +12,10 @@ use Linear** — see also **[the hard rules](hard-rules.md)** and the
     they're delivering the value expected of them, and why. That connection is the benefit;
     the rules just keep it intact.
 
-    And it all lives in **one tool — [Linear](https://linear.app/happydevs)** — from strategy
-    to execution. Not strategy in Notion, delivery in a spreadsheet and status in Slack: one
-    place, so no tool boundary ever breaks the line. **Initiative**, **project** and **issue**
-    below are Linear's own objects — this is how we use them.
+    All of it lives in **[Linear](https://linear.app/happydevs)** — strategy, delivery and
+    execution in one place, rather than strategy in Notion, delivery in a spreadsheet and
+    status in Slack, so no tool boundary breaks the line. The **initiatives**, **projects**
+    and **issues** below are the ones in Linear; this page is how we use them.
 
 ---
 

@@ -1,11 +1,10 @@
 # Initiatives
 
 <div class="lwm-lead" markdown>
-For strategic leadership. An **initiative** — one of [Linear](https://linear.app/happydevs/initiatives)'s
-own objects — is a **defined outcome**: the *why* behind a body of work and *how we'll know
-it worked*. Never a task list, never the *how it's built* (that's the [projects](index.md)
-beneath it). It lives in Linear next to the projects and issues it drives — one tool from
-strategy to delivery.
+For strategic leadership. An **initiative** in [Linear](https://linear.app/happydevs/initiatives)
+is a **defined outcome**: the *why* behind a body of work and *how we'll know it worked*.
+Never a task list, never the *how it's built* (that's the [projects](index.md) beneath it).
+It sits alongside the projects and issues it drives, in the same tool.
 </div>
 
 This page expands the [cheat sheet](index.md)'s Initiatives section. If the two ever
