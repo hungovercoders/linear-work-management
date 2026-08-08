@@ -12,6 +12,7 @@ HARD_RULES = [
     "Every project names the Key Result it moves, and by how much.",
     "Every issue is in a project OR carries one flow/* label — never both, never neither.",
     "One named human owns each initiative and each project.",
+    "Active initiatives are time-bound; projects carry start + end dates from Planned onward.",
 ]
 
 

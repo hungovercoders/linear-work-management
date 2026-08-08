@@ -12,5 +12,5 @@ operating model. Install them as a Claude Code plugin, then invoke by name.
 
 | Skill | What it does | Guide |
 | ----- | ------------ | ----- |
-| [`linear-doctor`](https://github.com/dataGriff/linear-work-management/tree/main/skills/linear-doctor) | Audit a Linear workspace for drift from the Ways of Working operating model. Reports (does not fix) violations of the hard rules — initiatives with no Key Results, projects with no named Key Result, unclassified issues (in no project and no flow/* label, or both), and initiatives/projects without a single named owner. Use for a health check of the happydevs workspace or before a review. | [hard-rules](../hard-rules.md) |
+| [`linear-doctor`](https://github.com/dataGriff/linear-work-management/tree/main/skills/linear-doctor) | Audit a Linear workspace for drift from the Ways of Working operating model. Reports (does not fix) violations of the hard rules — initiatives with no Key Results, projects with no named Key Result, unclassified issues (in no project and no flow/* label, or both), initiatives/projects without a single named owner, and active initiatives or planned-or-later projects with no dates. Use for a health check of the happydevs workspace or before a review. | [hard-rules](../hard-rules.md) |
 

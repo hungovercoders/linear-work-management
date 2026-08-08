@@ -34,7 +34,7 @@ do both.
 
 ## :material-gavel: The hard rules
 
-One per level, plus ownership.
+One per level, plus two cross-cutting invariants — ownership and time-bounds.
 
 | # | Level | Rule |
 |---|---|---|
@@ -42,6 +42,7 @@ One per level, plus ownership.
 | 2 | Project | **Names the Key Result it moves, and by how much.** No KR named, no project. |
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither (the *unclassified* defect), never both. |
 | 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
+| 5 | Time-bounds | **Active initiatives are time-bound; projects carry start + end dates from `Planned` onward.** Undated work can't be prioritised or sequenced. |
 
 !!! tip "The deal"
     If a rule and a convenience ever conflict, the rule wins — that's what keeps the model

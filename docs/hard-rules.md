@@ -2,7 +2,7 @@
 
 Everything else in this guide is elaboration on these. If a rule and a convenience
 conflict, the rule wins — that is what makes the model hold. **One rule per level, plus
-ownership.**
+two cross-cutting invariants: ownership and time-bounds.**
 
 ---
 
@@ -58,6 +58,22 @@ Ownership is singular and named. **Not a team, not two people — a person.**
   and by when*. Exactly one.
 - Teams still own issues and a project can draw on several teams — but accountability
   for the project rests with its single lead.
+
+---
+
+## 5. Active initiatives are time-bound; projects carry start + end dates from `Planned` onward
+
+Undated work can't be prioritised or sequenced. Dates are what make **dependency mapping**
+and **on-track delivery** possible — upcoming work can see what it depends on and whether
+that will land in time.
+
+- **Initiatives:** once **active**, carry a timeframe / target date (OKR-style — e.g. a
+  quarter). A `New` initiative that hasn't been agreed yet is exempt until it activates.
+- **Projects:** from **`Planned`** onward carry a **start** and a **target end** date.
+  `Idea` and `Scoping` projects are still being shaped, so dates firm up as they commit —
+  which is exactly what `Planned` means ("agreed, dated, resourced").
+- Dependencies between projects (drawn at the project level) only tell you about risk once
+  both ends have dates.
 
 ---
 

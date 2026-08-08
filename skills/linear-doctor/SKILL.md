@@ -1,6 +1,6 @@
 ---
 name: linear-doctor
-description: Audit a Linear workspace for drift from the Ways of Working operating model. Reports (does not fix) violations of the hard rules — initiatives with no Key Results, projects with no named Key Result, unclassified issues (in no project and no flow/* label, or both), and initiatives/projects without a single named owner. Use for a health check of the happydevs workspace or before a review.
+description: Audit a Linear workspace for drift from the Ways of Working operating model. Reports (does not fix) violations of the hard rules — initiatives with no Key Results, projects with no named Key Result, unclassified issues (in no project and no flow/* label, or both), initiatives/projects without a single named owner, and active initiatives or planned-or-later projects with no dates. Use for a health check of the happydevs workspace or before a review.
 ---
 
 <!-- doc: hard-rules.md -->
@@ -24,6 +24,8 @@ The doctor **reports; it does not fix** — it hands you a list, you decide.
    carry a `flow/*` label (*both*).
 4. **Single named owner.** Flag initiatives without a lead/owner and projects without a
    single named lead.
+5. **Time-bounds.** Flag active initiatives with no target date, and projects in
+   `Planned`/`In Progress`/`Launching` with no start or no target end date.
 
 ## How to run it
 
