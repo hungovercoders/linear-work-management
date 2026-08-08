@@ -15,6 +15,11 @@ env:
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
+    # Job-level env so the deploy step's `if` can see whether the secret is set
+    # (secrets can't be referenced directly in an `if` expression).
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
 
@@ -39,8 +44,6 @@ jobs:
       # and a Cloudflare Pages project named "linear-work-management".
       - name: Deploy to Cloudflare Pages
         if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

@@ -61,7 +61,7 @@ Mermaid is available via ` ```mermaid ` for sequence/gantt.
 ## Using the skills
 
 ```text
-/plugin marketplace add dataGriff/linear-work-management
+/plugin marketplace add hungovercoders/linear-work-management
 /plugin install linear-work-management@linear-work-management
 ```
 

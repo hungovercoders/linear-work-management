@@ -52,7 +52,7 @@ def main() -> int:
         "operating model. Install them as a Claude Code plugin, then invoke by name.",
         "",
         "```text",
-        "/plugin marketplace add dataGriff/linear-work-management",
+        "/plugin marketplace add hungovercoders/linear-work-management",
         "/plugin install linear-work-management@linear-work-management",
         "```",
         "",
@@ -66,7 +66,7 @@ def main() -> int:
     ]
     for s in skills:
         guide = f"[{s['doc'].split('/')[-1].replace('.md','')}](../{s['doc']})" if s["doc"] else "—"
-        src = f"[`{s['name']}`](https://github.com/dataGriff/linear-work-management/tree/main/{s['dir']})"
+        src = f"[`{s['name']}`](https://github.com/hungovercoders/linear-work-management/tree/main/{s['dir']})"
         lines.append(f"| {src} | {s['description']} | {guide} |")
 
     lines.append("")
