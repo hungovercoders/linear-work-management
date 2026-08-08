@@ -6,6 +6,12 @@ use Linear** — see also **[the hard rules](hard-rules.md)** and the
 **[skills](skills/index.md)** that apply them for you.
 </div>
 
+!!! abstract "Why this matters"
+    The point of all this is an **unbroken line from *why* to the work in your cycle** — every
+    issue ladders up to a project's Key Result and the initiative it serves. People can see
+    they're delivering the value expected of them, and why. That connection is the benefit;
+    the rules just keep it intact.
+
 ---
 
 ## :material-sitemap: How it fits together
