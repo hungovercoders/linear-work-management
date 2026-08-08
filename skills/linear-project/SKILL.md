@@ -75,6 +75,8 @@ discovery. Create it and run the **gate checklist** straight away.
 - **Dates** — start + target-end (rule 5).
 - **Priority & labels** — a priority (Urgent → Low) to sequence it; `spend/*` (capex/opex) at
   planning; `product/*` for the product it serves (carries onto its issues).
+- **Dependencies** — any Blocked by / Blocking relations to other projects, as **native project
+  relations** (never prose) — now that both ends have dates, the timeline can warn on conflicts.
 
 **Final · create or update it in Linear.** Set the **lead**, **status**, **dates**, **priority**,
 **initiative link(s)**, the **`spend/*`** / **`product/*`** labels and any **milestones** (dated
