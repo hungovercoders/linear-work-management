@@ -25,7 +25,7 @@ and create the issue.
 - **Understood before it starts.** The problem and what "done" means are clear enough to hand to
   someone (or something) without a follow-up question.
 - **A `type/*` (project issues).** `action` is the **default** (any work that needs doing);
-  `feature` · `bug` · `spike` when it's specifically that.
+  `feature` · `bug` · `analysis` (a data question / report) · `spike` when it's specifically that.
 - **A priority.** Urgent → Low, so it orders against the others.
 - **`product/*` inherited** from the project, unchanged.
 - **The body reads as a prompt** — the problem and what "done" means, enough to act on. The plan
@@ -50,7 +50,9 @@ issue or an inbound issue. One or the other, never both.
 
 - Identify the **project** it belongs to (`list_projects` / `get_project`) so it ladders to a KR.
 - Pick the **`type/*`** — default to **`action`** (any work that needs doing); use `feature`,
-  `bug` or `spike` when the work is specifically that.
+  `bug`, `analysis` (a data question to answer or report to produce) or `spike` when the work is
+  specifically that. `analysis` is distinct from `spike`: it delivers an answer/report, not a
+  build decision.
 - Write the **body** from [`template.md`](template.md): what needs doing, why, when it's done,
   and any **context** (notes, background, constraints). Attach resources (docs, designs, logs,
   related issues) as the issue's native **Links**, not a body section. `product/*` inherits from
@@ -61,8 +63,9 @@ issue or an inbound issue. One or the other, never both.
 
 **2b. Inbound issue.**
 
-- Pick the single **`flow/*`** label (`incident` · `vulnerability` · `bug` · `compliance` ·
-  `support` · `toil`). **No project, no `type/*`.**
+- Pick the single **`flow/*`** label (`incident` · `vulnerability` · `bug` · `analysis` ·
+  `compliance` · `support` · `toil`). **No project, no `type/*`.** (`flow/analysis` is an ad-hoc
+  data question or report requested from outside a project.)
 - Write the same body — what needs doing, why, and when it's done. Triage decides its fate; see
   Flow & Triage.
 

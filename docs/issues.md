@@ -84,14 +84,15 @@ groups and a priority.
 ### Labels — `type/*` and `product/*`
 
 One **`type/*`** label says what kind of work it is; **`product/*`** carries down from the
-project unchanged. **`action` is the default** — reach for `feature`, `bug` or `spike` only when
-the work is specifically one of those.
+project unchanged. **`action` is the default** — reach for `feature`, `bug`, `analysis` or
+`spike` only when the work is specifically one of those.
 
 | `type/*` | For | The template emphasises |
 |---|---|---|
 | `action` | **The default** — any work that needs doing, from a code change to upkeep to a reminder to yourself | What needs doing, and when it's done |
 | `feature` | A new capability | The change and its acceptance criteria |
 | `bug` | Something's broken | Steps to reproduce, expected vs actual |
+| `analysis` | A data question to answer or a report to produce — the deliverable is the answer, not shipped code | The question, and the answer/report |
 | `spike` | A time-boxed investigation — and the free-wheeling home for context, notes and planning | The question and the time box |
 
 `product/*` (`hungovercoders` · `dogadopt` · `woolwitch` · …) is **inherited from the project** —
@@ -106,6 +107,13 @@ issue. `flow/*` never appears on a project issue — that's the inbound group.
     Follow-up work it turns up becomes **new issues in the project**, linked back to the spike. (A
     whole body of work with its own backlog outgrows a spike — that's a [discovery
     project](projects.md#discovery-phase-is-there-something-here-idea-scoping).)
+
+!!! note "`analysis` vs `spike`"
+    Both produce understanding, but the **deliverable** differs: a `spike` reduces uncertainty to
+    decide *how to build*; `analysis` answers a data question or produces a report as the outcome
+    itself. Analysis happens in **discovery or delivery** — and, like `bug`, the same work can
+    arrive **inbound** (as `flow/analysis`) when someone asks for a number or a report outside any
+    project.
 
 ### Priority
 

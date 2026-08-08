@@ -225,6 +225,7 @@ Live inside a **project** and ladder to its KR.
 | action | **The default** — any work that needs doing, from a code change to a reminder |
 | feature | A new capability |
 | bug | Something's broken |
+| analysis | A data question to answer or a report to produce |
 | spike | A time-boxed investigation |
 
 `product/*` carries down automatically — same value as the project. Refined from `Backlog`
@@ -240,6 +241,7 @@ Arrive through **Triage**, carry **no project** and exactly one **`flow/*`** lab
 | incident | Something's down or degraded — needs a response now |
 | vulnerability | A security weakness to remediate (severity drives the SLA) |
 | bug | A fault reported from outside any project |
+| analysis | A data question or report requested ad-hoc from outside a project |
 | compliance | A regulatory or policy obligation to meet |
 | support | A user or customer request |
 | toil | Recurring manual work worth capturing |
@@ -262,7 +264,7 @@ Inbound work runs on **two clocks** — a **decision** clock (route it) then, fo
 |---|---|
 | `flow/incident` | Immediately |
 | `flow/vulnerability` · `flow/support` | 1 working day |
-| `flow/compliance` · `flow/bug` · `flow/toil` | 2 working days |
+| `flow/compliance` · `flow/bug` · `flow/toil` · `flow/analysis` | 2 working days |
 
 | Resolution — `flow/vulnerability` by severity | Remediate within |
 |---|---|
