@@ -73,3 +73,8 @@ tasks:
     desc: Emit a Marp stakeholder deck from live Linear state (see GRI-81).
     cmds:
       - "{{.PY}} scripts/linear_deck.py"
+
+  linear:skills:
+    desc: 'Publish opted-in skills (linear_skill: true) to Linear as team-shared Agent Skills. Flags: --dry-run, --check.'
+    cmds:
+      - "{{.PY}} scripts/linear_skills_sync.py {{.CLI_ARGS}}"
