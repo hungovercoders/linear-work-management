@@ -6,7 +6,8 @@ Claude Code plugin and are the executable half of the guide; every skill has a h
 companion page in the docs.
 
 Each skill lives in `skills/<name>/` and follows the conventions below. New skills conform to
-these; `linear-doctor` (GRI-77) maintains them.
+these; `linear-doctor` (GRI-77) maintains them. Skill prose follows the
+[writing style](https://linear-work-management.pages.dev/style/), checked by `task lint:prose`.
 
 ## Layout
 
