@@ -46,6 +46,12 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
    companion guide page. The skill is the *how* and the page the *why*, and they stay in lockstep.
 6. **Deep links.** Link the live workspace (the `linear.app/happydevs/…` slug pattern) so people
    arrive where they act.
+7. **Opt in to Linear's own Agent Skills.** A skill marked `linear_skill: true` in its frontmatter
+   is mirrored into Linear as a team-shared Agent Skill by `task linear:skills`, so the Linear
+   Agent (chat, Slack, loops) runs the same instructions Claude Code does. The repo stays the
+   single source of truth; `scripts/linear_skills_sync.py` inlines each companion template (Linear
+   skills can't reach repo files) and upserts idempotently. `task linear:skills -- --check` reports
+   drift from a manual Linear edit; `-- --dry-run` prints the generated body without publishing.
 
 ## The skills
 

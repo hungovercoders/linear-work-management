@@ -1,6 +1,7 @@
 ---
 name: linear-initiative
 description: Draft or refine a Linear initiative to the Ways of Working standard: a defined outcome with declared Key Results (measured or committed), a single named owner, and a target date set from Planned onward. Coaches the KR table and produces the initiative description ready to create in the happydevs workspace. Use when starting a new initiative or tidying an existing one.
+linear_skill: true
 ---
 
 <!-- doc: initiatives.md -->
@@ -85,4 +86,3 @@ unused, and keep 3–5 KRs total.
 The name, owner, status and target date are native Linear fields: set them on the initiative
 itself, never in the description text. Keeping them native is what lets Linear filter, sort and
 roll them up, and what keeps the workspace auditable.
-</content>

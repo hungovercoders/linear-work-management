@@ -92,4 +92,3 @@ body. Fill each placeholder using the flow above; add a KR + delta row per initi
 The lead, status, dates, priority, initiative link(s), labels and milestones are native Linear
 fields: set them on the project itself, never in the description text. Keeping them native is
 what lets Linear filter, sort and roll them up, and what lets `linear-doctor` check them.
-</content>
