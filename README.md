@@ -10,10 +10,9 @@ and the AI skills that go with them.
 
 ## Why this exists
 
-Work was invisible. Dependencies were unknown. Prioritising meant arguing from
-memory, and nobody could draw a line from the strategy deck to what they'd be doing
-on Tuesday. Project admin was manual. Stakeholder feedback was arduous. There was no
-one place to look.
+Work was invisible and dependencies unknown. Prioritising meant arguing from memory, and nobody
+could draw a line from the strategy deck to what they'd be doing on Tuesday. Project admin was
+manual, stakeholder feedback arduous, and there was no one place to look.
 
 This repo is that place.
 

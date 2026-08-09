@@ -25,7 +25,7 @@
 | <deliverable> | <concrete criteria that prove it shipped> | <PR/ticket/doc, or TBD> |
 
 ## Out of scope
-<what this initiative is deliberately not doing, so projects don't sprawl>
+<what this initiative is deliberately not doing, so projects stay bounded>
 
 ## Context
 <background, constraints, decisions, caveats — any notes needed that don't fit above>
