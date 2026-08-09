@@ -14,7 +14,7 @@ Every term the guide leans on, one line each. Terms link to the page that owns t
 | **Seeding** | Creating a new initiative *from* a discovery project's findings, rather than from a blank page. |
 | **Aggregation** | Forming one initiative from the shared findings of **several** projects. |
 | **The `Planned` gate** | The moment a project commits: rules 2 (KR + delta) and 5 (dates) switch on, and the graduate / standalone / drop decision is made. |
-| **Discovery** | The `Idea` / `Scoping` phase — exploring cheaply; a named lead but no KR or dates required yet. |
+| **Discovery** | The `Idea` / `Scoping` phase — exploring at low cost; a named lead but no KR or dates required yet. |
 | **Decision clock** | How fast [triage](issues/triage.md) must *route* an inbound issue — immediate for incidents, 1–2 working days otherwise. |
 | **Resolution clock** | How fast certain flow work must be *fixed* — vulnerability remediation by severity (7 / 30 / 90 days). |
 | **Triage Responsibility** | Linear's native duty rota — the named person whose job this cycle is to *decide* on each inbound item. |

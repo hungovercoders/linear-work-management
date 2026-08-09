@@ -36,6 +36,9 @@ jobs:
       - name: Regenerate skill index
         run: python scripts/gen_skill_index.py
 
+      - name: Lint prose (AI-tell gate)
+        run: python scripts/prose_lint.py
+
       - name: Build site (strict)
         run: mkdocs build --strict
 
