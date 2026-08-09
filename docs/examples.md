@@ -5,9 +5,7 @@ strategic outcome down to a single picked-up issue, plus one inbound item arrivi
 Triage. Every artefact below follows the live templates, and the native fields sit in the
 comment above each body, exactly as the [skills](skills/index.md) set them.
 
-```kroki-d2
-@from_file:diagrams/example-chain.d2
-```
+![Worked example: the dogadopt initiative down through a project to three issues, plus one inbound item accepted via Triage.](diagrams/example-chain.svg)
 
 That is the cheat-sheet model with real artefacts in place of the abstract boxes. Each one is
 written out in full below.

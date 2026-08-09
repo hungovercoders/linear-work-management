@@ -28,15 +28,28 @@ tasks:
     cmds:
       - "{{.PY}} scripts/gen_skill_index.py"
 
+  diagrams:
+    desc: Render docs/diagrams/*.d2 to committed SVGs with d2 (offline; no Kroki service).
+    cmds:
+      - |
+        command -v d2 >/dev/null || { echo "d2 not found — install it: brew install d2 (or see https://d2lang.com/tour/install)"; exit 1; }
+        for f in docs/diagrams/*.d2; do d2 --theme=0 "$f" "${f%.d2}.svg"; done
+      - "{{.PY}} scripts/check_diagrams.py"
+
+  diagrams:check:
+    desc: Verify every D2 source has a committed SVG (no d2 needed).
+    cmds:
+      - "{{.PY}} scripts/check_diagrams.py"
+
   serve:
     desc: Live-preview the docs site locally.
-    deps: [setup, skills:index]
+    deps: [setup, skills:index, diagrams:check]
     cmds:
       - "{{.MKDOCS}} serve"
 
   build:
     desc: Build the static site into ./site (fails on warnings).
-    deps: [setup, skills:index]
+    deps: [setup, skills:index, diagrams:check]
     cmds:
       - "{{.MKDOCS}} build --strict"
 

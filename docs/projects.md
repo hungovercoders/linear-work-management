@@ -38,9 +38,7 @@ Keep the project about means, not ends.
 A project is one object that moves through a lifecycle, not two kinds of thing. Its states
 group into three phases, and the `Planned` gate divides exploration from commitment:
 
-```kroki-d2
-@from_file:diagrams/project-lifecycle.d2
-```
+![Project lifecycle: Idea, Scoping, Planned and In Progress, then into Done or Closed.](diagrams/project-lifecycle.svg)
 
 | State | Phase | Means |
 |---|---|---|

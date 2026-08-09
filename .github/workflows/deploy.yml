@@ -36,6 +36,9 @@ jobs:
       - name: Regenerate skill index
         run: python scripts/gen_skill_index.py
 
+      - name: Check diagrams (every D2 source has a committed SVG)
+        run: python scripts/check_diagrams.py
+
       - name: Lint prose (AI-tell gate)
         run: python scripts/prose_lint.py
 

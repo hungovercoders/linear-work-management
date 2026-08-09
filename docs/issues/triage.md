@@ -47,9 +47,7 @@ Exactly one `flow/*` label, and no `type/*` (that's the [project-work](project-w
 Inbound work enters through Triage, where a named duty rota gives each item a fast
 routing decision, one of five outcomes ("leave it sitting there" isn't one):
 
-```kroki-d2
-@from_file:diagrams/triage-outcomes.d2
-```
+![Triage outcomes: the five decisions the duty rota can make on an inbound item.](../diagrams/triage-outcomes.svg)
 
 | Outcome | What it means |
 |---|---|

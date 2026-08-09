@@ -59,14 +59,9 @@ extra_css:
 
 plugins:
   - search
-  # D2 (and any Kroki type) render as ```kroki-d2``` fences, inlined as SVG.
-  # Mermaid renders client-side via the Material superfence above.
-  - kroki:
-      server_url: !ENV [KROKI_SERVER_URL, "https://kroki.io"]
-      fence_prefix: "kroki-"
-      file_types:
-        - svg
-      tag_format: svg
+  # Diagrams are D2, pre-rendered to committed SVGs (docs/diagrams/*.svg) via
+  # `task diagrams` — the build calls no external service and needs no d2.
+  # Mermaid still renders client-side via the Material superfence above.
 
 nav:
   - The Cheat Sheet: index.md

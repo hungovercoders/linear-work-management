@@ -37,9 +37,7 @@ initiative about ends, not means.
 Initiatives rarely spring up fully formed. There are three ways one starts, and the question
 behind all of them is the same: what evidence is this outcome built on?
 
-```kroki-d2
-@from_file:diagrams/initiative-origin.d2
-```
+![Three origins converging on one initiative outcome.](diagrams/initiative-origin.svg)
 
 - **Spontaneous**: a fresh strategic bet with no project behind it. Leadership names an outcome
   directly. Legitimate, but it still has to earn its Key Results like any other.
