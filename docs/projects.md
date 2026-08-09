@@ -3,8 +3,8 @@
 <div class="lwm-lead" markdown>
 For delivery leads. A **project** in [Linear](https://linear.app/happydevs/projects/all) is
 what you'll do and how: a bounded piece of work that moves a Key Result. One project, one named
-lead, moving through one lifecycle. It sits alongside the initiative it serves and the issues
-that build it, in the same tool.
+lead, moving through one lifecycle. It sits alongside the initiative it serves and the
+[project work](issues/project-work.md) that builds it, in the same tool.
 </div>
 
 [Every project in Linear sits on one screen.](https://linear.app/happydevs/projects/all) That's

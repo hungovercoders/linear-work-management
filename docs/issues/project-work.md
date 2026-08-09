@@ -1,10 +1,10 @@
 # Project work
 
 <div class="lwm-lead" markdown>
-For delivery teams. A **project issue** lives inside a [project](../projects.md) and moves its
-Key Result, so it's planned work on the strategic path. What follows is specific to project
-issues; the [shared issue model](index.md) (the lifecycle, the body-as-prompt, native fields)
-sits underneath it.
+For delivery teams. **Project work** is the planned kind of work: a **project issue** that lives
+inside a [project](../projects.md) and moves its Key Result, on the strategic path. The other
+kind is [inbound work](triage.md). What follows is specific to project issues; the
+[shared model](index.md) (the lifecycle, the body-as-prompt, native fields) sits underneath it.
 </div>
 
 A project issue sits in a project ([rule 3](../hard-rules.md) classification), inherits that

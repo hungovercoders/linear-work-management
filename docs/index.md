@@ -77,7 +77,7 @@ the whole chain.
 |---|---|---|
 | Strategic leadership | An **outcome** and its measures | **[Initiatives](initiatives.md)** |
 | A delivery lead | A **project** — the what, how and when | **[Projects](projects.md)** |
-| On the delivery team | **Issues** — is it done? | **[Project work](issues/project-work.md)** |
+| On the delivery team | **The work** — is it done? | **[Project work](issues/project-work.md)** |
 | On triage duty | Inbound work — where does this go? | **[Triage work](issues/triage.md)** |
 
 ---
@@ -85,7 +85,7 @@ the whole chain.
 ## :material-map: Where everything lives
 
 - [Examples](examples.md): one real chain, initiative → project → issues → a triage call
-- [Issues](issues/index.md): the shared lifecycle, templates and the agent-plan convention
+- [Work](issues/index.md): what an issue is, the shared lifecycle, templates and the agent-plan convention
 - [Teams, states & labels](teams.md): the canonical enums; org invariants vs team room
 - [Communications](communications.md): every update cadence, and Pulse
 - [Dashboards](dashboards.md): the drift and portfolio views
