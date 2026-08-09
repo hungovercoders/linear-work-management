@@ -1,0 +1,43 @@
+# The worked example as a picture: the dogadopt chain, initiative to issues.
+# Rendered inline on the Worked example page via Kroki (```kroki-d2```).
+# A concrete instance of model.d2 — same shape, real artefacts.
+# Flat + acyclic, top-to-bottom.
+
+direction: down
+
+# ---- the initiative ----
+initiative: "INITIATIVE · Effortless rescue-dog adoption\nActive · owner Richard · target 30 Sep\nKR: Welsh rescues live 0% → 100%" {
+  style: {fill: "#E4EAF6"; stroke: "#3D4C6B"; border-radius: 8; bold: true; stroke-width: 2}
+}
+
+# ---- the project (with its blocking dependency) ----
+project: "PROJECT · Onboard Welsh rescues\nIn Progress · moves the KR 0% → 100%\nspend/capex · product/dogadopt" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+consent: "Consent process\n(blocking dependency)" {
+  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 7}
+}
+
+# ---- the three project issues ----
+feature: "type/feature\nShow a rescue's dogs — Todo" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+}
+bug: "type/bug\nRefresh drops photoless dogs — Urgent" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+}
+action: "type/action\nNightly confirm email — plan filled" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
+}
+
+# ---- the inbound item, accepted into the project ----
+inbound: "flow/defect · 'shows a rehomed dog'\naccepted into the project as a type/bug" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 7}
+}
+
+# ---- the chain ----
+initiative -> project: contains · names its KR {style.stroke: "#3D4C6B"}
+consent -> project: blocks {style: {stroke: "#A9B2C4"; stroke-dash: 4}}
+project -> feature {style.stroke: "#3D4C6B"}
+project -> bug {style.stroke: "#3D4C6B"}
+project -> action {style.stroke: "#3D4C6B"}
+inbound -> project: triaged in {style.stroke: "#8C2F39"}

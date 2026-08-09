@@ -1,0 +1,50 @@
+# Communication cadence: who posts what, where it goes, and how it rolls up.
+# Rendered inline on the Communications page via Kroki (```kroki-d2```).
+# Push (scheduled updates to channels) plus the roll-up; Pulse is the pull surface.
+# Flat + acyclic so the layout stays a clean funnel.
+
+direction: down
+
+# ---- the evidence a project update rests on ----
+evidence: "Issue & cycle movement\nthe evidence a project's health rests on" {
+  style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 8}
+}
+
+# ---- the two scheduled updates ----
+projupd: "PROJECT update\nweekly, while In Progress / Launching" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+iniupd: "INITIATIVE update\nmonthly, while Active" {
+  style: {fill: "#E4EAF6"; stroke: "#3D4C6B"; border-radius: 8; bold: true; stroke-width: 2}
+}
+digest: "TEAM digest\nweekly · cycle + triage" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+announce: "LAUNCH / INCIDENT\non the event" {
+  style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 8; bold: true}
+}
+
+# ---- where each lands (push) ----
+ch_proj: "#project-updates" {style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6}}
+ch_ini: "#initiative-updates" {style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6}}
+ch_team: "team channel" {style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6}}
+ch_ann: "#announcements" {style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6}}
+
+# ---- the pull surface ----
+pulse: "Pulse — a personal pull feed\nFor me · Popular · Recent · Inbox digest" {
+  style: {fill: "#FBF6EC"; stroke: "#B7791F"; border-radius: 8; bold: true; font-color: "#7A5312"}
+}
+
+# ---- the roll-up (project evidence feeds project health, which feeds the initiative) ----
+evidence -> projupd: rolls up {style.stroke: "#3D4C6B"}
+projupd -> iniupd: rolls up · tempers health {style.stroke: "#3D4C6B"}
+
+# ---- push to channels ----
+projupd -> ch_proj {style.stroke: "#3D4C6B"}
+iniupd -> ch_ini {style.stroke: "#3D4C6B"}
+digest -> ch_team {style.stroke: "#3D4C6B"}
+announce -> ch_ann {style.stroke: "#8C2F39"}
+
+# ---- pull into Pulse ----
+projupd -> pulse: pull {style: {stroke: "#B7791F"; stroke-dash: 4}}
+iniupd -> pulse: pull {style: {stroke: "#B7791F"; stroke-dash: 4}}

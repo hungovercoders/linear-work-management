@@ -18,6 +18,14 @@ health and launches without asking, while nobody drowns in noise.
 The lead is responsible for their update happening. The skills draft it and the channel carries
 it, but the obligation belongs to a person, by name.
 
+```kroki-d2
+@from_file:diagrams/comms-cadence.d2
+```
+
+Two things to read off the picture: a project update rolls up into its initiative's health, so
+silence downstream tempers the story upstream; and the scheduled updates push to channels while
+Pulse pulls the same updates into a personal feed.
+
 ### Making the cadence stick
 
 The cadence doesn't live in anyone's memory. Three things keep it honest:
