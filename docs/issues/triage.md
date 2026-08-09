@@ -1,11 +1,11 @@
 # Triage work
 
 <div class="lwm-lead" markdown>
-For the triage duty rota. An inbound issue arrived rather than being planned: an incident, a
-request, a reported bug, an ad-hoc analysis. It carries no project and exactly one `flow/*`
+For the triage duty rota. **Inbound work** is the kind that arrived rather than being planned:
+an incident, a request, a reported bug, an ad-hoc analysis. The other kind is
+[project work](project-work.md). An inbound issue carries no project and exactly one `flow/*`
 label ([rule 3](../hard-rules.md)), and no `type/*`. What follows is about inbound work; the
-[shared issue model](index.md) (the lifecycle, the body-as-prompt, native fields) sits
-underneath it.
+[shared model](index.md) (the lifecycle, the body-as-prompt, native fields) sits underneath it.
 </div>
 
 !!! info "Triage is a native Linear feature"
@@ -44,7 +44,7 @@ Exactly one `flow/*` label, and no `type/*` (that's the [project-work](project-w
 
 ## :material-door-open: Where inbound work arrives
 
-Inbound work enters through **Triage**, where a named duty rota gives each item a fast
+Inbound work enters through Triage, where a named duty rota gives each item a fast
 routing decision, one of five outcomes ("leave it sitting there" isn't one):
 
 ```kroki-d2

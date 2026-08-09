@@ -3,7 +3,7 @@
 <div class="lwm-lead" markdown>
 For strategic leadership. An **initiative** in [Linear](https://linear.app/happydevs/initiatives)
 is a defined outcome: the *why* behind a body of work and *how we'll know it worked*. It isn't
-a task list, and it isn't the *how it's built*; that belongs to the [projects](index.md)
+a task list, and it isn't the *how it's built*; that belongs to the [projects](projects.md)
 beneath it. It sits alongside those projects and their issues, in the same tool.
 </div>
 

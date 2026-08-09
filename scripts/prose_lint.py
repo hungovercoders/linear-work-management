@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Prose linter — flag AI-generated-text tells in the guide.
 
-Measures the countable tells from the style guide (docs/style.md) so "reads like AI"
+Measures the countable tells from the style guide (STYLE.md) so "reads like AI"
 becomes a gate rather than an opinion. Runs over the docs + skill prose, skips the
 auto-generated skill index, and ignores fenced code, HTML comments (native-field
 blocks), and table rows for the density counts.
@@ -123,7 +123,7 @@ def main() -> int:
         print(f"Failures ({len(failures)}):")
         for f in failures:
             print(f"  ✗ {f}")
-        print(f"\n{len(failures)} failure(s). See docs/style.md for the fixes.")
+        print(f"\n{len(failures)} failure(s). See STYLE.md for the fixes.")
         return 1
     print("Clean: every file within budget.")
     return 0

@@ -1,6 +1,6 @@
-# :material-fountain-pen-tip: Writing style
+# Writing style
 
-This guide is written for people, and it should read that way. Machine-drafted prose has a
+This repo's content is written for people, and it should read that way. Machine-drafted prose has a
 handful of habits that give it away, and they crept into these pages more than once. This page
 names them so the next edit avoids them, and `task lint:prose` checks the countable ones on
 every build.

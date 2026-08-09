@@ -1,10 +1,11 @@
-# Issues
+# Work
 
 <div class="lwm-lead" markdown>
-For anyone who touches the work itself. An **issue** in
-[Linear](https://linear.app/happydevs/team/GRI/all) is one discrete task, understood before it
-starts: the unit of work where a project's Key Result gets moved and where inbound work arrives.
-This page is what's true of every issue; the two paths an issue can take are at the bottom.
+For anyone who touches the work itself. Work you do is tracked in
+[Linear](https://linear.app/happydevs/team/GRI/all) as an **issue**: the representation of one
+discrete piece of work, understood before it starts. Every issue is one of two kinds, **project
+work** that moves a Key Result or **inbound work** that arrived through Triage. This page is
+what's true of every issue whichever kind it is; the two kinds have a page each below.
 </div>
 
 [Every issue in Linear sits on one screen.](https://linear.app/happydevs/team/GRI/all) Same
@@ -14,9 +15,9 @@ tool as the strategy above it, with no boundary between *why* and the task in yo
 
 ## :material-checkbox-marked-circle-outline: What an issue is
 
-An issue is a discrete task, understood before it starts: small enough for one person to pick up
-and finish, clear enough that "done" isn't ambiguous. Two things are true of every issue,
-whichever path it arrived on:
+An issue is how a piece of work is represented: small enough for one person to pick up and
+finish, clear enough that "done" isn't ambiguous, and understood before it starts. Two things
+are true of every issue, whichever path it arrived on:
 
 - **It's classified**: in a project *or* carrying exactly one `flow/*` label, never both,
   never neither ([rule 3](../hard-rules.md)). An issue that is neither is *unclassified*:

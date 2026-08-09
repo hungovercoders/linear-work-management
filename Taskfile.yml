@@ -52,7 +52,7 @@ tasks:
       - "{{.PY}} scripts/linear_doctor.py"
 
   lint:prose:
-    desc: Flag AI-generated-text tells in the guide prose (see docs/style.md).
+    desc: Flag AI-generated-text tells in the guide prose (see STYLE.md).
     cmds:
       - "{{.PY}} scripts/prose_lint.py"
 

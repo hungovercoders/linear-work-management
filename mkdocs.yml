@@ -74,7 +74,7 @@ nav:
   - The Hard Rules: hard-rules.md
   - Initiatives: initiatives.md
   - Projects: projects.md
-  - Issues:
+  - Work:
       - issues/index.md
       - Project work: issues/project-work.md
       - Triage work: issues/triage.md
@@ -85,4 +85,3 @@ nav:
   - Setup checklist: setup.md
   - Skills: skills/index.md
   - Glossary: glossary.md
-  - Writing style: style.md
