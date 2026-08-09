@@ -7,7 +7,7 @@ companion page in the docs.
 
 Each skill lives in `skills/<name>/` and follows the conventions below. New skills conform to
 these, and `linear-doctor` (GRI-77) maintains them. Skill prose follows the
-[writing style](https://linear-work-management.pages.dev/style/), checked by `task lint:prose`.
+[writing style](../STYLE.md), checked by `task lint:prose`.
 
 ## Layout
 

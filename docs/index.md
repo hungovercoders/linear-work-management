@@ -24,12 +24,14 @@ any term you meet on the way.
 @from_file:diagrams/model.d2
 ```
 
-Three layers, and two ways work reaches them. Neither way is superior:
+Start with **work** — the thing you actually do. In Linear a piece of work is an **issue**, and
+work comes in two kinds. The only difference is how each one arrives, and neither kind is
+superior:
 
-| Path | Flows | What it is |
+| Kind of work | How Linear holds it | What it is |
 |---|---|---|
-| <span class="lwm-strat">Strategic</span> | Initiative → Project → Issues | Planned work toward an outcome |
-| <span class="lwm-inbound">Inbound</span> | Triage → Issue (`flow/*`) | Work that arrives: incidents, requests, compliance, support, toil |
+| <span class="lwm-strat">Project work</span> | An issue in a project, under an initiative (Initiative → Project → Issue) | Planned work toward an outcome |
+| <span class="lwm-inbound">Inbound work</span> | An issue that arrived through Triage, on one `flow/*` label | Work that arrives: incidents, requests, compliance, support, toil |
 
 !!! danger "The one failure"
     An issue on neither path is *unclassified*. This is invisible work, the defect the whole

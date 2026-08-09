@@ -58,6 +58,9 @@ task doctor        # audit the workspace against the hard rules
 Diagrams are **D2** via ` ```kroki-d2 ` fences (rendered inline as SVG through Kroki);
 Mermaid is available via ` ```mermaid ` for sequence/gantt.
 
+Content and skill prose follow [`STYLE.md`](STYLE.md) (enforced by `task lint:prose`); repo
+authoring notes live in [`CLAUDE.md`](CLAUDE.md).
+
 ## Using the skills
 
 ```text
