@@ -1,0 +1,39 @@
+# GitHub → Linear: issue state as a side effect of shipping code.
+# Rendered inline on the Integrations page via Kroki (```kroki-d2```).
+# Left column: what you do in git. Right column: the issue state it drives.
+# Flat + acyclic, top-to-bottom.
+
+direction: down
+
+# ---- the git actions (what a person does) ----
+branch: "Branch from the issue's name\nlinks the branch to the issue" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
+}
+push: "Push commits" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+pr: "Open a PR on that branch" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+merge: "Merge the PR" {
+  style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
+}
+
+# ---- the issue states it drives (the side effect) ----
+s_prog: "Issue → In Progress" {
+  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6; font-color: "#3D4C6B"}
+}
+s_rev: "Issue → In Review" {
+  style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6; font-color: "#3D4C6B"}
+}
+s_done: "Issue → Done" {
+  style: {fill: "#DCE9DC"; stroke: "#2F6B3A"; border-radius: 6; font-color: "#1E4426"; bold: true}
+}
+
+# ---- the pipeline ----
+branch -> push -> pr -> merge
+
+# ---- each action moves the state, no one touches it by hand ----
+push -> s_prog: drives {style: {stroke: "#3D4C6B"; stroke-dash: 4}}
+pr -> s_rev: drives {style: {stroke: "#3D4C6B"; stroke-dash: 4}}
+merge -> s_done: drives {style: {stroke: "#2F6B3A"; stroke-dash: 4}}

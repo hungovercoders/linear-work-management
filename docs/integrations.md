@@ -25,6 +25,10 @@ The GitHub integration is live in `happydevs`, linked to the
 The upshot is that nobody moves issue states by hand for code work. The state is a side effect
 of shipping.
 
+```kroki-d2
+@from_file:diagrams/github-flow.d2
+```
+
 ---
 
 ## :material-slack: Slack, to connect
