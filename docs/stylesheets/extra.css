@@ -61,6 +61,9 @@
 .lwm-strat   { color: var(--lwm-strategic); font-weight: 700; }
 .lwm-inbound { color: var(--lwm-inbound);   font-weight: 700; }
 
-/* Give the model diagram a little room + centring */
-.md-typeset p > img[alt="Kroki"],
-.md-typeset .kroki-image { display: block; margin: .5rem auto 1rem; }
+/* Diagrams: pre-rendered D2 SVGs embedded as images — give them room + centring */
+.md-typeset img[src$=".svg"] {
+  display: block;
+  margin: .5rem auto 1rem;
+  max-width: 100%;
+}

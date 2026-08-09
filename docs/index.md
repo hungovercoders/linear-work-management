@@ -20,9 +20,7 @@ any term you meet on the way.
 
 ## :material-sitemap: How it fits together
 
-```kroki-d2
-@from_file:diagrams/model.d2
-```
+![The operating model: two paths of work — strategic (initiative → project → issue) and inbound (triage → issue).](diagrams/model.svg)
 
 Start with **work** — the thing you actually do. In Linear a piece of work is an **issue**, and
 work comes in two kinds. The only difference is how each one arrives, and neither kind is

@@ -35,9 +35,7 @@ the *what & how* to the [project](../projects.md) above it.
 
 Every issue moves through the same states, whichever path it came from:
 
-```kroki-d2
-@from_file:diagrams/issue-lifecycle.d2
-```
+![Issue lifecycle: two entry points converging on Backlog, then Todo, In Progress, In Review and Done.](../diagrams/issue-lifecycle.svg)
 
 | State | Means |
 |---|---|

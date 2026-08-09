@@ -18,9 +18,12 @@ task doctor        # audit the Linear workspace against the hard rules
 
 ## Diagrams
 
-Diagrams are **D2** in `docs/diagrams/*.d2`, rendered inline as SVG via ` ```kroki-d2 ` fences
-(`@from_file:diagrams/<name>.d2`). Follow the house palette and layout already in that folder.
-Mermaid is available via ` ```mermaid ` for sequence/gantt.
+Diagrams are **D2** in `docs/diagrams/*.d2`, pre-rendered to committed SVGs with `task diagrams`
+(offline via the d2 CLI — no Kroki, no build-time service) and embedded as images
+(`![alt](diagrams/<name>.svg)`; use `../diagrams/…` from pages in subfolders). Edit the `.d2`,
+run `task diagrams`, commit the SVG beside it. `task diagrams:check` (and CI) verifies every
+source has a committed SVG. Follow the house palette and layout already in that folder. Mermaid
+is available via ` ```mermaid ` for sequence/gantt (client-side).
 
 ## Writing
 
