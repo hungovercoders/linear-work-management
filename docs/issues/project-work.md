@@ -9,8 +9,8 @@ kind is [inbound work](triage.md). What follows is specific to project issues; t
 
 A project issue sits in a project ([rule 3](../hard-rules.md) classification), inherits that
 project's `product/*`, carries one `type/*`, and ladders to the project's KR. Like every issue,
-it's refined **Backlog → Todo** before anyone starts, which is the [readiness
-gate](index.md#backlog-vs-todo-the-readiness-gate).
+it's worked up **Backlog → Planning → Todo** before anyone starts, ending at the [readiness
+gate](index.md#backlog-planning-todo-commitment-then-readiness).
 
 ---
 
