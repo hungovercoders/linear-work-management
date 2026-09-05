@@ -53,14 +53,14 @@ Every issue moves through the same states, whichever path it came from:
 
 Two transitions here carry the model's weight, and they mean different things.
 
-- Backlog → Planning is a **commitment decision**. The team has agreed to work the item up.
+- Backlog → Planning is a *commitment decision*. The team has agreed to work the item up.
   Anything still in Backlog is honestly parked: captured or accepted, but nobody has promised to
   refine it, so no clock runs and no one need apologise for its age.
-- Planning is where refinement is **visible work**: sharpen the problem, gather requirements,
+- Planning is where refinement is *visible work*: sharpen the problem, gather requirements,
   define what "done" is, size it, clear blockers. Because commitment has been made, time spent
   here is measured — a growing or ageing Planning column is the evidence that refinement is the
   constraint (see [Flow](../flow.md)).
-- Planning → Todo is the **readiness gate**. The refinement has been accepted: someone can pick
+- Planning → Todo is the *readiness gate*. The refinement has been accepted: someone can pick
   the issue up and start without going back to ask what it means.
 
 Nothing starts from Backlog or Planning. That gate is what keeps *In Progress* honest, because
