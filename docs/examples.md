@@ -85,8 +85,8 @@ timeline.
 ## 3 · Three issues under it
 
 A `type/feature`, *"Show a rescue's dogs on the search page"*: user value in the Why,
-acceptance criteria listing the observable behaviours, `product/dogadopt` inherited. It sits in
-`Todo`, refined.
+acceptance criteria listing the observable behaviours, `product/dogadopt` inherited. It has been
+through `Planning` and sits in `Todo`, refined.
 
 A `type/bug`, *"Refresh job drops dogs with no photo"*: steps to reproduce, expected vs actual,
 impact ("listings shrink silently, a trust risk"). It's `Urgent`, picked up next.

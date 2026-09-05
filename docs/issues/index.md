@@ -35,12 +35,13 @@ the *what & how* to the [project](../projects.md) above it.
 
 Every issue moves through the same states, whichever path it came from:
 
-![Issue lifecycle: two entry points converging on Backlog, then Todo, In Progress, In Review and Done.](../diagrams/issue-lifecycle.svg)
+![Issue lifecycle: two entry points converging on Backlog, then Planning, Todo, In Progress, In Review and Done.](../diagrams/issue-lifecycle.svg)
 
 | State | Means |
 |---|---|
 | Triage | In **Linear's built-in Triage inbox**; awaiting a routing decision (see [Triage work](triage.md)) |
-| Backlog | Accepted, but **not yet refined** enough to start |
+| Backlog | The default pool — captured or accepted, **no commitment to plan it yet**; no clock runs here |
+| Planning | **Committed to work up** — requirements gathering, refinement and sizing happen here, and the clock runs |
 | Todo | **Refined, actionable, can be picked up now** |
 | In Progress | Being worked |
 | In Review | Work done; under review |
@@ -48,18 +49,22 @@ Every issue moves through the same states, whichever path it came from:
 | Canceled | Won't do; reason recorded |
 | Duplicate | Superseded by another issue |
 
-### Backlog vs Todo — the readiness gate
+### Backlog, Planning, Todo — commitment, then readiness
 
-The line between Backlog and Todo is the one distinction worth being strict about.
+Two transitions here carry the model's weight, and they mean different things.
 
-- Backlog is accepted but not ready. The intent is captured, but the task isn't yet understood
-  well enough to hand to someone. It might be vague, unestimated, or blocked.
-- Todo is ready now. It's refined to the point that someone can pick it up and start without
-  going back to ask what it means.
+- Backlog → Planning is a **commitment decision**. The team has agreed to work the item up.
+  Anything still in Backlog is honestly parked: captured or accepted, but nobody has promised to
+  refine it, so no clock runs and no one need apologise for its age.
+- Planning is where refinement is **visible work**: sharpen the problem, gather requirements,
+  define what "done" is, size it, clear blockers. Because commitment has been made, time spent
+  here is measured — a growing or ageing Planning column is the evidence that refinement is the
+  constraint (see [Flow](../flow.md)).
+- Planning → Todo is the **readiness gate**. The refinement has been accepted: someone can pick
+  the issue up and start without going back to ask what it means.
 
-Moving an issue Backlog → Todo is refinement: sharpen the problem, define what "done" is, size
-it, clear blockers. Nothing starts from Backlog. That gate is what keeps *In Progress* honest,
-because everything in it was understood before it began.
+Nothing starts from Backlog or Planning. That gate is what keeps *In Progress* honest, because
+everything in it was understood before it began.
 
 ---
 

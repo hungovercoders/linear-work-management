@@ -25,6 +25,8 @@ Every term the guide leans on, one line each. Terms link to the page that owns t
 | **`flow/*`** | The inbound kind label: `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil`. |
 | **`spend/*`** | Project funding: `capex` or `opex`, set at planning. |
 | **`product/*`** | Which product the work serves — set on the project, inherited by its issues. |
+| **Planning (issue state)** | The issue state between Backlog and Todo: committed to work up — requirements, refinement, sizing — with the clock running. Distinct from the project `Planned` status, which marks a project crossing into delivery. [Issues](issues/index.md). |
+| **Time in state** | How long an issue has sat in its current state — the [Flow](flow.md) page's raw material for spotting bottlenecks. Backlog deliberately doesn't count. |
 | **Additive-only** | Teams may *add* to shared states/labels, never remove or rename them — cross-team views stay comparable. |
 | **Health** | On track · at risk · off track — always a **claim with evidence** (KR movement, issue progress). [Communications](communications.md). |
 | **Roll-up dependency** | An initiative's health is only as good as its projects' updates — silence tempers it. |

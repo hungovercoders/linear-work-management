@@ -28,7 +28,9 @@ available without mandating them. Everything below is marked as one or the other
 
 Teams may add to the shared sets, whether an extra state their workflow needs or a local label,
 but never remove or rename shared values. Insights only stay comparable across teams if the
-shared values mean the same thing everywhere.
+shared values mean the same thing everywhere. The shared sets themselves do evolve, but only as
+an org-level change every team adopts together (the Planning issue state arrived that way), which
+is a different thing from a team-local addition.
 
 !!! example "A live example"
     The `happydevs` team carries a Review Requested state alongside the shared set, a legitimate
@@ -113,7 +115,12 @@ Workspace-level project statuses (Settings → Projects), configured to:
 
 Per-team workflow states, matching the shared set:
 
-**Triage → Backlog → Todo → In Progress → In Review → Done** (or **Canceled** · **Duplicate**)
+**Triage → Backlog → Planning → Todo → In Progress → In Review → Done** (or **Canceled** ·
+**Duplicate**)
+
+Backlog is the default pool and deliberately carries no clock; Planning is where the clock
+starts, because time spent there is the evidence of a refinement bottleneck (see
+[Flow](flow.md)).
 
 Teams may add local states (additive-only) while the shared ones stay untouched, so cross-team
 views stay comparable.

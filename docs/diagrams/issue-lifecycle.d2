@@ -15,13 +15,13 @@ projectwork: "Project work\nPLANNED work starts here · created straight in a pr
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; stroke-dash: 4; border-radius: 8; bold: true}
 }
 
-# ---- backlog: where both paths converge ----
-backlog: "Backlog\nboth paths converge here · accepted, not yet refined" {
+# ---- backlog: where both paths converge; the unmeasured pool ----
+backlog: "Backlog\nboth paths converge here · the default pool — no clock runs" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
 }
 
-# ---- the readiness gate ----
-gate: "«Readiness gate» — refine: sharpen, define done, size, unblock" {
+# ---- planning: committed to work up; the clock runs here ----
+planning: "Planning\nrequirements, refinement, sizing — the clock runs here" {
   style: {fill: "#FBF6EC"; stroke: "#B7791F"; border-radius: 8; bold: true; font-color: "#7A5312"}
 }
 
@@ -47,7 +47,7 @@ dropped: "Canceled / Duplicate\nwon't do / superseded — reason recorded" {
 # ---- the spine (acyclic, top-to-bottom) ----
 triage -> backlog: accepted {style.stroke: "#8C2F39"}
 projectwork -> backlog: created {style.stroke: "#3D4C6B"}
-backlog -> gate
-gate -> todo
+backlog -> planning: committed {style.stroke: "#B7791F"}
+planning -> todo: accepted as ready {style.stroke: "#B7791F"}
 todo -> inprogress -> inreview -> done
 backlog -> dropped: won't do {style.stroke: "#A9B2C4"}
