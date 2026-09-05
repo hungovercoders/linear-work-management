@@ -17,7 +17,8 @@ surface hard-rule breaches and portfolio state as you scan them, and each exists
 | [Drift — undated delivery projects](https://linear.app/happydevs/view/5e8e8163-9f0c-4fee-a210-c781f8c92707) | `Planned`-or-later projects missing a start or target-end date | [5](hard-rules.md) |
 | [Drift — violated dependencies](https://linear.app/happydevs/view/4c475feb-953d-466e-af97-9dcc29bc2cfc) | Projects whose [dependency lines](projects.md#dependencies-native-never-prose) have gone red | — |
 
-Empty views are the goal, and anything in one is a conversation waiting to happen.
+Empty views are the goal, and anything in one is a conversation waiting to happen. These views
+catch rule breaches; the time-in-state views that catch queue buildup live on [Flow](flow.md).
 
 !!! note "Rules 1 and 2 belong to the doctor"
     "Initiative declares Key Results" and "project names a KR + delta" live in description
@@ -53,5 +54,6 @@ Empty views are the goal, and anything in one is a conversation waiting to happe
 ## Related
 
 - [The Hard Rules](hard-rules.md) — what these views enforce
+- [Flow](flow.md) — measuring time in state and reading bottlenecks
 - [Communications](communications.md) — where findings get talked about
 - [Teams, states & labels](teams.md) — the enums the filters rely on

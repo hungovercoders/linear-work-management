@@ -3,7 +3,7 @@
      The issue DESCRIPTION only. Set these as native Linear fields, NOT in this text:
        • Assignee   → the one person doing it
        • Priority   → Urgent → Low, so it orders against the others
-       • Status     → Backlog (new) → Todo once refined; nothing starts from Backlog
+       • Status     → Backlog (new) → Planning when committed → Todo once ready; nothing starts before Todo
        • Classify   → in a PROJECT (type/analysis) OR flow/query (inbound) — rule 3, never both
        • type/*     → analysis (or none, if inbound flow/query)
        • product/*  → inherited from the project, unchanged

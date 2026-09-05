@@ -3,7 +3,8 @@
 
 The headless, whole-workspace sweep: paginates the Linear GraphQL API directly, so it
 covers what the interactive `linear-doctor` skill can't (initiatives; full-workspace scale)
-and runs the same five hard rules + taxonomy/staleness checks in CI or from `task doctor`.
+and runs the same five hard rules + taxonomy/staleness/languishing checks in CI or from
+`task doctor`.
 
 Requires LINEAR_API_KEY in the environment. Exits 1 if violations are found, 0 if clean —
 reports drift; does not fix.
@@ -27,6 +28,16 @@ EXPECTED_LABELS = {
 PROJECT_DELIVERY_STATUSES = {"planned", "started"}  # status *types* where rules 2 & 5 bite
 PROJECT_STALE_DAYS = 10   # weekly cadence + grace
 INITIATIVE_STALE_DAYS = 35  # monthly cadence + grace
+
+# Languishing issues (see docs/flow.md). Keyed on shared state *names*, not types:
+# only the additive-only rule's protection of shared names makes that safe, and it's
+# the only way to tell Planning from Backlog (both backlog-type) or Todo from a
+# team's local unstarted state. Backlog is deliberately absent — the unmeasured pool.
+LANGUISHING_DAYS = {
+    "Planning": 10,   # committed work-up with no visible movement for two working weeks
+    "Todo": 14,       # refined two weekly cycles ago, still unstarted
+    "In Review": 5,   # finished work waiting on review for a working week
+}
 
 # Prose that belongs in a native field, not the description body.
 NATIVE_FIELD_PROSE = re.compile(
@@ -161,35 +172,47 @@ def main() -> int:
         if p_body and NATIVE_FIELD_PROSE.search(p_body):
             flag("native fields in prose", f"project {label}")
 
-    # ---- Issues (rule 3) --------------------------------------------------------------
+    # ---- Issues (rule 3 + languishing) ------------------------------------------------
+    # One paginated pass serves both checks; the age check runs even pre-taxonomy.
+    issues = paginate(
+        """query($after: String) {
+             issues(first: 100, after: $after,
+                    filter: { state: { type: { nin: ["completed", "canceled"] } } }) {
+               nodes { identifier title url updatedAt
+                       state { name type }
+                       project { id }
+                       labels { nodes { name parent { name } } } }
+               pageInfo { hasNextPage endCursor } } }""",
+        "issues",
+    )
+
     if not taxonomy_present:
         flag("rule 3 — every issue is classified",
              "not checkable: the label taxonomy is absent (see `taxonomy` findings) — "
              "rule 3 is unsatisfiable until the groups exist")
-    else:
-        issues = paginate(
-            """query($after: String) {
-                 issues(first: 100, after: $after,
-                        filter: { state: { type: { nin: ["completed", "canceled"] } } }) {
-                   nodes { identifier title url
-                           state { type }
-                           project { id }
-                           labels { nodes { name parent { name } } } }
-                   pageInfo { hasNextPage endCursor } } }""",
-            "issues",
-        )
-        for issue in issues:
-            if issue["state"]["type"] == "triage":
-                continue  # in-flight at the front door, not a violation
-            flow = [lb["name"] for lb in issue["labels"]["nodes"]
-                    if lb["parent"] and lb["parent"]["name"] == "flow"]
-            label = f"{issue['identifier']} {issue['title']} <{issue['url']}>"
-            if issue["project"] and flow:
-                flag("rule 3 — every issue is classified", f"BOTH project and flow/*: {label}")
-            elif not issue["project"] and not flow:
-                flag("rule 3 — every issue is classified", f"unclassified: {label}")
-            elif len(flow) > 1:
-                flag("rule 3 — every issue is classified", f"multiple flow/* labels: {label}")
+    for issue in issues:
+        label = f"{issue['identifier']} {issue['title']} <{issue['url']}>"
+
+        threshold = LANGUISHING_DAYS.get(issue["state"]["name"])
+        if threshold is not None:
+            idle = days_ago(issue["updatedAt"])
+            if idle > threshold:
+                flag("languishing issues",
+                     f"{issue['state']['name']} with no activity for {idle:.0f}d "
+                     f"(threshold {threshold}d): {label}")
+
+        if not taxonomy_present:
+            continue
+        if issue["state"]["type"] == "triage":
+            continue  # in-flight at the front door, not a rule-3 violation
+        flow = [lb["name"] for lb in issue["labels"]["nodes"]
+                if lb["parent"] and lb["parent"]["name"] == "flow"]
+        if issue["project"] and flow:
+            flag("rule 3 — every issue is classified", f"BOTH project and flow/*: {label}")
+        elif not issue["project"] and not flow:
+            flag("rule 3 — every issue is classified", f"unclassified: {label}")
+        elif len(flow) > 1:
+            flag("rule 3 — every issue is classified", f"multiple flow/* labels: {label}")
 
     # ---- Report -----------------------------------------------------------------------
     print("linear-doctor — reports drift; does not fix.\n")
@@ -202,6 +225,9 @@ def main() -> int:
             print(f"  - {item}")
         print()
     print("Not checked headlessly: Slack channel connections (verify in Linear settings).")
+    print("Languishing checks use last activity as a proxy for time in state (Linear stores "
+          "no entered-state timestamp outside per-issue history), so they understate the true "
+          "wait — the Flow page's views measure the real durations.")
     total = sum(len(v) for v in findings.values())
     print(f"\n{total} finding(s).")
     return 1

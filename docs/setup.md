@@ -56,8 +56,9 @@ Current `happydevs` state is reflected below, and ticked items are done.
 
 #### Issue states: [the shared set](teams.md#issue-states)
 
-- [x] Triage · Backlog · Todo · In Progress · In Review · Done · Canceled · Duplicate
-      (local additions allowed, additive only)
+- [ ] Triage · Backlog · Planning · Todo · In Progress · In Review · Done · Canceled · Duplicate
+      (local additions allowed, additive only; Planning is a `backlog`-type state ordered after
+      Backlog)
 
 #### Triage: [where inbound work arrives](issues/triage.md)
 

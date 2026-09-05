@@ -9,8 +9,8 @@ kind is [inbound work](triage.md). What follows is specific to project issues; t
 
 A project issue sits in a project ([rule 3](../hard-rules.md) classification), inherits that
 project's `product/*`, carries one `type/*`, and ladders to the project's KR. Like every issue,
-it's refined **Backlog → Todo** before anyone starts, which is the [readiness
-gate](index.md#backlog-vs-todo-the-readiness-gate).
+it's worked up **Backlog → Planning → Todo** before anyone starts, ending at the [readiness
+gate](index.md#backlog-planning-todo-commitment-then-readiness).
 
 ---
 
@@ -77,7 +77,7 @@ The description body is the only thing that lives as text; everything else is a
    [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue)
    into the description and fill it in. They're the same files the skill uses.
 
-Refine it **Backlog → Todo** before anyone starts.
+Work it up **Backlog → Planning → Todo** before anyone starts.
 
 ---
 

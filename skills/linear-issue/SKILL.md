@@ -83,8 +83,9 @@ classification, the `type/*` (project issues) and the inherited `product/*`. Use
 That's capture, so stop here. The issue is down and classified. Two things happen *later*,
 not in this skill:
 
-- Refine to Todo: sharpen the problem, define done, size it, clear blockers. That's the
-  **Backlog → Todo** readiness gate, and nothing starts from Backlog.
+- Work it up: when the team commits, the issue moves **Backlog → Planning** for requirements,
+  refinement and sizing, then to Todo once accepted as ready (the readiness gate). Nothing
+  starts from Backlog or Planning, and the move out of Backlog is a decision, never drift.
 - Write the plan: when the issue is picked up, whoever works it (person or agent) works out the
   *how* and stores it in the description's `## Plan` section, left empty at creation so the
   approach is reviewable before the code is.
