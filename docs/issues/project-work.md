@@ -77,7 +77,7 @@ The description body is the only thing that lives as text; everything else is a
    [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue)
    into the description and fill it in. They're the same files the skill uses.
 
-Refine it **Backlog → Todo** before anyone starts.
+Work it up **Backlog → Planning → Todo** before anyone starts.
 
 ---
 
