@@ -64,5 +64,5 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 | `linear-issue` | An issue description (problem + agent plan) | [Issues](https://hungovercoders.github.io/linear-work-management/issues/) |
 | `linear-triage` | A routing decision per inbound issue (five outcomes) | [Triage work](https://hungovercoders.github.io/linear-work-management/issues/triage/) |
 | `linear-team-digest` | The weekly team digest (cycle + triage roll-up) | [Communications](https://hungovercoders.github.io/linear-work-management/communications/) |
-| `linear-doctor` | A drift report — hard rules, taxonomy, stale updates | [The Hard Rules](https://hungovercoders.github.io/linear-work-management/hard-rules/) |
+| `linear-doctor` | A drift report — hard rules, taxonomy, stale updates | [The hard rules](https://hungovercoders.github.io/linear-work-management/hard-rules/) |
 | `linear-stakeholder-deck` | A Marp slide deck of the live portfolio | [Communications](https://hungovercoders.github.io/linear-work-management/communications/) |

@@ -1,98 +1,94 @@
 # :material-bullhorn: Communications
 
-Every update rhythm in the model is stated here once, and the other
-pages point back to it. The aim is that the right audience hears about KR movement, project
-health and launches without asking, and nobody drowns in noise.
+<div class="lwm-lead" markdown>
+Who posts which update, where and how often. The aim is that people hear how things are going
+without having to ask, and without being buried in messages.
+</div>
 
----
+## The schedule { #the-cadence }
 
-## The cadence
+| Update | Covers | Where | When | Who |
+|---|---|---|---|---|
+| Initiative update | Key Result movement, health, risks | `#initiative-updates` | Monthly, while `Active` | The initiative's owner |
+| Project update | What changed, health, risks | `#project-updates` | Weekly, while `In Progress` or `Launching` | The project's lead |
+| Team digest | The cycle and what came through Triage | The team's channel | Weekly | The team |
+| Launches and incidents | What happened | `#announcements` | When it happens | Whoever ships or responds |
 
-| What | Where | When | Whose job |
-|---|---|---|---|
-| **Initiative update** — KR movement, health, risks | `#initiative-updates` | **Monthly**, while Active | The initiative **owner** |
-| **Project update** — what changed, health, risks | `#project-updates` | **Weekly**, while In Progress / Launching | The project **lead** |
-| **Team digest** — cycle summary + triage digest | The team's channel | **Weekly** | The team |
-| **Launches / incidents** | `#announcements` | On event | Whoever ships / responds |
-
-The lead is responsible for their update happening. The skills draft it and the channel carries
-it, but the obligation belongs to a person, by name.
+The skills can draft an update and the channel carries it, but a named person is responsible
+for it going out.
 
 ![Communication cadence: project and initiative updates rolling up and pushing to channels, with Pulse as the pull feed.](diagrams/comms-cadence.svg)
 
-Two things to read off the picture: a project update rolls up into its initiative's health, so
-silence downstream tempers the story upstream; and the scheduled updates push to channels while
-Pulse pulls the same updates into a personal feed.
-
-### Making the cadence stick
-
-The cadence doesn't live in anyone's memory. Three things keep it honest:
-
-- Linear's native update reminders do the nudging. Configure them in workspace settings (weekly,
-  at the day and time of your choosing) and leads of In Progress projects and owners of Active
-  initiatives get the prompt; follow-up nudges arrive after 1 and 2 working days, and an overdue
-  project shows **Update Missing** with its health icon greying as silence grows. Individual
-  projects can override or opt out via the bell icon.
-- The skills pre-gather the delta. [`linear-project-update`](skills/index.md) reads what moved
-  since the last update, and [`linear-initiative-update`](skills/index.md) reads which feeding
-  projects reported. Answering the reminder is verify-judge-post rather than archaeology, and a
-  scheduled agent (say a weekly Claude Code routine invoking the update skill per In Progress
-  project) can hand the lead a ready draft.
-- Silence escalates. The [team digest](#the-cadence) and `task doctor` both flag stale updates
-  (project over 10 days, initiative over 35), so a missed cadence shows up in the same views as
-  any other drift.
+Project updates feed initiative updates. So when a project goes quiet, the initiative above it
+has less to go on.
 
 ---
 
-## Health is a claim with evidence
+## Health needs evidence { #health-is-a-claim-with-evidence }
 
-Every update carries a health call (**on track · at risk · off track**), and the call is a claim
-you can defend rather than a colour someone picked:
+Every update says whether the work is on track, at risk or off track. That's a claim, and you
+should be able to back it up.
 
-- A project's evidence is its issue and cycle movement, and the KR delta it's chasing.
-- An initiative's evidence is its projects' weekly updates rolling up.
+| For | The evidence is |
+|---|---|
+| A project | How its issues and cycle are moving, and whether its Key Result is shifting |
+| An initiative | The weekly updates from its projects |
 
-!!! warning "The roll-up dependency"
-    Initiative updates depend on project updates. If a feeding project hasn't reported, or its
-    update is stale, the initiative update says so and its health is tempered accordingly. A
-    green initiative sitting on silent projects is a lie.
+!!! warning "Don't report green on top of silence"
+    If a project under an initiative hasn't reported, or its update is old, the initiative
+    update says so and its health reflects that.
 
-The standard formats live as templates beside the update skills:
-[`linear-initiative-update`](skills/index.md) (KR movement table plus risks plus a
-project-reporting note) and [`linear-project-update`](skills/index.md) (what changed, KR
-progress, risks). Post via Linear's native status-update UI or let the skill draft and post for
-you; both flow to the connected channel.
-
----
-
-## :material-rss: Pulse — the pull surface
-
-The cadence above is the push: accountable, scheduled updates. Linear **Pulse** is the pull, a
-native feed of the workspace's project and initiative updates. It has a *For me* tab for work
-you're involved in, plus *Popular* and *Recent*, with an optional daily or weekly digest
-delivered to your Inbox (and audio playback, if you'd rather listen).
-
-Use them together. Leads still post to the cadence, since Pulse has nothing to show without
-those updates; everyone else catches up through [Pulse](https://linear.app/happydevs/pulse)
-instead of scrolling channels. Pulse is available on all Linear plans. A workspace admin enables
-it in Settings and sets the default digest cadence, and you subscribe to any project to pull it
-into your feed.
+Each update skill has a template for the format:
+[`linear-project-update`](skills/index.md) and [`linear-initiative-update`](skills/index.md).
+You can write the update in Linear yourself or let the skill draft and post it. Both reach the
+connected channel.
 
 ---
 
-## Keeping noise low
+## How updates don't get forgotten { #making-the-cadence-stick }
 
-- One channel per audience, not per object: a single `#project-updates` for all projects, where
-  people who need one project's detail follow it in Linear (or via Pulse).
-- Channel messages come from the connected updates rather than ad-hoc posting, so the update
-  *is* the message.
-- Escalations and launches go to `#announcements` on the event itself. A channel that's quiet
-  unless it matters stays read.
+Nobody has to remember the schedule, because three things back it up.
+
+1. Linear reminds you. Switch on update reminders in workspace settings and pick a day and
+   time. Project leads and initiative owners get a prompt, with follow-ups after one and two
+   working days. An overdue project shows **Update Missing**, and its health icon fades the
+   longer it stays quiet. A single project can change its reminders, or turn them off, from the
+   bell icon.
+2. The skills do the gathering. `linear-project-update` reads what has moved since the last
+   update, and `linear-initiative-update` checks which projects have reported. That leaves you
+   to check the draft and add your judgement. A scheduled agent can even have a draft waiting
+   for each lead.
+3. Silence shows up. The team digest and `task doctor` flag a project with no update for 10
+   days and an initiative with none for 35.
+
+---
+
+## :material-rss: Pulse, for catching up
+
+Linear's Pulse is a feed of project and initiative updates across the workspace. It has a
+*For me* tab for work you're involved in, plus *Popular* and *Recent*. It can also send a daily
+or weekly digest to your Inbox, and read it aloud if you'd rather listen.
+
+Leads still post their updates, because Pulse has nothing to show without them. Everyone else
+can catch up in [Pulse](https://linear.app/happydevs/pulse) and skip scrolling through channels.
+
+Pulse is on every Linear plan. A workspace admin enables it in Settings, and you subscribe to
+any project you want in your feed.
+
+---
+
+## Keeping the noise down
+
+- There's one channel for each audience. All projects share `#project-updates`, and anyone who
+  wants more on one project follows it in Linear or Pulse.
+- Channel messages come from the updates themselves, so nobody posts a separate summary.
+- `#announcements` is for launches and incidents only. A channel that stays quiet until
+  something matters is one people keep reading.
 
 ---
 
 ## Related
 
-- [Initiatives](initiatives.md) · [Projects](projects.md) — where the updates are written
-- [Teams, states & labels](teams.md) — the team digest's home ground
-- [Skills](skills/index.md) — the update skills that draft to the standard formats
+- [Initiatives](initiatives.md) and [Projects](projects.md): where the updates are written
+- [Integrations](integrations.md): connecting the Slack channels
+- [Skills](skills/index.md): the skills that draft updates

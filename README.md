@@ -4,7 +4,7 @@ The single source of truth for how we use Linear: the guidelines, the expectatio
 and the AI skills that go with them.
 
 📖 **Published guide:** https://hungovercoders.github.io/linear-work-management/
-**Start here → [The Cheat Sheet](docs/index.md)**
+**[Start here](docs/index.md)**
 
 ---
 
@@ -20,15 +20,13 @@ This repo is that place.
 
 ## The hard rules
 
-1. Every initiative declares its Key Results (measured or committed, with targets).
-2. Every project names the Key Result it moves, and by how much.
-3. Every issue is either in a project or carries one `flow/*` label. Never both,
-   never neither.
-4. One named human owns each initiative and each project.
-5. Initiatives and projects carry dates from `Planned` onward: initiatives a target
-   date, projects start + end.
+1. Every initiative says how it will be measured.
+2. Every project says which Key Result it moves, and by how much.
+3. Every issue is in a project or has one `flow/*` label. Never both, never neither.
+4. One named person owns each initiative and each project.
+5. Initiatives and projects have dates once they're `Planned`.
 
-Everything else here expands on those; see **[The Hard Rules](docs/hard-rules.md)**.
+Everything else here expands on those; see **[The hard rules](docs/hard-rules.md)**.
 
 ---
 
@@ -36,7 +34,7 @@ Everything else here expands on those; see **[The Hard Rules](docs/hard-rules.md
 
 | Path | What |
 |---|---|
-| [`docs/index.md`](docs/index.md) | The cheat sheet — hierarchy, hard rules, states, labels, SLAs, cadence. |
+| [`docs/index.md`](docs/index.md) | Start here: the model, the five rules and where to go next. |
 | [`docs/diagrams/model.d2`](docs/diagrams/model.d2) | The operating model as a D2 source, pre-rendered to `model.svg` and embedded on the site. |
 | [`docs/hard-rules.md`](docs/hard-rules.md) | The hard rules, expanded. |
 | `skills/` | Claude Code skills — the source of the installable plugin. |

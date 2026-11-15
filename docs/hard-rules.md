@@ -1,100 +1,101 @@
-# The Hard Rules
+# The hard rules
 
-Everything else in this guide expands on these. Where a rule and a convenience
-conflict, the rule wins; that is what makes the model hold. There is one rule per level, plus two
-that span levels: ownership and time-bounds.
-
----
-
-## 1. Every initiative declares its Key Results
-
-An initiative is a defined outcome, not a theme. State its Key Results before any project sits
-beneath it. It carries the *why* and *how it's judged*, never the *how it's built*. A Key
-Result is one of two kinds:
-
-- **Measured**: a metric with a baseline and the target it moves to; or
-- **Committed**: a binary deliverable with a Definition of Done, for work that just needs to
-  happen (compliance, contracted, hard-deadline).
-
-Then:
-
-- No Key Results, no initiative. Without them it's a wish.
-- Those KRs are what the projects below name and move (rule 2). This is the
-  measurement chain: initiatives *declare* KRs, projects *name which one(s)*, issues *do the
-  work*.
+<div class="lwm-lead" markdown>
+There are five. Everything else in this guide is detail on top of them, and if a rule and a
+shortcut ever disagree, the rule wins.
+</div>
 
 ---
 
-## 2. Every project names the Key Result it moves, and by how much
+## 1. Every initiative says how it will be measured
 
-A project exists to move a measure on an initiative. Name which KR and the delta you expect
-(say, "activation 22% → 30%"). This turns "projects are the how" from an aspiration into
-something checkable.
+An initiative is an outcome we want, such as "make onboarding effortless". On its own, that is
+only a good sentence. It becomes an initiative once it has Key Results (KRs): the few things that
+will be true if it worked.
 
-Work starts as a project in `Idea`. That's the entry point for planned work; no initiative or
-KR is needed to begin. `Idea` and `Scoping` are discovery, where a project may have no parent and no
-named KR, though it still has a named lead (rule 4 applies throughout). Discovery is also where the
-work of *forming* an initiative gets recorded. The rule applies from `Planned`, where discovery
-resolves into one of three:
+A Key Result is one of two kinds.
 
-- Graduate: mature from discovery into delivery, attached to an outcome, either linked to an
-  existing initiative or seeding a new one (a deliberate strategic step, distinct from the flow
-  *promotion* we don't do). Name the KR + delta it moves.
-- Proceed standalone: allowed, but questioned, because there's nothing to trace up to.
-- Drop it (Canceled).
-
-A project can belong to more than one initiative; when it does, name the KR and delta it moves
-on each. Every committed KR carries a named delta. **Completed** means delivered *and* the
-KR delta observed, not merely shipped.
-
----
-
-## 3. Every issue is in a project *or* carries one `flow/*` label — never both, never neither
-
-Every issue is classified. Two states are valid; two are failures.
-
-| | State | Meaning |
+| Kind | What it is | Example |
 |---|---|---|
-| ✓ | In a project | Planned work, tracing to a KR |
-| ✓ | One `flow/*` label, no project | Inbound work, visible on its own |
-| ✗ | Both at once | Pick one, drop the other |
-| ✗ | Neither | **Unclassified** — invisible work, the defect the system chases |
+| Measured | A number with a starting point and a target | Activation rate from 22% to 30% |
+| Committed | Something that is either done or not, with a clear definition of done | SOC 2 Type II report issued |
 
-`flow/*` is how inbound work stays visible without faking a project around it. The
-`linear-doctor` skill reports every unclassified issue.
+Write the Key Results before any project goes underneath. Each project will pick one to move, so
+they have to exist first.
 
 ---
 
-## 4. One named human owns each initiative and each project
+## 2. Every project says which Key Result it moves, and by how much
 
-Ownership is singular and named: a person, not a team, and not two people splitting it.
+A project exists to move a number on an initiative. So it names the Key Result and the change it
+expects (its delta), for example "activation 22% → 30%". Anyone can then check whether the project did its
+job.
 
-- **Initiative** owner: strategic seniority. Answers *why this matters* and *how we know it
-  worked*.
-- **Project** lead: the deliverer, an eng lead or product owner. Answers *what, how, and by
-  when*. Exactly one.
-- Teams still own issues, and a project can draw on several teams, but accountability for the
-  project rests with its single lead.
+You don't need this on day one, because a project starts life as an idea.
 
----
+| Stage | What the project needs |
+|---|---|
+| `Idea` or `Scoping` | A named lead and a description of what it's exploring. No Key Result, no dates and no initiative yet |
+| `Planned` onward | The Key Result it moves and by how much, plus dates |
 
-## 5. Initiatives and projects carry dates from `Planned` onward
+Reaching `Planned` is the moment to decide what the idea turned into:
 
-Undated work can't be prioritised or sequenced. Dates let upcoming work see what it depends on and
-whether that will arrive in time. Because prioritisation happens *before* work starts, the date is
-set when the work is agreed, not when it becomes active.
+- Most projects join an initiative and name the Key Result they'll move. We call this
+  graduating. The initiative can be an existing one, or a new one that the project's findings
+  justify.
+- A project can go ahead with no initiative. That's allowed, but expect to be asked why, because
+  the work then connects to nothing above it.
+- Or the project is dropped (`Canceled`). For an idea, that's a perfectly good result.
 
-- **Initiatives:** from `Planned` onward, carry a timeframe or target date (OKR-style: often a
-  quarter, but some run a year or more), set alongside the owner and KRs when the initiative is
-  agreed. `Active` means work is now underway against that date, not that the date appears for
-  the first time. A `Proposed` initiative that isn't agreed yet is exempt until it's planned.
-- **Projects:** from `Planned` onward carry a start and a target end date. `Idea` and `Scoping`
-  projects are still being shaped, so dates firm up as they commit; that's what `Planned` means
-  ("agreed, dated, resourced").
-- Dependencies between projects (drawn at the project level) only tell you about risk once both
-  ends have dates.
+Two more details. A project that serves several initiatives names a Key Result and a change for
+each one. And `Completed` means the work shipped and the Key Result moved, so shipping alone
+doesn't close a project.
 
 ---
 
-These are what the [`linear-doctor`](skills/index.md) skill checks first, and what every other
-page here assumes. Back to the [cheat sheet](index.md).
+## 3. Every issue is in a project or has one `flow/*` label
+
+Every issue has to belong somewhere, and there are two places it can belong.
+
+| | The issue is… | Which means |
+|---|---|---|
+| ✓ | In a project | Planned work that connects to a Key Result |
+| ✓ | Carrying one `flow/*` label, with no project | Unplanned work that arrived, visible in its own right |
+| ✗ | Both | Pick one and drop the other |
+| ✗ | Neither | Unclassified. Nobody can see where it belongs |
+
+The `flow/*` labels exist so that unplanned work doesn't need a pretend project around it. The
+`linear-doctor` skill lists every unclassified issue.
+
+---
+
+## 4. One named person owns each initiative and each project
+
+When two people own something, each can assume the other has it. So ownership is always one
+person, by name.
+
+- An initiative has one owner, someone senior enough to say why it matters and how we'll know it
+  worked.
+- A project has one lead, the person delivering it (usually an eng lead or product owner). They
+  answer what, how and by when.
+- Teams still own issues, and a project can draw on several teams. The lead is the one who
+  answers for the project.
+
+---
+
+## 5. Initiatives and projects have dates once they're `Planned`
+
+Work with no date can't be put in order against other work. And nobody waiting on it can tell
+whether it will arrive in time.
+
+- Initiatives get a target date when they're agreed, which is `Planned`. Often that's a quarter,
+  and sometimes a year or more. `Active` then means work is underway against that date. A
+  `Proposed` initiative doesn't need one yet.
+- Projects get a start date and a target end date at `Planned`. Projects in `Idea` and `Scoping`
+  are still taking shape, so they're exempt.
+- Dependencies between projects only tell you something once both projects have dates.
+
+---
+
+The [`linear-doctor`](skills/index.md) skill checks these five first. Back to
+[Start here](index.md).

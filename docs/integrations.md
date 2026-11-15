@@ -1,65 +1,67 @@
 # :material-connection: Integrations
 
-Linear only reflects reality if it's wired to where work and conversation happen. Two
-integrations carry the model. **GitHub** keeps issue state in sync with code, and **Slack**
-carries the [cadence](communications.md). Both are configured once in
+<div class="lwm-lead" markdown>
+Two connections keep Linear in step with where the work happens. GitHub moves issues along as
+code ships, and Slack carries the [updates](communications.md). Both are set up once in
 [Linear settings → Integrations](https://linear.app/happydevs/settings/integrations).
+</div>
 
----
+## :material-github: GitHub (connected)
 
-## :material-github: GitHub, connected
+GitHub is linked to the [hungovercoders](https://github.com/hungovercoders) organisation. For
+code work, you don't need to move an issue by hand.
 
-The GitHub integration is live in `happydevs`, linked to the
-[hungovercoders](https://github.com/hungovercoders) org. The loop runs per issue:
+1. Copy the branch name from the issue (`Cmd/Ctrl` `Shift` `.`) and create your branch with
+   it. That links the branch, and everything after it, to the issue.
+2. Push, open a pull request and merge as usual. Linear moves the issue for you:
 
-1. Take the branch name from the issue. Every issue carries a git branch name (`Cmd/Ctrl`
-   `Shift` `.` to copy), and branching with it links the branch, and everything that follows,
-   to the issue automatically.
-2. The PR tracks the issue. Opening a PR on that branch attaches it, and Linear's state
-   automation moves the issue (branch pushed → **In Progress**, PR opened → **In Review**,
-   PR merged → **Done**). Configure the exact mapping per team in
-   [team settings → Workflow](https://linear.app/happydevs/settings/teams).
-3. Magic words work too. A PR description containing *Fixes GRI-123* or *Closes GRI-123* links
-   and closes the issue on merge, for work that didn't start from the branch name.
+    | You do | The issue moves to |
+    |---|---|
+    | Push the branch | In Progress |
+    | Open a pull request | In Review |
+    | Merge it | Done |
 
-Nobody moves issue states by hand for code work; the state is a side effect of shipping.
+3. If the work didn't start from the issue's branch name, write *Fixes GRI-123* or
+   *Closes GRI-123* in the pull request description. That links the issue and closes it on
+   merge.
+
+Each team can adjust which event maps to which state in
+[team settings → Workflow](https://linear.app/happydevs/settings/teams).
 
 ![GitHub to Linear: branch, push, PR and merge driving issue state as a side effect.](diagrams/github-flow.svg)
 
 ---
 
-## :material-slack: Slack, to connect
+## :material-slack: Slack (not connected yet)
 
-Slack carries the [communication cadence](communications.md); the wiring is per-channel:
+!!! warning "Still to do"
+    Connecting Slack is a one-time sign-in under
+    [settings → Integrations](https://linear.app/happydevs/settings/integrations). After that,
+    connect the two update channels to each initiative and project as you create them.
 
-| Channel | Carries | Wired how |
+| Channel | Carries | How it gets there |
 |---|---|---|
-| `#initiative-updates` | Monthly initiative updates | **Connect the channel on each initiative** — updates post automatically |
-| `#project-updates` | Weekly project updates | **Connect the channel on each project** — same mechanism |
-| `#announcements` | Launches & incidents, on event | Posted by whoever ships/responds — no automation needed |
-| Team channels | The weekly [team digest](communications.md) | Posted by the team (or a scheduled agent) |
+| `#initiative-updates` | Monthly initiative updates | Connect the channel on each initiative, and updates post themselves |
+| `#project-updates` | Weekly project updates | Connect the channel on each project |
+| `#announcements` | Launches and incidents | Posted by whoever ships or responds |
+| Team channels | The weekly [team digest](communications.md) | Posted by the team, or by a scheduled agent |
 
-**Noise conventions** keep the integration carrying updates rather than everything:
+A few habits keep Slack useful:
 
-- Channel messages come from status updates, not per-issue activity, so nobody gets a Slack
-  ping for every state change. Per-issue notifications stay personal (your Linear Inbox, or
-  Slack DMs if you opt in).
-- One channel per audience, not per object: projects share `#project-updates`, and you follow
-  an individual project in Linear (or [Pulse](communications.md)) for more.
-- If a thread starts in Slack, the decision goes back onto the issue. Slack is where
-  conversation happens, Linear is where it's remembered.
+- Channels get status updates only. Nobody is pinged for every state change. Notifications about
+  single issues stay in your Linear Inbox, or in Slack DMs if you opt in.
+- All projects share one channel. For more on one project, follow it in Linear or
+  [Pulse](communications.md).
+- When a decision is made in a Slack thread, write it on the issue. Slack is for talking, and
+  Linear is the record.
 
-!!! warning "Setup still needed"
-    The Slack integration isn't connected yet. Enabling it is a one-time OAuth in
-    [settings → Integrations](https://linear.app/happydevs/settings/integrations), after which
-    you connect the two shared channels to their initiatives and projects as they're created.
-    **Linear Asks** (create issues from Slack requests) is Business/Enterprise, so it isn't
-    available on the current plan; requests arrive via [Triage](issues/triage.md) instead.
+Linear Asks, which creates issues from Slack requests, needs the Business or Enterprise plan.
+We're not on either, so requests come in through [Triage](issues/triage.md).
 
 ---
 
 ## Related
 
-- [Communications](communications.md) — the cadence these channels carry
-- [Issues](issues/index.md) — the branch-name convention starts at the issue
-- [Triage work](issues/triage.md) — where inbound lands without Asks
+- [Communications](communications.md): what these channels carry
+- [Issues](issues/index.md): where the branch name comes from
+- [Triage work](issues/triage.md): where requests arrive

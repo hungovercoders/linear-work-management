@@ -1,92 +1,89 @@
-# The Cheat Sheet
+# Start here
 
 <div class="lwm-lead" markdown>
-If you read only one page, read this one. It is the single source of truth for how we
-use Linear. The [hard rules](hard-rules.md) are the contract, the
-[skills](skills/index.md) apply them for you, and the [glossary](glossary.md) decodes
-any term you meet on the way.
+This is how we use Linear. Five minutes on this page is enough to get going. Every other page is
+here for when you want the detail.
 </div>
 
-!!! abstract "Why this matters"
-    We want an unbroken line from *why* to the work in your cycle. Every issue traces up to a
-    project's Key Result and the initiative it serves, so people can see they're delivering the
-    value expected of them, and why. That connection is the benefit; the rules exist to keep it
-    intact.
+## :material-lightbulb-on-outline: The idea in one minute
 
-    All of it lives in [Linear](https://linear.app/happydevs), where strategy, delivery and
-    execution share one tool and no boundary between them breaks the line.
+We want everyone to be able to answer "why am I doing this?" without having to ask around. So
+work in [Linear](https://linear.app/happydevs) sits on three levels, and each level points at
+the one above it.
 
----
-
-## :material-sitemap: How it fits together
-
-![The operating model: two paths of work — strategic (initiative → project → issue) and inbound (triage → issue).](diagrams/model.svg)
-
-Start with **work**, the thing you do. In Linear a piece of work is an **issue**, and
-work comes in two kinds. The only difference is how each arrives, and neither ranks above the other:
-
-| Kind of work | How Linear holds it | What it is |
+| Level | What it is | For example |
 |---|---|---|
-| <span class="lwm-strat">Project work</span> | An issue in a project, under an initiative (Initiative → Project → Issue) | Planned work toward an outcome |
-| <span class="lwm-inbound">Inbound work</span> | An issue that arrived through Triage, on one `flow/*` label | Work that arrives: incidents, requests, compliance, support, toil |
+| [Initiative](initiatives.md) | An outcome we want, and how we'll measure it | "Effortless rescue-dog adoption", measured by how many Welsh rescues are in the portal |
+| [Project](projects.md) | A piece of work that moves one of those measures | Onboard the 12 Welsh rescues |
+| [Issue](issues/index.md) | One task a person can pick up and finish | Show a rescue's dogs on the search page |
 
-!!! danger "The one failure"
-    An issue on neither path is *unclassified*. This is invisible work, the defect the whole
-    system chases. The [drift views](dashboards.md) and `linear-doctor` report every one.
+Plenty of work isn't planned, though. Things break, and people ask for help. That work comes in
+through [Triage](issues/triage.md) and gets a `flow/*` label in place of a project, so it stays
+visible without anyone inventing a project for it.
+
+![The operating model: two paths of work, strategic (initiative, project, issue) and inbound (triage, issue).](diagrams/model.svg)
+
+Want to see it with real content? The [worked example](examples.md) follows one chain from top
+to bottom.
 
 ---
 
-## :material-gavel: The hard rules
+## :material-gavel: The five rules
 
-| # | Level | Rule |
+These are the only things we insist on.
+
+| # | Rule | In practice |
 |---|---|---|
-| 1 | Initiative | **Declares its Key Results** before any project: measured (baseline → target) or committed (done/not-done). Without them it is only a theme. |
-| 2 | Project | **Names the Key Result(s) it moves, and by how much** — by `Planned` (`Idea`/`Scoping` may still be exploring). |
-| 3 | Issue | **In a project *or* one `flow/*` label** — never neither, never both. |
-| 4 | Ownership | **One named human owns each initiative and each project**, never a team or a pair. |
-| 5 | Time-bounds | **Dated from `Planned` onward**: initiatives a target date, projects start + end. |
+| 1 | Every initiative says how it will be measured | Write its Key Results before any project sits under it |
+| 2 | Every project says which Key Result it moves, and by how much | Needed once the project is `Planned`. Ideas can wait |
+| 3 | Every issue is in a project or has one `flow/*` label | One or the other. Never both, never neither |
+| 4 | One named person owns each initiative and each project | A person, never a team or a pair |
+| 5 | Initiatives and projects have dates once they're `Planned` | Initiatives a target date, projects a start and an end |
 
-Where a rule and a convenience conflict, the rule wins. The detail and rationale sit in
-[The Hard Rules](hard-rules.md).
+If a rule and a shortcut disagree, the rule wins. [The hard rules](hard-rules.md) explains the
+thinking behind each one.
+
+!!! warning "The one thing to avoid"
+    An issue with no project and no `flow/*` label belongs nowhere, so nobody can see it and it
+    gets lost. The [drift views](dashboards.md) and the `linear-doctor` skill list every one.
 
 ---
 
-## :material-shape-plus: What am I making?
+## :material-shape-plus: What do I need to make?
 
-| Situation | Make a… |
+| You have… | Make… |
 |---|---|
-| A strategic outcome we want by a date, with measures | **[Initiative](initiatives.md)** |
-| A bounded piece of work that moves those measures | **[Project](projects.md)** under the initiative(s) it serves |
-| A discrete task within that work | **[Issue](issues/project-work.md)** in the project |
-| Something broke, arrived, or was reported | **Issue via [Triage](issues/triage.md)** |
-| An idea to explore before committing | **Project in `Idea`** — no initiative or KR needed yet |
+| An outcome we want by a date, with a way to measure it | An [initiative](initiatives.md) |
+| A piece of work that moves one of those measures | A [project](projects.md) under that initiative |
+| A task within that work | An [issue](issues/project-work.md) in the project |
+| Something that broke, arrived or was reported | An issue through [Triage](issues/triage.md) |
+| An idea you'd like to explore first | A project in `Idea`. It needs a lead and a line on what you're exploring |
 
-The easiest way to start work is a project in `Idea`, which is pure discovery with no
-KR required. By `Planned` it either graduates under an initiative (existing, or one it seeds),
-goes standalone (and gets questioned for it), or drops. The [worked example](examples.md) walks
-the whole chain.
+Not sure where to begin? Start a project in `Idea`. It costs nothing, and it can join an
+initiative later if the idea holds up.
 
 ---
 
-## :material-account-check: Who does what — start with the page that's you
+## :material-account-check: Find your page
 
-| You are… | You own | Start with |
+| You are… | You look after | Read |
 |---|---|---|
-| Strategic leadership | An **outcome** and its measures | **[Initiatives](initiatives.md)** |
-| A delivery lead | A **project** — the what, how and when | **[Projects](projects.md)** |
-| On the delivery team | **The work** — is it done? | **[Project work](issues/project-work.md)** |
-| On triage duty | Inbound work — where does this go? | **[Triage work](issues/triage.md)** |
+| In strategic leadership | An outcome and its measures | [Initiatives](initiatives.md) |
+| A delivery lead | A project: what, how and when | [Projects](projects.md) |
+| On a delivery team | The work itself | [Project work](issues/project-work.md) |
+| On triage duty | Whatever arrives | [Triage work](issues/triage.md) |
 
 ---
 
-## :material-map: Where everything lives
+## :material-map: Everything else
 
-- [Examples](examples.md): one real chain, initiative → project → issues → a triage call
-- [Work](issues/index.md): what an issue is, the shared lifecycle, templates and the agent-plan convention
-- [Teams, states & labels](teams.md): the canonical enums; org invariants vs team room
-- [Communications](communications.md): every update cadence, and Pulse
-- [Dashboards](dashboards.md): the drift and portfolio views
-- [Integrations](integrations.md): GitHub and Slack wiring
-- [Setup checklist](setup.md): everything Linear needs configured, tickable
-- [Skills](skills/index.md): the AI skills that do the above on demand
+- [Worked example](examples.md): one real initiative, its project, its issues and a triage call
+- [Issues](issues/index.md): what a good issue looks like and the states it moves through
+- [Teams, states and labels](teams.md): the shared lists every team uses
+- [Communications](communications.md): who posts which update, and when
+- [Dashboards](dashboards.md): the views that show when something has slipped
+- [Flow](flow.md): spotting where work gets stuck
+- [Integrations](integrations.md): how GitHub and Slack connect
+- [Setup checklist](setup.md): what needs switching on in Linear
+- [Skills](skills/index.md): AI skills that do the routine parts for you
 - [Glossary](glossary.md): every term, one line each

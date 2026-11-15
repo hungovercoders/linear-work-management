@@ -1,200 +1,140 @@
 # Projects
 
 <div class="lwm-lead" markdown>
-For delivery leads. A **project** in [Linear](https://linear.app/happydevs/projects/all) is
-what you'll do and how: a bounded piece of work that moves a Key Result. One project, one named
-lead, moving through one lifecycle. It sits alongside the initiative it serves and the
-[project work](issues/project-work.md) that builds it, in the same tool.
+For delivery leads. A project is a piece of work with a start, an end and one person leading
+it. Its job is to move a Key Result on an [initiative](initiatives.md).
 </div>
 
-[Every project in Linear sits on one screen.](https://linear.app/happydevs/projects/all) That's
-where strategy becomes delivery: what's being built, who leads it, which measure it moves, and
-whether it's on track. Scan it to see what's committed versus still an idea, and that every
-active project traces up to an outcome.
+[See every project in Linear.](https://linear.app/happydevs/projects/all) That list shows what's
+being built, who leads each piece, which measure it moves and whether it's on track.
+
+!!! abstract "In short"
+    - Anyone can start a project in `Idea`. All it needs is a lead and a line on what it's
+      exploring.
+    - To become `Planned`, it names the Key Result it moves and by how much, and gets dates.
+    - While it's being built, the lead posts an update every week.
+    - It's `Completed` when the work shipped and the Key Result moved.
+    - The `linear-project` skill walks you through all of it.
 
 ---
 
-## What a project is
+## The life of a project
 
-A project is a bounded body of work with one named lead, the *what & how* between the outcome
-above it and the tasks below. Two things hold across its whole life; a third arrives when it
-commits:
-
-- **One named lead** from the moment it exists, at `Idea` (rule 4).
-- **A defined scope**: what we're doing and how, the shape of the work, its milestones and its
-  dependencies.
-- **A Key Result it moves, and by how much**: the measure it takes from an initiative and the
-  delta it promises. This is the point of a project in delivery; in discovery that measure is what
-  it's still trying to find, so it isn't required yet.
-
-Everything about *why the outcome matters* belongs to the [initiative](initiatives.md) above,
-and everything about *the individual tasks* belongs to the [issues](issues/index.md) beneath.
-Keep the project about means, not ends.
-
----
-
-## One project, three phases
-
-A project is one object that moves through a lifecycle, not two kinds of thing. Its states
-group into three phases, and the `Planned` gate divides exploration from commitment:
+A project is one thing that grows up. It starts as an idea and, if the idea holds, becomes
+committed work.
 
 ![Project lifecycle: Idea, Scoping, Planned and In Progress, then into Done or Closed.](diagrams/project-lifecycle.svg)
 
 | State | Phase | Means |
 |---|---|---|
-| Idea | Discovery | Someone's thought of it; nothing committed |
-| Scoping | Discovery | Being shaped; cost and value under investigation |
-| Planned | Delivery | Agreed, dated, resourced; not started |
+| Idea | Discovery | Someone's thought of it. Nothing is committed |
+| Scoping | Discovery | Being shaped, with cost and value under investigation |
+| Planned | Delivery | Agreed, dated and resourced, but not started |
 | In Progress | Delivery | Being built |
-| Launching | Delivery | Built; rolling out |
-| Paused | Delivery | Deliberately stopped, with a reason and a review date |
-| Completed | Closed | Delivered **and** the KR delta observed |
-| Canceled | Closed | Stopped for good; reason recorded |
+| Launching | Delivery | Built and rolling out |
+| Paused | Delivery | Stopped on purpose, with a reason and a review date |
+| Completed | Closed | Delivered, and the Key Result moved |
+| Canceled | Closed | Stopped for good, with the reason recorded |
 
-A project can enter at either phase. Most start in `Idea` and cross the gate as they mature
-(discovery, below). But one whose outcome is already agreed can be created straight into
-`Planned`: it skips discovery, yet still owes a lead, a named KR + delta and dates from the
-moment it exists. Graduation is different again: it's a *transition* of a project that already
-exists in discovery, not a fresh creation. The [`linear-project`](skills/index.md) skill routes on
-this choice: new idea, graduate an existing one, or born committed.
+A project whose outcome is already agreed can skip discovery and be created straight into
+`Planned`. It then needs everything a planned project needs from its first day.
 
 ---
 
-## Discovery phase — is there something here? (`Idea` · `Scoping`)
+## Discovery: is there something here? { #discovery-phase-is-there-something-here-idea-scoping }
 
-The easiest way to start work is a project in `Idea`. Explore before you commit. A project in
-discovery may have no parent initiative and no named Key Result; that's legitimate, and it's
-where an initiative's groundwork gets recorded.
+Starting a project in `Idea` is the easiest way to begin any work. Explore first and commit
+later. At this stage the project needs no initiative, no Key Result and no dates.
 
-A single named lead is required even here. Rule 4 applies from day one.
-Ownership is named the moment the project exists, at `Idea`, not deferred to `Planned`. Only the
-KR and the dates wait for commitment.
+It does need one named lead from the first day ([rule 4](hard-rules.md)), and a description of
+the question it's exploring.
 
-At the `Planned` gate, discovery resolves into one of three:
+When the project is ready to become `Planned`, decide what the idea turned into.
 
-| Outcome | What it means |
+| Decision | What it means |
 |---|---|
-| **Graduate** | Mature into delivery under an outcome: link an existing initiative, or seed a new one it justifies |
-| **Standalone** | Proceed with no initiative: allowed, but questioned, because there's nothing to trace up to |
-| **Drop** | Cancel it; reason recorded |
+| Graduate | It becomes delivery work under an initiative. Link an existing initiative, or start a new one that the findings justify |
+| Go standalone | It goes ahead with no initiative. That's allowed, but expect to be asked why |
+| Drop | Cancel it and record the reason |
 
-Graduating is a deliberate strategic step: a discovery project matures into delivery attached
-to an outcome. When it seeds a *new* initiative, the [`linear-initiative`](initiatives.md) skill
-draws on the discovery project's findings to ground the objective and KR baselines, and links
-the two so the lineage is recorded. This is project → initiative, distinct from the inbound →
-project route that triage takes.
+When a project starts a new initiative, the `linear-initiative` skill uses the project's
+findings to write the objective and the baselines, and links the two.
 
 ---
 
-## Delivery phase: build the committed outcome (`Planned` · `In Progress` · `Launching`)
+## Delivery: what a planned project needs
 
-The project is now committed and linked to an outcome, so every rule applies.
+From `Planned` onward the project is a commitment, and every rule applies.
 
-### Name the Key Result it moves, and by how much
-
-[Hard rule 2](hard-rules.md): a project names which Key Result(s) it moves and the delta it
-expects (say, "activation 22% → 30%"). No KR named, no project. This is what turns "projects are
-the how" from a slogan into something checkable, and what the initiative's update rolls up from.
-
-A project can serve more than one initiative; Linear's model is many-to-many. When it does, name
-the KR and delta on each one it moves. Standalone (no initiative) is allowed but gets questioned,
-since there's nothing for the work to trace up to.
-
-### Own it, date it, sequence it
-
-| Your job | Detail |
+| You need | Detail |
 |---|---|
-| Be the single named lead | One person accountable: the deliverer, eng lead or product owner ([rule 4](hard-rules.md)) |
-| Set start + target-end dates | From `Planned` onward ([rule 5](hard-rules.md)); dependencies only tell you about risk once both ends are dated |
-| Draw dependencies | With Linear's native project relations ([how, below](#dependencies-native-never-prose)) |
-| Set a priority | Urgent → Low, to sequence projects against each other |
-| Post the update | Weekly to `#project-updates` while In Progress or Launching |
+| A Key Result and a delta | Which Key Result it moves and by how much, such as "activation 22% → 30%" ([rule 2](hard-rules.md)). If it serves several initiatives, name one for each |
+| One named lead | The person delivering it, usually an eng lead or product owner ([rule 4](hard-rules.md)) |
+| Start and target end dates | So it can be put in order against other projects ([rule 5](hard-rules.md)) |
+| A priority | Urgent to Low |
+| Two labels | `spend/*` (`capex` or `opex`) for how it's funded, and `product/*` for the product it serves. Its issues inherit the product label |
+| Dependencies | Drawn in Linear as [relations between projects](#dependencies-native-never-prose) |
 
-Completed means delivered *and the KR delta observed*, not merely shipped. A project that
-launched but didn't move its measure isn't done. Treat what it taught you as the return.
+The project's description covers what you're doing and how, the Key Result table, what's out
+of scope and any context. Why the outcome matters belongs to the initiative, and the individual
+tasks belong to the [issues](issues/index.md).
 
-### Labels: two groups, both native project fields
+A project is `Completed` when it has delivered and the Key Result has moved. If it launched and
+the number didn't change, it isn't done yet, though what you learned is still worth having.
 
-| Group | Values | What it records |
-|---|---|---|
-| `spend/*` | `capex` · `opex` | How the work is funded; set at planning |
-| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · … (grows over time) | Which product it serves — also carried onto its issues |
+### Dependencies { #dependencies-native-never-prose }
 
-`type/*` and `flow/*` are *issue*-level groups, not project ones; see
-[Issues](issues/index.md).
+If your project can't start until another finishes, record that with Linear's **Blocked by** and
+**Blocking** relations. A dependency written into a description goes stale as soon as dates
+move, whereas a relation shows up in views and warns you.
 
-### Dependencies — native, never prose
-
-Dependencies between projects use Linear's native project relations, **Blocked by** /
-**Blocking**, the same native-field rule as everything else. A dependency written into a
-description goes stale the moment dates move; a native one shows up in views and warns you.
-
-- Draw them at the `Planned` gate, when both projects have dates, and review them whenever
+- Draw them when the project becomes `Planned` and both projects have dates. Look again whenever
   dates move.
-- How: on the project, `⌘K` → *Dependencies* → *Blocked by… / Blocking…*; or on the
-  [timeline view](https://linear.app/happydevs/projects/all), drag from the end of one project's
-  bar to another.
-- What you get: the relation on both projects' overview panels, and connector lines on the
-  timeline. They're blue while the dates work and red when the dependency is violated (the
-  blocking project's end now falls after the blocked project's start). A red line means the two
-  leads need to talk about sequencing.
+- On the project, press `⌘K`, choose *Dependencies*, then *Blocked by…* or *Blocking…*. On the
+  [timeline view](https://linear.app/happydevs/projects/all) you can drag from the end of one
+  project's bar to another.
+- The timeline draws a line between the two. It's blue while the dates work, and it turns red
+  when the blocking project now ends after the blocked one starts. Red means the two leads need
+  to talk.
 
 ---
 
-## Health is a claim with evidence
+## Weekly updates { #keep-everyone-posted }
 
-A project's health (on track / at risk / off track) is a claim you can defend. The evidence is
-the KR movement and the issue and cycle progress beneath it. If the work isn't moving the
-measure, the health says so, however much shipped.
+While a project is `In Progress` or `Launching`, its lead posts an update to `#project-updates`
+every week. It covers what changed, the health (on track, at risk or off track) and any risks.
 
----
+You can write the update on the project in Linear and set its health there, and it posts to the
+connected channel. Or let the [`linear-project-update`](skills/index.md) skill draft and post it.
 
-## Keep everyone posted
+!!! warning "Health has to match the evidence"
+    Health is a claim you can back up with how the issues are moving and whether the Key Result
+    is shifting. If work has stalled or the cycle slipped, say so. Plenty shipping while the
+    number stays still is not "on track".
 
-While a project is In Progress or Launching, its lead sees that a weekly update reaches the
-shared `#project-updates` Slack channel: what changed, the health claim, and any risks. The full
-cadence and formats live in [Communications](communications.md).
-
-!!! warning "A project update is only as current as its issues"
-    The weekly update rolls up from the issue and cycle progress beneath it, the same
-    dependency an [initiative update](initiatives.md#keep-everyone-posted) has on its projects.
-    If work has stalled or the cycle slipped, say so and don't claim a health greener than the
-    evidence. The `linear-project-update` skill flags stale or missing movement for you.
-
-Post it either way:
-
-- Linear's project update UI: write the status update on the project and set its health, and it
-  flows to the connected `#project-updates` channel.
-- The [`linear-project-update`](skills/index.md) skill drafts the standard update (what changed,
-  health and risks) and posts it for you.
+[Communications](communications.md) has the full schedule.
 
 ---
 
 ## Create one
 
-What you set depends on the phase (above). Either way, one rule holds. Everything Linear models
-as a field (lead, status, dates, priority, initiative link(s), `spend/*` / `product/*` labels,
-milestones, the connected `#project-updates` channel) is a native field, never prose. The
-description carries only the *what & how*, any KR(s) + delta, *out of scope* and *context*; that
-part is the template.
+1. The quick way is the [`linear-project`](skills/index.md) skill. It asks whether this is a new
+   idea, an existing idea ready to be planned, or work that's already agreed, and then asks only
+   for what that stage needs.
+2. To do it by hand, create a project in the
+   [Linear projects view](https://linear.app/happydevs/projects/all) and paste in
+   [`template.md`](https://github.com/hungovercoders/linear-work-management/blob/main/skills/linear-project/template.md).
+   It's the same file the skill uses.
 
-- An idea (`Idea` / `Scoping`) needs only a lead, a status, and a description of the question
-  it's exploring. No KR, no dates, no initiative yet.
-- A delivery project (`Planned`+) also needs the KR(s) + delta, initiative link(s), start +
-  target-end dates, a priority and the `spend/*` / `product/*` labels.
-
-1. **Use the [`linear-project`](skills/index.md) skill (preferred).** It routes on entry point
-   (new idea · graduate an existing project · born committed), asks only for what the phase
-   needs, keeps the native fields native, and gives you the description body to drop in.
-2. **By hand.** Create a new project in the [Linear projects view](https://linear.app/happydevs/projects/all),
-   set the fields the phase calls for (above), connect the `#project-updates` Slack channel,
-   then paste [`template.md`](https://github.com/hungovercoders/linear-work-management/blob/main/skills/linear-project/template.md)
-   into the description and fill it in. It's the same file the skill uses.
+Either way, anything Linear has a field for goes in that field and stays out of the description.
+That covers the lead, status, dates, priority, initiative links, labels and milestones. Then
+connect the `#project-updates` Slack channel so updates post there.
 
 ---
 
 ## Related
 
-- [The Hard Rules](hard-rules.md): rules 2 (name the KR + delta), 4 (single lead), 5 (dates)
-- [Initiatives](initiatives.md): the outcome a project graduates under and serves
-- [The Cheat Sheet](index.md): the one-page summary this expands
+- [The hard rules](hard-rules.md): rules 2, 4 and 5 apply here
+- [Initiatives](initiatives.md): the outcome a project serves
+- [Project work](issues/project-work.md): the issues inside a project
+- [Start here](index.md): the overview

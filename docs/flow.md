@@ -1,75 +1,75 @@
 # :material-chart-timeline-variant: Flow
 
-Flow here means how work moves through the [issue states](teams.md#issue-states), which is different
-from the `flow/*` labels that classify [inbound work](issues/triage.md). A bottleneck is a queue,
-and a queue is visible as time in state: when a stage of the process can't keep up, work piles up in
-the state before it and sits. Measure the sitting and the constraint names itself.
+<div class="lwm-lead" markdown>
+How to tell where work is getting stuck. When one stage of the process can't keep up, issues
+pile up in the state before it. Look at how long issues have been waiting and the bottleneck
+shows itself.
+</div>
 
-## What each state's age tells you
+This kind of flow is work moving through the [issue states](teams.md#the-shared-state-sets). The `flow/*`
+labels on [inbound work](issues/triage.md) are a different thing.
 
-| State | Its age evidences |
+## What a long wait tells you
+
+| State | A long wait here means |
 |---|---|
-| Triage | A routing decision overdue — the [decision clock](issues/triage.md#two-clocks) owns this one |
-| Backlog | Nothing, deliberately. It's the default pool; nobody has committed to the work, so no clock runs |
-| Planning | The planning bottleneck: committed work waiting on, or stuck in, requirements, refinement and sizing |
-| Todo | Ready work nobody has started — refinement is outrunning delivery, or the cycle intake is too timid |
-| In Progress | Execution time; long ages here usually mean oversized issues or hidden blockers |
-| In Review | The review bottleneck: finished work waiting on a reviewer |
+| Triage | A decision is overdue. The [decision clock](issues/triage.md#two-clocks) covers this |
+| Backlog | Nothing. It's a parking place, and nobody is counting |
+| Planning | Refinement can't keep up. Work the team committed to is waiting for requirements or sizing |
+| Todo | Ready work that nobody has started. You're refining faster than you deliver, or pulling too little into each cycle |
+| In Progress | The issues are too big, or something is quietly blocking them |
+| In Review | Finished work is waiting for a reviewer |
 
-Backlog is exempt on purpose. Keeping it an unmeasured pool is what makes the other numbers
-honest: an ageing item there is a parked idea, and parking is allowed. The moment the team
-commits, the move to [Planning](issues/index.md#backlog-planning-todo-commitment-then-readiness)
-starts the clock.
+`Backlog` is left out on purpose. An old item there is an idea someone parked, and parking is
+allowed. The count starts when the team commits and the issue moves to
+[`Planning`](issues/index.md#backlog-planning-todo-commitment-then-readiness).
 
-## Measure it in Linear
+## What to do about it
 
-None of this needs new tooling, just a handful of shared views.
-
-- One view per measured state (Planning, Todo, In Review) filtered to open issues, ordered
-  oldest first, with the **time in status** display property switched on. The triage page
-  already uses the same mechanism for its decision clock. The oldest item at the top of each
-  view is the current worst case.
-- A board of open issues grouped by state, which shows the *depth* of each queue where the
-  views show the *wait*. A Planning column twice the size of Todo is refinement capacity
-  failing to keep up.
-- Where your plan includes Linear Insights, chart open issues by state with average age, and
-  watch the trend rather than the snapshot. A Planning average that climbs week on week is the
-  evidence to look for.
-
-Favourite the views into the shared sidebar beside the [drift views](dashboards.md), and record
-their URLs there once they exist.
-
-## Read it, then act
-
-| Signal | Likely cause | Do |
+| You see | Likely cause | Try |
 |---|---|---|
-| Planning ages, or its column grows | Refinement capacity is the constraint | Schedule refinement time; pull less into Planning; move honest not-nows back to Backlog |
-| Todo ages while In Progress stays thin | Intake: nobody is starting ready work | Start what's refined before refining more; check cycle intake habits |
-| In Review ages | Review capacity is the constraint | Smaller changes; a review rota; reviewing before starting new work |
-| In Progress ages | Issues oversized or quietly blocked | Split them; surface blockers as native relations |
+| Planning issues ageing, or the column growing | Not enough time for refinement | Schedule refinement time. Pull less into Planning. Move things you won't do soon back to Backlog |
+| Todo ageing while In Progress stays thin | Nobody is starting ready work | Start what's refined before refining more |
+| In Review ageing | Not enough reviewing | Make changes smaller. Set up a review rota. Review before starting something new |
+| In Progress ageing | Issues too big, or blocked | Split them. Record blockers as relations in Linear |
 
-The number is never the point. Each row is a conversation the age lets you open with evidence
-instead of a feeling.
+The numbers matter less than the conversation they let you have, with evidence in place of a
+hunch.
 
-## The doctor's part
+## Set up the views
 
-`task doctor` flags issues that have sat unusually long, so a languishing item gets caught
-between glances at the views:
+You don't need any new tools for this, only a few shared views in Linear.
 
-| State | Flagged after | Why this threshold |
+- Make one view each for `Planning`, `Todo` and `In Review`. Filter to open issues, sort oldest
+  first and turn on the **time in status** display property. The issue at the top is your
+  longest wait.
+- Make a board of open issues grouped by state. This shows how deep each queue is. A Planning
+  column twice the size of Todo means refinement is falling behind.
+- If your plan includes Linear Insights, chart open issues by state with their average age, and
+  watch how it changes from week to week.
+
+Add the views to the shared sidebar next to the [drift views](dashboards.md).
+
+## What the doctor checks
+
+`task doctor` flags issues that have waited a long time, so they get noticed even when nobody
+is watching the views.
+
+| State | Flagged after | Because |
 |---|---|---|
-| Planning | 10 days | Two working weeks of committed work-up with no visible movement |
-| Todo | 14 days | Refined two weekly cycles ago and still unstarted |
+| Planning | 10 days | Two working weeks with no visible progress |
+| Todo | 14 days | Refined two weekly cycles ago and still not started |
 | In Review | 5 days | A working week of finished work waiting on review |
 
-These checks read the issue's last activity as a stand-in for time in state, since Linear
-doesn't store when an issue entered its current state short of per-issue history. Any touch
-resets the proxy, so the doctor understates the true wait and every finding is real. The views
-above measure the actual durations; the doctor catches what nobody happened to be watching.
+??? note "How the doctor measures the wait"
+    Linear doesn't record when an issue entered its current state, short of reading each
+    issue's history. So the doctor uses the issue's last activity as a stand-in. Any edit resets
+    that, which means the doctor can only underestimate a wait. Everything it flags really has
+    waited at least that long. The time-in-status views show the true durations.
 
 ## Related
 
-- [Issues](issues/index.md) — the lifecycle these measurements hang off
-- [Teams, states & labels](teams.md) — the shared state set, including Planning
-- [Dashboards](dashboards.md) — the drift views these queues sit beside
-- [Triage work](issues/triage.md) — the decision clock at the start of the lifecycle
+- [Issues](issues/index.md): the states being measured
+- [Teams, states and labels](teams.md): the shared list of states
+- [Dashboards](dashboards.md): the drift views
+- [Triage work](issues/triage.md): the decision clock

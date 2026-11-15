@@ -1,59 +1,56 @@
 # :material-monitor-dashboard: Dashboards
 
-The model only works if drift is **visible without going looking**. These shared Linear views
-surface hard-rule breaches and portfolio state as you scan them, and each exists in the
-`happydevs` workspace exactly as documented here.
+<div class="lwm-lead" markdown>
+Shared Linear views that show when something has slipped, so nobody has to go hunting. All of
+them already exist in the `happydevs` workspace.
+</div>
 
----
+## Drift views: is anything breaking the rules?
 
-## Drift views: the hard rules, watched
+Each of these should be empty. Anything that appears in one is worth a conversation.
 
-| View | Catches | Rule |
+| View | Shows | Rule |
 |---|---|---|
-| [Drift — unclassified issues](https://linear.app/happydevs/view/af5ea30a-d34e-4175-8410-8be8337441f8) | Open issues in **no project** with **no `flow/*`** label (Triage-state exempt; that's inbound work being received) | [3](hard-rules.md) |
-| [Drift — project and flow at once](https://linear.app/happydevs/view/82cdb693-867e-455e-83ad-4a6feeb2c4a9) | Open issues in a project **and** carrying `flow/*` — never both | [3](hard-rules.md) |
-| [Drift — ownerless projects](https://linear.app/happydevs/view/d07503b5-d1ea-4de2-9090-8b397b9787b0) | Open projects without a single named lead | [4](hard-rules.md) |
-| [Drift — ownerless initiatives](https://linear.app/happydevs/view/3b3f664d-ba6f-41e9-967b-1532aff6724b) | Initiatives without a named owner | [4](hard-rules.md) |
-| [Drift — undated delivery projects](https://linear.app/happydevs/view/5e8e8163-9f0c-4fee-a210-c781f8c92707) | `Planned`-or-later projects missing a start or target-end date | [5](hard-rules.md) |
-| [Drift — violated dependencies](https://linear.app/happydevs/view/4c475feb-953d-466e-af97-9dcc29bc2cfc) | Projects whose [dependency lines](projects.md#dependencies-native-never-prose) have gone red | — |
+| [Unclassified issues](https://linear.app/happydevs/view/af5ea30a-d34e-4175-8410-8be8337441f8) | Open issues with no project and no `flow/*` label. Issues still in Triage don't count | [3](hard-rules.md) |
+| [Project and flow at once](https://linear.app/happydevs/view/82cdb693-867e-455e-83ad-4a6feeb2c4a9) | Open issues that are in a project and also carry a `flow/*` label | [3](hard-rules.md) |
+| [Ownerless projects](https://linear.app/happydevs/view/d07503b5-d1ea-4de2-9090-8b397b9787b0) | Open projects with no named lead | [4](hard-rules.md) |
+| [Ownerless initiatives](https://linear.app/happydevs/view/3b3f664d-ba6f-41e9-967b-1532aff6724b) | Initiatives with no named owner | [4](hard-rules.md) |
+| [Undated delivery projects](https://linear.app/happydevs/view/5e8e8163-9f0c-4fee-a210-c781f8c92707) | Projects that are `Planned` or later with a start or end date missing | [5](hard-rules.md) |
+| [Violated dependencies](https://linear.app/happydevs/view/4c475feb-953d-466e-af97-9dcc29bc2cfc) | Projects whose [dependency lines](projects.md#dependencies-native-never-prose) have turned red | |
 
-Empty views are the goal, and anything in one needs a conversation. These views
-catch rule breaches; the time-in-state views that catch queue buildup live on [Flow](flow.md).
+Rules 1 and 2 are about what's written in a description, and Linear views can't filter on that.
+The doctor checks those two, and it also checks for overdue updates. Run the
+[`linear-doctor`](skills/index.md) skill on one team or project, or `task doctor` for the whole
+workspace.
 
-!!! note "Rules 1 and 2 belong to the doctor"
-    "Initiative declares Key Results" and "project names a KR + delta" live in description
-    content, which Linear views can't filter on. The [`linear-doctor`](skills/index.md)
-    (interactive, scoped) and `task doctor` (headless, whole-workspace) check those, plus
-    stale updates against the [cadence](communications.md). Views watch the native fields
-    while the doctor reads the prose.
+The views for work that is stuck in a queue are on the [Flow](flow.md) page.
 
 ---
 
-## Portfolio views: running the work
+## Portfolio views: how is the work going?
 
-| View | Shows |
+| View | Use it to |
 |---|---|
-| [SLA health](https://linear.app/happydevs/view/c51ef229-df32-4d64-970e-335c369c81ac) | Open issues carrying an SLA, watched against the [resolution clock](issues/triage.md) |
-| [Portfolio — delivery ranking](https://linear.app/happydevs/view/4f97a6df-2be4-4e8a-b143-181cd18f7585) | Delivery projects for sequencing: group by **priority**, eye the **health** column; prioritisation stays a leadership judgement, this view just makes it answerable |
-| [All projects](https://linear.app/happydevs/projects/all) | Lifecycle spread: group by **status** to see Idea → Launching → Completed in one view |
-| [Projects timeline](https://linear.app/happydevs/projects/all) | The dependency graph: switch the display to **Timeline** and the connector lines appear, blue while dates work, red when violated |
+| [SLA health](https://linear.app/happydevs/view/c51ef229-df32-4d64-970e-335c369c81ac) | See open issues with a deadline, against the [fix deadlines](issues/triage.md#two-clocks) |
+| [Delivery ranking](https://linear.app/happydevs/view/4f97a6df-2be4-4e8a-b143-181cd18f7585) | Put delivery projects in order. Group by priority and look down the health column. Leadership still makes the call, and this gives them something to make it with |
+| [All projects](https://linear.app/happydevs/projects/all) | See how many projects are at each stage. Group by status |
+| [Projects timeline](https://linear.app/happydevs/projects/all) | See dependencies. Switch the display to Timeline and the lines appear, blue while the dates work and red when they don't |
 
 ---
 
-## The rhythm
+## When to look
 
-- Weekly, whoever's on triage duty glances at the drift views, and the findings go into the
-  [team digest](communications.md).
-- Before any review, run the [`linear-doctor`](skills/index.md) on the slice under review, or
-  `task doctor` for the whole workspace.
-- Views are shared and workspace-level, so favourite them into your sidebar. Grouping and
-  ordering are display settings; set them once to your taste.
+- Every week, whoever is on triage duty looks over the drift views, and anything they find goes
+  into the [team digest](communications.md).
+- Before a review, run [`linear-doctor`](skills/index.md) on whatever is being reviewed, or
+  `task doctor` for everything.
+- Add the views to your sidebar favourites. Grouping and ordering are personal display settings,
+  so arrange them however you like.
 
 ---
 
 ## Related
 
-- [The Hard Rules](hard-rules.md) — what these views enforce
-- [Flow](flow.md) — measuring time in state and reading bottlenecks
-- [Communications](communications.md) — where findings get talked about
-- [Teams, states & labels](teams.md) — the enums the filters rely on
+- [The hard rules](hard-rules.md): what the drift views check
+- [Flow](flow.md): spotting where work gets stuck
+- [Communications](communications.md): where findings get discussed
