@@ -30,7 +30,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKILLS_DIR = ROOT / "skills"
 MAP_FILE = SKILLS_DIR / ".linear-skills.json"
 API = "https://api.linear.app/graphql"
-GUIDE_BASE = "https://linear-work-management.pages.dev"
+GUIDE_BASE = "https://hungovercoders.github.io/linear-work-management"
 TEAM_KEY = os.environ.get("LINEAR_TEAM", "GRI")
 
 FRONTMATTER = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)

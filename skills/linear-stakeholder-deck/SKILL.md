@@ -21,7 +21,7 @@ MCP; the data comes from the headless script).
    per initiative (status · health · lead · dates).
 2. **Add the judgement.** The script gives the *state*; the deck needs the *story*. For each
    initiative, add a line of narrative: KR movement since last review, the biggest risk, the
-   ask (decision, resource, unblock). Health stays [a claim with evidence](https://linear-work-management.pages.dev/communications/):
+   ask (decision, resource, unblock). Health stays [a claim with evidence](https://hungovercoders.github.io/linear-work-management/communications/):
    don't upgrade a colour the updates don't support, and say when a feeding project hasn't
    reported.
 3. **Trim to the audience.** A portfolio review keeps every initiative one slide; a deep-dive
@@ -38,5 +38,5 @@ MCP; the data comes from the headless script).
 
 ## Related
 
-- [Communications](https://linear-work-management.pages.dev/communications/) — the updates this rolls up
-- [Dashboards](https://linear-work-management.pages.dev/dashboards/) — the always-on counterpart
+- [Communications](https://hungovercoders.github.io/linear-work-management/communications/) — the updates this rolls up
+- [Dashboards](https://hungovercoders.github.io/linear-work-management/dashboards/) — the always-on counterpart

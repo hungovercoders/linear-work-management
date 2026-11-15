@@ -3,7 +3,7 @@
 The single source of truth for how we use Linear: the guidelines, the expectations,
 and the AI skills that go with them.
 
-📖 **Published guide:** https://linear-work-management.pages.dev/
+📖 **Published guide:** https://hungovercoders.github.io/linear-work-management/
 **Start here → [The Cheat Sheet](docs/index.md)**
 
 ---
@@ -76,9 +76,9 @@ Then invoke by name, e.g. *"run linear-doctor on the workspace"*.
 
 ## Deployment
 
-CI builds the site `--strict` and deploys it to **Cloudflare Pages**
-(`.github/workflows/deploy.yml`). Requires repo secrets `CLOUDFLARE_API_TOKEN` and
-`CLOUDFLARE_ACCOUNT_ID` and a Pages project named `linear-work-management`.
+CI builds the site `--strict` on every pull request and push. A push to `main` also deploys it to
+**GitHub Pages** (`.github/workflows/deploy.yml`). This needs no secrets, only Pages switched on
+once with **GitHub Actions** as the source (repo Settings → Pages → Build and deployment).
 
 ---
 
