@@ -23,7 +23,7 @@ This is one-time setup. For keeping things in order afterwards, use the
 #### Labels: [the label groups](teams.md#the-label-taxonomy) ([settings](https://linear.app/happydevs/settings/labels))
 
 - [x] `type/` group: `action` (default) · `feature` · `bug` · `analysis` · `spike`
-- [x] `flow/` group: `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil`
+- [x] `bau/` group: `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil`
 - [x] `spend/` group: `capex` · `opex`
 - [x] `product/` group: one value per product (grows over time)
 - [ ] Legacy flat labels retired (`Improvement` remains; retire when nothing depends on it)
@@ -48,7 +48,7 @@ This is one-time setup. For keeping things in order afterwards, use the
 #### SLAs: [Triage work](issues/triage.md)
 
 - [x] The `slaBreachesAt` fallback (the `linear-triage` skill), which works on every plan
-- [ ] Native SLA rules for `flow/vulnerability` severity windows, Business/Enterprise only;
+- [ ] Native SLA rules for `bau/vulnerability` severity windows, Business/Enterprise only;
       skip until upgraded
 
 ---
@@ -61,7 +61,7 @@ This is one-time setup. For keeping things in order afterwards, use the
       (teams may add their own; Planning is a `backlog`-type state ordered after
       Backlog)
 
-#### Triage: [where inbound work arrives](issues/triage.md)
+#### Triage: [where BAU work arrives](issues/triage.md)
 
 - [x] Triage enabled for the team
 - [ ] **Triage Responsibility** rota assigned (the duty is to decide)

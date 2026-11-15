@@ -28,12 +28,12 @@ Every term the guide and the skills use, one line each.
 
 | Term | Meaning |
 |---|---|
-| Classification | Rule 3: every issue is in a project or carries exactly one `flow/*` label |
+| Classification | Rule 3: every issue is in a project or carries exactly one `bau/*` label |
 | Unclassified | An issue with neither, which nobody can place |
-| Flow work | Unplanned work that arrived (incidents, requests, compliance, support, toil). It has a `flow/*` label and no project. [Triage work](issues/triage.md) |
-| Triage responsibility | Linear's duty rota. The named person who decides what happens to each inbound item |
-| The five outcomes | What a triage decision can be: accept into a project, accept as flow, redirect, merge or decline |
-| Decision clock | How quickly an inbound item must be routed. At once for incidents, one or two working days otherwise |
+| BAU work | Business as usual: work nobody planned that arrived (incidents, requests, compliance, support, toil). It has a `bau/*` label and no project. [Triage work](issues/triage.md) |
+| Triage responsibility | Linear's duty rota. The named person who decides what happens to each item in Triage |
+| The five outcomes | What a triage decision can be: accept into a project, accept as BAU, redirect, merge or decline |
+| Decision clock | How quickly an item in Triage must be routed. At once for incidents, one or two working days otherwise |
 | Fix deadline | How quickly a vulnerability must be fixed: 7, 30 or 90 days by severity. The skills call it the resolution clock |
 | Planning (issue state) | The state between Backlog and Todo, where the team has committed and is working out the details. Different from a project being `Planned` |
 | Time in state | How long an issue has sat in its current state. Backlog isn't counted. [Flow](flow.md) |
@@ -45,7 +45,7 @@ Every term the guide and the skills use, one line each.
 | Term | Meaning |
 |---|---|
 | `type/*` | The kind of project issue: `action` (default), `feature`, `bug`, `analysis` or `spike`. [Labels](teams.md#the-label-taxonomy) |
-| `flow/*` | The kind of inbound issue: `incident`, `vulnerability`, `defect`, `query`, `compliance`, `support` or `toil` |
+| `bau/*` | The kind of BAU issue: `incident`, `vulnerability`, `defect`, `query`, `compliance`, `support` or `toil` |
 | `spend/*` | How a project is funded: `capex` or `opex` |
 | `product/*` | Which product the work serves. Set on the project and inherited by its issues |
 | Additive-only | The rule that teams may add states and labels, but never remove or rename shared ones. [Teams](teams.md) |

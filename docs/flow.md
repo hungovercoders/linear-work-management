@@ -6,9 +6,6 @@ pile up in the state before it. Look at how long issues have been waiting and th
 shows itself.
 </div>
 
-This kind of flow is work moving through the [issue states](teams.md#the-shared-state-sets). The `flow/*`
-labels on [inbound work](issues/triage.md) are a different thing.
-
 ## What a long wait tells you
 
 | State | A long wait here means |

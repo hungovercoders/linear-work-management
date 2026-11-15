@@ -1,16 +1,16 @@
 # Triage work
 
 <div class="lwm-lead" markdown>
-For whoever is on triage duty. Inbound work is the kind nobody planned: an incident, a
-request, a reported fault, a quick data question. It arrives in Triage, and your job is to
-decide where it goes. Everything on the [Issues](index.md) page applies here too.
+For whoever is on triage duty. Business as usual (BAU) is the work nobody planned: an
+incident, a request, a reported fault, a quick data question. It arrives in Triage, and your
+job is to decide where it goes. Everything on the [Issues](index.md) page applies here too.
 </div>
 
 !!! abstract "In short"
-    - Everything inbound arrives in Linear's Triage inbox.
+    - Everything that comes in arrives in Linear's Triage inbox.
     - One named person is on duty. They decide, and they don't have to do the work.
     - Every item gets one of five outcomes. Leaving it there isn't one of them.
-    - Work that stays inbound gets exactly one `flow/*` label and no project.
+    - Work that stays BAU gets exactly one `bau/*` label and no project.
     - Decide quickly: at once for incidents, within a day or two for everything else.
 
 ---
@@ -49,37 +49,37 @@ you and applies each decision.
 
 ## :material-source-branch: The five outcomes
 
-![Triage outcomes: the five decisions the duty rota can make on an inbound item.](../diagrams/triage-outcomes.svg)
+![Triage outcomes: the five decisions the person on duty can make on an item in Triage.](../diagrams/triage-outcomes.svg)
 
 | Outcome | What it means | In Linear |
 |---|---|---|
 | Accept into a project | It becomes [project work](project-work.md) | **Accept**, then add it to the project and give it a `type/*` label |
-| Accept as flow | It stays inbound | **Accept**, and keep the one `flow/*` label with no project |
+| Accept as BAU | It stays outside any project | **Accept**, and keep the one `bau/*` label with no project |
 | Redirect | It belongs to another team | **Move to team**, and it joins that team's Triage |
 | Merge | It's already covered | **Merge** or **Mark duplicate** |
 | Decline | We won't do it | **Decline**, with a reason |
 
-!!! tip "Into a project, or stay as flow?"
+!!! tip "Into a project, or stay as BAU?"
     Ask whether an open project already owns the thing this touches. A bug in something a
     project is building, or a request the project will deliver anyway, goes into that project.
     Work that stands alone, such as an incident, a one-off question or some upkeep, stays as
-    flow.
+    BAU.
 
-Work accepted as flow joins the team's normal states, from `Backlog` to `Done`, alongside
-everything else. It isn't a lesser queue. You find it again with `flow/*` filters and
+Work accepted as BAU joins the team's normal states, from `Backlog` to `Done`, alongside
+everything else. It isn't a lesser queue. You find it again with `bau/*` filters and
 dashboards.
 
-If the same kind of flow work keeps coming back, such as the same support theme every cycle,
+If the same kind of BAU work keeps coming back, such as the same support theme every cycle,
 propose a [project](../projects.md) for it in the usual way. There's no shortcut that turns
-recurring flow work into a project.
+recurring BAU work into a project.
 
 ---
 
-## :material-tag-outline: The `flow/*` labels
+## :material-tag-outline: The `bau/*` labels
 
-Inbound work gets exactly one of these, and no `type/*` label.
+BAU work gets exactly one of these, and no `type/*` label.
 
-| `flow/*` | Use it for |
+| `bau/*` | Use it for |
 |---|---|
 | `incident` | Something is down or degraded and needs a response now |
 | `vulnerability` | A security weakness to fix. Its severity sets the deadline |
@@ -93,7 +93,7 @@ A `product/*` label is optional here. Add one only if the work clearly serves a 
 
 ??? note "Why `defect` and `query`, when project work has `bug` and `analysis`?"
     Linear label names have to be unique across the whole workspace, even between groups. The
-    `type/*` group already uses `bug` and `analysis`, so their inbound equivalents needed
+    `type/*` group already uses `bug` and `analysis`, so their BAU equivalents needed
     different names.
 
 ---
@@ -104,9 +104,9 @@ There are two clocks. The first is how quickly you decide where an item goes.
 
 | Kind of work | Decide within |
 |---|---|
-| `flow/incident` | Immediately |
-| `flow/vulnerability`, `flow/support` | 1 working day |
-| `flow/compliance`, `flow/defect`, `flow/toil`, `flow/query` | 2 working days |
+| `bau/incident` | Immediately |
+| `bau/vulnerability`, `bau/support` | 1 working day |
+| `bau/compliance`, `bau/defect`, `bau/toil`, `bau/query` | 2 working days |
 
 The second is the fix deadline. It applies only to vulnerabilities.
 
@@ -128,7 +128,7 @@ the priority can drive the deadline.
     on the Triage state so an item that's been waiting stands out.
 
     **The fix deadline** is a Linear SLA rule, available on the Business and Enterprise plans.
-    Under *Settings → Issues → SLAs*, add a rule filtered to the `flow/vulnerability` label,
+    Under *Settings → Issues → SLAs*, add a rule filtered to the `bau/vulnerability` label,
     with severity taken from priority and durations in business days: Critical 7, High 30,
     Medium 90. A few things to know:
 
@@ -146,12 +146,12 @@ the priority can drive the deadline.
 
 ## :material-plus-circle-outline: Create one
 
-Most inbound work arrives without your help. When you need to write one up yourself:
+Most BAU work arrives without your help. When you need to write one up yourself:
 
-1. The quick way is the [`linear-issue`](../skills/index.md) skill. It sets the single `flow/*`
+1. The quick way is the [`linear-issue`](../skills/index.md) skill. It sets the single `bau/*`
    label with no project, writes the description and sets the fields.
 2. To do it by hand, create the issue in the
-   [team's Linear view](https://linear.app/happydevs/team/GRI/all), set one `flow/*` label and
+   [team's Linear view](https://linear.app/happydevs/team/GRI/all), set one `bau/*` label and
    no project, then paste in a template from the
    [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue).
    Use `template-bug` for a `defect`, `template-analysis` for a `query`, and `template-action`

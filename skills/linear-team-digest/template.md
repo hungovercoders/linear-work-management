@@ -11,7 +11,7 @@
 
 **Triage**: <arrived> arrived · <decided> decided · <waiting> waiting
 
-- Routed: <n> into projects · <n> as flow · <n> redirected · <n> merged · <n> declined
+- Routed: <n> into projects · <n> as BAU · <n> redirected · <n> merged · <n> declined
 - Waiting: <oldest item + age, or "queue clear">
 
 **Flags:** <slipped milestone, blocked dependency, capacity note, or "none">

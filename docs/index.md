@@ -17,11 +17,11 @@ the one above it.
 | [Project](projects.md) | A piece of work that moves one of those measures | Onboard the 12 Welsh rescues |
 | [Issue](issues/index.md) | One task a person can pick up and finish | Show a rescue's dogs on the search page |
 
-Plenty of work isn't planned, though. Things break, and people ask for help. That work comes in
-through [Triage](issues/triage.md) and gets a `flow/*` label in place of a project, so it stays
-visible without anyone inventing a project for it.
+Plenty of work isn't planned, though. Things break, and people ask for help. That's business as
+usual, or BAU. It comes in through [Triage](issues/triage.md) and gets a `bau/*` label in place
+of a project, so it stays visible without anyone inventing a project for it.
 
-![The operating model: two paths of work, strategic (initiative, project, issue) and inbound (triage, issue).](diagrams/model.svg)
+![The operating model: planned work runs from initiative to project to issue, and BAU work arrives through Triage.](diagrams/model.svg)
 
 Want to see it with real content? The [worked example](examples.md) follows one chain from top
 to bottom.
@@ -36,7 +36,7 @@ These are the only things we insist on.
 |---|---|---|
 | 1 | Every initiative says how it will be measured | Write its Key Results before any project sits under it |
 | 2 | Every project says which Key Result it moves, and by how much | Needed once the project is `Planned`. Ideas can wait |
-| 3 | Every issue is in a project or has one `flow/*` label | One or the other. Never both, never neither |
+| 3 | Every issue is in a project or has one `bau/*` label | One or the other. Never both, never neither |
 | 4 | One named person owns each initiative and each project | A person, never a team or a pair |
 | 5 | Initiatives and projects have dates once they're `Planned` | Initiatives a target date, projects a start and an end |
 
@@ -44,7 +44,7 @@ If a rule and a shortcut disagree, the rule wins. [The hard rules](hard-rules.md
 thinking behind each one.
 
 !!! warning "The one thing to avoid"
-    An issue with no project and no `flow/*` label belongs nowhere, so nobody can see it and it
+    An issue with no project and no `bau/*` label belongs nowhere, so nobody can see it and it
     gets lost. The [drift views](dashboards.md) and the `linear-doctor` skill list every one.
 
 ---

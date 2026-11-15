@@ -19,10 +19,10 @@ have their own skills.
 - The current cycle (`list_cycles`, `list_issues` filtered to the team plus cycle): issues Done
   this week, In Progress or In Review, and anything stalled (no state change since last digest).
 - Triage activity: issues that arrived in Triage this week, how they were routed (accepted into a
-  project, accepted as flow, redirected, merged, declined), and what's still waiting, with the
+  project, accepted as BAU, redirected, merged, declined), and what's still waiting, with the
   oldest item's age (the decision clock is watching).
 - Queue ages: the oldest item in Planning, Todo and In Review, the
-  [bottleneck evidence](https://hungovercoders.github.io/linear-work-management/flow/) the digest carries
+  [bottleneck evidence](https://hungovercoders.github.io/linear-work-management/bau/) the digest carries
   weekly. Backlog is the unmeasured pool and doesn't feature.
 - Anything the team should flag upward, such as a slipped milestone or a blocked dependency.
 

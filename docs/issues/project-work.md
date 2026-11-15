@@ -37,7 +37,7 @@ empty `## Plan` section, which gets
     change the label.
 
 The `product/*` label (`hungovercoders`, `dogadopt`, `woolwitch` and so on) comes from the
-project, so you never decide it per issue. A `flow/*` label never goes on a project issue,
+project, so you never decide it per issue. A `bau/*` label never goes on a project issue,
 because that group is for [triage work](triage.md).
 
 ---

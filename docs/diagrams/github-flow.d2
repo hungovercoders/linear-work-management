@@ -6,27 +6,27 @@
 direction: down
 
 # ---- the git actions (what a person does) ----
-branch: "Branch from the issue's name\nlinks the branch to the issue" {
+branch: "Create a branch\nusing the issue's branch name" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
 }
-push: "Push commits" {
+push: "Push the branch" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
 }
-pr: "Open a PR on that branch" {
+pr: "Open a pull request" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
 }
-merge: "Merge the PR" {
+merge: "Merge it" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
 }
 
 # ---- the issue states it drives (the side effect) ----
-s_prog: "Issue → In Progress" {
+s_prog: "Issue moves to In Progress" {
   style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6; font-color: "#3D4C6B"}
 }
-s_rev: "Issue → In Review" {
+s_rev: "Issue moves to In Review" {
   style: {fill: "#F7F8FB"; stroke: "#C7CDDA"; border-radius: 6; font-color: "#3D4C6B"}
 }
-s_done: "Issue → Done" {
+s_done: "Issue moves to Done" {
   style: {fill: "#DCE9DC"; stroke: "#2F6B3A"; border-radius: 6; font-color: "#1E4426"; bold: true}
 }
 
@@ -34,6 +34,6 @@ s_done: "Issue → Done" {
 branch -> push -> pr -> merge
 
 # ---- each action moves the state, no one touches it by hand ----
-push -> s_prog: drives {style: {stroke: "#3D4C6B"; stroke-dash: 4}}
-pr -> s_rev: drives {style: {stroke: "#3D4C6B"; stroke-dash: 4}}
-merge -> s_done: drives {style: {stroke: "#2F6B3A"; stroke-dash: 4}}
+push -> s_prog {style: {stroke: "#3D4C6B"; stroke-dash: 4}}
+pr -> s_rev {style: {stroke: "#3D4C6B"; stroke-dash: 4}}
+merge -> s_done {style: {stroke: "#2F6B3A"; stroke-dash: 4}}

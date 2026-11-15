@@ -5,32 +5,32 @@
 direction: down
 
 # ---- the three origins ----
-strat: "Strategic idea\nSPONTANEOUS · no project behind it" {
+strat: "Leadership names an outcome\nno project behind it yet" {
   style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 8}
 }
-grad: "Discovery project\nGRADUATION · one project matures into an outcome" {
+grad: "One exploratory project\ngrows into an outcome of its own" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
 }
-agg1: "Idea project\nAGGREGATION" {
+agg1: "Exploratory project" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
 }
-agg2: "Idea project\nAGGREGATION" {
+agg2: "Exploratory project" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
 }
 
 # ---- the initiative ----
-initiative: "INITIATIVE\ndeclares Key Results (measured / committed)\none owner · target date" {
+initiative: "INITIATIVE\nKey Results · one owner · a target date" {
   style: {fill: "#E4EAF6"; stroke: "#3D4C6B"; border-radius: 8; bold: true; stroke-width: 2}
 }
 
 # ---- what happens next ----
-delivery: "Projects deliver its KRs\ngraduated / aggregated projects continue here, or close" {
+delivery: "Projects move its Key Results\nthe projects that fed it carry on here, or close" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8}
 }
 
 # ---- the funnel (acyclic, top-to-bottom) ----
 strat -> initiative: spontaneous {style.stroke: "#A9B2C4"}
-grad -> initiative: graduate {style.stroke: "#3D4C6B"}
-agg1 -> initiative: aggregate {style.stroke: "#3D4C6B"}
-agg2 -> initiative: aggregate {style.stroke: "#3D4C6B"}
+grad -> initiative: graduation {style.stroke: "#3D4C6B"}
+agg1 -> initiative: aggregation {style.stroke: "#3D4C6B"}
+agg2 -> initiative: aggregation {style.stroke: "#3D4C6B"}
 initiative -> delivery {style.stroke: "#3D4C6B"}
