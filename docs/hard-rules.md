@@ -5,14 +5,6 @@ There are five. Everything else in this guide is detail on top of them, and if a
 shortcut ever disagree, the rule wins.
 </div>
 
-| # | Rule |
-|---|---|
-| 1 | Every initiative says how it will be measured |
-| 2 | Every project says which Key Result it moves, and by how much |
-| 3 | Every issue is in a project or has one `flow/*` label |
-| 4 | One named person owns each initiative and each project |
-| 5 | Initiatives and projects have dates once they're `Planned` |
-
 ---
 
 ## 1. Every initiative says how it will be measured
@@ -36,14 +28,14 @@ they have to exist first.
 ## 2. Every project says which Key Result it moves, and by how much
 
 A project exists to move a number on an initiative. So it names the Key Result and the change it
-expects, for example "activation 22% → 30%". Anyone can then check whether the project did its
+expects (its delta), for example "activation 22% → 30%". Anyone can then check whether the project did its
 job.
 
 You don't need this on day one, because a project starts life as an idea.
 
 | Stage | What the project needs |
 |---|---|
-| `Idea` or `Scoping` | A named lead. No Key Result, no dates and no initiative yet |
+| `Idea` or `Scoping` | A named lead and a description of what it's exploring. No Key Result, no dates and no initiative yet |
 | `Planned` onward | The Key Result it moves and by how much, plus dates |
 
 Reaching `Planned` is the moment to decide what the idea turned into:

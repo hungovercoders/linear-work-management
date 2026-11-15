@@ -12,7 +12,7 @@ This is one-time setup. For keeping things in order afterwards, use the
 
 ## Workspace level (once, for everyone)
 
-#### Workflow states: [Teams, states and labels](teams.md#states)
+#### Workflow states: [Teams, states and labels](teams.md#the-shared-state-sets)
 
 - [x] Project statuses: Idea → Scoping → Planned → In Progress → Launching →
       Completed / Canceled ([settings](https://linear.app/happydevs/settings/projects))
@@ -20,7 +20,7 @@ This is one-time setup. For keeping things in order afterwards, use the
 - [x] Initiative statuses: Proposed / Planned / Active / Completed / Canceled, Linear-native
       with nothing to configure
 
-#### Labels: [the label groups](teams.md#labels) ([settings](https://linear.app/happydevs/settings/labels))
+#### Labels: [the label groups](teams.md#the-label-taxonomy) ([settings](https://linear.app/happydevs/settings/labels))
 
 - [x] `type/` group: `action` (default) · `feature` · `bug` · `analysis` · `spike`
 - [x] `flow/` group: `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil`
@@ -40,7 +40,7 @@ This is one-time setup. For keeping things in order afterwards, use the
       (check the channel spelling first)
 - [ ] `#announcements` channel exists for launches and incidents
 
-#### Update reminders: [Communications](communications.md#reminders)
+#### Update reminders: [Communications](communications.md#making-the-cadence-stick)
 
 - [ ] Native update reminders enabled (workspace settings): weekly, targeting project leads and
       initiative owners
@@ -68,7 +68,7 @@ This is one-time setup. For keeping things in order afterwards, use the
 - [ ] Priority required before an issue leaves Triage (team setting)
 - [ ] **Triage Rules** auto-applying labels on arrival, Business/Enterprise; manual until then
 
-#### Cycles: [team-owned](teams.md#team-settings)
+#### Cycles: [team-owned](teams.md#team-settings-recommended-not-required)
 
 - [ ] Cycles configured at the team's cadence (weekly recommended); Current and Upcoming views
       visible to others

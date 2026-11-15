@@ -24,7 +24,7 @@ has less to go on.
 
 ---
 
-## Health needs evidence { #health }
+## Health needs evidence { #health-is-a-claim-with-evidence }
 
 Every update says whether the work is on track, at risk or off track. That's a claim, and you
 should be able to back it up.
@@ -45,7 +45,7 @@ connected channel.
 
 ---
 
-## How updates don't get forgotten { #reminders }
+## How updates don't get forgotten { #making-the-cadence-stick }
 
 Nobody has to remember the schedule, because three things back it up.
 

@@ -121,7 +121,7 @@ the connected channel. Or let the `linear-initiative-update` skill draft and pos
     supports. The skill points out missing and stale project updates for you.
 
 [Communications](communications.md) has the full schedule, and explains
-[what a health claim needs](communications.md#health).
+[what a health claim needs](communications.md#health-is-a-claim-with-evidence).
 
 ---
 

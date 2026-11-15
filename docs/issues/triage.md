@@ -24,7 +24,8 @@ where each one goes before it joins the team's work.
 Turn it on under **Team settings → Triage**. Work reaches it in a few ways:
 
 - Integrations such as Sentry, GitHub, Zendesk and Intercom create issues straight into it.
-- Linear Asks sends requests raised in Slack.
+- Linear Asks can send requests raised in Slack. It needs the Business or Enterprise plan and a
+  connected Slack, and we have neither yet ([Integrations](../integrations.md)).
 - Customer requests, forms and the API arrive there too.
 - Anyone can move a stray issue into Triage by hand when it needs a decision.
 
@@ -107,7 +108,7 @@ There are two clocks. The first is how quickly you decide where an item goes.
 | `flow/vulnerability`, `flow/support` | 1 working day |
 | `flow/compliance`, `flow/defect`, `flow/toil`, `flow/query` | 2 working days |
 
-The second applies only to vulnerabilities, and it's how quickly they get fixed.
+The second is the fix deadline. It applies only to vulnerabilities.
 
 | Severity | Fix within |
 |---|---|
@@ -156,7 +157,7 @@ Most inbound work arrives without your help. When you need to write one up yours
    Use `template-bug` for a `defect`, `template-analysis` for a `query`, and `template-action`
    for anything else.
 
-As with every issue, the assignee, priority and status go in [Linear's fields](index.md#fields).
+As with every issue, the assignee, priority and status go in [Linear's fields](index.md#native-fields-not-prose).
 
 ---
 

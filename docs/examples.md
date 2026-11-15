@@ -7,7 +7,7 @@ under it, three of its issues, and one item that arrived through Triage.
 
 ![Worked example: the dogadopt initiative down through a project to three issues, plus one inbound item accepted via Triage.](diagrams/example-chain.svg)
 
-Each quoted block below is the description as it appears in Linear. The line above it lists
+Each quoted block is a description as it appears in Linear. The Fields line before it lists
 what was set in Linear's own fields.
 
 ---
@@ -85,7 +85,7 @@ How it measures up:
 
 - Rule 2 ✓ It names the Key Result it moves and by how much.
 - It's **Blocked by** the Consent process project. That's recorded as a
-  [dependency in Linear](projects.md#dependencies), so it shows on the timeline.
+  [dependency in Linear](projects.md#dependencies-native-never-prose), so it shows on the timeline.
 
 ---
 

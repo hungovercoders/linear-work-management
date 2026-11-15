@@ -9,7 +9,8 @@ it. Its job is to move a Key Result on an [initiative](initiatives.md).
 being built, who leads each piece, which measure it moves and whether it's on track.
 
 !!! abstract "In short"
-    - Anyone can start a project in `Idea`. All it needs is a lead.
+    - Anyone can start a project in `Idea`. All it needs is a lead and a line on what it's
+      exploring.
     - To become `Planned`, it names the Key Result it moves and by how much, and gets dates.
     - While it's being built, the lead posts an update every week.
     - It's `Completed` when the work shipped and the Key Result moved.
@@ -40,12 +41,13 @@ A project whose outcome is already agreed can skip discovery and be created stra
 
 ---
 
-## Discovery: is there something here? { #discovery }
+## Discovery: is there something here? { #discovery-phase-is-there-something-here-idea-scoping }
 
 Starting a project in `Idea` is the easiest way to begin any work. Explore first and commit
 later. At this stage the project needs no initiative, no Key Result and no dates.
 
-It does need one named lead, from the first day ([rule 4](hard-rules.md)).
+It does need one named lead from the first day ([rule 4](hard-rules.md)), and a description of
+the question it's exploring.
 
 When the project is ready to become `Planned`, decide what the idea turned into.
 
@@ -66,12 +68,12 @@ From `Planned` onward the project is a commitment, and every rule applies.
 
 | You need | Detail |
 |---|---|
-| A Key Result and a change | Which Key Result it moves and by how much, such as "activation 22% → 30%" ([rule 2](hard-rules.md)). If it serves several initiatives, name one for each |
+| A Key Result and a delta | Which Key Result it moves and by how much, such as "activation 22% → 30%" ([rule 2](hard-rules.md)). If it serves several initiatives, name one for each |
 | One named lead | The person delivering it, usually an eng lead or product owner ([rule 4](hard-rules.md)) |
 | Start and target end dates | So it can be put in order against other projects ([rule 5](hard-rules.md)) |
 | A priority | Urgent to Low |
 | Two labels | `spend/*` (`capex` or `opex`) for how it's funded, and `product/*` for the product it serves. Its issues inherit the product label |
-| Dependencies | Drawn in Linear, [as described below](#dependencies) |
+| Dependencies | Drawn in Linear as [relations between projects](#dependencies-native-never-prose) |
 
 The project's description covers what you're doing and how, the Key Result table, what's out
 of scope and any context. Why the outcome matters belongs to the initiative, and the individual
@@ -80,7 +82,7 @@ tasks belong to the [issues](issues/index.md).
 A project is `Completed` when it has delivered and the Key Result has moved. If it launched and
 the number didn't change, it isn't done yet, though what you learned is still worth having.
 
-### Dependencies { #dependencies }
+### Dependencies { #dependencies-native-never-prose }
 
 If your project can't start until another finishes, record that with Linear's **Blocked by** and
 **Blocking** relations. A dependency written into a description goes stale as soon as dates
@@ -97,7 +99,7 @@ move, whereas a relation shows up in views and warns you.
 
 ---
 
-## Weekly updates
+## Weekly updates { #keep-everyone-posted }
 
 While a project is `In Progress` or `Launching`, its lead posts an update to `#project-updates`
 every week. It covers what changed, the health (on track, at risk or off track) and any risks.

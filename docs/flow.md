@@ -6,8 +6,8 @@ pile up in the state before it. Look at how long issues have been waiting and th
 shows itself.
 </div>
 
-"Flow" on this page means work moving through the [issue states](teams.md#states). It's a
-different thing from the `flow/*` labels on [inbound work](issues/triage.md).
+This kind of flow is work moving through the [issue states](teams.md#the-shared-state-sets). The `flow/*`
+labels on [inbound work](issues/triage.md) are a different thing.
 
 ## What a long wait tells you
 
@@ -22,7 +22,7 @@ different thing from the `flow/*` labels on [inbound work](issues/triage.md).
 
 `Backlog` is left out on purpose. An old item there is an idea someone parked, and parking is
 allowed. The count starts when the team commits and the issue moves to
-[`Planning`](issues/index.md#readiness).
+[`Planning`](issues/index.md#backlog-planning-todo-commitment-then-readiness).
 
 ## What to do about it
 
@@ -65,7 +65,7 @@ is watching the views.
     Linear doesn't record when an issue entered its current state, short of reading each
     issue's history. So the doctor uses the issue's last activity as a stand-in. Any edit resets
     that, which means the doctor can only underestimate a wait. Everything it flags really has
-    waited at least that long. The views above show the true durations.
+    waited at least that long. The time-in-status views show the true durations.
 
 ## Related
 

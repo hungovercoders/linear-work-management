@@ -13,7 +13,7 @@ the one above it.
 
 | Level | What it is | For example |
 |---|---|---|
-| [Initiative](initiatives.md) | An outcome we want, and how we'll measure it | Every Welsh rescue's dogs searchable in one place by September |
+| [Initiative](initiatives.md) | An outcome we want, and how we'll measure it | "Effortless rescue-dog adoption", measured by how many Welsh rescues are in the portal |
 | [Project](projects.md) | A piece of work that moves one of those measures | Onboard the 12 Welsh rescues |
 | [Issue](issues/index.md) | One task a person can pick up and finish | Show a rescue's dogs on the search page |
 
@@ -57,7 +57,7 @@ thinking behind each one.
 | A piece of work that moves one of those measures | A [project](projects.md) under that initiative |
 | A task within that work | An [issue](issues/project-work.md) in the project |
 | Something that broke, arrived or was reported | An issue through [Triage](issues/triage.md) |
-| An idea you'd like to explore first | A project in `Idea`. It needs a lead and nothing else |
+| An idea you'd like to explore first | A project in `Idea`. It needs a lead and a line on what you're exploring |
 
 Not sure where to begin? Start a project in `Idea`. It costs nothing, and it can join an
 initiative later if the idea holds up.

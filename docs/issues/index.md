@@ -67,7 +67,7 @@ Both kinds of issue use the same states.
 | Canceled | Won't be done, with the reason recorded |
 | Duplicate | Covered by another issue |
 
-### Backlog, Planning and Todo { #readiness }
+### Backlog, Planning and Todo { #backlog-planning-todo-commitment-then-readiness }
 
 These three are easy to blur together, so here is what separates them.
 
@@ -85,7 +85,7 @@ before anyone began.
 
 ---
 
-## :material-robot-outline: Write the description as a brief { #prompt }
+## :material-robot-outline: Write the description as a brief { #the-body-is-the-prompt }
 
 Write an issue's description for whoever picks it up, whether that's a colleague or an AI agent.
 It gets written in two stages.
@@ -101,7 +101,7 @@ someone starts.
 
 ---
 
-## :material-table: Use Linear's fields { #fields }
+## :material-table: Use Linear's fields { #native-fields-not-prose }
 
 If Linear has a field for something, use the field and keep it out of the description. Fields
 are what let Linear filter, sort and report, and text in a description does none of that.

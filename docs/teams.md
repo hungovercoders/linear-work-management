@@ -20,14 +20,14 @@ for the whole organisation:
 | Shared by everyone | Where it's described |
 |---|---|
 | The five hard rules | [The hard rules](hard-rules.md) |
-| The states for initiatives, projects and issues | [States](#states), below |
-| The labels | [Labels](#labels), below |
+| The states for initiatives, projects and issues | [States](#the-shared-state-sets) |
+| The labels | [Labels](#the-label-taxonomy) |
 | Every issue being in a project or carrying one `flow/*` label | [Issues](issues/index.md) |
 | When updates are posted, and where | [Communications](communications.md) |
 | How fast inbound work is decided and fixed | [Triage work](issues/triage.md) |
 
-How a team runs day to day is up to the team. The suggestions further down are only
-suggestions.
+How a team runs day to day is up to the team. The [suggestions for teams](#team-settings-recommended-not-required)
+are only that.
 
 ### Add, but don't remove or rename
 
@@ -43,7 +43,7 @@ which is how the `Planning` issue state arrived.
 
 ---
 
-## :material-tag-multiple: Labels { #labels }
+## :material-tag-multiple: Labels { #the-label-taxonomy }
 
 There are four groups, and you can browse them in
 [Linear settings → Labels](https://linear.app/happydevs/settings/labels).
@@ -70,7 +70,7 @@ A few things to know:
 
 ---
 
-## :material-list-status: States { #states }
+## :material-list-status: States { #the-shared-state-sets }
 
 The [Initiatives](initiatives.md), [Projects](projects.md) and [Issues](issues/index.md) pages
 all take their states from here. The closing state is spelled `Canceled` throughout, the way
@@ -104,7 +104,7 @@ time spent there shows whether refinement is keeping up ([Flow](flow.md)).
 
 ---
 
-## :material-tune: Suggestions for teams { #team-settings }
+## :material-tune: Suggestions for teams { #team-settings-recommended-not-required }
 
 None of these are required.
 

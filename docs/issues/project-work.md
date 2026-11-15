@@ -27,8 +27,9 @@ uses.
 | `analysis` | A data question or a report. The answer is the deliverable | The question, why it's needed, and what counts as answered |
 | `spike` | A time-boxed investigation | The question, what it unblocks, the time box, and notes |
 
-Every template also has a Context section and an empty `## Plan` section, which gets
-[filled in when someone picks the issue up](index.md#prompt).
+Every template also has room for background (Context, or Notes in a spike) and ends with an
+empty `## Plan` section, which gets
+[filled in when someone picks the issue up](index.md#the-body-is-the-prompt).
 
 !!! tip "Feature or action?"
     Ask whether someone gets a new capability when this ships. If they do, it's a `feature`, and
@@ -51,8 +52,8 @@ because that group is for [triage work](triage.md).
    the [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue).
    They're the same files the skill uses.
 
-Set the assignee and a priority (Urgent to Low) in [Linear's fields](index.md#fields). Then take
-the issue through [`Backlog`, `Planning` and `Todo`](index.md#readiness) before anyone starts.
+Set the assignee and a priority (Urgent to Low) in [Linear's fields](index.md#native-fields-not-prose). Then take
+the issue through [`Backlog`, `Planning` and `Todo`](index.md#backlog-planning-todo-commitment-then-readiness) before anyone starts.
 
 ---
 
