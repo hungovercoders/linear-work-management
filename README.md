@@ -20,13 +20,11 @@ This repo is that place.
 
 ## The hard rules
 
-1. Every initiative declares its Key Results (measured or committed, with targets).
-2. Every project names the Key Result it moves, and by how much.
-3. Every issue is either in a project or carries one `flow/*` label. Never both,
-   never neither.
-4. One named human owns each initiative and each project.
-5. Initiatives and projects carry dates from `Planned` onward: initiatives a target
-   date, projects start + end.
+1. Every initiative says how it will be measured.
+2. Every project says which Key Result it moves, and by how much.
+3. Every issue is in a project or has one `flow/*` label. Never both, never neither.
+4. One named person owns each initiative and each project.
+5. Initiatives and projects have dates once they're `Planned`.
 
 Everything else here expands on those; see **[The hard rules](docs/hard-rules.md)**.
 
