@@ -1,6 +1,6 @@
 ---
 name: linear-issue
-description: Capture a Linear issue to the Ways of Working standard: one discrete task got down clearly (the problem and what "done" means), classified in a project or under one flow/* label (never both), with a type/*, a priority and the product/* it inherits. Sets the native fields and lands it in Backlog, ready to refine. Use when capturing planned project work or writing up an inbound item. The how, the agent plan, comes later when the issue is picked up.
+description: Capture a Linear issue to the Ways of Working standard: one discrete task got down clearly (the problem and what "done" means), classified in a project or under one bau/* label (never both), with a type/*, a priority and the product/* it inherits. Sets the native fields and lands it in Backlog, ready to refine. Use when capturing planned project work or writing up a BAU item. The how, the agent plan, comes later when the issue is picked up.
 ---
 
 <!-- doc: issues/index.md -->
@@ -20,7 +20,7 @@ and create the issue.
 
 ## What good looks like
 
-- Rule 3, classified: in a project *or* carrying exactly one `flow/*` label, never both, never
+- Rule 3, classified: in a project *or* carrying exactly one `bau/*` label, never both, never
   neither. This is the first decision, and it sets the shape of everything after.
 - Understood before it starts, so the problem and what "done" means are clear enough to hand to
   someone (or something) without a follow-up question.
@@ -36,15 +36,15 @@ and create the issue.
 The skill's first job is to classify, and that fork decides everything after it:
 
 - A project issue sits in a project and ladders to its KR. It gets a `type/*`, inherits the
-  project's `product/*`, and carries no `flow/*`.
-- An inbound issue arrived through Triage. It carries one `flow/*` label and no project, no
-  `type/*`. Where inbound work arrives, the five outcomes and the SLA clocks live in **Flow &
+  project's `product/*`, and carries no `bau/*`.
+- A BAU issue arrived through Triage. It carries one `bau/*` label and no project, no
+  `type/*`. Where BAU work arrives, the five outcomes and the SLA clocks live in **BAU &
   Triage** (GRI-74); this skill just sets the issue up correctly.
 
 ## Flow
 
 1. Classify it (rule 3). Ask whether this is planned project work or something that arrived:
-a project issue or an inbound issue. One or the other, never both.
+a project issue or a BAU issue. One or the other, never both.
 
 2a. Project issue.
 
@@ -63,21 +63,21 @@ a project issue or an inbound issue. One or the other, never both.
   backlog before the work is understood. Fill the sections only as far as they help, since the
   time box is what bounds it. Follow-ups become new issues in the project.
 
-2b. Inbound issue.
+2b. BAU issue.
 
-- Pick the single `flow/*` label (`incident` · `vulnerability` · `defect` · `query` ·
-  `compliance` · `support` · `toil`), with no project and no `type/*`. `flow/defect` is a fault
-  reported from outside, and `flow/query` an ad-hoc data question or report from outside a
-  project: the inbound counterparts of `type/bug` and `type/analysis`, named differently because
+- Pick the single `bau/*` label (`incident` · `vulnerability` · `defect` · `query` ·
+  `compliance` · `support` · `toil`), with no project and no `type/*`. `bau/defect` is a fault
+  reported from outside, and `bau/query` an ad-hoc data question or report from outside a
+  project: the BAU counterparts of `type/bug` and `type/analysis`, named differently because
   Linear label names are unique across groups.
 - Write the body from the template that matches the kind where one exists:
-  [`template-bug.md`](template-bug.md) for `flow/defect`, [`template-analysis.md`](template-analysis.md)
-  for `flow/query`, otherwise the general [`template-action.md`](template-action.md). Bespoke
-  shapes for incident, vulnerability and the rest arrive with Flow & Triage (GRI-74). Triage
-  decides its fate; see Flow & Triage.
+  [`template-bug.md`](template-bug.md) for `bau/defect`, [`template-analysis.md`](template-analysis.md)
+  for `bau/query`, otherwise the general [`template-action.md`](template-action.md). Bespoke
+  shapes for incident, vulnerability and the rest arrive with BAU & Triage (GRI-74). Triage
+  decides its fate; see BAU & Triage.
 
 3. Set the native fields. On the issue itself, never in the description: **assignee**,
-**priority** (Urgent → Low), **status** (Backlog for new work), the project *or* `flow/*`
+**priority** (Urgent → Low), **status** (Backlog for new work), the project *or* `bau/*`
 classification, the `type/*` (project issues) and the inherited `product/*`. Use `save_issue`.
 
 That's capture, so stop here. The issue is down and classified. Two things happen *later*,
@@ -103,11 +103,11 @@ body** at capture. Pick the one matching the type:
 | `analysis` | [`template-analysis.md`](template-analysis.md) | The question / Why it's needed / When it's answered / Context / Plan |
 | `spike` | [`template-spike.md`](template-spike.md) | The question / Why (what it unblocks) / Time box / Notes / Plan |
 
-`action` is the base and also serves inbound kinds with no bespoke template. Every template keeps
+`action` is the base and also serves BAU kinds with no bespoke template. Every template keeps
 the same fixed parts: the native-fields header, a why, and the `## Plan` section left empty
 at creation and filled at pickup. Resources go in native Links, never a body section.
 
-The assignee, priority, status, project or `flow/*` classification and `type/*` or `product/*`
+The assignee, priority, status, project or `bau/*` classification and `type/*` or `product/*`
 labels are native Linear fields; set them on the issue, never in the description text. Keeping
 them native is what lets Linear filter, sort and cycle them, and what lets `linear-doctor` check
 classification.

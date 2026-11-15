@@ -1,11 +1,11 @@
-<!-- type/analysis issue (also flow/query, inbound) — a data question to answer or a report to
+<!-- type/analysis issue (also bau/query, BAU) — a data question to answer or a report to
      produce. The deliverable is the answer/insight, not shipped code.
      The issue DESCRIPTION only. Set these as native Linear fields, NOT in this text:
        • Assignee   → the one person doing it
        • Priority   → Urgent → Low, so it orders against the others
        • Status     → Backlog (new) → Planning when committed → Todo once ready; nothing starts before Todo
-       • Classify   → in a PROJECT (type/analysis) OR flow/query (inbound) — rule 3, never both
-       • type/*     → analysis (or none, if inbound flow/query)
+       • Classify   → in a PROJECT (type/analysis) OR bau/query (BAU) — rule 3, never both
+       • type/*     → analysis (or none, if BAU bau/query)
        • product/*  → inherited from the project, unchanged
        • Links      → attach data sources, dashboards, prior analyses as native Links -->
 

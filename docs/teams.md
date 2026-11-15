@@ -22,9 +22,9 @@ for the whole organisation:
 | The five hard rules | [The hard rules](hard-rules.md) |
 | The states for initiatives, projects and issues | [States](#the-shared-state-sets) |
 | The labels | [Labels](#the-label-taxonomy) |
-| Every issue being in a project or carrying one `flow/*` label | [Issues](issues/index.md) |
+| Every issue being in a project or carrying one `bau/*` label | [Issues](issues/index.md) |
 | When updates are posted, and where | [Communications](communications.md) |
-| How fast inbound work is decided and fixed | [Triage work](issues/triage.md) |
+| How fast BAU work is decided and fixed | [Triage work](issues/triage.md) |
 
 How a team runs day to day is up to the team. The [suggestions for teams](#team-settings-recommended-not-required)
 are only that.
@@ -51,21 +51,21 @@ There are four groups, and you can browse them in
 | Group | Values | Goes on | Set when |
 |---|---|---|---|
 | `type/*` | `action` (default) · `feature` · `bug` · `analysis` · `spike` | Project issues | The issue is created |
-| `flow/*` | `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil` | Inbound issues, exactly one each | It arrives or is triaged |
+| `bau/*` | `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil` | BAU issues, exactly one each | It arrives or is triaged |
 | `spend/*` | `capex` · `opex` | Projects | The project is planned |
 | `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · `cheeserater` · … (grows) | Projects, and their issues inherit it | The project is planned |
 
 A few things to know:
 
-- An issue never has both a `type/*` and a `flow/*` label. The first means project work and the
-  second means inbound work ([rule 3](hard-rules.md)).
+- An issue never has both a `type/*` and a `bau/*` label. The first means project work and the
+  second means BAU work ([rule 3](hard-rules.md)).
 - `product/*` is decided once, on the project. Its issues take the same value.
 - There's no `risk/*` group. The product labels replaced it.
 - The old Improvement label belongs to no group. Don't use it on new work.
 
-??? note "Why `flow/defect` and `flow/query`, when `type/*` has `bug` and `analysis`?"
+??? note "Why `bau/defect` and `bau/query`, when `type/*` has `bug` and `analysis`?"
     Linear label names have to be unique across the whole workspace, even between groups. The
-    `type/*` group uses `bug` and `analysis`, so the inbound equivalents are `defect` (a fault
+    `type/*` group uses `bug` and `analysis`, so the BAU equivalents are `defect` (a fault
     reported from outside) and `query` (a one-off data question).
 
 ---

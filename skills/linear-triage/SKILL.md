@@ -1,6 +1,6 @@
 ---
 name: linear-triage
-description: Work a Linear team's Triage inbox to the Ways of Working standard: for each incoming issue give it one of the five outcomes (accept into a project · accept as flow · redirect · merge · decline), set the single flow/* label and a priority, and act within the decision clock. Drives Linear's native Triage; reuses the linear-issue templates when accepting. Use when you're on triage duty and clearing the queue.
+description: Work a Linear team's Triage inbox to the Ways of Working standard: for each incoming issue give it one of the five outcomes (accept into a project · accept as BAU · redirect · merge · decline), set the single bau/* label and a priority, and act within the decision clock. Drives Linear's native Triage; reuses the linear-issue templates when accepting. Use when you're on triage duty and clearing the queue.
 ---
 
 <!-- doc: issues/triage.md -->
@@ -19,26 +19,26 @@ its native actions; the skill's part is making each decision to standard.
 ## What good looks like
 
 - Every item gets a decision; "leave it sitting there" is not an outcome.
-- Rule 3 holds: it either stays inbound with exactly one `flow/*` label and no project, or is
-  accepted into a project with a `type/*` and no `flow/*`. Never both, never neither.
+- Rule 3 holds: it either stays BAU with exactly one `bau/*` label and no project, or is
+  accepted into a project with a `type/*` and no `bau/*`. Never both, never neither.
 - A priority (Urgent → Low) is set, so it orders the item and can drive the SLA.
-- The decision is made within the decision clock for its `flow/*` kind.
+- The decision is made within the decision clock for its `bau/*` kind.
 
 ## Flow
 
 **1. Read the queue.** List the team's issues in the Triage state (`list_issues`,
-`state: Triage`). Take the most time-critical first, which is `flow/incident`, then whatever's
+`state: Triage`). Take the most time-critical first, which is `bau/incident`, then whatever's
 nearest its decision-clock limit.
 
-**2. Classify the kind.** Pick the single `flow/*`: `incident` · `vulnerability` · `defect` ·
+**2. Classify the kind.** Pick the single `bau/*`: `incident` · `vulnerability` · `defect` ·
 `query` · `compliance` · `support` · `toil`.
 
 **3. Decide the outcome (one of five).**
 
 | Outcome | Do this |
 |---|---|
-| Accept into a project | Set the **project** + a **`type/*`**, drop the `flow/*`; it's planned work now. Shape the body with a [`linear-issue`](../linear-issue/SKILL.md) template if it needs one. |
-| Accept as flow | Keep the **one `flow/*`** label, **no project**; set priority; leave it in the workflow. |
+| Accept into a project | Set the **project** + a **`type/*`**, drop the `bau/*`; it's planned work now. Shape the body with a [`linear-issue`](../linear-issue/SKILL.md) template if it needs one. |
+| Accept as BAU | Keep the **one `bau/*`** label, **no project**; set priority; leave it in the workflow. |
 | Redirect | **Move it to the right team** (change `team`) — it moves to that team's Triage. |
 | Merge | **Mark duplicate of** / merge into the existing issue (`duplicateOf`). |
 | Decline | **Cancel** it with a reason. |
@@ -49,11 +49,11 @@ priority before an issue leaves Triage).
 **5. Respect the clocks.** Decide within the decision clock (`incident` immediately,
 `vulnerability` or `support` 1 working day, `compliance`, `defect`, `toil` or `query` 2). The
 rota and Triage's time-in-status keep that in check, since it isn't a native SLA. For
-`flow/vulnerability`, set the resolution SLA (severity → 7 / 30 / 90 days): a native SLA rule
+`bau/vulnerability`, set the resolution SLA (severity → 7 / 30 / 90 days): a native SLA rule
 handles it on Business/Enterprise, otherwise set `slaBreachesAt` directly (with
 `slaType: onlyBusinessDays`).
 
-**6. Apply it.** Use `save_issue` for the state, team, project, `flow/*` or `type/*` labels,
+**6. Apply it.** Use `save_issue` for the state, team, project, `bau/*` or `type/*` labels,
 priority, `duplicateOf` and (for vulnerabilities) `slaBreachesAt`. One decision per item, then
 move on.
 

@@ -1,11 +1,11 @@
 <!-- type/action issue — the DEFAULT, and the general/base capture for any work that needs doing.
-     Also used for inbound (flow/*) kinds with no bespoke template.
+     Also used for BAU (bau/*) kinds with no bespoke template.
      The issue DESCRIPTION only. Set these as native Linear fields, NOT in this text:
        • Assignee   → the one person doing it
        • Priority   → Urgent → Low, so it orders against the others
        • Status     → Backlog (new) → Planning when committed → Todo once ready; nothing starts before Todo
-       • Classify   → in a PROJECT (project issue) OR one flow/* label (inbound) — rule 3, never both
-       • type/*     → action (or none, if inbound)
+       • Classify   → in a PROJECT (project issue) OR one bau/* label (BAU) — rule 3, never both
+       • type/*     → action (or none, if BAU)
        • product/*  → inherited from the project, unchanged
        • Links      → attach resources (docs, logs, prior art, related issues) as native Links -->
 

@@ -5,7 +5,7 @@ One real chain from top to bottom, using the **dogadopt** product: an initiative
 under it, three of its issues, and one item that arrived through Triage.
 </div>
 
-![Worked example: the dogadopt initiative down through a project to three issues, plus one inbound item accepted via Triage.](diagrams/example-chain.svg)
+![Worked example: the dogadopt initiative down through a project to three issues, plus one item that arrived through Triage.](diagrams/example-chain.svg)
 
 Each quoted block is a description as it appears in Linear. The Fields line before it lists
 what was set in Linear's own fields.
@@ -124,7 +124,7 @@ any code:
 > Service) → confirmation hits a Worker route stamping `last_confirmed` → coverage report
 > reads the stamp. No login needed; link is signed, 14-day expiry.
 
-All three meet rule 3 ✓ They're in the project, with one `type/*` label and no `flow/*` label.
+All three meet rule 3 ✓ They're in the project, with one `type/*` label and no `bau/*` label.
 
 ---
 
@@ -135,12 +135,12 @@ An email arrives: "Your site shows a dog we rehomed last week." Whoever is on
 
 | Question | Answer |
 |---|---|
-| What kind of thing is it? | `flow/defect`, a fault reported from outside |
-| Where does it go? | Into the onboarding project. It's a bug in the refresh job that project is building, so it becomes a `type/bug` there and the `flow/*` label comes off |
-| How urgent is it? | High. It damages trust, but nothing is down. An outage would be a `flow/incident` and decided at once |
+| What kind of thing is it? | `bau/defect`, a fault reported from outside |
+| Where does it go? | Into the onboarding project. It's a bug in the refresh job that project is building, so it becomes a `type/bug` there and the `bau/*` label comes off |
+| How urgent is it? | High. It damages trust, but nothing is down. An outage would be a `bau/incident` and decided at once |
 
 If the email had been a one-off question, such as "how many collies are listed in Powys?", it
-would have stayed inbound: `flow/query`, no project, decided within two working days.
+would have stayed BAU: `bau/query`, no project, decided within two working days.
 
 ---
 

@@ -10,7 +10,7 @@ tool as the strategy above them, so the reason behind a task is never far away.
 
 !!! abstract "In short"
     - Every issue is one of two kinds: [project work](project-work.md) or
-      [inbound work](triage.md) that arrived through Triage.
+      [BAU work](triage.md) that arrived through Triage.
     - Write the description so that someone could start without asking you anything.
     - Put the assignee, priority, status and labels in Linear's fields. Keep them out of the
       description.
@@ -20,7 +20,7 @@ tool as the strategy above them, so the reason behind a task is never far away.
 
 ## :material-directions-fork: Two kinds of issue
 
-Each issue is either in a project or carries one `flow/*` label ([rule 3](../hard-rules.md)).
+Each issue is either in a project or carries one `bau/*` label ([rule 3](../hard-rules.md)).
 Which one it is tells you which page to read.
 
 <div class="grid cards" markdown>
@@ -38,8 +38,8 @@ Which one it is tells you which page to read.
 
     ---
 
-    <span class="lwm-inbound">Inbound work</span> that arrived: an incident, a request, a
-    reported fault. It gets one `flow/*` label and no project.
+    <span class="lwm-inbound">BAU work</span> that arrived: an incident, a request, a
+    reported fault. It gets one `bau/*` label and no project.
 
     For the triage rota. [:octicons-arrow-right-24: Triage work](triage.md)
 
@@ -111,7 +111,7 @@ are what let Linear filter, sort and report, and text in a description does none
 | Assignee | The one person doing it |
 | Priority | Urgent to Low |
 | Status | One of the states above |
-| Project or `flow/*` label | Whichever kind of issue it is. Never both |
+| Project or `bau/*` label | Whichever kind of issue it is. Never both |
 | Links | Documents, designs, logs and related issues, attached as links |
 
 That leaves the description with the problem, the reason, what done looks like, any context

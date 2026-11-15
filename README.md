@@ -22,7 +22,7 @@ This repo is that place.
 
 1. Every initiative says how it will be measured.
 2. Every project says which Key Result it moves, and by how much.
-3. Every issue is in a project or has one `flow/*` label. Never both, never neither.
+3. Every issue is in a project or has one `bau/*` label. Never both, never neither.
 4. One named person owns each initiative and each project.
 5. Initiatives and projects have dates once they're `Planned`.
 
@@ -84,5 +84,5 @@ once with **GitHub Actions** as the source (repo Settings → Pages → Build an
 
 Tracked under **[GRI-68](https://linear.app/happydevs/issue/GRI-68)** — Foundation first
 (this), then one sub-issue at a time, each on its own branch: initiatives, projects,
-issues, flow & triage, teams/states/labels, SLAs, communication, dashboards, integrations,
+issues, BAU & triage, teams/states/labels, SLAs, communication, dashboards, integrations,
 and the full skills (author, triage, weekly-update, doctor).

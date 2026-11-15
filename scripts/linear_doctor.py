@@ -20,7 +20,7 @@ API = "https://api.linear.app/graphql"
 
 EXPECTED_LABELS = {
     "type": {"action", "feature", "bug", "analysis", "spike"},
-    "flow": {"incident", "vulnerability", "defect", "query", "compliance", "support", "toil"},
+    "bau": {"incident", "vulnerability", "defect", "query", "compliance", "support", "toil"},
     "spend": {"capex", "opex"},
     "product": None,  # open set — only the group itself is required
 }
@@ -205,14 +205,14 @@ def main() -> int:
             continue
         if issue["state"]["type"] == "triage":
             continue  # in-flight at the front door, not a rule-3 violation
-        flow = [lb["name"] for lb in issue["labels"]["nodes"]
-                if lb["parent"] and lb["parent"]["name"] == "flow"]
-        if issue["project"] and flow:
-            flag("rule 3 — every issue is classified", f"BOTH project and flow/*: {label}")
-        elif not issue["project"] and not flow:
+        bau = [lb["name"] for lb in issue["labels"]["nodes"]
+                if lb["parent"] and lb["parent"]["name"] == "bau"]
+        if issue["project"] and bau:
+            flag("rule 3 — every issue is classified", f"BOTH project and bau/*: {label}")
+        elif not issue["project"] and not bau:
             flag("rule 3 — every issue is classified", f"unclassified: {label}")
-        elif len(flow) > 1:
-            flag("rule 3 — every issue is classified", f"multiple flow/* labels: {label}")
+        elif len(bau) > 1:
+            flag("rule 3 — every issue is classified", f"multiple bau/* labels: {label}")
 
     # ---- Report -----------------------------------------------------------------------
     print("linear-doctor — reports drift; does not fix.\n")

@@ -1,6 +1,6 @@
 /* Linear Ways of Working — visual polish.
    Ties the site to the operating-model diagram's palette:
-   slate = strategic / planned path, ox-red = inbound / flow path. */
+   slate = strategic / planned path, ox-red = BAU path. */
 
 :root {
   --lwm-strategic: #3d4c6b;

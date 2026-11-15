@@ -53,18 +53,18 @@ doesn't close a project.
 
 ---
 
-## 3. Every issue is in a project or has one `flow/*` label
+## 3. Every issue is in a project or has one `bau/*` label
 
 Every issue has to belong somewhere, and there are two places it can belong.
 
 | | The issue is… | Which means |
 |---|---|---|
 | ✓ | In a project | Planned work that connects to a Key Result |
-| ✓ | Carrying one `flow/*` label, with no project | Unplanned work that arrived, visible in its own right |
+| ✓ | Carrying one `bau/*` label, with no project | Business as usual: work that arrived, visible in its own right |
 | ✗ | Both | Pick one and drop the other |
 | ✗ | Neither | Unclassified. Nobody can see where it belongs |
 
-The `flow/*` labels exist so that unplanned work doesn't need a pretend project around it. The
+The `bau/*` labels exist so that business-as-usual work doesn't need a pretend project around it. The
 `linear-doctor` skill lists every unclassified issue.
 
 ---
