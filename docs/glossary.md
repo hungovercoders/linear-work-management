@@ -1,34 +1,60 @@
 # :material-book-open-variant: Glossary
 
-Every term the guide leans on, one line each. Terms link to the page that owns them.
+Every term the guide uses, one line each.
+
+## The model
 
 | Term | Meaning |
 |---|---|
-| **Key Result (KR)** | A measurable outcome an [initiative](initiatives.md) declares — **measured** (a metric with baseline → target) or **committed** (a deliverable with a Definition of Done). |
-| **Delta** | The movement a [project](projects.md) promises on a KR — "activation 22% → 30%". Rule 2 is the KR *plus* its delta. |
-| **Ladder** | The traceable line from an issue up through its project's KR to the initiative it serves — the point of the whole model. |
-| **Classification** | Rule 3's requirement: every issue is in a **project** or carries exactly one **`flow/*`** label — never both, never neither. |
-| **Unclassified** | An issue on neither path — invisible work. |
-| **Flow work** | [Inbound work](issues/triage.md) that *arrives* (incidents, requests, compliance, support, toil) rather than being planned — classified by a `flow/*` label, living outside projects. |
-| **Graduation** | A discovery project crossing the `Planned` gate into delivery — linking an existing initiative or seeding a new one from its findings. |
-| **Seeding** | Creating a new initiative *from* a discovery project's findings, rather than from a blank page. |
-| **Aggregation** | Forming one initiative from the shared findings of **several** projects. |
-| **The `Planned` gate** | The moment a project commits: rules 2 (KR + delta) and 5 (dates) switch on, and the graduate / standalone / drop decision is made. |
-| **Discovery** | The `Idea` / `Scoping` phase — exploring at low cost; a named lead but no KR or dates required yet. |
-| **Decision clock** | How fast [triage](issues/triage.md) must *route* an inbound issue — immediate for incidents, 1–2 working days otherwise. |
-| **Resolution clock** | How fast certain flow work must be *fixed* — vulnerability remediation by severity (7 / 30 / 90 days). |
-| **Triage Responsibility** | Linear's native duty rota — the named person whose job this cycle is to *decide* on each inbound item. |
-| **The five outcomes** | Every triage decision is one of: accept into a project · accept as flow · redirect · merge · decline. "Leave it sitting there" isn't one. |
-| **Agent-plan convention** | The issue body is the **prompt** (written at capture); the `## Plan` section is filled **at pickup**, so the approach is reviewable before the code. See [Issues](issues/index.md). |
-| **Native fields, not prose** | Anything Linear models as a field (owner, dates, priority, labels, milestones, dependencies) is set as that field, never written into a description; that's what makes views, roll-ups and the doctor work. |
-| **`type/*`** | The project-issue kind label: `action` (default) · `feature` · `bug` · `analysis` · `spike`. [Reference](teams.md#the-label-taxonomy). |
-| **`flow/*`** | The inbound kind label: `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil`. |
-| **`spend/*`** | Project funding: `capex` or `opex`, set at planning. |
-| **`product/*`** | Which product the work serves — set on the project, inherited by its issues. |
-| **Planning (issue state)** | The issue state between Backlog and Todo: committed to work up — requirements, refinement, sizing — with the clock running. Distinct from the project `Planned` status, which marks a project crossing into delivery. [Issues](issues/index.md). |
-| **Time in state** | How long an issue has sat in its current state — the [Flow](flow.md) page's raw material for spotting bottlenecks. Backlog deliberately doesn't count. |
-| **Additive-only** | Teams may *add* to shared states/labels, never remove or rename them — cross-team views stay comparable. |
-| **Health** | On track · at risk · off track — always a **claim with evidence** (KR movement, issue progress). [Communications](communications.md). |
-| **Roll-up dependency** | An initiative's health is only as good as its projects' updates — silence tempers it. |
-| **The doctor** | `linear-doctor` (scoped, interactive) and `task doctor` (headless, whole-workspace) — report drift from the rules; never fix. |
-| **Pulse** | Linear's native feed of project/initiative updates — the *pull* surface beside the cadence's *push*. [Communications](communications.md). |
+| Initiative | An outcome we want, with Key Results that say how we'll know it worked. [Initiatives](initiatives.md) |
+| Project | A piece of work with one lead that moves a Key Result. [Projects](projects.md) |
+| Issue | One task a person can pick up and finish. [Issues](issues/index.md) |
+| Key Result (KR) | How an initiative is measured. Either measured (a number with a baseline and a target) or committed (done or not done, with a definition of done) |
+| Delta | How far a project promises to move a Key Result, such as "activation 22% → 30%" |
+| Ladder | The line from an issue, through its project's Key Result, up to the initiative. When work "ladders up", it connects to a reason |
+| Health | On track, at risk or off track. Always a claim backed by evidence. [Communications](communications.md#health) |
+
+## Projects growing up
+
+| Term | Meaning |
+|---|---|
+| Discovery | The `Idea` and `Scoping` states, where a project explores. It needs a lead and nothing else |
+| The `Planned` gate | The point where a project commits. It now needs a Key Result, a delta and dates |
+| Graduation | A discovery project becoming delivery work under an initiative |
+| Seeding | Starting a new initiative from what a discovery project found |
+| Aggregation | Starting one initiative from what several projects found |
+
+## Issues and triage
+
+| Term | Meaning |
+|---|---|
+| Classification | Rule 3: every issue is in a project or carries exactly one `flow/*` label |
+| Unclassified | An issue with neither, which nobody can place |
+| Flow work | Unplanned work that arrived (incidents, requests, compliance, support, toil). It has a `flow/*` label and no project. [Triage work](issues/triage.md) |
+| Triage responsibility | Linear's duty rota. The named person who decides what happens to each inbound item |
+| The five outcomes | What a triage decision can be: accept into a project, accept as flow, redirect, merge or decline |
+| Decision clock | How quickly an inbound item must be routed. At once for incidents, one or two working days otherwise |
+| Resolution clock | How quickly a vulnerability must be fixed: 7, 30 or 90 days by severity |
+| Planning (issue state) | The state between Backlog and Todo, where the team has committed and is working out the details. Different from a project being `Planned` |
+| Time in state | How long an issue has sat in its current state. Backlog isn't counted. [Flow](flow.md) |
+| Agent-plan convention | The description is the brief, written when the issue is created. The `## Plan` section is filled in when someone picks it up. [Issues](issues/index.md#prompt) |
+| Native fields | Anything Linear has a field for (owner, dates, priority, labels, milestones, dependencies) goes in that field and stays out of the description |
+
+## Labels
+
+| Term | Meaning |
+|---|---|
+| `type/*` | The kind of project issue: `action` (default), `feature`, `bug`, `analysis` or `spike`. [Labels](teams.md#labels) |
+| `flow/*` | The kind of inbound issue: `incident`, `vulnerability`, `defect`, `query`, `compliance`, `support` or `toil` |
+| `spend/*` | How a project is funded: `capex` or `opex` |
+| `product/*` | Which product the work serves. Set on the project and inherited by its issues |
+| Additive-only | Teams may add states and labels, but never remove or rename shared ones |
+
+## Keeping it honest
+
+| Term | Meaning |
+|---|---|
+| The doctor | `linear-doctor` (one team or project, interactive) and `task doctor` (the whole workspace). Both report problems and neither fixes them |
+| Drift | Anything that has slipped out of line with the rules. [Dashboards](dashboards.md) |
+| Roll-up dependency | An initiative's health is only as good as its projects' updates |
+| Pulse | Linear's feed of project and initiative updates. [Communications](communications.md) |

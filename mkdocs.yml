@@ -64,16 +64,16 @@ plugins:
   # Mermaid still renders client-side via the Material superfence above.
 
 nav:
-  - The Cheat Sheet: index.md
+  - Start here: index.md
   - Worked example: examples.md
-  - The Hard Rules: hard-rules.md
+  - The hard rules: hard-rules.md
   - Initiatives: initiatives.md
   - Projects: projects.md
-  - Work:
+  - Issues:
       - issues/index.md
       - Project work: issues/project-work.md
       - Triage work: issues/triage.md
-  - Teams, states & labels: teams.md
+  - Teams, states and labels: teams.md
   - Communications: communications.md
   - Dashboards: dashboards.md
   - Flow: flow.md

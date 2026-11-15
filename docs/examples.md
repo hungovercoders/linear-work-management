@@ -1,21 +1,21 @@
 # :material-school: Worked example
 
-One chain, end to end, in a real shape rather than a toy: the **dogadopt** product, from
-strategic outcome down to a single picked-up issue, plus one inbound item arriving through
-Triage. Every artefact below follows the live templates, and the native fields sit in the
-comment above each body, exactly as the [skills](skills/index.md) set them.
+<div class="lwm-lead" markdown>
+One real chain from top to bottom, using the **dogadopt** product: an initiative, the project
+under it, three of its issues, and one item that arrived through Triage.
+</div>
 
 ![Worked example: the dogadopt initiative down through a project to three issues, plus one inbound item accepted via Triage.](diagrams/example-chain.svg)
 
-That is the cheat-sheet model with real artefacts in place of the abstract boxes. Each one is
-written out in full below.
+Each quoted block below is the description as it appears in Linear. The line above it lists
+what was set in Linear's own fields.
 
 ---
 
-## 1 · The initiative: the *what & why*, measured
+## 1. The initiative
 
-Native fields: Owner Richard · Status `Active` · Target date 30 Sep 2026 ·
-Slack `#initiative-updates` connected. The description body:
+Fields: owner Richard · status `Active` · target date 30 Sep 2026 · Slack channel
+`#initiative-updates` connected.
 
 > ## Why this matters
 >
@@ -43,18 +43,23 @@ Slack `#initiative-updates` connected. The description body:
 > Consent from each rescue is part of the bar. Scraping without it is a relationship and legal
 > risk, so onboarding includes a consent step.
 
-Rule 1 ✓ (KRs declared, measured, with evidence sources; two are marked TBD, which is a
-dependency rather than a pass). Rule 4 ✓ (one owner). Rule 5 ✓ (target date set).
+How it measures up:
+
+- Rule 1 ✓ It has Key Results, each with a baseline, a target and a place to find the evidence.
+  Two evidence sources are still TBD, and those need sorting out before they can be scored.
+- Rule 4 ✓ It has one owner.
+- Rule 5 ✓ It has a target date.
 
 ---
 
-## 2 · The project: the *how*, promising a delta
+## 2. The project
 
-Born as a project in `Idea` ("could we aggregate Welsh rescues?"), it graduated at the
-`Planned` gate under the initiative above. Native fields: Lead Richard · Status
-`In Progress` · Dates 11 Aug → 12 Sep 2026 · Priority High · Labels
-`spend/capex` + `product/dogadopt` · Milestones "First rescue live", "All 12 consented" ·
-Slack `#project-updates` connected. The body:
+This began as an idea ("could we bring Welsh rescues together?") and joined the initiative above
+when it became `Planned`.
+
+Fields: lead Richard · status `In Progress` · dates 11 Aug → 12 Sep 2026 · priority High ·
+labels `spend/capex` and `product/dogadopt` · milestones "First rescue live" and "All 12
+consented" · Slack channel `#project-updates` connected.
 
 > ## What we're doing and how
 >
@@ -76,24 +81,25 @@ Slack `#project-updates` connected. The body:
 > 12 rescues on the ADCH register at last count; the denominator may move, so recount at each
 > update.
 
-Rule 2 ✓ (KR + delta named). Dependencies: it's **Blocked by** the *Consent process* project,
-drawn as a [native relation](projects.md#dependencies-native-never-prose), visible on the
-timeline.
+How it measures up:
+
+- Rule 2 ✓ It names the Key Result it moves and by how much.
+- It's **Blocked by** the Consent process project. That's recorded as a
+  [dependency in Linear](projects.md#dependencies), so it shows on the timeline.
 
 ---
 
-## 3 · Three issues under it
+## 3. Three of its issues
 
-A `type/feature`, *"Show a rescue's dogs on the search page"*: user value in the Why,
-acceptance criteria listing the observable behaviours, `product/dogadopt` inherited. It has been
-through `Planning` and sits in `Todo`, refined.
+| Type | Title | Where it is |
+|---|---|---|
+| `type/feature` | Show a rescue's dogs on the search page | In `Todo`, refined and ready. It has acceptance criteria and takes `product/dogadopt` from the project |
+| `type/bug` | Refresh job drops dogs with no photo | `Urgent`, next to be picked up. It has steps to reproduce and the impact: listings shrink without anyone noticing |
+| `type/action` | Nightly confirmation email to rescues | Picked up, with its plan written |
 
-A `type/bug`, *"Refresh job drops dogs with no photo"*: steps to reproduce, expected vs actual,
-impact ("listings shrink silently, a trust risk"). It's `Urgent`, picked up next.
-
-A `type/action`, picked up, with its Plan filled. At capture the body was the prompt (What / Why
-/ When it's done). At pickup the assignee added the plan, so the approach is reviewable before
-the code:
+Here is the third one in full. The first four sections were written when the issue was created.
+The assignee added the Plan when they picked it up, so the approach could be reviewed before
+any code:
 
 > ## What needs doing?
 >
@@ -118,34 +124,35 @@ the code:
 > Service) → confirmation hits a Worker route stamping `last_confirmed` → coverage report
 > reads the stamp. No login needed; link is signed, 14-day expiry.
 
-All three satisfy rule 3 ✓ (in the project, one `type/*`, no `flow/*`).
+All three meet rule 3 ✓ They're in the project, with one `type/*` label and no `flow/*` label.
 
 ---
 
-## 4 · One inbound item, received through Triage
+## 4. Something arrives through Triage
 
-An email arrives: *"Your site shows a dog we rehomed last week."* Whoever's on
-[triage duty](issues/triage.md) captures it into **Triage** and decides within the clock:
+An email arrives: "Your site shows a dog we rehomed last week." Whoever is on
+[triage duty](issues/triage.md) puts it into Triage and decides what happens to it.
 
-- Kind: `flow/defect`, a fault reported from outside any project's scope.
-- Outcome: accept into a project. It's the refresh pipeline's bug, so it becomes a `type/bug`
-  in the onboarding project and the `flow/*` label comes off (rule 3, never both).
-- Priority: High, a trust issue rather than an outage. An outage would be `flow/incident`,
-  decided immediately.
+| Question | Answer |
+|---|---|
+| What kind of thing is it? | `flow/defect`, a fault reported from outside |
+| Where does it go? | Into the onboarding project. It's a bug in the refresh job that project is building, so it becomes a `type/bug` there and the `flow/*` label comes off |
+| How urgent is it? | High. It damages trust, but nothing is down. An outage would be a `flow/incident` and decided at once |
 
-Had it been an ad-hoc data ask ("how many collies are listed in Powys?") it would stay flow
-work: `flow/query`, no project, decided within 2 working days.
+If the email had been a one-off question, such as "how many collies are listed in Powys?", it
+would have stayed inbound: `flow/query`, no project, decided within two working days.
 
 ---
 
-## What the example shows
+## What this shows
 
-The ladder holds. The nightly-confirm action serves the coverage KR's freshness bar, the
-project promises that KR 0% → 100%, and the initiative measures why anyone cares. Ask "why am I
-doing this?" at any rung and the answer is one hop up.
+Every piece connects to the one above it. The nightly email keeps listings fresh, and fresh
+listings are what the coverage Key Result counts. The project promises to move that Key Result
+from 0% to 100%. And the initiative says why anyone cares. Ask "why am I doing this?" at any
+level and the answer is one step up.
 
 ## Related
 
-- [The Cheat Sheet](index.md) — the model this walks through
-- [Initiatives](initiatives.md) · [Projects](projects.md) · [Issues](issues/index.md) — the standards each artefact follows
-- [Glossary](glossary.md) — any term above, one line each
+- [Start here](index.md): the model this follows
+- [Initiatives](initiatives.md), [Projects](projects.md) and [Issues](issues/index.md): how to write each piece
+- [Glossary](glossary.md): any term above, one line each

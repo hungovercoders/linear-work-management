@@ -1,114 +1,27 @@
-# Work
+# Issues
 
 <div class="lwm-lead" markdown>
-For anyone who touches the work itself. Work you do is tracked in
-[Linear](https://linear.app/happydevs/team/GRI/all) as an **issue**: the representation of one
-discrete piece of work, understood before it starts. Every issue is one of two kinds, **project
-work** that moves a Key Result or **inbound work** that arrived through Triage. This page is
-what's true of every issue whichever kind it is; the two kinds have a page each below.
+For anyone doing the work. An issue is one task: small enough for one person to finish, and
+clear enough that everyone agrees when it's done.
 </div>
 
-[Every issue in Linear sits on one screen.](https://linear.app/happydevs/team/GRI/all) Same
-tool as the strategy above it, with no boundary between *why* and the task in your cycle.
+[See every issue in Linear.](https://linear.app/happydevs/team/GRI/all) Issues live in the same
+tool as the strategy above them, so the reason behind a task is never far away.
+
+!!! abstract "In short"
+    - Every issue is one of two kinds: [project work](project-work.md) or
+      [inbound work](triage.md) that arrived through Triage.
+    - Write the description so that someone could start without asking you anything.
+    - Put the assignee, priority, status and labels in Linear's fields. Keep them out of the
+      description.
+    - Nothing starts until it reaches `Todo`.
 
 ---
 
-## :material-checkbox-marked-circle-outline: What an issue is
+## :material-directions-fork: Two kinds of issue
 
-An issue is how a piece of work is represented: small enough for one person to pick up and
-finish, clear enough that "done" isn't ambiguous, and understood before it starts. Two things
-are true of every issue, whichever path it arrived on:
-
-- **It's classified**: in a project *or* carrying exactly one `flow/*` label, never both,
-  never neither ([rule 3](../hard-rules.md)). An issue that is neither is *unclassified*:
-  invisible work.
-- **Its body is the prompt**: the description says what to do and what "done" means, well
-  enough that a person *or an agent* can act on it (the [agent-plan convention](#the-body-is-the-prompt)
-  below). It carries a priority (Urgent → Low) that orders it.
-
-Keep the issue about *the task*: the *why* belongs to the [initiative](../initiatives.md), and
-the *what & how* to the [project](../projects.md) above it.
-
----
-
-## :material-timer-sand: The shared lifecycle
-
-Every issue moves through the same states, whichever path it came from:
-
-![Issue lifecycle: two entry points converging on Backlog, then Planning, Todo, In Progress, In Review and Done.](../diagrams/issue-lifecycle.svg)
-
-| State | Means |
-|---|---|
-| Triage | In **Linear's built-in Triage inbox**; awaiting a routing decision (see [Triage work](triage.md)) |
-| Backlog | The default pool — captured or accepted, **no commitment to plan it yet**; no clock runs here |
-| Planning | **Committed to work up** — requirements gathering, refinement and sizing happen here, and the clock runs |
-| Todo | **Refined, actionable, can be picked up now** |
-| In Progress | Being worked |
-| In Review | Work done; under review |
-| Done | Shipped and accepted |
-| Canceled | Won't do; reason recorded |
-| Duplicate | Superseded by another issue |
-
-### Backlog, Planning, Todo — commitment, then readiness
-
-Two transitions here matter most, and they mean different things.
-
-- Backlog → Planning is a *commitment decision*. The team has agreed to work the item up.
-  Anything still in Backlog is honestly parked: captured or accepted, but nobody has promised to
-  refine it, so no clock runs and no one need apologise for its age.
-- Planning is where refinement is *visible work*: sharpen the problem, gather requirements,
-  define what "done" is, size it, clear blockers. Because commitment has been made, time spent
-  here is measured — a growing or ageing Planning column is the evidence that refinement is the
-  constraint (see [Flow](../flow.md)).
-- Planning → Todo is the *readiness gate*. The refinement has been accepted: someone can pick
-  the issue up and start without going back to ask what it means.
-
-Nothing starts from Backlog or Planning. That gate is what keeps *In Progress* honest, because
-everything in it was understood before it began.
-
----
-
-## :material-robot-outline: The body is the prompt
-
-An issue's description is written to be acted on directly, by a person or an agent. That's the
-*agent-plan convention*, and it splits into two moments:
-
-- **At capture**, the body is the prompt. State the problem and what "done" looks like clearly
-  enough that the reader needs nothing else to start. Write it for whoever, or whatever, picks
-  it up. This is all the creation step does: get the task down.
-- **At pickup**, the plan joins it. Whoever picks the issue up, agent or person, works out *how* and
-  writes that plan into the issue's `## Plan` section (left empty at creation), so the approach is
-  reviewable before the code is, and the issue stays the single record of the task.
-
-Keep the two apart. Capturing an issue is *getting it down*; planning the how happens when it's
-picked up.
-
----
-
-## :material-table: Native fields, not prose
-
-Everything Linear models as a field is a native field, never text in the description. The same
-holds on both paths:
-
-| Native field | Set to |
-|---|---|
-| Assignee | The one person doing it |
-| Priority | Urgent → Low |
-| Status | The lifecycle state above |
-| Project **or** `flow/*` | The classification (rule 3) — one, never both |
-| Links | Resources (docs, designs, logs, prior art, related issues) attached, not pasted into the body |
-
-The kind-specific labels (`type/*`, `product/*` for project work; `flow/*` for triage) are on
-the two pages below. The description carries only the *what / why / when*, any *context*, and,
-later, the *plan*: that's the template, and the [`linear-issue`](../skills/index.md) skill fills
-it.
-
----
-
-## :material-directions-fork: Which work is it?
-
-Every issue is exactly one of two kinds, set by how it's classified ([rule 3](../hard-rules.md)).
-Pick your path; each page is written for the people who live on it:
+Each issue is either in a project or carries one `flow/*` label ([rule 3](../hard-rules.md)).
+Which one it is tells you which page to read.
 
 <div class="grid cards" markdown>
 
@@ -116,8 +29,8 @@ Pick your path; each page is written for the people who live on it:
 
     ---
 
-    <span class="lwm-strat">Planned work</span> that sits in a project and traces to its Key
-    Result. `type/*` + `product/*` labels, a priority, and a template per type.
+    <span class="lwm-strat">Planned work</span> inside a project, moving its Key Result. It
+    gets a `type/*` label and a template to match.
 
     For delivery teams. [:octicons-arrow-right-24: Project work](project-work.md)
 
@@ -125,16 +38,89 @@ Pick your path; each page is written for the people who live on it:
 
     ---
 
-    <span class="lwm-inbound">Inbound work</span> that arrived, on one `flow/*` label, no
-    project. Where inbound work enters, the five outcomes, and the two SLA clocks.
+    <span class="lwm-inbound">Inbound work</span> that arrived: an incident, a request, a
+    reported fault. It gets one `flow/*` label and no project.
 
     For the triage rota. [:octicons-arrow-right-24: Triage work](triage.md)
 
 </div>
 
+An issue that is neither is unclassified, and nobody can tell where it belongs.
+
+---
+
+## :material-timer-sand: The states an issue moves through
+
+Both kinds of issue use the same states.
+
+![Issue lifecycle: two entry points converging on Backlog, then Planning, Todo, In Progress, In Review and Done.](../diagrams/issue-lifecycle.svg)
+
+| State | Means |
+|---|---|
+| Triage | In Linear's Triage inbox, waiting for someone to decide where it goes ([Triage work](triage.md)) |
+| Backlog | Written down, with no promise to work on it yet |
+| Planning | The team has committed to it and is working out the details |
+| Todo | Understood and ready to pick up |
+| In Progress | Being worked on |
+| In Review | Finished and being reviewed |
+| Done | Shipped and accepted |
+| Canceled | Won't be done, with the reason recorded |
+| Duplicate | Covered by another issue |
+
+### Backlog, Planning and Todo { #readiness }
+
+These three are easy to blur together, so here is what separates them.
+
+- **Backlog** is a parking place. Nobody has promised anything, so an item can sit here for as
+  long as it likes and no one is counting.
+- **Planning** means the team has said yes. This is where you sharpen the problem, gather
+  requirements, agree what done means, size it and clear blockers. We do measure time here,
+  because a Planning column that keeps growing shows that refinement can't keep up
+  ([Flow](../flow.md)).
+- **Todo** means it's ready. Someone can pick it up and start without coming back to ask what it
+  means.
+
+Nothing starts from Backlog or Planning. That's why everything `In Progress` was understood
+before anyone began.
+
+---
+
+## :material-robot-outline: Write the description as a brief { #prompt }
+
+Write an issue's description for whoever picks it up, whether that's a colleague or an AI agent.
+It gets written in two stages.
+
+1. When you create the issue, say what the problem is and what done looks like, clearly enough
+   that the reader needs nothing else to start. That's all you do at this point.
+2. When someone picks it up, they work out how to do it and write that into the issue's
+   `## Plan` section, which was left empty until now. The approach can then be reviewed before
+   any code is, and the issue stays the one record of the task.
+
+So creating an issue is about getting the task written down. Planning how to do it waits until
+someone starts.
+
+---
+
+## :material-table: Use Linear's fields { #fields }
+
+If Linear has a field for something, use the field and keep it out of the description. Fields
+are what let Linear filter, sort and report, and text in a description does none of that.
+
+| Field | Set it to |
+|---|---|
+| Assignee | The one person doing it |
+| Priority | Urgent to Low |
+| Status | One of the states above |
+| Project or `flow/*` label | Whichever kind of issue it is. Never both |
+| Links | Documents, designs, logs and related issues, attached as links |
+
+That leaves the description with the problem, the reason, what done looks like, any context
+and, later, the plan. The [`linear-issue`](../skills/index.md) skill fills it in from a template.
+
 ---
 
 ## Related
 
-- [The Hard Rules](../hard-rules.md): rule 3 (every issue classified)
-- [The Cheat Sheet](../index.md): the one-page summary this expands
+- [The hard rules](../hard-rules.md): rule 3 covers issues
+- [Flow](../flow.md): spotting where issues get stuck
+- [Start here](../index.md): the overview

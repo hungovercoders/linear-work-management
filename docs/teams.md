@@ -1,108 +1,90 @@
-# :material-account-group: Teams, states & labels
+# :material-account-group: Teams, states and labels
 
-This is the canonical reference for who owns what in the workspace. It holds the shared sets the
-organisation defines so teams can work together, and the room each team keeps for its own ways of
-working. The [doctor](skills/index.md) and the dashboards test against this page, so if a value
-isn't here, it isn't shared.
+<div class="lwm-lead" markdown>
+The shared lists every team uses: which states work moves through, and which labels exist. If
+a value isn't on this page, it isn't shared.
+</div>
+
+!!! abstract "In short"
+    - The organisation sets a small number of things so that work looks the same across teams.
+    - Teams decide the rest for themselves.
+    - Teams can add their own states and labels. They can't remove or rename the shared ones.
 
 ---
 
-## :material-scale-balance: Org invariants vs team room
+## :material-scale-balance: What's shared and what's yours
 
-The organisation defines the invariants every team honours, because cross-team visibility and
-roll-ups break without them:
+Reports and cross-team views only work if a few things mean the same everywhere. These are set
+for the whole organisation:
 
-| Org-defined (shared) | Where it's specified |
+| Shared by everyone | Where it's described |
 |---|---|
-| The five hard rules | [The Hard Rules](hard-rules.md) |
-| The shared state sets (initiative · project · issue) | [below](#the-shared-state-sets) |
-| The label taxonomy | [below](#the-label-taxonomy) |
-| Issue classification (project XOR `flow/*`) | [Issues](issues/index.md) |
-| Update cadence to the shared channels | [Initiatives](initiatives.md) · [Projects](projects.md) |
-| SLAs (decision + resolution clocks) | [Triage work](issues/triage.md) |
+| The five hard rules | [The hard rules](hard-rules.md) |
+| The states for initiatives, projects and issues | [States](#states), below |
+| The labels | [Labels](#labels), below |
+| Every issue being in a project or carrying one `flow/*` label | [Issues](issues/index.md) |
+| When updates are posted, and where | [Communications](communications.md) |
+| How fast inbound work is decided and fixed | [Triage work](issues/triage.md) |
 
-Teams own their internal ways of working. For those the org recommends options and mandates none.
-Everything below is marked as one or the other.
+How a team runs day to day is up to the team. The suggestions further down are only
+suggestions.
 
-### The additive-only rule
+### Add, but don't remove or rename
 
-Teams may add to the shared sets, whether an extra state their workflow needs or a local label,
-but never remove or rename shared values. Insights only stay comparable across teams if the
-shared values mean the same thing everywhere. The shared sets themselves do evolve, but only as
-an org-level change every team adopts together (the Planning issue state arrived that way), which
-differs from a team-local addition.
+A team can add a state its workflow needs, or a label of its own. It can't remove or rename a
+shared one, because then the same word would mean different things in different teams.
 
-!!! example "A live example"
-    The `happydevs` team carries a Review Requested state alongside the shared set, a legitimate
-    local addition. Renaming shared Done or deleting Triage would not be.
+The shared lists do change now and then. When they do, every team adopts the change together,
+which is how the `Planning` issue state arrived.
 
----
-
-## :material-tune: Team settings (recommended, not required)
-
-- Triage on: every team enables [Triage](issues/triage.md) so inbound work has somewhere to
-  arrive, with a **Triage Responsibility** rota so the duty is named.
-- Cycles (team-owned): teams run cycles at their own cadence. The org recommends weekly, a short
-  feedback loop that shows a week's worth of achievement; anything larger belongs to project
-  milestones rather than longer cycles. Whatever the cadence, keep the team's Current and
-  Upcoming cycle views visible to others, which is where the team's near-term work can be seen
-  without asking.
-- Estimates are optional. If used, keep them for the team's own planning rather than cross-team
-  comparison.
-
-## :material-account-multiple: Membership
-
-- Every team has a named owner and members, since accountability needs names (org-level).
-- Recommended: a person has one home team, even when active on several projects. A project can
-  draw on multiple teams while the person's home stays singular, so the team digest and cycle
-  views mean something.
-
-Manage teams in [Linear settings → Teams](https://linear.app/happydevs/settings/teams).
+!!! example "For example"
+    The `happydevs` team has a Review Requested state next to the shared ones, and that's fine.
+    Renaming `Done` or deleting `Triage` would not be.
 
 ---
 
-## :material-tag-multiple: The label taxonomy
+## :material-tag-multiple: Labels { #labels }
 
-There are four workspace-level groups, kept to exactly these values; browse them in
+There are four groups, and you can browse them in
 [Linear settings → Labels](https://linear.app/happydevs/settings/labels).
 
-| Group | Values | Lives on | Set |
+| Group | Values | Goes on | Set when |
 |---|---|---|---|
-| `type/*` | `action` (default) · `feature` · `bug` · `analysis` · `spike` | Project issues | At capture |
-| `flow/*` | `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil` | Inbound issues (exactly one) | At arrival / triage |
-| `spend/*` | `capex` · `opex` | Projects | At planning |
-| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · `cheeserater` · … (grows) | Projects, carried onto their issues | At planning |
+| `type/*` | `action` (default) · `feature` · `bug` · `analysis` · `spike` | Project issues | The issue is created |
+| `flow/*` | `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil` | Inbound issues, exactly one each | It arrives or is triaged |
+| `spend/*` | `capex` · `opex` | Projects | The project is planned |
+| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · `cheeserater` · … (grows) | Projects, and their issues inherit it | The project is planned |
 
-- `type/*` and `flow/*` never meet: a `type/*` means project work, a `flow/*` means inbound
-  ([rule 3](hard-rules.md)).
-- `product/*` is decided once, on the project, and issues inherit it rather than re-deciding it.
-- There is no `risk/*` group; product attribution replaced it.
+A few things to know:
 
-!!! note "Why `flow/defect` + `flow/query` (not `bug` + `analysis` again)?"
-    Linear label names are unique across the whole workspace, even between groups, so
-    the `type/*` group owns `bug` and `analysis`, and the inbound counterparts take their own
-    names: `defect` (a fault reported from outside) and `query` (an ad-hoc data ask).
+- An issue never has both a `type/*` and a `flow/*` label. The first means project work and the
+  second means inbound work ([rule 3](hard-rules.md)).
+- `product/*` is decided once, on the project. Its issues take the same value.
+- There's no `risk/*` group. The product labels replaced it.
+- The old Improvement label belongs to no group. Don't use it on new work.
 
-!!! warning "Legacy label"
-    The flat Improvement label predates the taxonomy and belongs to no group. Don't use it on
-    new work, and retire it once nothing depends on it.
+??? note "Why `flow/defect` and `flow/query`, when `type/*` has `bug` and `analysis`?"
+    Linear label names have to be unique across the whole workspace, even between groups. The
+    `type/*` group uses `bug` and `analysis`, so the inbound equivalents are `defect` (a fault
+    reported from outside) and `query` (a one-off data question).
 
 ---
 
-## :material-list-status: The shared state sets
+## :material-list-status: States { #states }
 
-The [Initiatives](initiatives.md), [Projects](projects.md) and [Issues](issues/index.md) pages all
-take their states from here. The terminal state is spelled **Canceled** (Linear-native) throughout.
+The [Initiatives](initiatives.md), [Projects](projects.md) and [Issues](issues/index.md) pages
+all take their states from here. The closing state is spelled `Canceled` throughout, the way
+Linear spells it.
 
 ### Initiative states
 
-Linear's native initiative statuses match the model's five with no configuration needed:
+Linear's built-in statuses already match, so there's nothing to set up.
 
 **Proposed → Planned → Active → Completed** (or **Canceled**)
 
 ### Project states
 
-Workspace-level project statuses (Settings → Projects), configured to:
+Set once for the workspace, under Settings → Projects.
 
 | Phase | States |
 |---|---|
@@ -112,22 +94,40 @@ Workspace-level project statuses (Settings → Projects), configured to:
 
 ### Issue states
 
-Per-team workflow states, matching the shared set:
+Set for each team, matching this list.
 
 **Triage → Backlog → Planning → Todo → In Progress → In Review → Done** (or **Canceled** ·
 **Duplicate**)
 
-Backlog is the default pool and deliberately carries no clock; Planning is where the clock
-starts, because time spent there is the evidence of a refinement bottleneck (see
-[Flow](flow.md)).
+Nobody counts how long an issue sits in `Backlog`. The counting starts at `Planning`, because
+time spent there shows whether refinement is keeping up ([Flow](flow.md)).
 
-Teams may add local states (additive-only) while the shared ones stay untouched, so cross-team
-views stay comparable.
+---
+
+## :material-tune: Suggestions for teams { #team-settings }
+
+None of these are required.
+
+- Turn [Triage](issues/triage.md) on, and assign Triage responsibility so that someone is always
+  on duty.
+- Run cycles at whatever length suits you. We suggest a week, which is short enough to show
+  what got done. Anything bigger belongs in project milestones.
+- Keep your Current and Upcoming cycle views visible to other teams, so people can see what's
+  coming without asking.
+- Estimates are optional. If you use them, use them for your own planning and don't compare
+  them across teams.
+
+## :material-account-multiple: Membership { #membership }
+
+Every team has a named owner and named members. We suggest each person has one home team, even
+if they work on several projects, so that the team digest and cycle views stay meaningful.
+
+Manage teams in [Linear settings → Teams](https://linear.app/happydevs/settings/teams).
 
 ---
 
 ## Related
 
-- [The Cheat Sheet](index.md) — the one-page summary
-- [The Hard Rules](hard-rules.md) — the invariants these sets serve
-- [Issues](issues/index.md) — how classification uses the label groups
+- [The hard rules](hard-rules.md): what these lists support
+- [Issues](issues/index.md): how issues use the labels
+- [Start here](index.md): the overview
