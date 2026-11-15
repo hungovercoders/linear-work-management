@@ -140,7 +140,7 @@ work: `flow/query`, no project, decided within 2 working days.
 
 ## What the example shows
 
-The ladder holds intact. The nightly-confirm action serves the coverage KR's freshness bar, the
+The ladder holds. The nightly-confirm action serves the coverage KR's freshness bar, the
 project promises that KR 0% → 100%, and the initiative measures why anyone cares. Ask "why am I
 doing this?" at any rung and the answer is one hop up.
 

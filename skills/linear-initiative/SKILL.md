@@ -21,8 +21,8 @@ updates.
 
 ## What good looks like
 
-- Rule 1: declares its Key Results before any project. A result, not a theme.
-- Rule 4: one named owner with strategic seniority. Not a team, not two people.
+- Rule 1: declares its Key Results before any project. Without them it is only a theme.
+- Rule 4: one named owner with strategic seniority, never a team or a pair.
 - Rule 5: a target date, set now (from `Planned` onward), so it can be prioritised.
 - It carries the *why* and *how it's judged*, never the *how it's built*, which is the
   projects' job.

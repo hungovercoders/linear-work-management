@@ -21,7 +21,7 @@ and post updates.
 
 - Rule 2: names the Key Result(s) it moves and the delta (say, "activation 22% → 30%"). No KR
   named, no project (once it's past discovery).
-- Rule 4: one named lead, the deliverer. Not a team, not two people.
+- Rule 4: one named lead, the deliverer, never a team or a pair.
 - Rule 5: start + target-end dates from `Planned` onward, so it can be sequenced.
 - It serves one or more initiatives (many-to-many), and names the KR + delta on each.
   Standalone is allowed but questioned.
@@ -31,8 +31,8 @@ and post updates.
 ## The phase decides which rules apply
 
 A project can enter the model at any point and move on its own timeline, so the skill's first
-job is to locate it on the lifecycle. That's what decides which rules bite, not a fixed
-checklist run every time:
+job is to locate it on the lifecycle. Its position decides which rules apply, so there is no fixed
+checklist to run every time:
 
 - **Discovery** (`Idea` / `Scoping`): needs only a single named lead (rule 4, from day one)
   and a description of what's being explored. No KR, no dates, no initiative required. Don't
@@ -42,7 +42,7 @@ checklist run every time:
   or seed a new one), standalone (allowed, questioned), or drop (`Canceled`).
 - **Delivery** (`Planned` / `In Progress` / `Launching`): fully committed; every rule applies.
 
-So the flow forks up front into the three ways a project actually shows up, rather than assuming
+So the flow forks up front into the three ways a project shows up, rather than assuming
 a create-from-scratch path.
 
 ## Flow

@@ -8,8 +8,8 @@ description: Work a Linear team's Triage inbox to the Ways of Working standard: 
 # linear-triage
 
 Work the team's Triage inbox: give every incoming issue a fast routing decision (one of the
-five outcomes) and clear the queue within the decision clock. This rides on Linear's built-in
-Triage, making the decision to standard rather than replacing the native actions.
+five outcomes) and clear the queue within the decision clock. It uses Linear's built-in Triage and
+its native actions; the skill's part is making each decision to standard.
 
 **Requires:** the **Linear MCP server** connected, to read the Triage queue and apply decisions.
 

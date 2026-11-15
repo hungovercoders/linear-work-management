@@ -9,8 +9,8 @@ description: Draft the weekly team digest for a Linear team: current-cycle progr
 
 Draft the **weekly team digest**: what the cycle achieved, what's in flight, and what arrived in
 Triage. It's the team-level rhythm in the
-[cadence](https://linear-work-management.pages.dev/communications/), where project and initiative
-updates have their own skills and this one is the team's.
+[cadence](https://hungovercoders.github.io/linear-work-management/communications/); project and initiative updates
+have their own skills.
 
 **Requires:** the **Linear MCP server** connected, to read the team's cycle and Triage state.
 
@@ -22,13 +22,13 @@ updates have their own skills and this one is the team's.
   project, accepted as flow, redirected, merged, declined), and what's still waiting, with the
   oldest item's age (the decision clock is watching).
 - Queue ages: the oldest item in Planning, Todo and In Review, the
-  [bottleneck evidence](https://linear-work-management.pages.dev/flow/) the digest carries
+  [bottleneck evidence](https://hungovercoders.github.io/linear-work-management/flow/) the digest carries
   weekly. Backlog is the unmeasured pool and doesn't feature.
 - Anything the team should flag upward, such as a slipped milestone or a blocked dependency.
 
 ## Flow
 
-1. Which team is this digest for, and what's its current cycle.
+1. Ask which team the digest is for, and find its current cycle.
 2. Read the week: gather the lists above with scoped, minimal queries (paginate, the team's slice
    only).
 3. Fill the digest from [`template.md`](template.md) beside this skill, keeping each list to the
@@ -38,5 +38,5 @@ updates have their own skills and this one is the team's.
 
 ## Related
 
-- [Communications](https://linear-work-management.pages.dev/communications/) — the cadence this serves
-- [Triage work](https://linear-work-management.pages.dev/issues/triage/) — the five outcomes it reports on
+- [Communications](https://hungovercoders.github.io/linear-work-management/communications/) — the cadence this serves
+- [Triage work](https://hungovercoders.github.io/linear-work-management/issues/triage/) — the five outcomes it reports on

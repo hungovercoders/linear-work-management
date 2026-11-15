@@ -7,20 +7,20 @@ description: Audit a scoped slice of the Linear workspace for drift from the Way
 
 # linear-doctor
 
-Report drift from the [Ways of Working](https://linear-work-management.pages.dev/) model. The
+Report drift from the [Ways of Working](https://hungovercoders.github.io/linear-work-management/) model. The
 doctor reports rather than fixes: it hands you a list, and you decide.
 
 **Requires:** the **Linear MCP server** connected, to read the slice being audited.
 
 > Two doctors share one rulebook. This skill is the interactive, scoped audit over a team, a
 > project or a filter. The whole-workspace sweep is the headless `task doctor`
-> (`scripts/linear_doctor.py` against the Linear API): it paginates in code, doesn't blow up a
-> model context, and runs in CI. Don't point this skill at a large workspace; that's what the
+> (`scripts/linear_doctor.py` against the Linear API): it paginates in code, doesn't overflow a
+> model's context, and runs in CI. Don't point this skill at a large workspace; that's what the
 > script is for.
 
 ## What it checks
 
-The [five hard rules](https://linear-work-management.pages.dev/hard-rules/):
+The [five hard rules](https://hungovercoders.github.io/linear-work-management/hard-rules/):
 
 1. **Initiatives declare Key Results.** The description names measurable KRs with targets.
 2. **Projects name a KR + delta**, once past discovery (`Planned` onward).
@@ -33,12 +33,12 @@ The [five hard rules](https://linear-work-management.pages.dev/hard-rules/):
 Plus the operational layer:
 
 - The taxonomy is present: the four label groups and their
-  [canonical values](https://linear-work-management.pages.dev/teams/) exist.
+  [canonical values](https://hungovercoders.github.io/linear-work-management/teams/) exist.
 - Stale updates: a project In Progress or Launching with no update in about 10 days, an Active
-  initiative with none in about 35 ([the cadence](https://linear-work-management.pages.dev/communications/)).
+  initiative with none in about 35 ([the cadence](https://hungovercoders.github.io/linear-work-management/communications/)).
 - Native fields written into prose: owner, dates or priority put in a description body instead
   of set as fields.
-- Languishing issues ([Flow](https://linear-work-management.pages.dev/flow/)): no activity for
+- Languishing issues ([Flow](https://hungovercoders.github.io/linear-work-management/flow/)): no activity for
   10 days in Planning, 14 in Todo, or 5 in In Review. Backlog is exempt by design, the
   unmeasured pool.
 
@@ -50,7 +50,7 @@ Plus the operational layer:
 - Triage-state exemption: issues sitting in **Triage** are in-flight and awaiting a decision,
   not rule-3 violations. Distinguish them from the truly unclassified.
 - Pre-model workspaces: if the taxonomy groups don't exist yet, report *that* (rule 3 is
-  unsatisfiable until they do) instead of drowning the user in per-issue findings.
+  unsatisfiable until they do) instead of listing every issue.
 - Slack connections aren't API-visible, so note them as unverified.
 - Languishing is a proxy: Linear stores no entered-state timestamp outside per-issue history,
   so the check reads last activity instead. Any touch resets it, meaning it understates the
@@ -71,6 +71,6 @@ Plus the operational layer:
 
 ## Related
 
-- [The Hard Rules](https://linear-work-management.pages.dev/hard-rules/)
-- [Teams, states & labels](https://linear-work-management.pages.dev/teams/) — the enums it tests against
+- [The Hard Rules](https://hungovercoders.github.io/linear-work-management/hard-rules/)
+- [Teams, states & labels](https://hungovercoders.github.io/linear-work-management/teams/) — the enums it tests against
 - `task doctor` — the headless whole-workspace sweep (CI-friendly, covers initiatives)

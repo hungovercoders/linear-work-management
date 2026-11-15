@@ -1,6 +1,6 @@
 # :material-connection: Integrations
 
-Linear only reflects reality if it's wired to where work and conversation actually happen. Two
+Linear only reflects reality if it's wired to where work and conversation happen. Two
 integrations carry the model. **GitHub** keeps issue state in sync with code, and **Slack**
 carries the [cadence](communications.md). Both are configured once in
 [Linear settings → Integrations](https://linear.app/happydevs/settings/integrations).
@@ -22,8 +22,7 @@ The GitHub integration is live in `happydevs`, linked to the
 3. Magic words work too. A PR description containing *Fixes GRI-123* or *Closes GRI-123* links
    and closes the issue on merge, for work that didn't start from the branch name.
 
-The upshot is that nobody moves issue states by hand for code work. The state is a side effect
-of shipping.
+Nobody moves issue states by hand for code work; the state is a side effect of shipping.
 
 ![GitHub to Linear: branch, push, PR and merge driving issue state as a side effect.](diagrams/github-flow.svg)
 

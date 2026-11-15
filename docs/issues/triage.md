@@ -38,7 +38,7 @@ Exactly one `flow/*` label, and no `type/*` (that's the [project-work](project-w
 !!! note "Why `defect` and `query`, not `bug` and `analysis`?"
     Linear label names are unique across the whole workspace, even between groups, so the
     `type/*` group already owns `bug` and `analysis`. Inbound uses `defect` (a fault reported
-    from outside) and `query` (an ad-hoc data ask). Same idea, different door.
+    from outside) and `query` (an ad-hoc data ask).
 
 ---
 
@@ -65,8 +65,7 @@ routing decision, one of five outcomes ("leave it sitting there" isn't one):
 
 ### Each outcome is a native Triage action
 
-The decision uses the buttons already in Linear's Triage view. We don't reinvent them, just say
-which to reach for:
+The decision uses the buttons already in Linear's Triage view; this table says which to reach for:
 
 | Our outcome | Native Triage action | Then |
 |---|---|---|
@@ -94,9 +93,8 @@ suggestion. It speeds the decision without making it.
 
 One named person owns the Triage inbox at a time (the duty rota), so every item gets a fast
 decision and nothing sits. Use Linear's **Triage responsibility** to assign the current owner and
-rotate it on a schedule, so the queue is always staffed. The duty is to decide, whether that's
-accept, route, merge or decline within the [decision clock](#two-clocks), and not necessarily to
-do the work.
+rotate it on a schedule, so the queue is always staffed. The duty is to decide (accept, route, merge
+or decline) within the [decision clock](#two-clocks), not necessarily to do the work.
 
 On duty, the [`linear-triage`](../skills/index.md) skill walks the inbox with you, reading the
 queue and applying each decision (the `flow/*` label, a priority, and the outcome) to standard.
@@ -149,11 +147,10 @@ way to SLA "decide within X". Wire each accordingly.
   urgent first, and an issue can have an SLA or a due date but not both. **Triage Rules** can
   auto-apply the label on arrival, which is what triggers the SLA.
 
-Not on Business/Enterprise, or want it deterministic? The
+If you're not on Business/Enterprise, or want it deterministic, the
 [`linear-triage`](../skills/index.md) skill sets the issue's `slaBreachesAt` directly per the
-`flow/*` mapping. Either way, every issue carries native SLA fields
-(started · medium-risk · high-risk · breaches) that dashboards and
-[`linear-doctor`](../skills/index.md) watch for.
+`flow/*` mapping. Either way, every issue carries native SLA fields (started · medium-risk ·
+high-risk · breaches) that dashboards and [`linear-doctor`](../skills/index.md) watch.
 
 ---
 

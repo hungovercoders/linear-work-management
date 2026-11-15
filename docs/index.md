@@ -1,7 +1,7 @@
 # The Cheat Sheet
 
 <div class="lwm-lead" markdown>
-One page. If you read nothing else, read this. It is the single source of truth for how we
+If you read only one page, read this one. It is the single source of truth for how we
 use Linear. The [hard rules](hard-rules.md) are the contract, the
 [skills](skills/index.md) apply them for you, and the [glossary](glossary.md) decodes
 any term you meet on the way.
@@ -22,9 +22,8 @@ any term you meet on the way.
 
 ![The operating model: two paths of work — strategic (initiative → project → issue) and inbound (triage → issue).](diagrams/model.svg)
 
-Start with **work** — the thing you actually do. In Linear a piece of work is an **issue**, and
-work comes in two kinds. The only difference is how each one arrives, and neither kind is
-superior:
+Start with **work**, the thing you do. In Linear a piece of work is an **issue**, and
+work comes in two kinds. The only difference is how each arrives, and neither ranks above the other:
 
 | Kind of work | How Linear holds it | What it is |
 |---|---|---|
@@ -41,10 +40,10 @@ superior:
 
 | # | Level | Rule |
 |---|---|---|
-| 1 | Initiative | **Declares its Key Results** before any project: measured (baseline → target) or committed (done/not-done). A result, not a theme. |
+| 1 | Initiative | **Declares its Key Results** before any project: measured (baseline → target) or committed (done/not-done). Without them it is only a theme. |
 | 2 | Project | **Names the Key Result(s) it moves, and by how much** — by `Planned` (`Idea`/`Scoping` may still be exploring). |
 | 3 | Issue | **In a project *or* one `flow/*` label** — never neither, never both. |
-| 4 | Ownership | **One named human owns each initiative and each project.** Not a team, not two people. |
+| 4 | Ownership | **One named human owns each initiative and each project**, never a team or a pair. |
 | 5 | Time-bounds | **Dated from `Planned` onward**: initiatives a target date, projects start + end. |
 
 Where a rule and a convenience conflict, the rule wins. The detail and rationale sit in
@@ -62,7 +61,7 @@ Where a rule and a convenience conflict, the rule wins. The detail and rationale
 | Something broke, arrived, or was reported | **Issue via [Triage](issues/triage.md)** |
 | An idea to explore before committing | **Project in `Idea`** — no initiative or KR needed yet |
 
-How work starts: the easiest way in is a project in `Idea`, which is pure discovery with no
+The easiest way to start work is a project in `Idea`, which is pure discovery with no
 KR required. By `Planned` it either graduates under an initiative (existing, or one it seeds),
 goes standalone (and gets questioned for it), or drops. The [worked example](examples.md) walks
 the whole chain.
@@ -91,5 +90,3 @@ the whole chain.
 - [Setup checklist](setup.md): everything Linear needs configured, tickable
 - [Skills](skills/index.md): the AI skills that do the above on demand
 - [Glossary](glossary.md): every term, one line each
-</content>
-</invoke>

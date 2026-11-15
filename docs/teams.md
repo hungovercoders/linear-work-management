@@ -1,7 +1,7 @@
 # :material-account-group: Teams, states & labels
 
-The canonical reference for who owns what in the workspace. It holds the shared sets the
-organisation defines so the whole works together, and the room teams keep for their own ways of
+This is the canonical reference for who owns what in the workspace. It holds the shared sets the
+organisation defines so teams can work together, and the room each team keeps for its own ways of
 working. The [doctor](skills/index.md) and the dashboards test against this page, so if a value
 isn't here, it isn't shared.
 
@@ -21,8 +21,8 @@ roll-ups break without them:
 | Update cadence to the shared channels | [Initiatives](initiatives.md) · [Projects](projects.md) |
 | SLAs (decision + resolution clocks) | [Triage work](issues/triage.md) |
 
-Teams own their own internal ways of working. For those the org recommends and makes options
-available without mandating them. Everything below is marked as one or the other.
+Teams own their internal ways of working. For those the org recommends options and mandates none.
+Everything below is marked as one or the other.
 
 ### The additive-only rule
 
@@ -30,7 +30,7 @@ Teams may add to the shared sets, whether an extra state their workflow needs or
 but never remove or rename shared values. Insights only stay comparable across teams if the
 shared values mean the same thing everywhere. The shared sets themselves do evolve, but only as
 an org-level change every team adopts together (the Planning issue state arrived that way), which
-is a different thing from a team-local addition.
+differs from a team-local addition.
 
 !!! example "A live example"
     The `happydevs` team carries a Review Requested state alongside the shared set, a legitimate
@@ -63,7 +63,7 @@ Manage teams in [Linear settings → Teams](https://linear.app/happydevs/setting
 
 ## :material-tag-multiple: The label taxonomy
 
-Four groups, workspace-level, created and maintained to exactly these values; browse them in
+There are four workspace-level groups, kept to exactly these values; browse them in
 [Linear settings → Labels](https://linear.app/happydevs/settings/labels).
 
 | Group | Values | Lives on | Set |
@@ -91,9 +91,8 @@ Four groups, workspace-level, created and maintained to exactly these values; br
 
 ## :material-list-status: The shared state sets
 
-The single source the [Initiatives](initiatives.md), [Projects](projects.md) and
-[Issues](issues/index.md) pages reference. The terminal state is spelled **Canceled**
-(Linear-native) throughout.
+The [Initiatives](initiatives.md), [Projects](projects.md) and [Issues](issues/index.md) pages all
+take their states from here. The terminal state is spelled **Canceled** (Linear-native) throughout.
 
 ### Initiative states
 

@@ -11,7 +11,6 @@ vars:
   PY: "{{.VENV}}/bin/python"
   PIP: "{{.VENV}}/bin/pip"
   MKDOCS: "{{.VENV}}/bin/mkdocs"
-  CF_PAGES_PROJECT: linear-work-management
 
 tasks:
   setup:
@@ -52,12 +51,6 @@ tasks:
     deps: [setup, skills:index, diagrams:check]
     cmds:
       - "{{.MKDOCS}} build --strict"
-
-  deploy:
-    desc: Deploy ./site to Cloudflare Pages (needs wrangler + CF creds).
-    deps: [build]
-    cmds:
-      - npx wrangler pages deploy site --project-name={{.CF_PAGES_PROJECT}}
 
   doctor:
     desc: Audit the Linear workspace against the documented rules (see GRI-77).
