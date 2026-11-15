@@ -25,10 +25,10 @@ This repo is that place.
 3. Every issue is either in a project or carries one `flow/*` label. Never both,
    never neither.
 4. One named human owns each initiative and each project.
-5. Initiatives and projects carry dates from `Planned` onward — initiatives a target
+5. Initiatives and projects carry dates from `Planned` onward: initiatives a target
    date, projects start + end.
 
-Everything else here is elaboration on those; see **[The Hard Rules](docs/hard-rules.md)**.
+Everything else here expands on those; see **[The Hard Rules](docs/hard-rules.md)**.
 
 ---
 

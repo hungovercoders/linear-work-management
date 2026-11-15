@@ -21,7 +21,7 @@ and create the issue.
 ## What good looks like
 
 - Rule 3, classified: in a project *or* carrying exactly one `flow/*` label, never both, never
-  neither. This is the first decision, and it picks the whole rest of the shape.
+  neither. This is the first decision, and it sets the shape of everything after.
 - Understood before it starts, so the problem and what "done" means are clear enough to hand to
   someone (or something) without a follow-up question.
 - A `type/*` for project issues, where `action` is the default (any work that needs doing) and
@@ -104,7 +104,7 @@ body** at capture. Pick the one matching the type:
 | `spike` | [`template-spike.md`](template-spike.md) | The question / Why (what it unblocks) / Time box / Notes / Plan |
 
 `action` is the base and also serves inbound kinds with no bespoke template. Every template keeps
-the same non-negotiables: the native-fields header, a why, and the `## Plan` section left empty
+the same fixed parts: the native-fields header, a why, and the `## Plan` section left empty
 at creation and filled at pickup. Resources go in native Links, never a body section.
 
 The assignee, priority, status, project or `flow/*` classification and `type/*` or `product/*`

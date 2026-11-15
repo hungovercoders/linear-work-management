@@ -14,8 +14,8 @@ doctor reports rather than fixes: it hands you a list, and you decide.
 
 > Two doctors share one rulebook. This skill is the interactive, scoped audit over a team, a
 > project or a filter. The whole-workspace sweep is the headless `task doctor`
-> (`scripts/linear_doctor.py` against the Linear API): it paginates in code, doesn't blow up a
-> model context, and runs in CI. Don't point this skill at a large workspace; that's what the
+> (`scripts/linear_doctor.py` against the Linear API): it paginates in code, doesn't overflow a
+> model's context, and runs in CI. Don't point this skill at a large workspace; that's what the
 > script is for.
 
 ## What it checks
@@ -50,7 +50,7 @@ Plus the operational layer:
 - Triage-state exemption: issues sitting in **Triage** are in-flight and awaiting a decision,
   not rule-3 violations. Distinguish them from the truly unclassified.
 - Pre-model workspaces: if the taxonomy groups don't exist yet, report *that* (rule 3 is
-  unsatisfiable until they do) instead of drowning the user in per-issue findings.
+  unsatisfiable until they do) instead of listing every issue.
 - Slack connections aren't API-visible, so note them as unverified.
 - Languishing is a proxy: Linear stores no entered-state timestamp outside per-issue history,
   so the check reads last activity instead. Any touch resets it, meaning it understates the

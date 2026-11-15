@@ -82,8 +82,8 @@ Current `happydevs` state is reflected below, and ticked items are done.
 
 ## Verify it
 
-- Run **`task doctor`** (headless, whole workspace). A clean bill of health means the invariants
-  hold; findings tell you exactly which box above is lying.
+- Run **`task doctor`** (headless, whole workspace). A clean run means the invariants hold; findings
+  tell you which box above is wrong.
 - Glance at the [drift views](dashboards.md), where empty is the goal.
 
 ## Related

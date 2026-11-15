@@ -1,10 +1,9 @@
 # :material-chart-timeline-variant: Flow
 
-This page is about how work moves through the [issue states](teams.md#issue-states), which is a
-different thing from the `flow/*` labels that classify [inbound work](issues/triage.md). A
-bottleneck is a queue, and a queue is visible as time in state: when a stage of the process
-can't keep up, work piles up in the state before it and sits. Measure the sitting and the
-constraint names itself.
+Flow here means how work moves through the [issue states](teams.md#issue-states), which is different
+from the `flow/*` labels that classify [inbound work](issues/triage.md). A bottleneck is a queue,
+and a queue is visible as time in state: when a stage of the process can't keep up, work piles up in
+the state before it and sits. Measure the sitting and the constraint names itself.
 
 ## What each state's age tells you
 
@@ -34,8 +33,8 @@ None of this needs new tooling, just a handful of shared views.
   views show the *wait*. A Planning column twice the size of Todo is refinement capacity
   failing to keep up.
 - Where your plan includes Linear Insights, chart open issues by state with average age, and
-  watch the trend rather than the snapshot. A Planning average that climbs week on week is
-  exactly the evidence this page exists to surface.
+  watch the trend rather than the snapshot. A Planning average that climbs week on week is the
+  evidence to look for.
 
 Favourite the views into the shared sidebar beside the [drift views](dashboards.md), and record
 their URLs there once they exist.
@@ -73,4 +72,4 @@ above measure the actual durations; the doctor catches what nobody happened to b
 - [Issues](issues/index.md) — the lifecycle these measurements hang off
 - [Teams, states & labels](teams.md) — the shared state set, including Planning
 - [Dashboards](dashboards.md) — the drift views these queues sit beside
-- [Triage work](issues/triage.md) — the decision clock at the head of the pipe
+- [Triage work](issues/triage.md) — the decision clock at the start of the lifecycle

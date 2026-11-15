@@ -20,12 +20,12 @@ A project is a bounded body of work with one named lead, the *what & how* betwee
 above it and the tasks below. Two things hold across its whole life; a third arrives when it
 commits:
 
-- **One named lead**, named from the moment it exists, at `Idea` (rule 4). Always.
+- **One named lead** from the moment it exists, at `Idea` (rule 4).
 - **A defined scope**: what we're doing and how, the shape of the work, its milestones and its
   dependencies.
 - **A Key Result it moves, and by how much**: the measure it takes from an initiative and the
-  delta it promises. This is the point of a project in delivery; in discovery that measure is
-  exactly what it's still trying to find, so it isn't required yet.
+  delta it promises. This is the point of a project in delivery; in discovery that measure is what
+  it's still trying to find, so it isn't required yet.
 
 Everything about *why the outcome matters* belongs to the [initiative](initiatives.md) above,
 and everything about *the individual tasks* belongs to the [issues](issues/index.md) beneath.
@@ -55,8 +55,8 @@ A project can enter at either phase. Most start in `Idea` and cross the gate as 
 (discovery, below). But one whose outcome is already agreed can be created straight into
 `Planned`: it skips discovery, yet still owes a lead, a named KR + delta and dates from the
 moment it exists. Graduation is different again: it's a *transition* of a project that already
-exists in discovery, not a fresh creation. The [`linear-project`](skills/index.md) skill routes
-on exactly this: new idea, graduate an existing one, or born committed.
+exists in discovery, not a fresh creation. The [`linear-project`](skills/index.md) skill routes on
+this choice: new idea, graduate an existing one, or born committed.
 
 ---
 
@@ -66,7 +66,7 @@ The easiest way to start work is a project in `Idea`. Explore before you commit.
 discovery may have no parent initiative and no named Key Result; that's legitimate, and it's
 where an initiative's groundwork gets recorded.
 
-One thing is not optional, even here: a single named lead. Rule 4 applies from day one.
+A single named lead is required even here. Rule 4 applies from day one.
 Ownership is named the moment the project exists, at `Idea`, not deferred to `Planned`. Only the
 KR and the dates wait for commitment.
 
@@ -88,7 +88,7 @@ project route that triage takes.
 
 ## Delivery phase: build the committed outcome (`Planned` · `In Progress` · `Launching`)
 
-Committed and linked to an outcome. Now the rules bite.
+The project is now committed and linked to an outcome, so every rule applies.
 
 ### Name the Key Result it moves, and by how much
 
@@ -136,8 +136,8 @@ description goes stale the moment dates move; a native one shows up in views and
   bar to another.
 - What you get: the relation on both projects' overview panels, and connector lines on the
   timeline. They're blue while the dates work and red when the dependency is violated (the
-  blocking project's end now falls after the blocked project's start). A red line is a
-  sequencing conversation, not a decoration.
+  blocking project's end now falls after the blocked project's start). A red line means the two
+  leads need to talk about sequencing.
 
 ---
 
@@ -198,4 +198,3 @@ part is the template.
 - [The Hard Rules](hard-rules.md): rules 2 (name the KR + delta), 4 (single lead), 5 (dates)
 - [Initiatives](initiatives.md): the outcome a project graduates under and serves
 - [The Cheat Sheet](index.md): the one-page summary this expands
-</content>

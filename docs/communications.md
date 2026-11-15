@@ -1,8 +1,8 @@
 # :material-bullhorn: Communications
 
-The single home for update cadence. Every rhythm in the model is stated here once, and the other
+Every update rhythm in the model is stated here once, and the other
 pages point back to it. The aim is that the right audience hears about KR movement, project
-health and launches without asking, while nobody drowns in noise.
+health and launches without asking, and nobody drowns in noise.
 
 ---
 

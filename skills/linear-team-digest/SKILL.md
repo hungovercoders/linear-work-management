@@ -9,8 +9,8 @@ description: Draft the weekly team digest for a Linear team: current-cycle progr
 
 Draft the **weekly team digest**: what the cycle achieved, what's in flight, and what arrived in
 Triage. It's the team-level rhythm in the
-[cadence](https://linear-work-management.pages.dev/communications/), where project and initiative
-updates have their own skills and this one is the team's.
+[cadence](https://linear-work-management.pages.dev/communications/); project and initiative updates
+have their own skills.
 
 **Requires:** the **Linear MCP server** connected, to read the team's cycle and Triage state.
 
@@ -28,7 +28,7 @@ updates have their own skills and this one is the team's.
 
 ## Flow
 
-1. Which team is this digest for, and what's its current cycle.
+1. Ask which team the digest is for, and find its current cycle.
 2. Read the week: gather the lists above with scoped, minimal queries (paginate, the team's slice
    only).
 3. Fill the digest from [`template.md`](template.md) beside this skill, keeping each list to the

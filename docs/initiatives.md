@@ -34,17 +34,17 @@ initiative about ends, not means.
 
 ## Where an initiative comes from
 
-Initiatives rarely spring up fully formed. There are three ways one starts, and the question
+Few initiatives start fully formed. There are three ways one starts, and the question
 behind all of them is the same: what evidence is this outcome built on?
 
 ![Three origins converging on one initiative outcome.](diagrams/initiative-origin.svg)
 
 - **Spontaneous**: a fresh strategic bet with no project behind it. Leadership names an outcome
-  directly. Legitimate, but it still has to earn its Key Results like any other.
+  directly. That's allowed, but it still has to declare its Key Results like any other.
 - **Graduation**: a single discovery project (`Idea`/`Scoping`) matures into an outcome big
   enough to stand on its own. At the [`Planned` gate](projects.md#discovery-phase-is-there-something-here-idea-scoping)
   it seeds a new initiative or links to an existing one. Most initiatives arrive this way.
-- **Aggregation**: several discovery projects turn out to be facets of one larger outcome, and
+- **Aggregation**: several discovery projects turn out to be parts of one larger outcome, and
   their findings combine into a single initiative that then coordinates them.
 
 However it starts, the initiative declares its Key Results (below). The projects that fed it
@@ -57,9 +57,9 @@ baselines in their findings and links each one, so the lineage is recorded.
 
 !!! tip "New initiative, or extend an existing one?"
     Ask whether this work would move a Key Result an existing initiative already declares. If
-    yes, link the project there; no new initiative needed. Only when the outcome is genuinely
-    new, with no existing KR to capture it, does it earn its own. Fewer, sharper initiatives
-    beat a landscape of near-duplicates.
+    yes, link the project there; no new initiative needed. Only when the outcome is new, with no
+    existing KR to capture it, does it earn its own. A few sharp initiatives beat many
+    near-duplicates.
 
 ---
 
@@ -85,7 +85,7 @@ doesn't belong:
 |---|---|---|
 | SOC 2 Type II | Report issued with no exceptions | Auditor's signed report |
 
-Those Key Results are exactly what the projects below will name and move; that's
+Those Key Results are what the projects below name and move; that's
 [rule 2](hard-rules.md). The chain runs: initiatives *declare* KRs, projects *name which
 one(s) and the delta*, issues *do the work*. Every issue in your cycle should trace back up
 this line.
@@ -99,8 +99,8 @@ this line.
 ## Own it
 
 [Hard rule 4](hard-rules.md) puts one named human on the initiative: someone with the strategic
-seniority to answer *why this matters* and *how we know it worked*. Not a team, not two people
-sharing it. The owner is accountable for the outcome, not for building it.
+seniority to answer *why this matters* and *how we know it worked*. It can't be a team, or two
+people sharing it. The owner is accountable for the outcome, not for building it.
 
 ---
 
@@ -113,7 +113,7 @@ underway against it. Undated strategy can't be prioritised or sequenced against 
 
 Set the timeframe to the outcome, not a calendar habit:
 
-- Many initiatives fit a quarter, a clean OKR rhythm.
+- Many initiatives fit a quarter, the usual OKR rhythm.
 - Some run a year or more, like a large programme or a multi-phase bet. That's fine; give it a
   real horizon and revisit the KRs as it progresses.
 
@@ -121,23 +121,23 @@ Set the timeframe to the outcome, not a calendar habit:
 
 ## States and the two gates
 
-Initiative states are a fixed set; Linear doesn't let you customise them. Five states, each
-with a plain definition of done:
+Initiative states are a fixed set; Linear doesn't let you customise them. There are five, each with
+a plain definition of done:
 
 | State | Means | Move on when |
 |---|---|---|
 | Proposed | Being considered; not yet agreed | Leadership agrees it's worth doing |
-| Planned | Agreed & prioritised (owner named, KRs written, target date set); not yet started | Work actually begins |
+| Planned | Agreed & prioritised (owner named, KRs written, target date set); not yet started | Work begins |
 | Active | Work is underway against the target date; projects are moving its KRs | KRs are achieved, or the window closes |
 | Completed | KRs achieved, or the timeframe closed and scored | — |
 | Canceled | Dropped; reason recorded | — |
 
-Two transitions carry real weight:
+Two transitions matter most:
 
 | Gate | From → To | What has to be true |
 |---|---|---|
 | **Strategic agreement** | Proposed → Planned | Leadership agrees; a single owner is named; the KR table **and the target date** are set |
-| **Kick-off** | Planned → Active | Work actually starts against the date already set at `Planned` |
+| **Kick-off** | Planned → Active | Work starts against the date already set at `Planned` |
 
 Everything after Active is bookkeeping. Score the KRs and mark it Completed, or record why and
 mark it Canceled.
@@ -211,4 +211,3 @@ updates post there. The description carries only the *why*, the Key Results, *ou
 
 - [The Hard Rules](hard-rules.md): rules 1 (declare KRs), 4 (single owner), 5 (time-bounds)
 - [The Cheat Sheet](index.md): the one-page summary this expands
-</content>

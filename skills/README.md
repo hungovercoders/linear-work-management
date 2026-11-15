@@ -18,7 +18,7 @@ skills/<name>/
   template-<x>.md   # OR a set, one per value of a native field, when the shape differs by kind
 ```
 
-Most skills ship a single `template.md`. Where the artefact's shape genuinely differs by a
+Most skills ship a single `template.md`. Where the artefact's shape differs by a
 native field, a skill ships one template per value instead: `linear-issue` has one per `type/*`
 (`template-action.md` is the default and base, then `feature` · `bug` · `analysis` · `spike`).
 Skills that produce a decision or a report rather than a description carry no template at all;
@@ -32,7 +32,7 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 1. **Template(s) beside the skill.** Any skill that produces a Linear artefact keeps its
    `template.md` in the same directory as the single source of truth, or one or more
    `template-<x>.md` when the artefact's shape differs by a native field (say `linear-issue`,
-   one per `type/*`). The skill fills it and a human can copy it by hand. Same file, two paths.
+   one per `type/*`). The skill fills it and a human can copy it by hand, both from the same file.
 2. **Native fields, not prose.** Templates are the description body only. Everything Linear
    models as a field, whether name, lead or owner, status, dates, priority, initiative links,
    labels or the connected Slack channel, is set as a native Linear field rather than baked into

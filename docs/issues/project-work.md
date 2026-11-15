@@ -34,9 +34,8 @@ it per issue. `flow/*` never appears on a project issue; that's the [triage](tri
 
 !!! tip "Feature or action?"
     One question decides it: does someone get a new capability when this ships? If yes, it's a
-    `feature` and acceptance criteria earn their keep. If no (upkeep, a change, a chore, a
-    reminder) it's an `action`. When in doubt, `action` is the default for a reason, and
-    mislabelling costs nothing but a relabel.
+    `feature` and acceptance criteria are worth writing. If no (upkeep, a change, a chore, a
+    reminder) it's an `action`. When in doubt, use `action`; a wrong label costs only a relabel.
 
 ## :material-sort-variant: Priority
 
@@ -49,7 +48,7 @@ description.
 ## :material-file-document-multiple-outline: The templates, one per `type/*`
 
 The [`linear-issue`](../skills/index.md) skill writes the description body from the template that
-matches the type. Every template keeps the same non-negotiables (a native-fields header, a why,
+matches the type. Every template keeps the same fixed parts (a native-fields header, a why,
 and a `## Plan` section left empty at creation and filled at pickup) while the middle varies by
 type:
 

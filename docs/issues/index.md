@@ -51,7 +51,7 @@ Every issue moves through the same states, whichever path it came from:
 
 ### Backlog, Planning, Todo — commitment, then readiness
 
-Two transitions here carry the model's weight, and they mean different things.
+Two transitions here matter most, and they mean different things.
 
 - Backlog → Planning is a *commitment decision*. The team has agreed to work the item up.
   Anything still in Backlog is honestly parked: captured or accepted, but nobody has promised to
@@ -76,10 +76,9 @@ An issue's description is written to be acted on directly, by a person or an age
 - **At capture**, the body is the prompt. State the problem and what "done" looks like clearly
   enough that the reader needs nothing else to start. Write it for whoever, or whatever, picks
   it up. This is all the creation step does: get the task down.
-- **At pickup**, store the plan against the issue. *Later*, when the issue is picked up and an
-  agent (or a person) works out *how*, that plan is captured in the issue's `## Plan` section
-  (left empty at creation), so the approach is reviewable before the code is, and the issue
-  stays the single record of the task.
+- **At pickup**, the plan joins it. Whoever picks the issue up, agent or person, works out *how* and
+  writes that plan into the issue's `## Plan` section (left empty at creation), so the approach is
+  reviewable before the code is, and the issue stays the single record of the task.
 
 Keep the two apart. Capturing an issue is *getting it down*; planning the how happens when it's
 picked up.
@@ -139,4 +138,3 @@ Pick your path; each page is written for the people who live on it:
 
 - [The Hard Rules](../hard-rules.md): rule 3 (every issue classified)
 - [The Cheat Sheet](../index.md): the one-page summary this expands
-</content>

@@ -1,8 +1,8 @@
 # The Hard Rules
 
-Everything else in this guide is elaboration on these. Where a rule and a convenience
-conflict, the rule wins; that is what makes the model hold. One rule per level, plus two
-cross-cutting invariants: ownership and time-bounds.
+Everything else in this guide expands on these. Where a rule and a convenience
+conflict, the rule wins; that is what makes the model hold. There is one rule per level, plus two
+that span levels: ownership and time-bounds.
 
 ---
 
@@ -19,7 +19,7 @@ Result is one of two kinds:
 Then:
 
 - No Key Results, no initiative. Without them it's a wish.
-- Those KRs are exactly what the projects below will name and move (rule 2). This is the
+- Those KRs are what the projects below name and move (rule 2). This is the
   measurement chain: initiatives *declare* KRs, projects *name which one(s)*, issues *do the
   work*.
 
@@ -32,10 +32,10 @@ A project exists to move a measure on an initiative. Name which KR and the delta
 something checkable.
 
 Work starts as a project in `Idea`. That's the entry point for planned work; no initiative or
-KR is needed to begin. `Idea` and `Scoping` are discovery, where a project may legitimately
-have no parent and no named KR, though it still has a named lead (rule 4 applies throughout).
-Discovery is also where the work of *forming* an initiative gets recorded. The rule bites from
-`Planned`, where discovery resolves into one of three:
+KR is needed to begin. `Idea` and `Scoping` are discovery, where a project may have no parent and no
+named KR, though it still has a named lead (rule 4 applies throughout). Discovery is also where the
+work of *forming* an initiative gets recorded. The rule applies from `Planned`, where discovery
+resolves into one of three:
 
 - Graduate: mature from discovery into delivery, attached to an outcome, either linked to an
   existing initiative or seeding a new one (a deliberate strategic step, distinct from the flow
@@ -44,7 +44,7 @@ Discovery is also where the work of *forming* an initiative gets recorded. The r
 - Drop it (Canceled).
 
 A project can belong to more than one initiative; when it does, name the KR and delta it moves
-on each. Every committed KR carries a named delta. And **Completed** means delivered *and* the
+on each. Every committed KR carries a named delta. **Completed** means delivered *and* the
 KR delta observed, not merely shipped.
 
 ---
@@ -80,18 +80,17 @@ Ownership is singular and named: a person, not a team, and not two people splitt
 
 ## 5. Initiatives and projects carry dates from `Planned` onward
 
-Undated work can't be prioritised or sequenced. Dates are what make dependency mapping and
-on-track delivery possible: upcoming work can see what it depends on and whether that will land
-in time. Because prioritisation happens *before* work starts, the date is set when the work is
-agreed, not when it becomes active.
+Undated work can't be prioritised or sequenced. Dates let upcoming work see what it depends on and
+whether that will arrive in time. Because prioritisation happens *before* work starts, the date is
+set when the work is agreed, not when it becomes active.
 
 - **Initiatives:** from `Planned` onward, carry a timeframe or target date (OKR-style: often a
   quarter, but some run a year or more), set alongside the owner and KRs when the initiative is
   agreed. `Active` means work is now underway against that date, not that the date appears for
   the first time. A `Proposed` initiative that isn't agreed yet is exempt until it's planned.
 - **Projects:** from `Planned` onward carry a start and a target end date. `Idea` and `Scoping`
-  projects are still being shaped, so dates firm up as they commit; that's exactly what
-  `Planned` means ("agreed, dated, resourced").
+  projects are still being shaped, so dates firm up as they commit; that's what `Planned` means
+  ("agreed, dated, resourced").
 - Dependencies between projects (drawn at the project level) only tell you about risk once both
   ends have dates.
 
@@ -99,4 +98,3 @@ agreed, not when it becomes active.
 
 These are what the [`linear-doctor`](skills/index.md) skill checks first, and what every other
 page here assumes. Back to the [cheat sheet](index.md).
-</content>
