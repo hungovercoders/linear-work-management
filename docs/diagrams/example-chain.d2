@@ -6,38 +6,38 @@
 direction: down
 
 # ---- the initiative ----
-initiative: "INITIATIVE · Effortless rescue-dog adoption\nActive · owner Richard · target 30 Sep\nKR: Welsh rescues live 0% → 100%" {
+initiative: "INITIATIVE · Effortless rescue-dog adoption\nActive · owner Richard · target 30 Sep\nKey Result: Welsh rescues in the portal, 0% → 100%" {
   style: {fill: "#E4EAF6"; stroke: "#3D4C6B"; border-radius: 8; bold: true; stroke-width: 2}
 }
 
 # ---- the project (with its blocking dependency) ----
-project: "PROJECT · Onboard Welsh rescues\nIn Progress · moves the KR 0% → 100%\nspend/capex · product/dogadopt" {
+project: "PROJECT · Onboard Welsh rescues\nIn Progress · lead Richard\nmoves that Key Result from 0% to 100%" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 8; bold: true}
 }
-consent: "Consent process\n(blocking dependency)" {
+consent: "PROJECT · Consent process\nhas to finish first" {
   style: {fill: "#FCFCFD"; stroke: "#A9B2C4"; border-radius: 7}
 }
 
 # ---- the three project issues ----
-feature: "type/feature\nShow a rescue's dogs — Todo" {
+feature: "type/feature · Todo\nShow a rescue's dogs on search" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
 }
-bug: "type/bug\nRefresh drops photoless dogs — Urgent" {
+bug: "type/bug · Urgent\nRefresh drops dogs with no photo" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
 }
-action: "type/action\nNightly confirm email — plan filled" {
+action: "type/action · In Progress\nNightly confirmation email" {
   style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; border-radius: 7}
 }
 
 # ---- the inbound item, accepted into the project ----
-inbound: "flow/defect · 'shows a rehomed dog'\naccepted into the project as a type/bug" {
+inbound: "Arrives in Triage as bau/defect\n\"Your site shows a dog we rehomed\"" {
   style: {fill: "#F8EDEE"; stroke: "#8C2F39"; border-radius: 7}
 }
 
 # ---- the chain ----
-initiative -> project: contains · names its KR {style.stroke: "#3D4C6B"}
+initiative -> project {style.stroke: "#3D4C6B"}
 consent -> project: blocks {style: {stroke: "#A9B2C4"; stroke-dash: 4}}
 project -> feature {style.stroke: "#3D4C6B"}
 project -> bug {style.stroke: "#3D4C6B"}
 project -> action {style.stroke: "#3D4C6B"}
-inbound -> project: triaged in {style.stroke: "#8C2F39"}
+inbound -> project: accepted as a type/bug {style.stroke: "#8C2F39"}
