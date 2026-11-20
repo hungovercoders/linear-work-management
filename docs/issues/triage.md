@@ -1,168 +1,118 @@
-# Triage work
+# Triage and BAU
 
 <div class="lwm-lead" markdown>
-For whoever is on triage duty. Business as usual (BAU) is the work nobody planned: an
-incident, a request, a reported fault, a quick data question. It arrives in Triage, and your
-job is to decide where it goes. Everything on the [Issues](index.md) page applies here too.
+<span class="lwm-for">For whoever is on triage duty</span>
+
+BAU (business as usual) is the work nobody planned: an incident, a request, a reported fault.
+It arrives in Triage, and your job is to decide where it goes.
 </div>
 
-!!! abstract "In short"
-    - Everything that comes in arrives in Linear's Triage inbox.
-    - One named person is on duty. They decide, and they don't have to do the work.
-    - Every item gets one of five outcomes. Leaving it there isn't one of them.
-    - Work that stays BAU gets exactly one `bau/*` label and no project.
-    - Decide quickly: at once for incidents, within a day or two for everything else.
+## Your job on duty
 
----
+Triage is Linear's inbox for each team. New issues from integrations, customers and colleagues
+arrive there before they join the team's work.
 
-## :material-door-open: What Triage is
+One named person owns it at a time. You decide what happens to each item. You don't have to do
+the work yourself.
 
-Triage is a feature built into Linear: an inbox for each team, separate from the backlog. New
-issues from integrations, Slack, customers and the API arrive there first, so a person decides
-where each one goes before it joins the team's work.
+The [`linear-triage`](../skills/index.md) skill will go through the inbox with you.
 
-Turn it on under **Team settings → Triage**. Work reaches it in a few ways:
+## Five things you can do with an item
 
-- Integrations such as Sentry, GitHub, Zendesk and Intercom create issues straight into it.
-- Linear Asks can send requests raised in Slack. It needs the Business or Enterprise plan and a
-  connected Slack, and we have neither yet ([Integrations](../integrations.md)).
-- Customer requests, forms and the API arrive there too.
-- Anyone can move a stray issue into Triage by hand when it needs a decision.
+"Leave it there" isn't one of them.
 
-Linear's Triage Intelligence can suggest a label, spot likely duplicates and propose a team or
-assignee. Treat that as a first guess. The decision is still yours.
+Accept into a project
+:   A project already owns the thing this touches. **Accept**, add it to the project and give it
+    a `type/*` label.
 
----
+Accept as BAU
+:   It stands alone. **Accept**, and keep one `bau/*` label with no project.
 
-## :material-account-clock-outline: Who decides
+Redirect
+:   It belongs to another team. **Move to team**.
 
-One named person owns the inbox at a time. Use Linear's **Triage responsibility** setting to
-assign them and rotate the duty on a schedule, so the queue always has an owner.
+Merge
+:   Another issue already covers it. **Merge** or **Mark duplicate**.
 
-The duty is to decide. Doing the work is a separate question, and it often belongs to someone
-else.
+Decline
+:   We won't do it. **Decline**, with a reason.
 
-When you're on duty, the [`linear-triage`](../skills/index.md) skill goes through the inbox with
-you and applies each decision.
+Work accepted as BAU joins the team's normal [states](index.md#the-shared-lifecycle) alongside
+everything else. It isn't a lesser queue.
 
----
+## The `bau/*` labels
 
-## :material-source-branch: The five outcomes
+BAU work gets exactly one, and no `type/*` label.
 
-![Triage outcomes: the five decisions the person on duty can make on an item in Triage.](../diagrams/triage-outcomes.svg)
+`incident`
+:   Something is down or degraded and needs a response now.
 
-| Outcome | What it means | In Linear |
-|---|---|---|
-| Accept into a project | It becomes [project work](project-work.md) | **Accept**, then add it to the project and give it a `type/*` label |
-| Accept as BAU | It stays outside any project | **Accept**, and keep the one `bau/*` label with no project |
-| Redirect | It belongs to another team | **Move to team**, and it joins that team's Triage |
-| Merge | It's already covered | **Merge** or **Mark duplicate** |
-| Decline | We won't do it | **Decline**, with a reason |
+`vulnerability`
+:   A security weakness. Its severity sets the deadline.
 
-!!! tip "Into a project, or stay as BAU?"
-    Ask whether an open project already owns the thing this touches. A bug in something a
-    project is building, or a request the project will deliver anyway, goes into that project.
-    Work that stands alone, such as an incident, a one-off question or some upkeep, stays as
-    BAU.
+`defect`
+:   A fault someone reported.
 
-Work accepted as BAU joins the team's normal states, from `Backlog` to `Done`, alongside
-everything else. It isn't a lesser queue. You find it again with `bau/*` filters and
-dashboards.
+`query`
+:   A one-off data question.
 
-If the same kind of BAU work keeps coming back, such as the same support theme every cycle,
-propose a [project](../projects.md) for it in the usual way. There's no shortcut that turns
-recurring BAU work into a project.
+`compliance`
+:   A regulatory or policy obligation.
 
----
+`support`
+:   A user or customer request.
 
-## :material-tag-outline: The `bau/*` labels
+`toil`
+:   Recurring manual work worth recording.
 
-BAU work gets exactly one of these, and no `type/*` label.
+## How fast { #two-clocks }
 
-| `bau/*` | Use it for |
+| Deciding where it goes | Within |
 |---|---|
-| `incident` | Something is down or degraded and needs a response now |
-| `vulnerability` | A security weakness to fix. Its severity sets the deadline |
-| `defect` | A fault reported from outside any project |
-| `query` | A one-off data question or report |
-| `compliance` | A regulatory or policy obligation |
-| `support` | A user or customer request |
-| `toil` | Recurring manual work worth recording |
+| `incident` | Immediately |
+| `vulnerability`, `support` | 1 working day |
+| Everything else | 2 working days |
 
-A `product/*` label is optional here. Add one only if the work clearly serves a product.
+Vulnerabilities also have a fix deadline: 7 days for Critical, 30 for High, 90 for Medium.
+
+Set a priority as you decide. It orders the work and can drive the deadline.
+
+!!! tip "The same thing keeps arriving?"
+    If one kind of BAU work comes back every cycle, propose a [project](../projects.md) for it
+    in the usual way. There's no shortcut that turns it into one.
+
+??? note "Turning Triage on, and how work reaches it"
+    Enable it under **Team settings → Triage**, and use **Triage responsibility** to put a named
+    person on duty and rotate them.
+
+    Integrations such as Sentry, GitHub, Zendesk and Intercom create issues straight into
+    Triage, as do customer requests, forms and the API. Anyone can move a stray issue there by
+    hand. Linear Asks can send Slack requests too, but it needs a plan and a Slack connection we
+    don't have yet ([Integrations](../integrations.md)).
+
+    Triage Intelligence will suggest a label, a duplicate or an assignee. Treat it as a first
+    guess.
+
+??? note "Setting the deadlines up in Linear"
+    Linear's SLA rules measure time to completion. That suits the fix deadline. There's no rule
+    for "decide within a day", so that one relies on the rota and on showing time in status on
+    the Triage state.
+
+    The fix deadline is an SLA rule on the Business and Enterprise plans. Under
+    *Settings → Issues → SLAs*, add a rule filtered to `bau/vulnerability`, with severity taken
+    from priority and durations in business days. Rules apply only to new or updated issues, the
+    first match wins, and an issue can't have both an SLA and a due date.
+
+    On other plans the `linear-triage` skill sets the issue's `slaBreachesAt` date directly.
 
 ??? note "Why `defect` and `query`, when project work has `bug` and `analysis`?"
-    Linear label names have to be unique across the whole workspace, even between groups. The
-    `type/*` group already uses `bug` and `analysis`, so their BAU equivalents needed
-    different names.
+    Linear label names must be unique across the workspace. The `type/*` group already uses
+    `bug` and `analysis`, so the BAU equivalents needed different names.
 
----
-
-## :material-timer-outline: How fast { #two-clocks }
-
-There are two clocks. The first is how quickly you decide where an item goes.
-
-| Kind of work | Decide within |
-|---|---|
-| `bau/incident` | Immediately |
-| `bau/vulnerability`, `bau/support` | 1 working day |
-| `bau/compliance`, `bau/defect`, `bau/toil`, `bau/query` | 2 working days |
-
-The second is the fix deadline. It applies only to vulnerabilities.
-
-| Severity | Fix within |
-|---|---|
-| Critical | 7 days |
-| High | 30 days |
-| Medium | 90 days |
-
-Set a priority while you're deciding. Linear can require one before an issue leaves Triage, and
-the priority can drive the deadline.
-
-??? note "Setting the clocks up in Linear"
-    Linear's SLA rules measure time to completion. That suits the fix deadline, but Linear has
-    no rule for "decide within a day", so the two clocks are set up differently.
-
-    **The decision clock** relies on the rota and on being able to see the queue. Assign Triage
-    responsibility (it can link to PagerDuty, Opsgenie and Incident.io), and show time in status
-    on the Triage state so an item that's been waiting stands out.
-
-    **The fix deadline** is a Linear SLA rule, available on the Business and Enterprise plans.
-    Under *Settings → Issues → SLAs*, add a rule filtered to the `bau/vulnerability` label,
-    with severity taken from priority and durations in business days: Critical 7, High 30,
-    Medium 90. A few things to know:
-
-    - Rules apply when an issue is created or updated, and never to older issues.
-    - The first matching rule wins, so put the most urgent first.
-    - An issue can have an SLA or a due date, but not both.
-    - Triage Rules can add the label automatically on arrival, which starts the SLA.
-
-    On other plans, or if you'd rather not depend on rules, the
-    [`linear-triage`](../skills/index.md) skill sets the issue's `slaBreachesAt` date directly.
-    Either way the issue ends up with Linear's SLA fields filled in, and the dashboards and
-    [`linear-doctor`](../skills/index.md) watch those.
-
----
-
-## :material-plus-circle-outline: Create one
-
-Most BAU work arrives without your help. When you need to write one up yourself:
-
-1. The quick way is the [`linear-issue`](../skills/index.md) skill. It sets the single `bau/*`
-   label with no project, writes the description and sets the fields.
-2. To do it by hand, create the issue in the
-   [team's Linear view](https://linear.app/happydevs/team/GRI/all), set one `bau/*` label and
-   no project, then paste in a template from the
-   [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue).
-   Use `template-bug` for a `defect`, `template-analysis` for a `query`, and `template-action`
-   for anything else.
-
-As with every issue, the assignee, priority and status go in [Linear's fields](index.md#native-fields-not-prose).
-
----
-
-## Related
-
-- [Issues](index.md): what every issue has in common
-- [Project work](project-work.md): the other kind of issue
-- [Start here](../index.md): the overview
+??? note "Writing up a BAU issue yourself"
+    Most arrive without your help. When you do need to write one, the
+    [`linear-issue`](../skills/index.md) skill sets the single `bau/*` label and writes the
+    description. By hand, create it in the
+    [team's view](https://linear.app/happydevs/team/GRI/all) with one `bau/*` label and no
+    project, using `template-bug` for a defect, `template-analysis` for a query and
+    `template-action` for anything else.

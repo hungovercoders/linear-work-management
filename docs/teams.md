@@ -1,133 +1,90 @@
-# :material-account-group: Teams, states and labels
+# States and labels
 
 <div class="lwm-lead" markdown>
-The shared lists every team uses: which states work moves through, and which labels exist. If
-a value isn't on this page, it isn't shared.
+The shared lists every team uses. If a value isn't on this page, it isn't shared.
 </div>
 
-!!! abstract "In short"
-    - The organisation sets a small number of things so that work looks the same across teams.
-    - Teams decide the rest for themselves.
-    - Teams can add their own states and labels. They can't remove or rename the shared ones.
+## What's shared, and what's yours
 
----
+A few things have to mean the same everywhere, or cross-team views stop working: the
+[five rules](hard-rules.md), the states and labels on this page, the
+[update schedule](communications.md) and the [triage deadlines](issues/triage.md#two-clocks).
 
-## :material-scale-balance: What's shared and what's yours
-
-Reports and cross-team views only work if a few things mean the same everywhere. These are set
-for the whole organisation:
-
-| Shared by everyone | Where it's described |
-|---|---|
-| The five hard rules | [The hard rules](hard-rules.md) |
-| The states for initiatives, projects and issues | [States](#the-shared-state-sets) |
-| The labels | [Labels](#the-label-taxonomy) |
-| Every issue being in a project or carrying one `bau/*` label | [Issues](issues/index.md) |
-| When updates are posted, and where | [Communications](communications.md) |
-| How fast BAU work is decided and fixed | [Triage work](issues/triage.md) |
-
-How a team runs day to day is up to the team. The [suggestions for teams](#team-settings-recommended-not-required)
-are only that.
-
-### Add, but don't remove or rename
-
-A team can add a state its workflow needs, or a label of its own. It can't remove or rename a
-shared one, because then the same word would mean different things in different teams.
-
-The shared lists do change now and then. When they do, every team adopts the change together,
-which is how the `Planning` issue state arrived.
+How your team runs day to day is up to you. You can add your own states and labels. You can't
+remove or rename a shared one.
 
 !!! example "For example"
     The `happydevs` team has a Review Requested state next to the shared ones, and that's fine.
-    Renaming `Done` or deleting `Triage` would not be.
+    Renaming `Done` would not be.
 
----
+## Labels { #the-label-taxonomy }
 
-## :material-tag-multiple: Labels { #the-label-taxonomy }
+Browse them in [Linear settings](https://linear.app/happydevs/settings/labels).
 
-There are four groups, and you can browse them in
-[Linear settings → Labels](https://linear.app/happydevs/settings/labels).
+| Group | Values | Goes on |
+|---|---|---|
+| `type/*` | `action` · `feature` · `bug` · `analysis` · `spike` | Project issues |
+| `bau/*` | `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil` | BAU issues, one each |
+| `spend/*` | `capex` · `opex` | Projects |
+| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · `cheeserater` · … | Projects, and their issues inherit it |
 
-| Group | Values | Goes on | Set when |
-|---|---|---|---|
-| `type/*` | `action` (default) · `feature` · `bug` · `analysis` · `spike` | Project issues | The issue is created |
-| `bau/*` | `incident` · `vulnerability` · `defect` · `query` · `compliance` · `support` · `toil` | BAU issues, exactly one each | It arrives or is triaged |
-| `spend/*` | `capex` · `opex` | Projects | The project is planned |
-| `product/*` | `hungovercoders` · `dogadopt` · `woolwitch` · `cheeserater` · … (grows) | Projects, and their issues inherit it | The project is planned |
+An issue never has both a `type/*` and a `bau/*` label. The old Improvement label belongs to no
+group, so don't use it on new work.
 
-A few things to know:
+## States { #the-shared-state-sets }
 
-- An issue never has both a `type/*` and a `bau/*` label. The first means project work and the
-  second means BAU work ([rule 3](hard-rules.md)).
-- `product/*` is decided once, on the project. Its issues take the same value.
-- There's no `risk/*` group. The product labels replaced it.
-- The old Improvement label belongs to no group. Don't use it on new work.
+The closing state is spelled `Canceled`, the way Linear spells it.
 
-??? note "Why `bau/defect` and `bau/query`, when `type/*` has `bug` and `analysis`?"
-    Linear label names have to be unique across the whole workspace, even between groups. The
-    `type/*` group uses `bug` and `analysis`, so the BAU equivalents are `defect` (a fault
-    reported from outside) and `query` (a one-off data question).
+### Initiatives
 
----
+<ol class="lwm-flow">
+  <li class="is-quiet"><b>Proposed</b></li>
+  <li class="is-gate"><b>Planned</b></li>
+  <li><b>Active</b></li>
+  <li class="is-done"><b>Completed</b></li>
+</ol>
 
-## :material-list-status: States { #the-shared-state-sets }
+Built into Linear, so there's nothing to set up. [More on initiatives](initiatives.md)
 
-The [Initiatives](initiatives.md), [Projects](projects.md) and [Issues](issues/index.md) pages
-all take their states from here. The closing state is spelled `Canceled` throughout, the way
-Linear spells it.
+### Projects
 
-### Initiative states
+<ol class="lwm-flow">
+  <li class="is-quiet"><b>Idea</b></li>
+  <li class="is-quiet"><b>Scoping</b></li>
+  <li class="is-gate"><b>Planned</b></li>
+  <li><b>In Progress</b></li>
+  <li><b>Launching</b></li>
+  <li class="is-done"><b>Completed</b></li>
+</ol>
 
-Linear's built-in statuses already match, so there's nothing to set up.
+Plus `Paused` and `Canceled`. Set once for the workspace under Settings → Projects.
+[More on projects](projects.md)
 
-**Proposed → Planned → Active → Completed** (or **Canceled**)
+### Issues { #issue-states }
 
-### Project states
+<ol class="lwm-flow">
+  <li class="is-bau"><b>Triage</b></li>
+  <li class="is-quiet"><b>Backlog</b></li>
+  <li class="is-gate"><b>Planning</b></li>
+  <li><b>Todo</b></li>
+  <li><b>In Progress</b></li>
+  <li><b>In Review</b></li>
+  <li class="is-done"><b>Done</b></li>
+</ol>
 
-Set once for the workspace, under Settings → Projects.
+Plus `Canceled` and `Duplicate`. Set for each team. [More on issues](issues/index.md)
 
-| Phase | States |
-|---|---|
-| Discovery | **Idea** → **Scoping** |
-| Delivery | **Planned** → **In Progress** → **Launching** (with **Paused** available) |
-| Closed | **Completed** · **Canceled** |
-
-### Issue states
-
-Set for each team, matching this list.
-
-**Triage → Backlog → Planning → Todo → In Progress → In Review → Done** (or **Canceled** ·
-**Duplicate**)
-
-Nobody counts how long an issue sits in `Backlog`. The counting starts at `Planning`, because
-time spent there shows whether refinement is keeping up ([Flow](flow.md)).
-
----
-
-## :material-tune: Suggestions for teams { #team-settings-recommended-not-required }
+## Suggestions for teams { #team-settings-recommended-not-required }
 
 None of these are required.
 
-- Turn [Triage](issues/triage.md) on, and assign Triage responsibility so that someone is always
-  on duty.
-- Run cycles at whatever length suits you. We suggest a week, which is short enough to show
-  what got done. Anything bigger belongs in project milestones.
-- Keep your Current and Upcoming cycle views visible to other teams, so people can see what's
-  coming without asking.
-- Estimates are optional. If you use them, use them for your own planning and don't compare
-  them across teams.
+- Turn [Triage](issues/triage.md) on, and keep a named person on duty.
+- Run weekly cycles. Anything bigger belongs in project milestones.
+- Keep your Current and Upcoming cycle views visible to other teams.
+- If you estimate, use the numbers for your own planning and don't compare them across teams.
 
-## :material-account-multiple: Membership { #membership }
+## Membership { #membership }
 
 Every team has a named owner and named members. We suggest each person has one home team, even
-if they work on several projects, so that the team digest and cycle views stay meaningful.
-
-Manage teams in [Linear settings → Teams](https://linear.app/happydevs/settings/teams).
-
----
-
-## Related
-
-- [The hard rules](hard-rules.md): what these lists support
-- [Issues](issues/index.md): how issues use the labels
-- [Start here](index.md): the overview
+if they work across several projects. Manage teams in
+[Linear settings](https://linear.app/happydevs/settings/teams).

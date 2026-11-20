@@ -18,7 +18,7 @@ This repo is that place.
 
 ---
 
-## The hard rules
+## The five rules
 
 1. Every initiative says how it will be measured.
 2. Every project says which Key Result it moves, and by how much.
@@ -26,7 +26,7 @@ This repo is that place.
 4. One named person owns each initiative and each project.
 5. Initiatives and projects have dates once they're `Planned`.
 
-Everything else here expands on those; see **[The hard rules](docs/hard-rules.md)**.
+Everything else here expands on those; see **[The five rules](docs/hard-rules.md)**.
 
 ---
 

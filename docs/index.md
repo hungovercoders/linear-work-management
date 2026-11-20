@@ -1,89 +1,75 @@
-# Start here
+---
+title: Start here
+hide:
+  - navigation
+  - toc
+---
 
-<div class="lwm-lead" markdown>
-This is how we use Linear. Five minutes on this page is enough to get going. Every other page is
-here for when you want the detail.
+<div class="lwm-hero" markdown>
+
+# Know *why* you're doing what you're doing
+
+This is how we use Linear. Every task connects to a project, and every project to an outcome
+someone cares about. Five minutes here is enough to get going.
+
+[See a real example](examples.md){ .md-button .md-button--primary }
+[The five rules](hard-rules.md){ .md-button }
+
 </div>
 
-## :material-lightbulb-on-outline: The idea in one minute
+## Three levels, and one side door
 
-We want everyone to be able to answer "why am I doing this?" without having to ask around. So
-work in [Linear](https://linear.app/happydevs) sits on three levels, and each level points at
-the one above it.
+Planned work sits on three levels. Each one answers "why?" for the level below it.
 
-| Level | What it is | For example |
-|---|---|---|
-| [Initiative](initiatives.md) | An outcome we want, and how we'll measure it | "Effortless rescue-dog adoption", measured by how many Welsh rescues are in the portal |
-| [Project](projects.md) | A piece of work that moves one of those measures | Onboard the 12 Welsh rescues |
-| [Issue](issues/index.md) | One task a person can pick up and finish | Show a rescue's dogs on the search page |
+<div class="lwm-levels">
+  <div class="lwm-level"><b><a href="initiatives/">Initiative</a></b><span>An outcome we want, and how we'll measure it.<small>Effortless rescue-dog adoption</small></span></div>
+  <div class="lwm-level"><b><a href="projects/">Project</a></b><span>A piece of work that moves one of those measures.<small>Onboard the 12 Welsh rescues</small></span></div>
+  <div class="lwm-level"><b><a href="issues/">Issue</a></b><span>One task someone can pick up and finish.<small>Show a rescue's dogs on the search page</small></span></div>
+  <div class="lwm-level is-bau"><b><a href="issues/triage/">BAU</a></b><span>Things break and people ask for help. That's business as usual. It arrives through Triage and gets a <code>bau/*</code> label, with no project needed.<small>A rescue emails: "you're still showing a dog we rehomed"</small></span></div>
+</div>
 
-Plenty of work isn't planned, though. Things break, and people ask for help. That's business as
-usual, or BAU. It comes in through [Triage](issues/triage.md) and gets a `bau/*` label in place
-of a project, so it stays visible without anyone inventing a project for it.
+## The five rules
 
-![The operating model: planned work runs from initiative to project to issue, and BAU work arrives through Triage.](diagrams/model.svg)
+That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
 
-Want to see it with real content? The [worked example](examples.md) follows one chain from top
-to bottom.
+<div class="lwm-rules">
+  <div class="lwm-rule"><div><b>Every initiative says how it will be measured.</b><span>Write its Key Results before any project goes under it.</span></div></div>
+  <div class="lwm-rule"><div><b>Every project says which Key Result it moves, and by how much.</b><span>Needed once the project is planned. Ideas can wait.</span></div></div>
+  <div class="lwm-rule"><div><b>Every issue is in a project or has one <code>bau/*</code> label.</b><span>One or the other. An issue with neither gets lost.</span></div></div>
+  <div class="lwm-rule"><div><b>One named person owns each initiative and each project.</b><span>A person. Teams and pairs don't count.</span></div></div>
+  <div class="lwm-rule"><div><b>Initiatives and projects have dates once they're planned.</b><span>Without dates, nothing can be put in order.</span></div></div>
+</div>
 
----
+[Why these five](hard-rules.md)
 
-## :material-gavel: The five rules
+## Where do you fit?
 
-These are the only things we insist on.
+<div class="lwm-cards">
+  <a class="lwm-card is-slate" href="initiatives/"><span class="lwm-kicker">Leadership</span><b>Initiatives</b><span>You own an outcome and how it's measured.</span></a>
+  <a class="lwm-card is-slate" href="projects/"><span class="lwm-kicker">Delivery leads</span><b>Projects</b><span>You own a piece of work: what, how and when.</span></a>
+  <a class="lwm-card is-slate" href="issues/project-work/"><span class="lwm-kicker">Delivery teams</span><b>Project work</b><span>You pick up issues and finish them.</span></a>
+  <a class="lwm-card is-red" href="issues/triage/"><span class="lwm-kicker">On triage duty</span><b>Triage and BAU</b><span>You decide what happens to whatever arrives.</span></a>
+</div>
 
-| # | Rule | In practice |
-|---|---|---|
-| 1 | Every initiative says how it will be measured | Write its Key Results before any project sits under it |
-| 2 | Every project says which Key Result it moves, and by how much | Needed once the project is `Planned`. Ideas can wait |
-| 3 | Every issue is in a project or has one `bau/*` label | One or the other. Never both, never neither |
-| 4 | One named person owns each initiative and each project | A person, never a team or a pair |
-| 5 | Initiatives and projects have dates once they're `Planned` | Initiatives a target date, projects a start and an end |
+## Not sure what to create?
 
-If a rule and a shortcut disagree, the rule wins. [The hard rules](hard-rules.md) explains the
-thinking behind each one.
+An outcome we want by a date
+:   An [initiative](initiatives.md).
 
-!!! warning "The one thing to avoid"
-    An issue with no project and no `bau/*` label belongs nowhere, so nobody can see it and it
-    gets lost. The [drift views](dashboards.md) and the `linear-doctor` skill list every one.
+Work that moves one of its measures
+:   A [project](projects.md) under that initiative.
 
----
+One task within that work
+:   An [issue](issues/project-work.md) in the project.
 
-## :material-shape-plus: What do I need to make?
+Something broke, or someone asked
+:   An issue through [Triage](issues/triage.md).
 
-| You have… | Make… |
-|---|---|
-| An outcome we want by a date, with a way to measure it | An [initiative](initiatives.md) |
-| A piece of work that moves one of those measures | A [project](projects.md) under that initiative |
-| A task within that work | An [issue](issues/project-work.md) in the project |
-| Something that broke, arrived or was reported | An issue through [Triage](issues/triage.md) |
-| An idea you'd like to explore first | A project in `Idea`. It needs a lead and a line on what you're exploring |
+An idea you want to explore
+:   A project in `Idea`. It needs a lead and a line on what you're exploring. This is the easiest
+    way to start anything.
 
-Not sure where to begin? Start a project in `Idea`. It costs nothing, and it can join an
-initiative later if the idea holds up.
+## Let the skills do the routine parts
 
----
-
-## :material-account-check: Find your page
-
-| You are… | You look after | Read |
-|---|---|---|
-| In strategic leadership | An outcome and its measures | [Initiatives](initiatives.md) |
-| A delivery lead | A project: what, how and when | [Projects](projects.md) |
-| On a delivery team | The work itself | [Project work](issues/project-work.md) |
-| On triage duty | Whatever arrives | [Triage work](issues/triage.md) |
-
----
-
-## :material-map: Everything else
-
-- [Worked example](examples.md): one real initiative, its project, its issues and a triage call
-- [Issues](issues/index.md): what a good issue looks like and the states it moves through
-- [Teams, states and labels](teams.md): the shared lists every team uses
-- [Communications](communications.md): who posts which update, and when
-- [Dashboards](dashboards.md): the views that show when something has slipped
-- [Flow](flow.md): spotting where work gets stuck
-- [Integrations](integrations.md): how GitHub and Slack connect
-- [Setup checklist](setup.md): what needs switching on in Linear
-- [Skills](skills/index.md): AI skills that do the routine parts for you
-- [Glossary](glossary.md): every term, one line each
+You don't have to remember the templates. Ask Claude to "draft an initiative", "write up this
+bug" or "work through Triage with me", and a [skill](skills/index.md) does it to this standard.

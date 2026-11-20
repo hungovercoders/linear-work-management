@@ -38,5 +38,5 @@ have their own skills.
 
 ## Related
 
-- [Communications](https://hungovercoders.github.io/linear-work-management/communications/) — the cadence this serves
-- [Triage work](https://hungovercoders.github.io/linear-work-management/issues/triage/) — the five outcomes it reports on
+- [Updates](https://hungovercoders.github.io/linear-work-management/communications/) — the cadence this serves
+- [Triage and BAU](https://hungovercoders.github.io/linear-work-management/issues/triage/) — the five outcomes it reports on

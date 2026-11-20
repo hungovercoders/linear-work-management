@@ -1,101 +1,62 @@
-# The hard rules
+# The five rules
 
 <div class="lwm-lead" markdown>
-There are five. Everything else in this guide is detail on top of them, and if a rule and a
-shortcut ever disagree, the rule wins.
+Everything else in this guide is detail. If a rule and a shortcut ever disagree, the rule wins.
 </div>
-
----
 
 ## 1. Every initiative says how it will be measured
 
-An initiative is an outcome we want, such as "make onboarding effortless". On its own, that is
-only a good sentence. It becomes an initiative once it has Key Results (KRs): the few things that
-will be true if it worked.
+"Make onboarding effortless" is a good ambition. It becomes an initiative when you add Key
+Results: the few things that will be true if it worked.
 
-A Key Result is one of two kinds.
+Measured
+:   A number with a start and a target. *Activation rate, 22% to 30%.*
 
-| Kind | What it is | Example |
-|---|---|---|
-| Measured | A number with a starting point and a target | Activation rate from 22% to 30% |
-| Committed | Something that is either done or not, with a clear definition of done | SOC 2 Type II report issued |
+Committed
+:   Something that's either done or not. *SOC 2 Type II report issued.*
 
-Write the Key Results before any project goes underneath. Each project will pick one to move, so
-they have to exist first.
-
----
+Write them before any project goes underneath, because each project has to pick one to move.
 
 ## 2. Every project says which Key Result it moves, and by how much
 
-A project exists to move a number on an initiative. So it names the Key Result and the change it
-expects (its delta), for example "activation 22% → 30%". Anyone can then check whether the project did its
-job.
+A project exists to move a number. So it names the Key Result and the change it expects (its
+delta): "activation, 22% to 30%". Now anyone can check whether it worked.
 
-You don't need this on day one, because a project starts life as an idea.
+You don't need this on day one. A project in `Idea` or `Scoping` only needs a lead and a line on
+what it's exploring. The rule starts when the project becomes `Planned`.
 
-| Stage | What the project needs |
-|---|---|
-| `Idea` or `Scoping` | A named lead and a description of what it's exploring. No Key Result, no dates and no initiative yet |
-| `Planned` onward | The Key Result it moves and by how much, plus dates |
+And a project is only `Completed` when the number has moved. Shipping isn't enough.
 
-Reaching `Planned` is the moment to decide what the idea turned into:
-
-- Most projects join an initiative and name the Key Result they'll move. We call this
-  graduating. The initiative can be an existing one, or a new one that the project's findings
-  justify.
-- A project can go ahead with no initiative. That's allowed, but expect to be asked why, because
-  the work then connects to nothing above it.
-- Or the project is dropped (`Canceled`). For an idea, that's a perfectly good result.
-
-Two more details. A project that serves several initiatives names a Key Result and a change for
-each one. And `Completed` means the work shipped and the Key Result moved, so shipping alone
-doesn't close a project.
-
----
+[What happens when an idea is ready to be planned](projects.md#discovery-phase-is-there-something-here-idea-scoping)
 
 ## 3. Every issue is in a project or has one `bau/*` label
 
-Every issue has to belong somewhere, and there are two places it can belong.
+Every issue belongs somewhere, and there are only two places.
 
-| | The issue is… | Which means |
-|---|---|---|
-| ✓ | In a project | Planned work that connects to a Key Result |
-| ✓ | Carrying one `bau/*` label, with no project | Business as usual: work that arrived, visible in its own right |
-| ✗ | Both | Pick one and drop the other |
-| ✗ | Neither | Unclassified. Nobody can see where it belongs |
+In a project
+:   Planned work. It connects to a Key Result.
 
-The `bau/*` labels exist so that business-as-usual work doesn't need a pretend project around it. The
-`linear-doctor` skill lists every unclassified issue.
+One `bau/*` label, no project
+:   Business as usual: it arrived, and it's visible in its own right.
 
----
+Both
+:   Pick one and drop the other.
+
+Neither
+:   Nobody can tell where it belongs, so it gets lost. `linear-doctor` lists these.
 
 ## 4. One named person owns each initiative and each project
 
-When two people own something, each can assume the other has it. So ownership is always one
-person, by name.
+When two people own something, each assumes the other has it. So it's always one person, by
+name.
 
-- An initiative has one owner, someone senior enough to say why it matters and how we'll know it
-  worked.
-- A project has one lead, the person delivering it (usually an eng lead or product owner). They
-  answer what, how and by when.
-- Teams still own issues, and a project can draw on several teams. The lead is the one who
-  answers for the project.
+An initiative's owner can say why it matters and how we'll know it worked. A project's lead is
+the person delivering it. Teams still own issues, and a project can use several teams.
 
----
+## 5. Initiatives and projects have dates once they're planned
 
-## 5. Initiatives and projects have dates once they're `Planned`
+Work with no date can't be put in order, and nobody waiting on it can tell whether it will
+arrive in time.
 
-Work with no date can't be put in order against other work. And nobody waiting on it can tell
-whether it will arrive in time.
-
-- Initiatives get a target date when they're agreed, which is `Planned`. Often that's a quarter,
-  and sometimes a year or more. `Active` then means work is underway against that date. A
-  `Proposed` initiative doesn't need one yet.
-- Projects get a start date and a target end date at `Planned`. Projects in `Idea` and `Scoping`
-  are still taking shape, so they're exempt.
-- Dependencies between projects only tell you something once both projects have dates.
-
----
-
-The [`linear-doctor`](skills/index.md) skill checks these five first. Back to
-[Start here](index.md).
+Initiatives get a target date when they're agreed. Projects get a start and an end when they
+become `Planned`. Ideas are exempt until then.

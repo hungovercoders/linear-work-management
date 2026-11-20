@@ -1,4 +1,4 @@
-# :material-clipboard-check: Setup checklist
+# Setup checklist
 
 <div class="lwm-lead" markdown>
 Everything that needs switching on in Linear for this [way of working](index.md). Ticked items
@@ -12,7 +12,7 @@ This is one-time setup. For keeping things in order afterwards, use the
 
 ## Workspace level (once, for everyone)
 
-#### Workflow states: [Teams, states and labels](teams.md#the-shared-state-sets)
+#### Workflow states: [States and labels](teams.md#the-shared-state-sets)
 
 - [x] Project statuses: Idea → Scoping → Planned → In Progress → Launching →
       Completed / Canceled ([settings](https://linear.app/happydevs/settings/projects))
@@ -40,12 +40,12 @@ This is one-time setup. For keeping things in order afterwards, use the
       (check the channel spelling first)
 - [ ] `#announcements` channel exists for launches and incidents
 
-#### Update reminders: [Communications](communications.md#making-the-cadence-stick)
+#### Update reminders: [Updates](communications.md#making-the-cadence-stick)
 
 - [ ] Native update reminders enabled (workspace settings): weekly, targeting project leads and
       initiative owners
 
-#### SLAs: [Triage work](issues/triage.md)
+#### SLAs: [Triage and BAU](issues/triage.md)
 
 - [x] The `slaBreachesAt` fallback (the `linear-triage` skill), which works on every plan
 - [ ] Native SLA rules for `bau/vulnerability` severity windows, Business/Enterprise only;
@@ -89,6 +89,6 @@ This is one-time setup. For keeping things in order afterwards, use the
 
 ## Related
 
-- [Teams, states and labels](teams.md): the shared lists this checklist sets up
+- [States and labels](teams.md): the shared lists this checklist sets up
 - [Dashboards](dashboards.md): keeping things in order afterwards
 - [Integrations](integrations.md): GitHub and Slack in detail
