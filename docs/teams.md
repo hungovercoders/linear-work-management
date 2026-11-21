@@ -45,7 +45,7 @@ The closing state is spelled `Canceled`, the way Linear spells it.
   <li class="is-done"><b>Completed</b></li>
 </ol>
 
-Built into Linear, so there's nothing to set up. [More on initiatives](initiatives.md)
+These are built into Linear, so there's nothing to set up. [More on initiatives](initiatives.md)
 
 ### Projects
 
@@ -58,7 +58,8 @@ Built into Linear, so there's nothing to set up. [More on initiatives](initiativ
   <li class="is-done"><b>Completed</b></li>
 </ol>
 
-Plus `Paused` and `Canceled`. Set once for the workspace under Settings → Projects.
+There are also `Paused` and `Canceled`. They're set once for the workspace under Settings →
+Projects.
 [More on projects](projects.md)
 
 ### Issues { #issue-states }
@@ -73,7 +74,7 @@ Plus `Paused` and `Canceled`. Set once for the workspace under Settings → Proj
   <li class="is-done"><b>Done</b></li>
 </ol>
 
-Plus `Canceled` and `Duplicate`. Set for each team. [More on issues](issues/index.md)
+There are also `Canceled` and `Duplicate`. Each team sets its own. [More on issues](issues/index.md)
 
 ## Suggestions for teams { #team-settings-recommended-not-required }
 
@@ -81,7 +82,8 @@ None of these are required.
 
 - Turn [Triage](issues/triage.md) on, keep a named person on duty, and connect an asks channel
   in Slack.
-- Run weekly [cycles](https://linear.app/docs/use-cycles). Anything bigger belongs in project milestones.
+- Run weekly [cycles](https://linear.app/docs/use-cycles). Anything bigger belongs in project
+  milestones.
 - Keep your Current and Upcoming cycle views visible to other teams.
 - If you estimate, use the numbers for your own planning and don't compare them across teams.
 

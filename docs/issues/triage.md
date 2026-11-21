@@ -12,8 +12,8 @@ It arrives in Triage, and your job is to decide where it goes.
 
 ## Your job on duty
 
-[Triage](https://linear.app/docs/triage) is Linear's inbox for each team. New issues from Slack, integrations and
-customers arrive there before they join the team's work.
+[Triage](https://linear.app/docs/triage) is Linear's inbox for each team. New issues from Slack,
+integrations and customers arrive there before they join the team's work.
 
 One named person owns it at a time. You decide what happens to each item. You don't have to do
 the work yourself.
@@ -35,8 +35,8 @@ They don't need a Linear account. Linear replies in the Slack thread with a link
 and comments stay in step on both sides, so you can ask a question from Linear and they answer
 in Slack.
 
-Integrations, [customer requests](https://linear.app/docs/customer-requests) and the API also feed Triage, and
-anyone can move a stray issue there by hand.
+Integrations, [customer requests](https://linear.app/docs/customer-requests) and the API also feed
+Triage, and anyone can move a stray issue there by hand.
 
 ## Five things you can do with an item
 
@@ -102,16 +102,15 @@ Set a priority as you decide. It orders the work and can drive the deadline.
     person on duty and rotate them.
 
     Integrations such as Sentry, GitHub, Zendesk and Intercom create issues straight into
-    Triage. Setting up the asks channels is covered under
-    [Integrations](../integrations.md#linear-asks).
+    Triage. [Integrations](../integrations.md#linear-asks) covers setting up the asks channels.
 
-    [Triage Intelligence](https://linear.app/docs/triage-intelligence) will suggest a label, a duplicate or an
-    assignee. Treat it as a first guess.
+    [Triage Intelligence](https://linear.app/docs/triage-intelligence) will suggest a label, a
+    duplicate or an assignee. Treat it as a first guess.
 
 ??? note "Setting the deadlines up in Linear"
-    Linear's [SLA rules](https://linear.app/docs/sla) measure time to completion. That suits the fix deadline. There's no rule
-    for "decide within a day", so that one relies on the rota and on showing time in status on
-    the Triage state.
+    Linear's [SLA rules](https://linear.app/docs/sla) measure time to completion. That suits the fix
+    deadline. There's no rule for "decide within a day", so that one relies on the rota and on
+    showing time in status on the Triage state.
 
     The fix deadline is an SLA rule. Under
     *Settings → Issues → SLAs*, add a rule filtered to `bau/vulnerability`, with severity taken

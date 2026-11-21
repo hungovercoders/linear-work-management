@@ -42,9 +42,9 @@ That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
 
 <div class="lwm-rules">
   <div class="lwm-rule"><div><b>Every initiative says how it will be measured.</b><span>Write its Key Results before any project goes under it.</span></div></div>
-  <div class="lwm-rule"><div><b>Every project says which Key Result it moves, and by how much.</b><span>Needed once the project is planned. Ideas can wait.</span></div></div>
-  <div class="lwm-rule"><div><b>Every issue is in a project or has one <code>bau/*</code> label.</b><span>One or the other. An issue with neither gets lost.</span></div></div>
-  <div class="lwm-rule"><div><b>One named person owns each initiative and each project.</b><span>A person. Teams and pairs don't count.</span></div></div>
+  <div class="lwm-rule"><div><b>Every project says which Key Result it moves, and by how much.</b><span>This applies once the project is planned. Ideas can wait.</span></div></div>
+  <div class="lwm-rule"><div><b>Every issue is in a project or has one <code>bau/*</code> label.</b><span>It must be one or the other. An issue with neither gets lost.</span></div></div>
+  <div class="lwm-rule"><div><b>One named person owns each initiative and each project.</b><span>It has to be a person. Teams and pairs don't count.</span></div></div>
   <div class="lwm-rule"><div><b>Initiatives and projects have dates once they're planned.</b><span>Without dates, nothing can be put in order.</span></div></div>
 </div>
 

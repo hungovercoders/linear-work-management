@@ -25,7 +25,7 @@ delta): "activation, 22% to 30%". Now anyone can check whether it worked.
 You don't need this on day one. A project in `Idea` or `Scoping` only needs a lead and a line on
 what it's exploring. The rule starts when the project becomes `Planned`.
 
-And a project is only `Completed` when the number has moved. Shipping isn't enough.
+A project is only `Completed` when the number has moved. Shipping isn't enough.
 
 [What happens when an idea is ready to be planned](projects.md#becoming-planned)
 
@@ -34,10 +34,10 @@ And a project is only `Completed` when the number has moved. Shipping isn't enou
 Every issue belongs somewhere, and there are only two places.
 
 In a project
-:   Planned work. It connects to a Key Result.
+:   This is planned work, tied to a Key Result.
 
 One `bau/*` label, no project
-:   Business as usual: it arrived, and it's visible in its own right.
+:   This is business as usual. It arrived, and it's visible in its own right.
 
 Both
 :   Pick one and drop the other.

@@ -1,7 +1,7 @@
 # Worked example
 
 <div class="lwm-lead" markdown>
-One real chain from top to bottom, using the dogadopt product. Open any step to see exactly
+One real chain from top to bottom, using the dogadopt product. Open any step to see
 what was written in Linear.
 </div>
 
