@@ -59,8 +59,9 @@ To connect a team's channel:
 
 1. In Linear, open **Settings → Features → Asks**.
 2. Add the team's Slack channel and link it to the team.
-3. Turn on the templates you want people to choose from. One for each common `bau/*` kind
-   works well.
+3. Turn on the templates you want people to choose from, one for each kind of BAU. Each
+   template sets the `bau/*` label and priority, which is what
+   [starts the SLA](team-setup.md#service-levels).
 4. In Slack, run `/invite @Linear Asks` in that channel.
 
 ??? note "What depends on the Linear plan"

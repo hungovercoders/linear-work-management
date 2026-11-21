@@ -49,7 +49,8 @@ This is one-time setup. For keeping things in order afterwards, use the
 #### SLAs: [Triage and BAU](issues/triage.md)
 
 - [x] The `slaBreachesAt` fallback (the `linear-triage` skill), which works on every plan
-- [ ] Native SLA rules for `bau/vulnerability` severity windows
+- [ ] SLA rules for each kind of BAU the team handles, starting with `bau/vulnerability` by
+      priority ([the rules](team-setup.md#service-levels))
 
 ---
 
@@ -67,7 +68,8 @@ This is one-time setup. For keeping things in order afterwards, use the
 - [ ] **Triage Responsibility** rota assigned (the duty is to decide)
 - [ ] Priority required before an issue leaves Triage (team setting)
 - [ ] **Triage Rules** auto-applying labels on arrival
-- [ ] The team's asks channel connected to its Triage, with templates switched on
+- [ ] An issue template for each kind of BAU, setting its `bau/*` label and priority
+- [ ] The team's asks channel connected to its Triage, with those templates switched on
       ([how](integrations.md#linear-asks))
 
 #### Cycles: [team-owned](teams.md#team-settings-recommended-not-required)

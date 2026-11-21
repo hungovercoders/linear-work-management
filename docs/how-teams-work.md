@@ -86,6 +86,9 @@ An issue is in the wrong team
 You're not sure whose cycle it's in
 :   The issue's team. Projects don't live in cycles. Their issues do, each in its own team's.
 
+Setting a team up for the first time? [Recommended team setup](team-setup.md) has a starting
+point.
+
 ??? note "Sub-teams and private teams"
     Linear lets you nest teams. A [sub-team](https://linear.app/docs/sub-teams) can inherit its
     parent's states, cycles and labels, and the parent's views show every sub-team's work. A

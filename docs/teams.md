@@ -78,7 +78,7 @@ There are also `Canceled` and `Duplicate`. Each team sets its own. [More on issu
 
 ## Suggestions for teams { #team-settings-recommended-not-required }
 
-None of these are required.
+None of these are required. [Recommended team setup](team-setup.md) has the fuller version.
 
 - Turn [Triage](issues/triage.md) on, keep a named person on duty, and connect an asks channel
   in Slack.

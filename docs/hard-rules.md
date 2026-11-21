@@ -37,7 +37,7 @@ In a project
 :   This is planned work, tied to a Key Result.
 
 One `bau/*` label, no project
-:   This is business as usual. It arrived, and it's visible in its own right.
+:   This is business as usual. It arrived, and it's measured against the team's service levels.
 
 Both
 :   Pick one and drop the other.

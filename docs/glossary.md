@@ -19,6 +19,9 @@ Team
 Lead team
 :   The one team named as driving a project or an initiative. Other teams can still contribute
 
+Service level
+:   A standing promise a team keeps. In Linear it's an SLA rule on a kind of BAU work, such as incidents or vulnerabilities. It doesn't reset each quarter, and BAU work exists to keep it. [Team setup](team-setup.md#service-levels)
+
 Key Result (KR)
 :   How an initiative is measured. Either measured (a number with a baseline and a target) or committed (done or not done, with a definition of done)
 
@@ -57,7 +60,7 @@ Unclassified
 :   An issue with neither, which nobody can place
 
 BAU work
-:   Business as usual: work nobody planned that arrived (incidents, requests, compliance, support, toil). It has a `bau/*` label and no project. [Triage and BAU](issues/triage.md)
+:   Business as usual: work nobody planned that arrived (incidents, requests, compliance, support, toil). It has a `bau/*` label and no project, and it's measured against the team's service levels. [Triage and BAU](issues/triage.md)
 
 Linear Asks
 :   Linear's way of turning a Slack message into an issue. Each team has an asks channel that feeds its Triage. [Integrations](integrations.md#linear-asks)
