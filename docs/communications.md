@@ -1,7 +1,7 @@
 # Updates
 
 <div class="lwm-lead" markdown>
-Who posts what, where and how often. The aim is that people hear how things are going without
+Who posts which [update](https://linear.app/docs/initiative-and-project-updates), where and how often. The aim is that people hear how things are going without
 having to ask, and without being buried in messages.
 </div>
 
@@ -38,7 +38,8 @@ initiative's evidence is the updates from its projects.
 
 ## Catching up with Pulse
 
-[Pulse](https://linear.app/happydevs/pulse) is Linear's feed of every update. Its *For me* tab
+[Pulse](https://linear.app/happydevs/pulse) is Linear's feed of every update
+([how it works](https://linear.app/docs/pulse)). Its *For me* tab
 shows the work you're involved in, and it can send you a daily or weekly digest.
 
 Leads still post, because Pulse has nothing to show otherwise. Everyone else can read Pulse and

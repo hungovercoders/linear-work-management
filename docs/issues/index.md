@@ -32,7 +32,8 @@ the plan there, so the approach can be reviewed before any code is.
 
 ## Use Linear's fields { #native-fields-not-prose }
 
-Assignee, priority, status, labels and links all have their own fields in Linear. Put them
+Assignee, priority, status, labels and links all have their own
+[fields in Linear](https://linear.app/docs/issue-properties). Put them
 there and keep them out of the description. Fields can be filtered, sorted and reported on.
 Text in a description can't.
 

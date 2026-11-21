@@ -19,7 +19,8 @@ remove or rename a shared one.
 
 ## Labels { #the-label-taxonomy }
 
-Browse them in [Linear settings](https://linear.app/happydevs/settings/labels).
+Browse them in [Linear settings](https://linear.app/happydevs/settings/labels). Linear's docs explain
+[label groups](https://linear.app/docs/labels).
 
 | Group | Values | Goes on |
 |---|---|---|
@@ -78,8 +79,9 @@ Plus `Canceled` and `Duplicate`. Set for each team. [More on issues](issues/inde
 
 None of these are required.
 
-- Turn [Triage](issues/triage.md) on, and keep a named person on duty.
-- Run weekly cycles. Anything bigger belongs in project milestones.
+- Turn [Triage](issues/triage.md) on, keep a named person on duty, and connect an asks channel
+  in Slack.
+- Run weekly [cycles](https://linear.app/docs/use-cycles). Anything bigger belongs in project milestones.
 - Keep your Current and Upcoming cycle views visible to other teams.
 - If you estimate, use the numbers for your own planning and don't compare them across teams.
 

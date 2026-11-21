@@ -3,7 +3,7 @@
 <div class="lwm-lead" markdown>
 <span class="lwm-for">For leadership</span>
 
-An initiative is an outcome we want, and the measures that tell us whether we got it. You say
+An [initiative](https://linear.app/docs/initiatives) is an outcome we want, and the measures that tell us whether we got it. You say
 why it matters. The [projects](projects.md) underneath work out how.
 </div>
 
@@ -54,7 +54,7 @@ there's nothing to set up.
 
 ## Every month while it's active { #keep-everyone-posted }
 
-The owner posts an update to `#initiative-updates`: how the Key Results have moved, whether
+The owner posts an [update](https://linear.app/docs/initiative-and-project-updates) to `#initiative-updates`: how the Key Results have moved, whether
 it's on track, and any risks. Write it on the initiative in Linear, or let the
 `linear-initiative-update` skill draft it.
 
@@ -88,6 +88,7 @@ say so. Don't report green on top of silence.
     objective and baselines, and links them so the history is kept.
 
 ??? note "Sub-initiatives (Enterprise plan only)"
-    On Linear's Enterprise plan you can nest initiatives up to five levels deep. A parent rolls
+    On Linear's Enterprise plan you can nest initiatives as
+    [sub-initiatives](https://linear.app/docs/sub-initiatives), up to five levels deep. A parent rolls
     up its children's projects and progress, while each child keeps its own owner and Key
     Results. Use them when one objective spans several teams or phases. Otherwise keep it flat.

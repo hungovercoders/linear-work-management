@@ -71,7 +71,8 @@ One task within that work
 :   An [issue](issues/project-work.md) in the project.
 
 Something broke, or someone asked
-:   An issue through [Triage](issues/triage.md).
+:   An issue through [Triage](issues/triage.md). Colleagues can raise one from Slack by posting
+    in your team's asks channel.
 
 An idea you want to explore
 :   A project in `Idea`. It needs a lead and a line on what you're exploring. This is the easiest

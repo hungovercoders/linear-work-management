@@ -36,7 +36,8 @@ This is one-time setup. For keeping things in order afterwards, use the
 #### Integrations: [Integrations](integrations.md) ([settings](https://linear.app/happydevs/settings/integrations))
 
 - [x] GitHub connected; PR → issue state automation per team
-- [ ] Slack connected, with `#initiative-updates` and `#project-updates` wired to their objects
+- [x] Slack connected
+- [ ] `#initiative-updates` and `#project-updates` connected on each initiative and project
       (check the channel spelling first)
 - [ ] `#announcements` channel exists for launches and incidents
 
@@ -48,8 +49,7 @@ This is one-time setup. For keeping things in order afterwards, use the
 #### SLAs: [Triage and BAU](issues/triage.md)
 
 - [x] The `slaBreachesAt` fallback (the `linear-triage` skill), which works on every plan
-- [ ] Native SLA rules for `bau/vulnerability` severity windows, Business/Enterprise only;
-      skip until upgraded
+- [ ] Native SLA rules for `bau/vulnerability` severity windows
 
 ---
 
@@ -66,7 +66,9 @@ This is one-time setup. For keeping things in order afterwards, use the
 - [x] Triage enabled for the team
 - [ ] **Triage Responsibility** rota assigned (the duty is to decide)
 - [ ] Priority required before an issue leaves Triage (team setting)
-- [ ] **Triage Rules** auto-applying labels on arrival, Business/Enterprise; manual until then
+- [ ] **Triage Rules** auto-applying labels on arrival
+- [ ] The team's asks channel connected to its Triage, with templates switched on
+      ([how](integrations.md#linear-asks))
 
 #### Cycles: [team-owned](teams.md#team-settings-recommended-not-required)
 

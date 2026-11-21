@@ -1,13 +1,14 @@
 # Integrations
 
 <div class="lwm-lead" markdown>
-GitHub moves issues along as code ships, and Slack carries the updates. Both are set up once in
+GitHub moves issues along as code ships. Slack carries updates out and brings requests in. Both are set up once in
 [Linear settings](https://linear.app/happydevs/settings/integrations).
 </div>
 
 ## GitHub
 
-Connected to the [hungovercoders](https://github.com/hungovercoders) organisation. For code
+The [GitHub integration](https://linear.app/docs/github-integration) is connected to the
+[hungovercoders](https://github.com/hungovercoders) organisation. For code
 work, you never need to move an issue by hand.
 
 1. Copy the branch name from the issue (`Cmd/Ctrl` `Shift` `.`) and create your branch with it.
@@ -24,10 +25,9 @@ and it links and closes the issue on merge.
 
 ## Slack
 
-!!! warning "Not connected yet"
-    Connecting Slack is a one-time sign-in under
-    [settings](https://linear.app/happydevs/settings/integrations). After that, connect the two
-    update channels to each initiative and project as you create them.
+[Slack](https://linear.app/docs/slack) does two jobs: it carries updates out, and it brings requests in.
+
+### Updates going out
 
 `#initiative-updates`
 :   Monthly initiative updates. Connect the channel on each initiative.
@@ -41,9 +41,29 @@ and it links and closes the issue on merge.
 Channels get updates only, so nobody is pinged for every state change. And when a decision is
 made in a Slack thread, write it on the issue: Slack is for talking, Linear is the record.
 
-??? note "Linear Asks"
-    Asks creates issues from Slack requests. It needs the Business or Enterprise plan, which we
-    don't have, so requests come in through [Triage](issues/triage.md).
+### Requests coming in { #linear-asks }
+
+[Linear Asks](https://linear.app/docs/linear-asks-slack) turns a Slack message into an issue. Each team has its own
+asks channel, connected to that team's [Triage](issues/triage.md). Whoever is on duty picks
+requests up from there.
+
+Colleagues raise a request by reacting to a message with 🎫, typing `/asks`, or mentioning
+`@Linear Asks`. They don't need a Linear account, and replies stay in step between the Slack
+thread and the issue.
+
+To connect a team's channel:
+
+1. In Linear, open **Settings → Features → Asks**.
+2. Add the team's Slack channel and link it to the team.
+3. Turn on the templates you want people to choose from. One for each common `bau/*` kind
+   works well.
+4. In Slack, run `/invite @Linear Asks` in that channel.
+
+??? note "What depends on the Linear plan"
+    Asks is on the Business and Enterprise plans. Linear's docs list per-channel settings,
+    private channels and creating an Ask from every new message as Enterprise features. On
+    Business, people can still raise an Ask from any public channel and choose the team's
+    template, so a channel per team works as a habit even where Linear doesn't enforce it.
 
 ??? note "The GitHub link as a diagram"
     ![GitHub to Linear: branch, push, PR and merge driving issue state as a side effect.](diagrams/github-flow.svg)

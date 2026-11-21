@@ -1,7 +1,7 @@
 # Dashboards
 
 <div class="lwm-lead" markdown>
-Shared Linear views that show when something has slipped, so nobody has to go hunting.
+Shared [Linear views](https://linear.app/docs/custom-views) that show when something has slipped, so nobody has to go hunting.
 </div>
 
 ## Is anything breaking the rules?
@@ -34,7 +34,7 @@ everything.
 ## How is the work going?
 
 [SLA health](https://linear.app/happydevs/view/c51ef229-df32-4d64-970e-335c369c81ac)
-:   Open issues with a deadline.
+:   Open issues with an [SLA](https://linear.app/docs/sla) deadline.
 
 [Delivery ranking](https://linear.app/happydevs/view/4f97a6df-2be4-4e8a-b143-181cd18f7585)
 :   Delivery projects by priority, with health alongside. Use it to decide what comes first.

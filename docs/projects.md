@@ -3,7 +3,7 @@
 <div class="lwm-lead" markdown>
 <span class="lwm-for">For delivery leads</span>
 
-A project is a piece of work with a start, an end and one person leading it. Its job is to move
+A [project](https://linear.app/docs/projects) is a piece of work with a start, an end and one person leading it. Its job is to move
 a Key Result on an [initiative](initiatives.md).
 </div>
 
@@ -11,7 +11,8 @@ a Key Result on an [initiative](initiatives.md).
 
 ## From idea to done
 
-A project starts as an idea. If the idea holds up, it becomes committed work.
+A project starts as an idea. If the idea holds up, it becomes committed work. These are our
+[project statuses](https://linear.app/docs/project-status).
 
 <ol class="lwm-flow">
   <li class="is-quiet"><b>Idea</b>Someone's thought of it</li>
@@ -68,7 +69,7 @@ Key Result, and what's out of scope.
 
 ## Every week while it's being built { #keep-everyone-posted }
 
-The lead posts an update to `#project-updates`: what changed, whether it's on track, and any
+The lead posts an [update](https://linear.app/docs/initiative-and-project-updates) to `#project-updates`: what changed, whether it's on track, and any
 risks. Write it on the project in Linear, or let the
 [`linear-project-update`](skills/index.md) skill draft it.
 
@@ -98,7 +99,7 @@ If your project can't start until another finishes, record it with Linear's **Bl
 moves.
 
 On the project, press `⌘K` and choose *Dependencies*. Or on the
-[timeline](https://linear.app/happydevs/projects/all), drag from the end of one project's bar to
+[timeline](https://linear.app/happydevs/projects/all) ([how it works](https://linear.app/docs/timeline)), drag from the end of one project's bar to
 another. The line between them is blue while the dates work and red when they don't. Red means
 the two leads need to talk.
 
