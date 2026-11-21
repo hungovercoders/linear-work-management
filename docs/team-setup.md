@@ -16,7 +16,7 @@ a first draft. Run a retrospective on it like anything else, and change what doe
 
 - A mission that rarely changes, and a few tenets for how the team works
 - Three objectives a quarter, each with three Key Results
-- An SLA in Linear for each kind of BAU it handles
+- An SLA and an issue template in Linear for each kind of BAU it handles
 - [Triage](issues/triage.md) switched on, one person on duty, and an asks channel in Slack
 - [Cycles](https://linear.app/docs/use-cycles) at a steady length
 - Its objectives somewhere every member sees them daily
@@ -29,7 +29,8 @@ a first draft. Run a retrospective on it like anything else, and change what doe
 2. Keep the [shared issue states](teams.md#issue-states). Add your own only if you need them.
 3. Turn Triage on, set Triage responsibility, and
    [connect the team's asks channel](integrations.md#linear-asks).
-4. Add an [SLA rule](#service-levels) for each kind of BAU the team handles.
+4. Add an [SLA rule](#service-levels) and an issue template for each kind of BAU the team
+   handles.
 5. Turn cycles on. Start weekly, or fortnightly if a week is too short to finish anything.
 6. Create one [initiative](initiatives.md) for each objective, with your team as its lead team.
 7. Add the team's initiatives and current cycle to everyone's sidebar favourites, and keep the
@@ -69,6 +70,23 @@ each kind of BAU the team handles its own rule:
 
 Only the first rule that matches an issue applies, so put the most urgent at the top. Add a
 rule for any other kind where you've made a promise.
+
+An SLA only starts if the issue has the right label and priority, and people forget labels.
+So make an [issue template](https://linear.app/docs/issue-templates) for each kind of BAU. The
+template sets the `bau/*` label and a default priority, and gives the description its
+headings. Offer the same templates in the team's asks channel, and a request raised from Slack
+arrives already labelled, with its SLA running.
+
+| Template | Sets | Description from |
+|---|---|---|
+| Incident | `bau/incident`, Urgent | `template-action` |
+| Vulnerability | `bau/vulnerability`, priority by severity | `template-action` |
+| Defect | `bau/defect` | `template-bug` |
+| Query | `bau/query` | `template-analysis` |
+| Support | `bau/support` | `template-action` |
+
+The description templates are in the
+[`linear-issue` folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue).
 
 From then on Linear does the measuring:
 
