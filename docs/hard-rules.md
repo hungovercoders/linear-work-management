@@ -27,7 +27,7 @@ what it's exploring. The rule starts when the project becomes `Planned`.
 
 And a project is only `Completed` when the number has moved. Shipping isn't enough.
 
-[What happens when an idea is ready to be planned](projects.md#discovery-phase-is-there-something-here-idea-scoping)
+[What happens when an idea is ready to be planned](projects.md#becoming-planned)
 
 ## 3. Every issue is in a project or has one `bau/*` label
 

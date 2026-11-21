@@ -13,9 +13,12 @@ agrees when it's done.
 
 Every issue is one or the other. Never both, never neither.
 
-<div class="lwm-cards">
-  <a class="lwm-card is-slate" href="project-work/"><span class="lwm-kicker">Planned</span><b>Project work</b><span>Lives in a project and helps move its Key Result. Gets a <code>type/*</code> label.</span></a>
-  <a class="lwm-card is-red" href="triage/"><span class="lwm-kicker">Arrived</span><b>BAU work</b><span>An incident, a request, a reported fault. Gets one <code>bau/*</code> label and no project.</span></a>
+<div class="lwm-cards" markdown="block">
+
+[<span class="lwm-kicker">Planned</span><b>Project work</b><span>Lives in a project and helps move its Key Result. Gets a <code>type/*</code> label.</span>](project-work.md){ .lwm-card .is-slate }
+
+[<span class="lwm-kicker">Arrived</span><b>BAU work</b><span>An incident, a request, a reported fault. Gets one <code>bau/*</code> label and no project.</span>](triage.md){ .lwm-card .is-red }
+
 </div>
 
 ## Write it so someone can start { #the-body-is-the-prompt }

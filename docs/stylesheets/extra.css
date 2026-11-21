@@ -5,7 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap");
 
 :root {
-  --lwm-slate: #33415c;
+  --lwm-slate: #3d4c6b;
   --lwm-red: #8c2f39;
   --lwm-amber: #a8690f;
   --lwm-green: #2f6b3a;
@@ -18,6 +18,8 @@
   --md-primary-fg-color--light: #33415c;
   --md-primary-fg-color--dark: #1f2740;
   --md-accent-fg-color: #8c2f39;
+}
+[data-md-color-scheme="default"] {
   --md-default-bg-color: var(--lwm-paper);
   --md-typeset-a-color: #7a2832;
 }
@@ -67,7 +69,7 @@
 .md-typeset .lwm-for {
   display: inline-block;
   font-size: .68rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: .08em;
   text-transform: uppercase;
   color: var(--lwm-red);
@@ -95,11 +97,12 @@
 .lwm-level:nth-child(2) { margin-left: 1.5rem; }
 .lwm-level:nth-child(3) { margin-left: 3rem; }
 .lwm-level.is-bau { border-left-color: var(--lwm-red); margin-left: 3rem; }
-.lwm-level b { font-family: "Fraunces", Georgia, serif; font-size: 1.05rem; color: var(--lwm-slate); }
-.lwm-level.is-bau b { color: var(--lwm-red); }
+.lwm-level b, .md-typeset .lwm-level .lwm-name { font-family: "Fraunces", Georgia, serif; font-size: 1.05rem; color: var(--lwm-slate); }
+.lwm-level.is-bau b, .md-typeset .lwm-level.is-bau .lwm-name { color: var(--lwm-red); }
+.md-typeset .lwm-level .lwm-name { font-weight: 600; }
 .lwm-level span { display: block; }
 .lwm-level small { display: block; color: var(--lwm-muted); font-size: .74rem; margin-top: .15rem; }
-.lwm-level a { font-weight: 600; }
+
 
 /* ---------- cards ---------- */
 .lwm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .8rem; margin: 1.2rem 0; }
@@ -109,11 +112,13 @@
   transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
 .md-typeset a.lwm-card:hover { transform: translateY(-2px); border-color: var(--lwm-red); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
-.lwm-card .lwm-kicker { display: block; font-size: .66rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--lwm-red); }
+.lwm-card .lwm-kicker { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--lwm-red); }
 .lwm-card b { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; margin: .1rem 0 .25rem; }
 .lwm-card span { color: var(--lwm-muted); font-size: .78rem; line-height: 1.5; display: block; }
 .lwm-card.is-slate { border-top: .25rem solid var(--lwm-slate); }
 .lwm-card.is-red { border-top: .25rem solid var(--lwm-red); }
+
+.md-typeset .lwm-cards > p { display: contents; }
 
 /* ---------- numbered rules ---------- */
 .lwm-rules { counter-reset: rule; display: grid; gap: .5rem; margin: 1.2rem 0; max-width: 46rem; }
@@ -152,7 +157,7 @@
 
 /* ---------- definition lists stand in for most tables ---------- */
 .md-typeset dl { display: grid; grid-template-columns: minmax(8rem, 12rem) 1fr; gap: 0; margin: 1rem 0; max-width: 46rem; border-top: 1px solid var(--lwm-line); }
-.md-typeset dl dt { font-weight: 600; padding: .55rem .8rem .55rem 0; border-bottom: 1px solid var(--lwm-line); margin: 0; }
+.md-typeset dl dt { font-weight: 700; padding: .55rem .8rem .55rem 0; border-bottom: 1px solid var(--lwm-line); margin: 0; }
 .md-typeset dl dd { margin: 0 !important; padding: .55rem 0; border-bottom: 1px solid var(--lwm-line); color: var(--lwm-muted); }
 .md-typeset dl dd > p { margin: 0 !important; max-width: none; }
 .md-typeset dl dd > p + p { margin-top: .4rem !important; }
@@ -166,25 +171,25 @@
 
 /* ---------- the tables that remain are lookups ---------- */
 .md-typeset table:not([class]) { border: 1px solid var(--lwm-line); border-radius: .5rem; box-shadow: none; font-size: .76rem; background: var(--lwm-card); }
-.md-typeset table:not([class]) th { background: var(--lwm-soft); color: var(--md-default-fg-color); font-weight: 600; border: 0; }
+.md-typeset table:not([class]) th { background: var(--lwm-soft); color: var(--md-default-fg-color); font-weight: 700; border: 0; }
 .md-typeset table:not([class]) td { border-top: 1px solid var(--lwm-line); }
 
 /* ---------- callouts, quieter ---------- */
 .md-typeset .admonition, .md-typeset details {
   border: 1px solid var(--lwm-line) !important; border-left: .25rem solid var(--lwm-slate) !important; border-radius: .5rem;
-  box-shadow: none !important; background: var(--lwm-card); font-size: .8rem;
+  box-shadow: none !important; background: var(--lwm-card); font-size: .8rem; max-width: 46rem;
 }
 .md-typeset .admonition.warning, .md-typeset details.warning { border-left-color: var(--lwm-red) !important; }
 .md-typeset .admonition.tip, .md-typeset details.tip { border-left-color: var(--lwm-green) !important; }
-.md-typeset .admonition-title, .md-typeset summary { background: transparent !important; font-weight: 600; }
+.md-typeset .admonition-title, .md-typeset summary { background: transparent !important; font-weight: 700; }
 .md-typeset .admonition-title::before, .md-typeset summary::before { background-color: var(--lwm-muted) !important; }
 
 /* ---------- label and state chips ---------- */
 .md-typeset code { background: var(--lwm-soft); border-radius: .3rem; font-size: .82em; padding: .1em .35em; }
 
 /* Path colour words */
-.lwm-strat { color: var(--lwm-slate); font-weight: 600; }
-.lwm-inbound { color: var(--lwm-red); font-weight: 600; }
+.lwm-strat { color: var(--lwm-slate); font-weight: 700; }
+.lwm-inbound { color: var(--lwm-red); font-weight: 700; }
 
 /* Diagrams: pre-rendered D2 SVGs on a white card so they read in dark mode too */
 .md-typeset img[src$=".svg"] {

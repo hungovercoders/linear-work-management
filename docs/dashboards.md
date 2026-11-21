@@ -9,7 +9,7 @@ Shared Linear views that show when something has slipped, so nobody has to go hu
 Each of these should be empty. Anything in one is worth a conversation.
 
 [Unclassified issues](https://linear.app/happydevs/view/af5ea30a-d34e-4175-8410-8be8337441f8)
-:   Open issues with no project and no `bau/*` label.
+:   Open issues with no project and no `bau/*` label. Issues still in Triage don't count.
 
 [Project and BAU at once](https://linear.app/happydevs/view/82cdb693-867e-455e-83ad-4a6feeb2c4a9)
 :   Issues that are in a project and also carry a `bau/*` label.
@@ -21,7 +21,7 @@ Each of these should be empty. Anything in one is worth a conversation.
 :   Initiatives with no named owner.
 
 [Undated delivery projects](https://linear.app/happydevs/view/5e8e8163-9f0c-4fee-a210-c781f8c92707)
-:   Planned projects with a start or end date missing.
+:   Projects that are `Planned` or later with a start or end date missing.
 
 [Violated dependencies](https://linear.app/happydevs/view/4c475feb-953d-466e-af97-9dcc29bc2cfc)
 :   Projects whose [dependency lines](projects.md#dependencies-native-never-prose) have turned

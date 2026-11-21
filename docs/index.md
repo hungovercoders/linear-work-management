@@ -21,12 +21,15 @@ someone cares about. Five minutes here is enough to get going.
 
 Planned work sits on three levels. Each one answers "why?" for the level below it.
 
-<div class="lwm-levels">
-  <div class="lwm-level"><b><a href="initiatives/">Initiative</a></b><span>An outcome we want, and how we'll measure it.<small>Effortless rescue-dog adoption</small></span></div>
-  <div class="lwm-level"><b><a href="projects/">Project</a></b><span>A piece of work that moves one of those measures.<small>Onboard the 12 Welsh rescues</small></span></div>
-  <div class="lwm-level"><b><a href="issues/">Issue</a></b><span>One task someone can pick up and finish.<small>Show a rescue's dogs on the search page</small></span></div>
-  <div class="lwm-level is-bau"><b><a href="issues/triage/">BAU</a></b><span>Things break and people ask for help. That's business as usual. It arrives through Triage and gets a <code>bau/*</code> label, with no project needed.<small>A rescue emails: "you're still showing a dog we rehomed"</small></span></div>
+<div class="lwm-levels" markdown="block">
+<div class="lwm-level" markdown="span">[Initiative](initiatives.md){ .lwm-name }<span>An outcome we want, and how we'll measure it.<small>Effortless rescue-dog adoption</small></span></div>
+<div class="lwm-level" markdown="span">[Project](projects.md){ .lwm-name }<span>A piece of work that moves one of those measures.<small>Onboard the 12 Welsh rescues</small></span></div>
+<div class="lwm-level" markdown="span">[Issue](issues/index.md){ .lwm-name }<span>One task someone can pick up and finish.<small>Show a rescue's dogs on the search page</small></span></div>
+<div class="lwm-level is-bau" markdown="span">[BAU](issues/triage.md){ .lwm-name }<span>Things break and people ask for help. That's business as usual. It arrives through Triage and gets a <code>bau/*</code> label, with no project needed.<small>A rescue emails: "you're still showing a dog we rehomed"</small></span></div>
 </div>
+
+??? note "The same thing as a diagram"
+    ![The operating model: planned work runs from initiative to project to issue, and BAU work arrives through Triage.](diagrams/model.svg)
 
 ## The five rules
 
@@ -44,11 +47,16 @@ That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
 
 ## Where do you fit?
 
-<div class="lwm-cards">
-  <a class="lwm-card is-slate" href="initiatives/"><span class="lwm-kicker">Leadership</span><b>Initiatives</b><span>You own an outcome and how it's measured.</span></a>
-  <a class="lwm-card is-slate" href="projects/"><span class="lwm-kicker">Delivery leads</span><b>Projects</b><span>You own a piece of work: what, how and when.</span></a>
-  <a class="lwm-card is-slate" href="issues/project-work/"><span class="lwm-kicker">Delivery teams</span><b>Project work</b><span>You pick up issues and finish them.</span></a>
-  <a class="lwm-card is-red" href="issues/triage/"><span class="lwm-kicker">On triage duty</span><b>Triage and BAU</b><span>You decide what happens to whatever arrives.</span></a>
+<div class="lwm-cards" markdown="block">
+
+[<span class="lwm-kicker">Leadership</span><b>Initiatives</b><span>You own an outcome and how it's measured.</span>](initiatives.md){ .lwm-card .is-slate }
+
+[<span class="lwm-kicker">Delivery leads</span><b>Projects</b><span>You own a piece of work: what, how and when.</span>](projects.md){ .lwm-card .is-slate }
+
+[<span class="lwm-kicker">Delivery teams</span><b>Project work</b><span>You pick up issues and finish them.</span>](issues/project-work.md){ .lwm-card .is-slate }
+
+[<span class="lwm-kicker">On triage duty</span><b>Triage and BAU</b><span>You decide what happens to whatever arrives.</span>](issues/triage.md){ .lwm-card .is-red }
+
 </div>
 
 ## Not sure what to create?

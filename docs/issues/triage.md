@@ -81,6 +81,9 @@ Set a priority as you decide. It orders the work and can drive the deadline.
     If one kind of BAU work comes back every cycle, propose a [project](../projects.md) for it
     in the usual way. There's no shortcut that turns it into one.
 
+??? note "The five outcomes as a diagram"
+    ![Triage outcomes: the five decisions the person on duty can make on an item in Triage.](../diagrams/triage-outcomes.svg)
+
 ??? note "Turning Triage on, and how work reaches it"
     Enable it under **Team settings → Triage**, and use **Triage responsibility** to put a named
     person on duty and rotate them.
