@@ -20,7 +20,7 @@ Lead team
 :   The one team named as driving a project or an initiative. Other teams can still contribute
 
 Service level
-:   A standing promise a team keeps, such as uptime or how fast it fixes a vulnerability. It doesn't reset each quarter, and BAU work exists to keep it. [Team setup](team-setup.md#service-levels)
+:   A standing promise a team keeps: an SLA on a kind of BAU work, such as incidents or vulnerabilities, or a measure such as uptime. It doesn't reset each quarter, and BAU work exists to keep it. [Team setup](team-setup.md#service-levels)
 
 Key Result (KR)
 :   How an initiative is measured. Either measured (a number with a baseline and a target) or committed (done or not done, with a definition of done)

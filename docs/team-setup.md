@@ -16,7 +16,7 @@ a first draft. Run a retrospective on it like anything else, and change what doe
 
 - A mission that rarely changes, and a few tenets for how the team works
 - Three objectives a quarter, each with three Key Results
-- Service levels it always keeps, written down with numbers
+- SLAs for each kind of BAU it handles, and the service measures it always keeps
 - [Triage](issues/triage.md) switched on, one person on duty, and an asks channel in Slack
 - [Cycles](https://linear.app/docs/use-cycles) at a steady length
 - Its objectives somewhere every member sees them daily
@@ -54,23 +54,34 @@ Then use the objectives for every priority call. A request that serves none of t
 Objectives change every quarter. Service levels don't. Every team has a few promises it keeps
 for as long as it exists, and BAU is the work of keeping them.
 
-So write the team's service levels down, with numbers, where everyone can see them:
+Most of them are SLAs on a kind of BAU work, so each `bau/*` label can carry its own:
 
-- How fast we respond: incidents at once, support within a working day
-- How fast we fix: critical vulnerabilities within 7 days, high within 30
-- How reliable we are: 99.95% uptime
-- How current we stay: nothing running within three months of its end of life
+| Kind of BAU | Decide within | Fix within |
+|---|---|---|
+| `incident` | Immediately | Your promise for restoring service |
+| `vulnerability` | 1 working day | 7 days if critical, 30 if high, 90 if medium |
+| `support` | 1 working day | Your promise to the customer |
+| `defect`, `query`, `compliance`, `toil` | 2 working days | Set one where you've made a promise |
+
+The rest are standing measures of the service itself, such as 99.95% uptime, or nothing
+running within three months of its end of life.
+
+Write them all down, with numbers, where everyone can see them.
 
 These are why BAU work exists. An incident, a patch or a support request matters because one
-of these numbers is at risk. That's also how you size it: a request that threatens no service
+of these promises is at risk. That's also how you size it: a request that threatens no service
 level can wait, or be declined.
 
 In Linear, BAU is an issue with a `bau/*` label and no project. It belongs to no initiative
-either, because it has no end date. Linear measures the time-based service levels for you:
+either, because it has no end date. Linear does the measuring for the SLAs:
 
-- the [decision and fix deadlines](issues/triage.md#two-clocks) on each BAU issue
-- the [SLA health view](dashboards.md), which lists every issue with a deadline
-- the doctor, which flags anything left waiting
+- an [SLA rule](https://linear.app/docs/sla) for each kind, filtered by its label and by
+  priority, puts a deadline on every matching issue
+- the [SLA health view](dashboards.md) lists every issue with a deadline, and which are at risk
+- the doctor flags anything left waiting
+
+The decide-within times and the vulnerability fix times are
+[already the standard](issues/triage.md#two-clocks). The other fix times are yours to set.
 
 Uptime and software age are measured in your monitoring tools. Check them weekly, and raise a
 BAU issue whenever one slips.

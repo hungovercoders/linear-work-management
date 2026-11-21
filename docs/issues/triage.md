@@ -12,10 +12,10 @@ It arrives in Triage, and your job is to decide where it goes.
 
 ## Why BAU exists
 
-Every team keeps a few promises for as long as it exists: how fast it responds, how fast it
-fixes a vulnerability, how reliable its service is. BAU is the work of keeping those promises.
-That's how you judge an item in Triage. Ask which [service level](../team-setup.md#service-levels)
-it puts at risk.
+Every team keeps a few promises for as long as it exists: an SLA for incidents, another for
+vulnerabilities, another for support, and measures such as uptime. BAU is the work of keeping those
+promises. That's how you judge an item in Triage. Ask which [service
+level](../team-setup.md#service-levels) it puts at risk.
 
 ## Your job on duty
 
@@ -120,7 +120,8 @@ Set a priority as you decide. It orders the work and can drive the deadline.
     showing time in status on the Triage state.
 
     The fix deadline is an SLA rule. Under
-    *Settings → Issues → SLAs*, add a rule filtered to `bau/vulnerability`, with severity taken
+    *Settings → Issues → SLAs*, add a rule for each kind of BAU you've promised a fix time
+    for. The standard one is filtered to `bau/vulnerability`, with severity taken
     from priority and durations in business days. Rules apply only to new or updated issues, the
     first match wins, and an issue can't have both an SLA and a due date.
 
