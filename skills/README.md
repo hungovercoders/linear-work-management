@@ -69,4 +69,7 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 | `linear-triage` | A routing decision per inbound issue (five outcomes) | [Triage and BAU](https://hungovercoders.github.io/linear-work-management/issues/triage/) |
 | `linear-team-digest` | The weekly team digest (cycle + triage roll-up) | [Updates](https://hungovercoders.github.io/linear-work-management/communications/) |
 | `linear-doctor` | A drift report — hard rules, taxonomy, stale updates | [The five rules](https://hungovercoders.github.io/linear-work-management/hard-rules/) |
+| `linear-team-setup` | A setup report: what a team has in place and what is missing | [Team setup](https://hungovercoders.github.io/linear-work-management/team-setup/) |
+| `linear-objectives` | A quarter's three objectives and their Key Results | [Team setup](https://hungovercoders.github.io/linear-work-management/team-setup/) |
+| `linear-service-level-check` | The weekly report of BAU against its SLAs | [Team setup](https://hungovercoders.github.io/linear-work-management/team-setup/) |
 | `linear-stakeholder-deck` | A Marp slide deck of the live portfolio | [Updates](https://hungovercoders.github.io/linear-work-management/communications/) |

@@ -37,6 +37,10 @@ doesn't work.
 7. Add the team's initiatives and current cycle to everyone's sidebar favourites, and keep the
    cycle views open to other teams.
 
+Three [skills](skills/index.md) help with this page. `linear-team-setup` checks a team against
+these steps, `linear-objectives` helps choose the quarter's objectives, and
+`linear-service-level-check` runs the weekly check.
+
 ## Objectives, one quarter at a time
 
 An objective is an initiative, and its Key Results measure it. A project is a hypothesis about
