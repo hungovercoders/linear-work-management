@@ -18,7 +18,7 @@ why it matters. The [projects](projects.md) underneath work out how.
 
 - A name people can get behind, like "Make onboarding effortless"
 - Three to five Key Results
-- One owner
+- One owner. An initiative belongs to no team, so a person has to answer for it
 - A target date
 
 </div>

@@ -13,6 +13,12 @@ Project
 Issue
 :   One task a person can pick up and finish. [Issues](issues/index.md)
 
+Team
+:   The group that owns a set of issues, with its own Triage, cycles and states. Projects and initiatives can cross teams. An issue can't. [Teams](how-teams-work.md)
+
+Lead team
+:   The one team, among those sharing a project, that Linear treats as its home
+
 Key Result (KR)
 :   How an initiative is measured. Either measured (a number with a baseline and a target) or committed (done or not done, with a definition of done)
 

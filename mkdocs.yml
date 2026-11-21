@@ -80,6 +80,7 @@ nav:
           - issues/index.md
           - Project work: issues/project-work.md
           - Triage and BAU: issues/triage.md
+      - Teams: how-teams-work.md
   - Staying on track:
       - Updates: communications.md
       - Dashboards: dashboards.md

@@ -31,6 +31,11 @@ Planned work sits on three levels. Each one answers "why?" for the level below i
 <div class="lwm-level is-bau" markdown="span">[BAU](issues/triage.md){ .lwm-name }<span>Things break and people ask for help. That's business as usual. It arrives through Triage and gets a <code>bau/*</code> label, with no project needed.<small>A rescue emails: "you're still showing a dog we rehomed"</small></span></div>
 </div>
 
+## Where teams fit
+
+A team owns issues, and only issues. An initiative belongs to no team, a project can be shared
+by several, and every issue belongs to exactly one. [How teams work](how-teams-work.md)
+
 ## The five rules
 
 That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
