@@ -49,11 +49,13 @@ Uses [Task](https://taskfile.dev); everything humans, agents and CI run goes thr
 task serve         # live-preview the docs at http://127.0.0.1:8000
 task build         # strict static build into ./site
 task skills:index  # regenerate docs/skills/index.md from skills/*/SKILL.md
+task diagrams      # re-render docs/diagrams/*.d2 to committed SVGs (needs the d2 CLI)
 task doctor        # audit the workspace against the hard rules
 ```
 
-Pictures on the site are built from page components (cards, state strips, arrows) styled in
-`docs/stylesheets/extra.css`, so there are no image files to render.
+Each page has one summary diagram. They are **D2** sources in `docs/diagrams/*.d2`, rendered to
+committed SVGs with `task diagrams` (needs the [d2](https://d2lang.com) CLI) and styled from one
+shared file so they match the site. Edit a `.d2`, run `task diagrams`, and commit the SVG with it.
 
 Content and skill prose follow [`STYLE.md`](STYLE.md) (enforced by `task lint:prose`); repo
 authoring notes live in [`CLAUDE.md`](CLAUDE.md).

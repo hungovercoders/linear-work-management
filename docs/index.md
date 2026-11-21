@@ -17,6 +17,9 @@ someone cares about. Five minutes here is enough to get going.
 
 </div>
 
+??? abstract "See it as a diagram"
+    ![The operating model: planned work runs from initiative to project to issue, and BAU work arrives through Triage.](diagrams/model.svg)
+
 ## Three levels, and one side door
 
 Planned work sits on three levels. Each one answers "why?" for the level below it.

@@ -1,0 +1,23 @@
+# Issue lifecycle. Shown on the Issues page (see `task diagrams`).
+# Two ways in, one spine. Triage's five outcomes are in triage-outcomes.d2.
+...@shared/classes
+direction: down
+
+triage: "Triage\nunplanned work waits here\nfor a decision" {class: bau}
+projectwork: "Project work\ncreated straight\nin its project" {class: planned}
+backlog: "Backlog\nwritten down, no promise" {class: quiet}
+planning: "Planning\ncommitted, working out the details" {class: gate}
+todo: "Todo\nready to pick up" {class: planned}
+inprogress: "In Progress\nbeing worked on" {class: planned}
+inreview: "In Review\nbeing reviewed" {class: planned}
+done: "Done\nshipped and accepted" {class: done}
+dropped: "Canceled or Duplicate" {class: quiet}
+
+triage -> backlog: accepted {class: to-bau}
+projectwork -> backlog: created {class: to-planned}
+backlog -> planning: the team commits {class: to-gate}
+planning -> todo: it's ready {class: to-planned}
+todo -> inprogress: {class: to-planned}
+inprogress -> inreview: {class: to-planned}
+inreview -> done: {class: to-done}
+backlog -> dropped: {class: to-quiet}

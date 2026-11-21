@@ -9,6 +9,9 @@ agrees when it's done.
 
 [Open the issues list in Linear](https://linear.app/happydevs/team/GRI/all){ .md-button }
 
+??? abstract "See it as a diagram"
+    ![Issue lifecycle: Triage and project work both lead to Backlog, then Planning, Todo, In Progress, In Review and Done.](../diagrams/issue-lifecycle.svg)
+
 ## Two kinds
 
 Every issue is one or the other. Never both, never neither.

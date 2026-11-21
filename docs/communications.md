@@ -5,6 +5,9 @@ Who posts which [update](https://linear.app/docs/initiative-and-project-updates)
 having to ask, and without being buried in messages.
 </div>
 
+??? abstract "See it as a diagram"
+    ![Who posts which update, where it goes, and how project updates feed initiative updates and Pulse.](diagrams/comms-cadence.svg)
+
 ## Who posts what { #the-cadence }
 
 <div class="lwm-cards">

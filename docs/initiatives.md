@@ -9,6 +9,9 @@ why it matters. The [projects](projects.md) underneath work out how.
 
 [Open the initiatives list in Linear](https://linear.app/happydevs/initiatives){ .md-button }
 
+??? abstract "See it as a diagram"
+    ![Where an initiative comes from: one project graduating, several aggregating, or leadership naming an outcome.](diagrams/initiative-origin.svg)
+
 ## What every initiative needs
 
 <div class="lwm-need" markdown>

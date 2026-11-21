@@ -9,6 +9,9 @@ a Key Result on an [initiative](initiatives.md).
 
 [Open the projects list in Linear](https://linear.app/happydevs/projects/all){ .md-button }
 
+??? abstract "See it as a diagram"
+    ![Project lifecycle: Idea and Scoping, the decision at Planned, then In Progress, Launching and Completed.](diagrams/project-lifecycle.svg)
+
 ## From idea to done
 
 A project starts as an idea. If the idea holds up, it becomes committed work. These are our

@@ -12,6 +12,9 @@ what was written in Linear.
   <div class="lwm-level is-bau"><b>From Triage</b><span>"Your site shows a dog we rehomed last week."<small>Arrived as bau/defect, accepted into the project as a bug</small></span></div>
 </div>
 
+??? abstract "See it as a diagram"
+    ![The worked example: the dogadopt initiative, its project, three issues, and one item accepted from Triage.](diagrams/example-chain.svg)
+
 ## 1. The initiative
 
 The owner wanted one place to search every rescue. Three Key Results say how they'll know it

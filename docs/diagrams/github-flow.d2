@@ -1,0 +1,19 @@
+# GitHub to Linear. Shown on the Integrations page (see `task diagrams`).
+# Left: what you do. Right: where the issue moves as a result.
+...@shared/classes
+direction: down
+
+branch: "Create a branch\nusing the issue's branch name" {class: key}
+push: "Push the branch" {class: planned}
+pr: "Open a pull request" {class: planned}
+merge: "Merge it" {class: planned}
+s_prog: "Issue moves to In Progress" {class: plain}
+s_rev: "Issue moves to In Review" {class: plain}
+s_done: "Issue moves to Done" {class: done}
+
+branch -> push: {class: to-planned}
+push -> pr: {class: to-planned}
+pr -> merge: {class: to-planned}
+push -> s_prog: {class: to-quiet}
+pr -> s_rev: {class: to-quiet}
+merge -> s_done: {class: to-done; style.stroke-dash: 4}
