@@ -14,6 +14,7 @@ task build         # strict static build into ./site
 task skills:index  # regenerate docs/skills/index.md from skills/*/SKILL.md
 task lint:prose    # AI-tell gate on the guide + skill prose
 task model:check   # the guide and skills agree with docs/model.yml
+task llms          # generate llms.txt and llms-full.txt, the guide as plain text
 task doctor        # audit the Linear workspace against the hard rules
 ```
 

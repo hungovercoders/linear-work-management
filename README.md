@@ -37,6 +37,7 @@ Everything else here expands on those; see **[The five rules](docs/hard-rules.md
 | [`docs/index.md`](docs/index.md) | Start here: the model, the five rules and where to go next. |
 | [`docs/hard-rules.md`](docs/hard-rules.md) | The hard rules, expanded. |
 | [`docs/model.yml`](docs/model.yml) | The model as data: states, labels, SLAs, cadences and thresholds. The guide, skills and doctor are checked against it. |
+| `llms.txt`, `llms-full.txt` | The guide as plain text for agents. Generated at build time by `task llms` and served from the site root; not committed. |
 | `skills/` | Claude Code skills — the source of the installable plugin. |
 | `scripts/` | Shared helpers used by skills, `Taskfile.yml` and CI (no duplication). |
 

@@ -44,6 +44,11 @@ tasks:
     cmds:
       - "{{.PY}} scripts/check_diagrams.py"
 
+  llms:
+    desc: Generate docs/llms.txt and docs/llms-full.txt, the guide as plain text for agents.
+    cmds:
+      - "{{.PY}} scripts/gen_llms.py"
+
   model:check:
     desc: Check the guide and skills agree with docs/model.yml, the one source of the model.
     cmds:
@@ -51,13 +56,13 @@ tasks:
 
   serve:
     desc: Live-preview the docs site locally.
-    deps: [setup, skills:index, diagrams:check, model:check]
+    deps: [setup, skills:index, diagrams:check, model:check, llms]
     cmds:
       - "{{.MKDOCS}} serve"
 
   build:
     desc: Build the static site into ./site (fails on warnings).
-    deps: [setup, skills:index, diagrams:check, model:check]
+    deps: [setup, skills:index, diagrams:check, model:check, llms]
     cmds:
       - "{{.MKDOCS}} build --strict"
 

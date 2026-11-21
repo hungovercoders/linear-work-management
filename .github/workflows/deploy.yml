@@ -33,6 +33,9 @@ jobs:
       - name: Regenerate skill index
         run: python scripts/gen_skill_index.py
 
+      - name: Generate the plain-text guide for agents
+        run: python scripts/gen_llms.py
+
       - name: Check diagrams (every D2 source has a committed SVG)
         run: python scripts/check_diagrams.py
 

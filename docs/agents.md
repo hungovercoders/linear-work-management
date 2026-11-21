@@ -64,3 +64,6 @@ When an agent isn't sure which of these applies, it asks.
 
 [`model.yml`](model.yml)
 :   The states, labels, SLAs and thresholds as data.
+
+[`llms.txt`](https://hungovercoders.github.io/linear-work-management/llms.txt)
+:   An index of this guide in plain text, with the whole guide in one file beside it.

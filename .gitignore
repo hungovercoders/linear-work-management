@@ -5,3 +5,5 @@ __pycache__/
 .DS_Store
 node_modules/
 .cache/
+docs/llms.txt
+docs/llms-full.txt
