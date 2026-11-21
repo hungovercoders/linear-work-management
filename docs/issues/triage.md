@@ -12,10 +12,11 @@ It arrives in Triage, and your job is to decide where it goes.
 
 ## Why BAU exists
 
-Every team keeps a few promises for as long as it exists: an SLA for incidents, another for
-vulnerabilities, another for support, and measures such as uptime. BAU is the work of keeping those
-promises. That's how you judge an item in Triage. Ask which [service
-level](../team-setup.md#service-levels) it puts at risk.
+Every team keeps a few promises for as long as it exists, and BAU is the work of keeping
+them. In Linear each promise is an [SLA](https://linear.app/docs/sla): one for incidents,
+another for vulnerabilities, another for support. That's how you judge an item in Triage. Ask
+which SLA applies to it. [Team setup](../team-setup.md#service-levels) shows the rules to
+create.
 
 ## Your job on duty
 
@@ -115,15 +116,18 @@ Set a priority as you decide. It orders the work and can drive the deadline.
     duplicate or an assignee. Treat it as a first guess.
 
 ??? note "Setting the deadlines up in Linear"
-    Linear's [SLA rules](https://linear.app/docs/sla) measure time to completion. That suits the fix
-    deadline. There's no rule for "decide within a day", so that one relies on the rota and on
-    showing time in status on the Triage state.
+    Linear's SLAs measure time to completion, so they cover the fix deadline. Add the rules
+    under *Settings → Issues → SLAs*: one for each kind of BAU, filtered by its `bau/*` label
+    and, for vulnerabilities, by priority. [Team setup](../team-setup.md#service-levels) lists
+    them. Use business days for the durations.
 
-    The fix deadline is an SLA rule. Under
-    *Settings → Issues → SLAs*, add a rule for each kind of BAU you've promised a fix time
-    for. The standard one is filtered to `bau/vulnerability`, with severity taken
-    from priority and durations in business days. Rules apply only to new or updated issues, the
-    first match wins, and an issue can't have both an SLA and a due date.
+    A few things to know. Only the first matching rule applies. Rules apply to new or updated
+    issues, and never to older ones. An issue can't have both an SLA and a due date. Each issue
+    shows its SLA as low, medium or high risk, then breached, and Linear records it as achieved
+    or failed when the issue closes.
+
+    There's no SLA for "decide within a day", because nothing is completed at that point. That
+    one relies on the rota, and on showing time in status on the Triage state.
 
     If you'd rather not depend on rules, the `linear-triage` skill sets the issue's
     `slaBreachesAt` date directly.

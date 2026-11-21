@@ -16,7 +16,7 @@ a first draft. Run a retrospective on it like anything else, and change what doe
 
 - A mission that rarely changes, and a few tenets for how the team works
 - Three objectives a quarter, each with three Key Results
-- SLAs for each kind of BAU it handles, and the service measures it always keeps
+- An SLA in Linear for each kind of BAU it handles
 - [Triage](issues/triage.md) switched on, one person on duty, and an asks channel in Slack
 - [Cycles](https://linear.app/docs/use-cycles) at a steady length
 - Its objectives somewhere every member sees them daily
@@ -29,9 +29,10 @@ a first draft. Run a retrospective on it like anything else, and change what doe
 2. Keep the [shared issue states](teams.md#issue-states). Add your own only if you need them.
 3. Turn Triage on, set Triage responsibility, and
    [connect the team's asks channel](integrations.md#linear-asks).
-4. Turn cycles on. Start weekly, or fortnightly if a week is too short to finish anything.
-5. Create one [initiative](initiatives.md) for each objective, with your team as its lead team.
-6. Add the team's initiatives and current cycle to everyone's sidebar favourites, and keep the
+4. Add an [SLA rule](#service-levels) for each kind of BAU the team handles.
+5. Turn cycles on. Start weekly, or fortnightly if a week is too short to finish anything.
+6. Create one [initiative](initiatives.md) for each objective, with your team as its lead team.
+7. Add the team's initiatives and current cycle to everyone's sidebar favourites, and keep the
    cycle views open to other teams.
 
 ## Objectives, one quarter at a time
@@ -49,45 +50,46 @@ likely to reach, and say which ones are must-haves. In this guide a must-have is
 Then use the objectives for every priority call. A request that serves none of them is a fair
 "no", and because other teams can see your objectives, they can see why.
 
-## BAU, and the service levels behind it { #service-levels }
+## BAU, measured with Linear's SLAs { #service-levels }
 
 Objectives change every quarter. Service levels don't. Every team has a few promises it keeps
 for as long as it exists, and BAU is the work of keeping them.
 
-Most of them are SLAs on a kind of BAU work, so each `bau/*` label can carry its own:
+Linear has [SLAs](https://linear.app/docs/sla) built in, so use them. An SLA rule puts a
+deadline on every issue that matches it, and you can match on team, label and priority. Give
+each kind of BAU the team handles its own rule:
 
-| Kind of BAU | Decide within | Fix within |
+| Rule, in this order | Matches | SLA |
 |---|---|---|
-| `incident` | Immediately | Your promise for restoring service |
-| `vulnerability` | 1 working day | 7 days if critical, 30 if high, 90 if medium |
-| `support` | 1 working day | Your promise to the customer |
-| `defect`, `query`, `compliance`, `toil` | 2 working days | Set one where you've made a promise |
+| Incident | `bau/incident` | Your promise for restoring service |
+| Critical vulnerability | `bau/vulnerability`, Urgent | 7 days |
+| High vulnerability | `bau/vulnerability`, High | 30 days |
+| Medium vulnerability | `bau/vulnerability`, Medium | 90 days |
+| Support | `bau/support` | Your promise to the customer |
 
-The rest are standing measures of the service itself, such as 99.95% uptime, or nothing
-running within three months of its end of life.
+Only the first rule that matches an issue applies, so put the most urgent at the top. Add a
+rule for any other kind where you've made a promise.
 
-Write them all down, with numbers, where everyone can see them.
+From then on Linear does the measuring:
 
-These are why BAU work exists. An incident, a patch or a support request matters because one
-of these promises is at risk. That's also how you size it: a request that threatens no service
-level can wait, or be declined.
+- Each issue shows its SLA and how close it is: low, medium or high risk, then breached.
+- Subscribers, and the team's Slack channel, are told a day before a breach.
+- When the issue closes, Linear records the SLA as achieved or failed.
+- The [SLA health view](dashboards.md) lists what's open. [Insights](https://linear.app/docs/insights)
+  shows the share achieved for each kind of BAU.
 
-In Linear, BAU is an issue with a `bau/*` label and no project. It belongs to no initiative
-either, because it has no end date. Linear does the measuring for the SLAs:
+That share is how you measure BAU. "We achieved 96% of our vulnerability SLAs this quarter" is
+a number a team can own, report and improve, quarter after quarter.
 
-- an [SLA rule](https://linear.app/docs/sla) for each kind, filtered by its label and by
-  priority, puts a deadline on every matching issue
-- the [SLA health view](dashboards.md) lists every issue with a deadline, and which are at risk
-- the doctor flags anything left waiting
+It's also how you size the work. An item in Triage matters because an SLA applies to it. One
+that no SLA covers can wait, or be declined.
 
-The decide-within times and the vulnerability fix times are
-[already the standard](issues/triage.md#two-clocks). The other fix times are yours to set.
+Some service levels sit outside Linear, such as 99.95% uptime, or nothing running within three
+months of its end of life. Measure those in your monitoring tools, check them weekly, and raise
+a BAU issue whenever one slips. The SLA then applies to that issue.
 
-Uptime and software age are measured in your monitoring tools. Check them weekly, and raise a
-BAU issue whenever one slips.
-
-BAU comes before the objectives, and it should be the smaller share of the team's time. If a
-service level keeps being missed, or BAU starts taking most of the week, don't absorb that
+BAU comes before the objectives, and it should be the smaller share of the team's time. If the
+share of SLAs achieved keeps falling, or BAU starts taking most of the week, don't absorb that
 quietly. That's your evidence for next quarter: make fixing the cause an objective, with a
 project to do it.
 
@@ -101,7 +103,7 @@ project to do it.
 | Every cycle | Plan it around one goal that names the Key Result it serves | Up to 90 minutes |
 | | Review what moved, then a retrospective | Up to an hour, then up to 90 minutes |
 | Every week | Refinement: move issues through [Backlog, Planning and Todo](issues/index.md#backlog-planning-todo-commitment-then-readiness) | Up to two hours |
-| | Service level check: errors, vulnerabilities and ageing software against the team's service levels | Up to an hour |
+| | Service level check: SLAs at risk or breached, plus errors, vulnerabilities and ageing software | Up to an hour |
 | Every day | Stand-up. Walk the board from right to left, so the talk is about finishing work | 15 minutes |
 | End of the quarter | Score the Key Results, hold a retrospective, and celebrate | Up to four hours |
 

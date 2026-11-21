@@ -49,7 +49,8 @@ This is one-time setup. For keeping things in order afterwards, use the
 #### SLAs: [Triage and BAU](issues/triage.md)
 
 - [x] The `slaBreachesAt` fallback (the `linear-triage` skill), which works on every plan
-- [ ] Native SLA rules for `bau/vulnerability` severity windows
+- [ ] SLA rules for each kind of BAU the team handles, starting with `bau/vulnerability` by
+      priority ([the rules](team-setup.md#service-levels))
 
 ---
 
