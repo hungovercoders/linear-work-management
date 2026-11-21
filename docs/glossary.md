@@ -19,6 +19,9 @@ Team
 Lead team
 :   The one team named as driving a project or an initiative. Other teams can still contribute
 
+Objective zero
+:   A team's standing objective for keeping the lights on. Its Key Results are service levels, and BAU work serves it. [Team setup](team-setup.md#objective-zero)
+
 Key Result (KR)
 :   How an initiative is measured. Either measured (a number with a baseline and a target) or committed (done or not done, with a definition of done)
 

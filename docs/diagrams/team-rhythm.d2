@@ -1,0 +1,47 @@
+# A team's rhythm: the quarter around the cycles. Shown on the Team setup page (see `task diagrams`).
+# Three columns, read left to right; each column reads top to bottom.
+...@shared/classes
+
+grid-columns: 3
+grid-gap: 50
+
+start: "Start of the quarter" {
+  class: band
+  label.near: top-left
+  grid-columns: 1
+  grid-gap: 34
+  scene: "Scene setting\nstrategy, mission, tenets" {class: plain}
+  create: "Choose objectives\nthree, plus objective zero" {class: gate}
+  plan: "Impact planning\nhypotheses become projects" {class: key}
+  scene -> create: {class: to-gate}
+  create -> plan: {class: to-planned}
+}
+
+cycle: "Every cycle, repeated" {
+  class: band
+  label.near: top-left
+  grid-columns: 1
+  grid-gap: 34
+  planning: "Plan the cycle\none goal, tied to a Key Result" {class: key}
+  daily: "Daily stand-up" {class: planned}
+  weekly: "Weekly: refinement\nand zero tolerance" {class: bau}
+  review: "Review and retrospective" {class: planned}
+  planning -> daily: {class: to-planned}
+  daily -> weekly: {class: to-planned}
+  weekly -> review: {class: to-planned}
+}
+
+end: "End of the quarter" {
+  class: band
+  label.near: top-left
+  grid-columns: 1
+  grid-gap: 34
+  score: "Score the Key Results" {class: done}
+  retro: "Retrospective" {class: done}
+  party: "Celebrate" {class: done}
+  score -> retro: {class: to-done}
+  retro -> party: {class: to-done}
+}
+
+start -> cycle: {class: to-planned}
+cycle -> end: {class: to-done}

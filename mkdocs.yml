@@ -81,6 +81,7 @@ nav:
           - Project work: issues/project-work.md
           - Triage and BAU: issues/triage.md
       - Teams: how-teams-work.md
+      - Team setup: team-setup.md
   - Staying on track:
       - Updates: communications.md
       - Dashboards: dashboards.md
