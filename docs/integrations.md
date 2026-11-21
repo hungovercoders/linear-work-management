@@ -65,5 +65,3 @@ To connect a team's channel:
     Business, people can still raise an Ask from any public channel and choose the team's
     template, so a channel per team works as a habit even where Linear doesn't enforce it.
 
-??? note "The GitHub link as a diagram"
-    ![GitHub to Linear: branch, push, PR and merge driving issue state as a side effect.](diagrams/github-flow.svg)

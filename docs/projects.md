@@ -42,15 +42,11 @@ That's all. No Key Result, no dates, no initiative.
 
 This is where an idea turns into a commitment. First decide what it turned into:
 
-Graduate
-:   It joins an initiative, either an existing one or a new one its findings justify. This is
-    the usual route.
-
-Go standalone
-:   It goes ahead with no initiative. Allowed, but expect to be asked why.
-
-Drop
-:   Cancel it and record the reason. For an idea, that's a fine result.
+<div class="lwm-cards">
+  <div class="lwm-card is-slate"><span class="lwm-kicker">The usual route</span><b>Graduate</b><span>It joins an initiative: an existing one, or a new one its findings justify.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">Allowed</span><b>Go standalone</b><span>It goes ahead with no initiative. Expect to be asked why.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">A fine result</span><b>Drop</b><span>Cancel it and record the reason.</span></div>
+</div>
 
 A planned project then needs:
 
@@ -103,8 +99,6 @@ On the project, press `⌘K` and choose *Dependencies*. Or on the
 another. The line between them is blue while the dates work and red when they don't. Red means
 the two leads need to talk.
 
-??? note "The full picture"
-    ![Project lifecycle: Idea, Scoping, Planned and In Progress, then into Done or Closed.](diagrams/project-lifecycle.svg)
-
+??? note "Two special cases"
     A project whose outcome is already agreed can skip `Idea` and be created straight into
     `Planned`. A project that serves several initiatives names a Key Result for each.

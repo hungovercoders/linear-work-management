@@ -46,7 +46,13 @@ Leads still post, because Pulse has nothing to show otherwise. Everyone else can
 skip the channels.
 
 ??? note "How updates feed each other"
-    ![Communication cadence: project and initiative updates rolling up and pushing to channels, with Pulse as the pull feed.](diagrams/comms-cadence.svg)
+    <ol class="lwm-chain">
+      <li data-then="is the evidence for"><b>Issues and the cycle</b>What moved this week</li>
+      <li data-then="feeds"><b>Project update</b>Weekly, to <code>#project-updates</code></li>
+      <li><b>Initiative update</b>Monthly, to <code>#initiative-updates</code></li>
+    </ol>
+
+    Both kinds of update also appear in Pulse, so a quiet project is visible there too.
 
 ??? note "Keeping channels quiet"
     One channel serves each audience, so all projects share `#project-updates`. Channel messages

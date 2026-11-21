@@ -37,23 +37,18 @@ anyone can move a stray issue there by hand.
 
 ## Five things you can do with an item
 
-"Leave it there" isn't one of them.
+<div class="lwm-node is-red"><b>Something arrives in Triage</b><span>From Slack, an integration or a customer.</span></div>
+<div class="lwm-arrow"><small>whoever is on duty decides</small>↓</div>
+<div class="lwm-cards">
+  <div class="lwm-card is-slate"><span class="lwm-kicker">Accept</span><b>Into a project</b><span>A project already owns what this touches. Add it to the project with a <code>type/*</code> label.</span></div>
+  <div class="lwm-card is-red"><span class="lwm-kicker">Accept</span><b>As BAU</b><span>It stands alone. Keep one <code>bau/*</code> label and no project.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">Move to team</span><b>Redirect</b><span>It belongs to another team.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">Merge or mark duplicate</span><b>Merge</b><span>Another issue already covers it.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">Decline</span><b>Decline</b><span>We won't do it. Give a reason.</span></div>
+</div>
 
-Accept into a project
-:   A project already owns the thing this touches. **Accept**, add it to the project and give it
-    a `type/*` label.
-
-Accept as BAU
-:   It stands alone. **Accept**, and keep one `bau/*` label with no project.
-
-Redirect
-:   It belongs to another team. **Move to team**.
-
-Merge
-:   Another issue already covers it. **Merge** or **Mark duplicate**.
-
-Decline
-:   We won't do it. **Decline**, with a reason.
+The small label on each card is the button to press in Linear. "Leave it there" isn't an
+option.
 
 Work accepted as BAU joins the team's normal [states](index.md#the-shared-lifecycle) alongside
 everything else. It isn't a lesser queue.
@@ -98,9 +93,6 @@ Set a priority as you decide. It orders the work and can drive the deadline.
 !!! tip "The same thing keeps arriving?"
     If one kind of BAU work comes back every cycle, propose a [project](../projects.md) for it
     in the usual way. There's no shortcut that turns it into one.
-
-??? note "The five outcomes as a diagram"
-    ![Triage outcomes: the five decisions the person on duty can make on an item in Triage.](../diagrams/triage-outcomes.svg)
 
 ??? note "Turning Triage on"
     Enable it under **Team settings → Triage**, and use **Triage responsibility** to put a named

@@ -78,11 +78,13 @@ say so. Don't report green on top of silence.
     4. Connect the `#initiative-updates` Slack channel.
 
 ??? note "Where initiatives come from"
-    Most grow out of projects. One exploratory project becomes big enough to stand alone
-    (graduation), or several turn out to be parts of the same outcome (aggregation). Sometimes
-    leadership simply names an outcome with nothing behind it yet.
-
-    ![Three origins converging on one initiative outcome.](diagrams/initiative-origin.svg)
+    <div class="lwm-cards">
+      <div class="lwm-card is-slate"><span class="lwm-kicker">Most common</span><b>Graduation</b><span>One exploratory project grows big enough to stand alone.</span></div>
+      <div class="lwm-card is-slate"><span class="lwm-kicker">Several into one</span><b>Aggregation</b><span>A few projects turn out to be parts of the same outcome.</span></div>
+      <div class="lwm-card is-quiet"><span class="lwm-kicker">From the top</span><b>Spontaneous</b><span>Leadership names an outcome with nothing behind it yet.</span></div>
+    </div>
+    <div class="lwm-arrow">↓</div>
+    <div class="lwm-node"><b>Initiative</b><span>Key Results, one owner and a target date, whichever way it began.</span></div>
 
     When an initiative grows out of projects, the skill reads them, uses what they found for the
     objective and baselines, and links them so the history is kept.

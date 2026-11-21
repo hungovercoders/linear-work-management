@@ -28,9 +28,6 @@ Planned work sits on three levels. Each one answers "why?" for the level below i
 <div class="lwm-level is-bau" markdown="span">[BAU](issues/triage.md){ .lwm-name }<span>Things break and people ask for help. That's business as usual. It arrives through Triage and gets a <code>bau/*</code> label, with no project needed.<small>A rescue emails: "you're still showing a dog we rehomed"</small></span></div>
 </div>
 
-??? note "The same thing as a diagram"
-    ![The operating model: planned work runs from initiative to project to issue, and BAU work arrives through Triage.](diagrams/model.svg)
-
 ## The five rules
 
 That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
