@@ -7,10 +7,10 @@ hide:
 
 <div class="lwm-hero" markdown>
 
-# Know *why* you're doing what you're doing
+# How we use Linear
 
-This is how we use Linear. Every task connects to a project, and every project to an outcome
-someone cares about. Five minutes here is enough to get going.
+Every task connects to a project, and every project to an outcome someone cares about, so
+anyone can see why they're doing what they're doing. Five minutes here is enough to get going.
 
 [See a real example](examples.md){ .md-button .md-button--primary }
 [The five rules](hard-rules.md){ .md-button }
@@ -20,7 +20,7 @@ someone cares about. Five minutes here is enough to get going.
 ??? abstract "See it as a diagram"
     ![The operating model: planned work runs from initiative to project to issue, and BAU work arrives through Triage.](diagrams/model.svg)
 
-## Three levels, and one side door
+## Three levels of planned work, plus BAU
 
 Planned work sits on three levels. Each one answers "why?" for the level below it.
 
@@ -28,7 +28,7 @@ Planned work sits on three levels. Each one answers "why?" for the level below i
 <div class="lwm-level" markdown="span">[Initiative](initiatives.md){ .lwm-name }<span>An outcome we want, and how we'll measure it.<small>Effortless rescue-dog adoption</small></span></div>
 <div class="lwm-level" markdown="span">[Project](projects.md){ .lwm-name }<span>A piece of work that moves one of those measures.<small>Onboard the 12 Welsh rescues</small></span></div>
 <div class="lwm-level" markdown="span">[Issue](issues/index.md){ .lwm-name }<span>One task someone can pick up and finish.<small>Show a rescue's dogs on the search page</small></span></div>
-<div class="lwm-level is-bau" markdown="span">[BAU](issues/triage.md){ .lwm-name }<span>Things break and people ask for help. That's business as usual. It arrives through Triage and gets a <code>bau/*</code> label, with no project needed.<small>A rescue emails: "you're still showing a dog we rehomed"</small></span></div>
+<div class="lwm-level is-bau" markdown="span">[BAU](issues/triage.md){ .lwm-name }<span>Things break and people ask for help. This business-as-usual work arrives through Triage and gets a <code>bau/*</code> label, with no project needed.<small>A rescue emails: "you're still showing a dog we rehomed"</small></span></div>
 </div>
 
 ## Where teams fit
@@ -38,7 +38,7 @@ is different: it belongs to exactly one team. [How teams work](how-teams-work.md
 
 ## The five rules
 
-That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
+If a rule and a shortcut disagree, the rule wins.
 
 <div class="lwm-rules">
   <div class="lwm-rule"><div><b>Every initiative says how it will be measured.</b><span>Write its Key Results before any project goes under it.</span></div></div>
@@ -50,7 +50,7 @@ That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
 
 [Why these five](hard-rules.md)
 
-## Where do you fit?
+## Find your page
 
 <div class="lwm-cards" markdown="block">
 
@@ -64,7 +64,7 @@ That's the whole rulebook. If a rule and a shortcut disagree, the rule wins.
 
 </div>
 
-## Not sure what to create?
+## What to create
 
 An outcome we want by a date
 :   An [initiative](initiatives.md).

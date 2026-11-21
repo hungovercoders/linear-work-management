@@ -23,7 +23,7 @@ for it going out.
 
 ## Saying how it's going { #health-is-a-claim-with-evidence }
 
-Every update says on track, at risk or off track. That's a claim, so be ready to back it up.
+Every update says on track, at risk or off track, and you should be able to back that up.
 
 A project's evidence is how its issues are moving and whether its Key Result is shifting. An
 initiative's evidence is the updates from its projects.
@@ -33,12 +33,12 @@ initiative's evidence is the updates from its projects.
 
 ## So nobody has to remember { #making-the-cadence-stick }
 
-- Linear reminds you. Switch on update reminders in workspace settings. Leads and owners get a
-  prompt, then follow-ups, and an overdue project shows **Update Missing**.
-- The skills do the gathering. `linear-project-update` reads what moved since last time, so you
-  only check the draft and add your judgement.
-- Silence shows up. The team digest and `task doctor` flag a project with no update for 10 days
-  and an initiative with none for 35.
+- Switch on update reminders in workspace settings. Leads and owners get a prompt, then
+  follow-ups, and an overdue project shows **Update Missing**.
+- `linear-project-update` reads what moved since last time, so you only check the draft and add
+  your judgement.
+- A missed update gets noticed. The team digest and `task doctor` flag a project with none for
+  10 days and an initiative with none for 35.
 
 ## Catching up with Pulse
 

@@ -60,7 +60,7 @@ accepted. An issue can also end as `Canceled` or `Duplicate`.
 
 ### Backlog, Planning and Todo { #backlog-planning-todo-commitment-then-readiness }
 
-These three are easy to blur, so here's what separates them.
+These three are easy to confuse.
 
 Backlog
 :   A parking place. Nobody has promised anything, and nobody is counting how long it sits.

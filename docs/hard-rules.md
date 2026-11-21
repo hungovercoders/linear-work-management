@@ -1,7 +1,7 @@
 # The five rules
 
 <div class="lwm-lead" markdown>
-Everything else in this guide is detail. If a rule and a shortcut ever disagree, the rule wins.
+These five are the only things we insist on. Everything else in this guide is detail.
 </div>
 
 ## 1. Every initiative says how it will be measured
@@ -25,7 +25,7 @@ delta): "activation, 22% to 30%". Now anyone can check whether it worked.
 You don't need this on day one. A project in `Idea` or `Scoping` only needs a lead and a line on
 what it's exploring. The rule starts when the project becomes `Planned`.
 
-A project is only `Completed` when the number has moved. Shipping isn't enough.
+A project is only `Completed` when the number has moved, however much has shipped.
 
 [What happens when an idea is ready to be planned](projects.md#becoming-planned)
 

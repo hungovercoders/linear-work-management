@@ -93,7 +93,7 @@ Vulnerabilities also have a fix deadline: 7 days for Critical, 30 for High, 90 f
 
 Set a priority as you decide. It orders the work and can drive the deadline.
 
-!!! tip "The same thing keeps arriving?"
+!!! tip "When the same thing keeps arriving"
     If one kind of BAU work comes back every cycle, propose a [project](../projects.md) for it
     in the usual way. There's no shortcut that turns it into one.
 

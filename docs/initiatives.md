@@ -64,7 +64,7 @@ The owner posts an [update](https://linear.app/docs/initiative-and-project-updat
 it on the initiative in Linear, or let the `linear-initiative-update` skill draft it.
 
 You build your update from the weekly project updates beneath it. If a project has gone quiet,
-say so. Don't report green on top of silence.
+say so in yours.
 
 ## Create one
 

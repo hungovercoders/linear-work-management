@@ -4,14 +4,13 @@
 <span class="lwm-for">For everyone</span>
 
 In Linear a [team](https://linear.app/docs/teams) can lead a project or an initiative, but other
-teams can still work on it. Only an issue belongs to one team and no other. Most confusion
-about who owns what clears up once you know that.
+teams can still work on it. Only an issue belongs to one team and no other.
 </div>
 
 ??? abstract "See it as a diagram"
     ![Where teams fit: an initiative and a project each have a lead team but can draw on others, and each issue belongs to exactly one team.](diagrams/teams.svg)
 
-## Loose at the top, strict at the bottom
+## From initiative down to issue
 
 Linear gets stricter about teams the further down you go.
 
@@ -21,10 +20,10 @@ Linear gets stricter about teams the further down you go.
   <div class="lwm-level"><b>Issue</b><span>Belongs to exactly one team. It can't be shared.<small>One assignee · one team only</small></span></div>
 </div>
 
-That's deliberate. Outcomes don't follow the org chart: "Effortless rescue-dog adoption" needs
-web, data and partnerships work. So an initiative or a project names one team as its lead, which
-says who drives it, and still takes work from others. Leading something doesn't make it yours alone.
-The one-to-one rule arrives at the issue, because that's where one person in one team does the work.
+Linear works this way because outcomes don't follow the org chart: "Effortless rescue-dog adoption"
+needs web, data and partnerships work. So an initiative or a project names one team as its lead,
+which says who drives it, and still takes work from others. The one-to-one rule arrives at the
+issue, because that's where one person in one team does the work.
 
 ## What a team owns
 
@@ -56,7 +55,7 @@ Labels
 :   Our [label groups](teams.md#the-label-taxonomy) are set for the whole workspace, so
     `bau/support` means the same in every team.
 
-## So who is accountable?
+## Who is accountable
 
 A lead team tells you which team is driving. It doesn't tell you who to ask, and the work
 still crosses teams. So [rule 4](hard-rules.md) asks for one named person as well.
