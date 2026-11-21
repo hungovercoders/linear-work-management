@@ -3,26 +3,28 @@
 <div class="lwm-lead" markdown>
 <span class="lwm-for">For everyone</span>
 
-In Linear a [team](https://linear.app/docs/teams) owns issues. It doesn't own projects or
-initiatives. Most confusion about who owns what clears up once you know that.
+In Linear a [team](https://linear.app/docs/teams) can lead a project or an initiative, but other
+teams can still work on it. Only an issue belongs to one team and no other. Most confusion
+about who owns what clears up once you know that.
 </div>
 
 ??? abstract "See it as a diagram"
-    ![Where teams fit: an initiative has no team, a project can span teams, and each issue belongs to exactly one team.](diagrams/teams.svg)
+    ![Where teams fit: an initiative and a project each have a lead team but can draw on others, and each issue belongs to exactly one team.](diagrams/teams.svg)
 
 ## Loose at the top, strict at the bottom
 
 Linear gets stricter about teams the further down you go.
 
 <div class="lwm-levels">
-  <div class="lwm-level"><b>Initiative</b><span>Belongs to no team. It can hold projects from anywhere in the company.<small>One owner</small></span></div>
-  <div class="lwm-level"><b>Project</b><span>Belongs to one team, or is shared across several. It can hold issues from each of them.<small>One lead</small></span></div>
-  <div class="lwm-level"><b>Issue</b><span>Belongs to exactly one team. It can't be shared.<small>One assignee</small></span></div>
+  <div class="lwm-level"><b>Initiative</b><span>Can have a lead team. Its projects can come from anywhere in the company.<small>One owner · one lead team at most · any number of teams involved</small></span></div>
+  <div class="lwm-level"><b>Project</b><span>Has a lead team. Other teams can contribute, and it holds issues from each of them.<small>One lead · one lead team · any number of contributing teams</small></span></div>
+  <div class="lwm-level"><b>Issue</b><span>Belongs to exactly one team. It can't be shared.<small>One assignee · one team, full stop</small></span></div>
 </div>
 
 That's deliberate. Outcomes don't follow the org chart: "Effortless rescue-dog adoption" needs
-web, data and partnerships work. So the levels that describe outcomes are free to cross teams.
-The restriction arrives at the issue, because that's where one person in one team has to do
+web, data and partnerships work. So an initiative or a project names one team as its lead, which says who drives it, and
+still takes work from others. Leading something doesn't make it yours alone. The one-to-one
+rule arrives at the issue, because that's where one person in one team has to do
 something.
 
 ## What a team owns
@@ -39,14 +41,17 @@ Its cycles
 Its states
 :   Each team has the [shared states](teams.md#issue-states), and can add its own.
 
-## What a team doesn't own
+## What a team can lead, but shares
 
 Projects
-:   A project can be shared by several teams. One of them is its lead team, and Linear shows a
-    tab for each team's issues. The project still has one lead.
+:   One team is the [lead team](https://linear.app/docs/projects). The others contribute, and
+    Linear shows a tab for each team's issues. The lead team decides which project statuses are
+    available. You can filter projects by lead team to see what each team is driving.
 
 Initiatives
-:   These sit above every team, in one list for the whole workspace.
+:   A team can lead an [initiative](https://linear.app/docs/initiatives) too, on the Business
+    and Enterprise plans. It still appears in the one list for the whole workspace, and its
+    projects can belong to other teams.
 
 Labels
 :   Our [label groups](teams.md#the-label-taxonomy) are set for the whole workspace, so `bau/support`
@@ -54,14 +59,14 @@ Labels
 
 ## So who is accountable?
 
-A team can't be, for anything above an issue, because projects and initiatives cross teams.
-That's why [rule 4](hard-rules.md) asks for one named person.
+A lead team tells you which team is driving. It doesn't tell you who to ask, and the work
+still crosses teams. So [rule 4](hard-rules.md) asks for one named person as well.
 
 An initiative
-:   Its owner.
+:   Its owner, with a lead team if you've set one.
 
 A project
-:   Its lead, however many teams contribute.
+:   Its lead, usually from the lead team, however many teams contribute.
 
 An issue
 :   Its assignee, inside the team it belongs to.

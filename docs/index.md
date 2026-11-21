@@ -33,8 +33,8 @@ Planned work sits on three levels. Each one answers "why?" for the level below i
 
 ## Where teams fit
 
-A team owns issues, and only issues. An initiative belongs to no team, a project can be shared
-by several, and every issue belongs to exactly one. [How teams work](how-teams-work.md)
+An initiative or a project can have a lead team and still take work from other teams. An issue
+is different: it belongs to exactly one team. [How teams work](how-teams-work.md)
 
 ## The five rules
 
