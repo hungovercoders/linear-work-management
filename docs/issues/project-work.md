@@ -12,7 +12,7 @@ its Key Result.
 <div class="lwm-need" markdown>
 
 - A project. The issue takes that project's `product/*` label
-- One `type/*` label. If you're unsure, use `action`
+- One `type/*` [label](https://linear.app/docs/labels). If you're unsure, use `action`
 - A priority, so it's clear what gets picked up next
 - A description [someone could start from](index.md#the-body-is-the-prompt)
 
@@ -20,7 +20,7 @@ its Key Result.
 
 ## Pick a type
 
-The type decides which template the description uses.
+The type decides which [template](https://linear.app/docs/issue-templates) the description uses.
 
 `action`
 :   Anything that needs doing: a code change, upkeep, a reminder to yourself. The default.

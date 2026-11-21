@@ -1,7 +1,7 @@
 # Updates
 
 <div class="lwm-lead" markdown>
-Who posts what, where and how often. The aim is that people hear how things are going without
+Who posts which [update](https://linear.app/docs/initiative-and-project-updates), where and how often. The aim is that people hear how things are going without
 having to ask, and without being buried in messages.
 </div>
 
@@ -38,14 +38,21 @@ initiative's evidence is the updates from its projects.
 
 ## Catching up with Pulse
 
-[Pulse](https://linear.app/happydevs/pulse) is Linear's feed of every update. Its *For me* tab
+[Pulse](https://linear.app/happydevs/pulse) is Linear's feed of every update
+([how it works](https://linear.app/docs/pulse)). Its *For me* tab
 shows the work you're involved in, and it can send you a daily or weekly digest.
 
 Leads still post, because Pulse has nothing to show otherwise. Everyone else can read Pulse and
 skip the channels.
 
 ??? note "How updates feed each other"
-    ![Communication cadence: project and initiative updates rolling up and pushing to channels, with Pulse as the pull feed.](diagrams/comms-cadence.svg)
+    <ol class="lwm-chain">
+      <li data-then="is the evidence for"><b>Issues and the cycle</b>What moved this week</li>
+      <li data-then="feeds"><b>Project update</b>Weekly, to <code>#project-updates</code></li>
+      <li><b>Initiative update</b>Monthly, to <code>#initiative-updates</code></li>
+    </ol>
+
+    Both kinds of update also appear in Pulse, so a quiet project is visible there too.
 
 ??? note "Keeping channels quiet"
     One channel serves each audience, so all projects share `#project-updates`. Channel messages

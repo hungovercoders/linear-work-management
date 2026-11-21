@@ -53,6 +53,9 @@ Unclassified
 BAU work
 :   Business as usual: work nobody planned that arrived (incidents, requests, compliance, support, toil). It has a `bau/*` label and no project. [Triage and BAU](issues/triage.md)
 
+Linear Asks
+:   Linear's way of turning a Slack message into an issue. Each team has an asks channel that feeds its Triage. [Integrations](integrations.md#linear-asks)
+
 Triage responsibility
 :   Linear's duty rota. The named person who decides what happens to each item in Triage
 

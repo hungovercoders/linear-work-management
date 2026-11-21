@@ -67,9 +67,6 @@ extra_css:
 
 plugins:
   - search
-  # Diagrams are D2, pre-rendered to committed SVGs (docs/diagrams/*.svg) via
-  # `task diagrams` — the build calls no external service and needs no d2.
-  # Mermaid still renders client-side via the Material superfence above.
 
 nav:
   - Start here:

@@ -9,33 +9,46 @@ It arrives in Triage, and your job is to decide where it goes.
 
 ## Your job on duty
 
-Triage is Linear's inbox for each team. New issues from integrations, customers and colleagues
-arrive there before they join the team's work.
+[Triage](https://linear.app/docs/triage) is Linear's inbox for each team. New issues from Slack, integrations and
+customers arrive there before they join the team's work.
 
 One named person owns it at a time. You decide what happens to each item. You don't have to do
 the work yourself.
 
 The [`linear-triage`](../skills/index.md) skill will go through the inbox with you.
 
+## How work arrives
+
+Most of it comes from Slack. Each team has an asks channel, and anything raised there with
+[Linear Asks](https://linear.app/docs/linear-asks-slack) becomes an issue in that team's Triage.
+
+To raise a request, a colleague can:
+
+- post in the team's asks channel and react with 🎫
+- type `/asks` and pick a template
+- mention `@Linear Asks` in a message
+
+They don't need a Linear account. Linear replies in the Slack thread with a link to the issue,
+and comments stay in step on both sides, so you can ask a question from Linear and they answer
+in Slack.
+
+Integrations, [customer requests](https://linear.app/docs/customer-requests) and the API also feed Triage, and
+anyone can move a stray issue there by hand.
+
 ## Five things you can do with an item
 
-"Leave it there" isn't one of them.
+<div class="lwm-node is-red"><b>Something arrives in Triage</b><span>From Slack, an integration or a customer.</span></div>
+<div class="lwm-arrow"><small>whoever is on duty decides</small>↓</div>
+<div class="lwm-cards">
+  <div class="lwm-card is-slate"><span class="lwm-kicker">Accept</span><b>Into a project</b><span>A project already owns what this touches. Add it to the project with a <code>type/*</code> label.</span></div>
+  <div class="lwm-card is-red"><span class="lwm-kicker">Accept</span><b>As BAU</b><span>It stands alone. Keep one <code>bau/*</code> label and no project.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">Move to team</span><b>Redirect</b><span>It belongs to another team.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">Merge or mark duplicate</span><b>Merge</b><span>Another issue already covers it.</span></div>
+  <div class="lwm-card is-quiet"><span class="lwm-kicker">Decline</span><b>Decline</b><span>We won't do it. Give a reason.</span></div>
+</div>
 
-Accept into a project
-:   A project already owns the thing this touches. **Accept**, add it to the project and give it
-    a `type/*` label.
-
-Accept as BAU
-:   It stands alone. **Accept**, and keep one `bau/*` label with no project.
-
-Redirect
-:   It belongs to another team. **Move to team**.
-
-Merge
-:   Another issue already covers it. **Merge** or **Mark duplicate**.
-
-Decline
-:   We won't do it. **Decline**, with a reason.
+The small label on each card is the button to press in Linear. "Leave it there" isn't an
+option.
 
 Work accepted as BAU joins the team's normal [states](index.md#the-shared-lifecycle) alongside
 everything else. It isn't a lesser queue.
@@ -81,32 +94,29 @@ Set a priority as you decide. It orders the work and can drive the deadline.
     If one kind of BAU work comes back every cycle, propose a [project](../projects.md) for it
     in the usual way. There's no shortcut that turns it into one.
 
-??? note "The five outcomes as a diagram"
-    ![Triage outcomes: the five decisions the person on duty can make on an item in Triage.](../diagrams/triage-outcomes.svg)
-
-??? note "Turning Triage on, and how work reaches it"
+??? note "Turning Triage on"
     Enable it under **Team settings → Triage**, and use **Triage responsibility** to put a named
     person on duty and rotate them.
 
     Integrations such as Sentry, GitHub, Zendesk and Intercom create issues straight into
-    Triage, as do customer requests, forms and the API. Anyone can move a stray issue there by
-    hand. Linear Asks can send Slack requests too, but it needs a plan and a Slack connection we
-    don't have yet ([Integrations](../integrations.md)).
+    Triage. Setting up the asks channels is covered under
+    [Integrations](../integrations.md#linear-asks).
 
-    Triage Intelligence will suggest a label, a duplicate or an assignee. Treat it as a first
-    guess.
+    [Triage Intelligence](https://linear.app/docs/triage-intelligence) will suggest a label, a duplicate or an
+    assignee. Treat it as a first guess.
 
 ??? note "Setting the deadlines up in Linear"
-    Linear's SLA rules measure time to completion. That suits the fix deadline. There's no rule
+    Linear's [SLA rules](https://linear.app/docs/sla) measure time to completion. That suits the fix deadline. There's no rule
     for "decide within a day", so that one relies on the rota and on showing time in status on
     the Triage state.
 
-    The fix deadline is an SLA rule on the Business and Enterprise plans. Under
+    The fix deadline is an SLA rule. Under
     *Settings → Issues → SLAs*, add a rule filtered to `bau/vulnerability`, with severity taken
     from priority and durations in business days. Rules apply only to new or updated issues, the
     first match wins, and an issue can't have both an SLA and a due date.
 
-    On other plans the `linear-triage` skill sets the issue's `slaBreachesAt` date directly.
+    If you'd rather not depend on rules, the `linear-triage` skill sets the issue's
+    `slaBreachesAt` date directly.
 
 ??? note "Why `defect` and `query`, when project work has `bug` and `analysis`?"
     Linear label names must be unique across the workspace. The `type/*` group already uses

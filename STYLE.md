@@ -38,6 +38,11 @@ components styled in `docs/stylesheets/extra.css`:
 | "You need…" lists | A list inside `<div class="lwm-need" markdown>` |
 | Links to other pages, or two to four options | `<div class="lwm-cards">` |
 | Skill or by hand | Content tabs (`=== "With the skill"`) |
+| One thing leading to several, or several to one | `lwm-node`, `lwm-arrow` and `lwm-cards` together |
+| A short top-to-bottom chain | `<ol class="lwm-chain">` |
+
+Don't add image diagrams. A picture built from these parts matches the site, follows dark mode
+and reads on a phone.
 
 ## Keep
 

@@ -3,7 +3,7 @@
 <div class="lwm-lead" markdown>
 <span class="lwm-for">For leadership</span>
 
-An initiative is an outcome we want, and the measures that tell us whether we got it. You say
+An [initiative](https://linear.app/docs/initiatives) is an outcome we want, and the measures that tell us whether we got it. You say
 why it matters. The [projects](projects.md) underneath work out how.
 </div>
 
@@ -54,7 +54,7 @@ there's nothing to set up.
 
 ## Every month while it's active { #keep-everyone-posted }
 
-The owner posts an update to `#initiative-updates`: how the Key Results have moved, whether
+The owner posts an [update](https://linear.app/docs/initiative-and-project-updates) to `#initiative-updates`: how the Key Results have moved, whether
 it's on track, and any risks. Write it on the initiative in Linear, or let the
 `linear-initiative-update` skill draft it.
 
@@ -78,16 +78,19 @@ say so. Don't report green on top of silence.
     4. Connect the `#initiative-updates` Slack channel.
 
 ??? note "Where initiatives come from"
-    Most grow out of projects. One exploratory project becomes big enough to stand alone
-    (graduation), or several turn out to be parts of the same outcome (aggregation). Sometimes
-    leadership simply names an outcome with nothing behind it yet.
-
-    ![Three origins converging on one initiative outcome.](diagrams/initiative-origin.svg)
+    <div class="lwm-cards">
+      <div class="lwm-card is-slate"><span class="lwm-kicker">Most common</span><b>Graduation</b><span>One exploratory project grows big enough to stand alone.</span></div>
+      <div class="lwm-card is-slate"><span class="lwm-kicker">Several into one</span><b>Aggregation</b><span>A few projects turn out to be parts of the same outcome.</span></div>
+      <div class="lwm-card is-quiet"><span class="lwm-kicker">From the top</span><b>Spontaneous</b><span>Leadership names an outcome with nothing behind it yet.</span></div>
+    </div>
+    <div class="lwm-arrow">↓</div>
+    <div class="lwm-node"><b>Initiative</b><span>Key Results, one owner and a target date, whichever way it began.</span></div>
 
     When an initiative grows out of projects, the skill reads them, uses what they found for the
     objective and baselines, and links them so the history is kept.
 
 ??? note "Sub-initiatives (Enterprise plan only)"
-    On Linear's Enterprise plan you can nest initiatives up to five levels deep. A parent rolls
+    On Linear's Enterprise plan you can nest initiatives as
+    [sub-initiatives](https://linear.app/docs/sub-initiatives), up to five levels deep. A parent rolls
     up its children's projects and progress, while each child keeps its own owner and Key
     Results. Use them when one objective spans several teams or phases. Otherwise keep it flat.

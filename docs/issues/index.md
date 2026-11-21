@@ -32,7 +32,8 @@ the plan there, so the approach can be reviewed before any code is.
 
 ## Use Linear's fields { #native-fields-not-prose }
 
-Assignee, priority, status, labels and links all have their own fields in Linear. Put them
+Assignee, priority, status, labels and links all have their own
+[fields in Linear](https://linear.app/docs/issue-properties). Put them
 there and keep them out of the description. Fields can be filtered, sorted and reported on.
 Text in a description can't.
 
@@ -48,7 +49,8 @@ Text in a description can't.
   <li class="is-done"><b>Done</b>Shipped and accepted</li>
 </ol>
 
-An issue can also end as `Canceled` or `Duplicate`.
+Project work starts in Backlog. BAU work starts in Triage and joins Backlog once it's
+accepted. An issue can also end as `Canceled` or `Duplicate`.
 
 ### Backlog, Planning and Todo { #backlog-planning-todo-commitment-then-readiness }
 
@@ -66,5 +68,3 @@ Todo
 
 Nothing starts from Backlog or Planning.
 
-??? note "The states as a diagram"
-    ![Issue lifecycle: two entry points converging on Backlog, then Planning, Todo, In Progress, In Review and Done.](../diagrams/issue-lifecycle.svg)

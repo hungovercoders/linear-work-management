@@ -1,5 +1,5 @@
 /* Linear Ways of Working: site style.
-   Two colours carry meaning everywhere, including the diagrams:
+   Two colours carry meaning everywhere:
    slate = planned work (initiative, project, issue), ox-red = BAU work. */
 
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap");
@@ -105,7 +105,7 @@
 
 
 /* ---------- cards ---------- */
-.lwm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .8rem; margin: 1.2rem 0; }
+.lwm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: .8rem; margin: 1.2rem 0; }
 .md-typeset a.lwm-card, .md-typeset div.lwm-card {
   display: block; background: var(--lwm-card); border: 1px solid var(--lwm-line); border-radius: .6rem;
   padding: 1rem 1.1rem; text-decoration: none; color: var(--md-default-fg-color);
@@ -115,8 +115,8 @@
 .lwm-card .lwm-kicker { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--lwm-red); }
 .lwm-card b { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; margin: .1rem 0 .25rem; }
 .lwm-card span { color: var(--lwm-muted); font-size: .78rem; line-height: 1.5; display: block; }
-.lwm-card.is-slate { border-top: .25rem solid var(--lwm-slate); }
-.lwm-card.is-red { border-top: .25rem solid var(--lwm-red); }
+.md-typeset .lwm-card.is-slate { border-top: .25rem solid var(--lwm-slate); }
+.md-typeset .lwm-card.is-red { border-top: .25rem solid var(--lwm-red); }
 
 .md-typeset .lwm-cards > p { display: contents; }
 
@@ -191,8 +191,41 @@
 .lwm-strat { color: var(--lwm-slate); font-weight: 700; }
 .lwm-inbound { color: var(--lwm-red); font-weight: 700; }
 
-/* Diagrams: pre-rendered D2 SVGs on a white card so they read in dark mode too */
-.md-typeset img[src$=".svg"] {
-  display: block; margin: 1rem auto 1.4rem; max-width: 100%;
-  background: #fff; border: 1px solid var(--lwm-line); border-radius: .6rem; padding: .6rem;
+
+/* ---------- pictures built from the page's own parts ---------- */
+/* An arrow between two blocks */
+.md-typeset .lwm-arrow {
+  max-width: 46rem; text-align: center; color: var(--lwm-muted); font-size: 1.1rem; line-height: 1; margin: .35rem 0;
 }
+.md-typeset .lwm-arrow small { display: block; font-size: .7rem; margin-bottom: .1rem; }
+/* One wide block that several things lead to, or come from */
+.md-typeset .lwm-node {
+  max-width: 46rem; background: var(--lwm-card); border: 1px solid var(--lwm-line);
+  border-left: .3rem solid var(--lwm-slate); border-radius: .5rem; padding: .8rem 1.1rem; margin: .4rem 0;
+}
+.md-typeset .lwm-node b { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.05rem; }
+.md-typeset .lwm-node span { color: var(--lwm-muted); font-size: .78rem; }
+.md-typeset .lwm-node.is-red { border-left-color: var(--lwm-red); }
+.md-typeset .lwm-node.is-amber { border-left-color: var(--lwm-amber); }
+.md-typeset .lwm-cards { max-width: 62rem; }
+.md-typeset .lwm-card.is-amber { border-top: .25rem solid var(--lwm-amber); }
+.md-typeset .lwm-card.is-green { border-top: .25rem solid var(--lwm-green); }
+.md-typeset .lwm-card.is-quiet { border-top: .25rem solid var(--lwm-line); }
+.md-typeset .lwm-card code { font-size: .78em; }
+/* Arrows between the states in a strip */
+.md-typeset ol.lwm-flow { gap: .4rem 1.1rem; }
+.md-typeset ol.lwm-flow li + li::before {
+  content: "→"; position: absolute; left: -.95rem; top: 50%; transform: translateY(-50%);
+  color: var(--lwm-muted); font-size: .85rem;
+}
+/* A short chain of steps, top to bottom */
+.md-typeset ol.lwm-chain { list-style: none; margin: 1rem 0 !important; padding: 0; max-width: 30rem; }
+.md-typeset ol.lwm-chain li {
+  margin: 0 0 1.5rem !important; position: relative; background: var(--lwm-card); border: 1px solid var(--lwm-line);
+  border-left: .3rem solid var(--lwm-slate); border-radius: .5rem; padding: .6rem .9rem; color: var(--lwm-muted); font-size: .78rem;
+}
+.md-typeset ol.lwm-chain li b { display: block; color: var(--md-default-fg-color); font-size: .86rem; }
+.md-typeset ol.lwm-chain li:not(:last-child)::after {
+  content: "↓  " attr(data-then); position: absolute; left: 1rem; bottom: -1.35rem; font-size: .72rem; color: var(--lwm-muted); white-space: pre;
+}
+.md-typeset ol.lwm-chain li.is-amber { border-left-color: var(--lwm-amber); }
