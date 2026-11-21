@@ -3,8 +3,9 @@
 <div class="lwm-lead" markdown>
 <span class="lwm-for">For team owners</span>
 
-A starting point for setting a team up in Linear and running it quarter by quarter. Treat it as
-a first draft. Run a retrospective on it like anything else, and change what doesn't work.
+This is a starting point for setting a team up in Linear and running it quarter by quarter.
+Treat it as a first draft: run a retrospective on it like anything else, and change what
+doesn't work.
 </div>
 
 ??? abstract "See it as a diagram"
@@ -38,22 +39,22 @@ a first draft. Run a retrospective on it like anything else, and change what doe
 
 ## Objectives, one quarter at a time
 
-An objective is an initiative. A Key Result measures it. A project is a hypothesis about how to
-move a Key Result, and its issues are the work that tests the hypothesis.
+An objective is an initiative, and its Key Results measure it. A project is a hypothesis about
+how to move a Key Result, and its issues are the work that tests it.
 
-Pick three objectives. More than that and none of them gets enough attention.
+Pick three objectives. With more than three, none gets enough attention.
 
 Give each one three Key Results with numbers, so partial success still counts. Getting to 70%
 of a stretching target usually beats hitting an easy one. Aim for targets the team is 70 to 80%
 likely to reach, and say which ones are must-haves. In this guide a must-have is a
 [committed](initiatives.md#writing-key-results) Key Result and a stretch is a measured one.
 
-Then use the objectives for every priority call. A request that serves none of them is a fair
-"no", and because other teams can see your objectives, they can see why.
+Then use the objectives for every decision about priority. A request that serves none of them is a
+fair "no", and because other teams can see your objectives, they can see why.
 
 ## BAU, measured with Linear's SLAs { #service-levels }
 
-Objectives change every quarter. Service levels don't. Every team has a few promises it keeps
+Objectives change every quarter, but service levels stay. Every team has a few promises it keeps
 for as long as it exists, and BAU is the work of keeping them.
 
 Linear has [SLAs](https://linear.app/docs/sla) built in, so use them. An SLA rule puts a
@@ -91,13 +92,13 @@ The description templates are in the
 From then on Linear does the measuring:
 
 - Each issue shows its SLA and how close it is: low, medium or high risk, then breached.
-- Subscribers, and the team's Slack channel, are told a day before a breach.
+- Linear warns subscribers and the team's Slack channel a day before a breach.
 - When the issue closes, Linear records the SLA as achieved or failed.
 - The [SLA health view](dashboards.md) lists what's open. [Insights](https://linear.app/docs/insights)
   shows the share achieved for each kind of BAU.
 
 That share is how you measure BAU. "We achieved 96% of our vulnerability SLAs this quarter" is
-a number a team can own, report and improve, quarter after quarter.
+a number a team can report and improve every quarter.
 
 It's also how you size the work. An item in Triage matters because an SLA applies to it. One
 that no SLA covers can wait, or be declined.
@@ -108,7 +109,7 @@ a BAU issue whenever one slips. The SLA then applies to that issue.
 
 BAU comes before the objectives, and it should be the smaller share of the team's time. If the
 share of SLAs achieved keeps falling, or BAU starts taking most of the week, don't absorb that
-quietly. That's your evidence for next quarter: make fixing the cause an objective, with a
+quietly. Use it as evidence, and make fixing the cause one of next quarter's objectives, with a
 project to do it.
 
 ## The rhythm
@@ -125,7 +126,7 @@ project to do it.
 | Every day | Stand-up. Walk the board from right to left, so the talk is about finishing work | 15 minutes |
 | End of the quarter | Score the Key Results, hold a retrospective, and celebrate | Up to four hours |
 
-Each of these has a home in Linear. The cycle review feeds the weekly
+Linear supports each of these. The cycle review feeds the weekly
 [project update](communications.md). The service level check uses the
 [SLA health and drift views](dashboards.md). Refinement uses the [Flow](flow.md) views.
 
@@ -136,7 +137,7 @@ A second way of prioritising
     arguing in every planning session.
 
 Key Results tied to anyone's pay
-:   People start gaming the number, and the shared goal is lost. Reward what someone did for
+:   People start gaming the number and lose sight of the shared goal. Reward what someone did for
     their own skills, their team and other teams.
 
 Objectives nobody sees

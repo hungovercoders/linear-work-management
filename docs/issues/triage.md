@@ -14,7 +14,7 @@ It arrives in Triage, and your job is to decide where it goes.
 
 Every team keeps a few promises for as long as it exists, and BAU is the work of keeping
 them. In Linear each promise is an [SLA](https://linear.app/docs/sla): one for incidents,
-another for vulnerabilities, another for support. That's how you judge an item in Triage. Ask
+another for vulnerabilities, another for support. Judge an item in Triage by asking
 which SLA applies to it. [Team setup](../team-setup.md#service-levels) shows the rules to
 create.
 
