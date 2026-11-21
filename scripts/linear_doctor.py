@@ -16,28 +16,23 @@ import sys
 import urllib.request
 from datetime import datetime, timedelta, timezone
 
+import model
+
 API = "https://api.linear.app/graphql"
 
-EXPECTED_LABELS = {
-    "type": {"action", "feature", "bug", "analysis", "spike"},
-    "bau": {"incident", "vulnerability", "defect", "query", "compliance", "support", "toil"},
-    "spend": {"capex", "opex"},
-    "product": None,  # open set — only the group itself is required
-}
+# Labels, thresholds and BAU kinds come from docs/model.yml, the one source of the model.
+MODEL = model.load()
+EXPECTED_LABELS = model.expected_labels(MODEL)  # an open group maps to None
 
 PROJECT_DELIVERY_STATUSES = {"planned", "started"}  # status *types* where rules 2 & 5 bite
-PROJECT_STALE_DAYS = 10   # weekly cadence + grace
-INITIATIVE_STALE_DAYS = 35  # monthly cadence + grace
+PROJECT_STALE_DAYS = MODEL["doctor"]["stale_update_days"]["project"]        # weekly + grace
+INITIATIVE_STALE_DAYS = MODEL["doctor"]["stale_update_days"]["initiative"]  # monthly + grace
 
 # Languishing issues (see docs/flow.md). Keyed on shared state *names*, not types:
 # only the additive-only rule's protection of shared names makes that safe, and it's
 # the only way to tell Planning from Backlog (both backlog-type) or Todo from a
 # team's local unstarted state. Backlog is deliberately absent — the unmeasured pool.
-LANGUISHING_DAYS = {
-    "Planning": 10,   # committed work-up with no visible movement for two working weeks
-    "Todo": 14,       # refined two weekly cycles ago, still unstarted
-    "In Review": 5,   # finished work waiting on review for a working week
-}
+LANGUISHING_DAYS = MODEL["doctor"]["languishing_days"]
 
 # Prose that belongs in a native field, not the description body.
 NATIVE_FIELD_PROSE = re.compile(

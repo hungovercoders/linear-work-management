@@ -36,6 +36,9 @@ jobs:
       - name: Check diagrams (every D2 source has a committed SVG)
         run: python scripts/check_diagrams.py
 
+      - name: Check the guide against the model file
+        run: python scripts/check_model.py
+
       - name: Lint prose (AI-tell gate)
         run: python scripts/prose_lint.py
 

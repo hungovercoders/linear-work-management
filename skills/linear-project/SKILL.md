@@ -1,6 +1,6 @@
 ---
 name: linear-project
-description: Draft or refine a Linear project to the Ways of Working standard: a bounded piece of work that names the Key Result(s) it moves and by how much, has a single named lead, start + target-end dates, a priority, and spend/product labels. Coaches the KR-delta and produces the project description ready to create in the happydevs workspace. Use when starting a new project, graduating one out of discovery, or tidying an existing one.
+description: Draft or refine a Linear project to the Ways of Working standard: a bounded piece of work that names the Key Result(s) it moves and by how much, has a single named lead, start + target-end dates, a priority, and spend and product labels. Coaches the KR-delta and produces the project description ready to create in the happydevs workspace. Use when starting a new project, graduating one out of discovery, or tidying an existing one.
 ---
 
 <!-- doc: projects.md -->

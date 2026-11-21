@@ -13,8 +13,16 @@ task serve         # live-preview the docs at http://127.0.0.1:8000
 task build         # strict static build into ./site
 task skills:index  # regenerate docs/skills/index.md from skills/*/SKILL.md
 task lint:prose    # AI-tell gate on the guide + skill prose
+task model:check   # the guide and skills agree with docs/model.yml
 task doctor        # audit the Linear workspace against the hard rules
 ```
+
+## The model file
+
+`docs/model.yml` is the one source of the model's facts: states, labels, the SLA and template
+for each kind of BAU, update cadences and the doctor's thresholds. Change a value there first.
+`task model:check` (and CI) then names any page or skill that still states the old one. The
+doctor reads its labels and thresholds from the same file.
 
 ## Diagrams
 

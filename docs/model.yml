@@ -1,0 +1,73 @@
+# The operating model as data. One source for the guide, the skills and the doctor.
+# Change a value here first, then run `task model:check` to find the prose that still
+# states the old one. Published with the site at /model.yml.
+
+rules:
+  1: Every initiative says how it will be measured.
+  2: Every project says which Key Result it moves, and by how much.
+  3: Every issue is in a project or has one bau/* label.
+  4: One named person owns each initiative and each project.
+  5: Initiatives and projects have dates once they're planned.
+
+states:
+  initiative: [Proposed, Planned, Active, Completed, Canceled]
+  project: [Idea, Scoping, Planned, In Progress, Launching, Paused, Completed, Canceled]
+  issue: [Triage, Backlog, Planning, Todo, In Progress, In Review, Done, Canceled, Duplicate]
+
+labels:
+  type:
+    on: project issues
+    default: action
+    values: [action, feature, bug, analysis, spike]
+  bau:
+    on: BAU issues, exactly one each
+    values: [incident, vulnerability, defect, query, compliance, support, toil]
+  spend:
+    on: projects
+    values: [capex, opex]
+  product:
+    on: projects, inherited by their issues
+    values: open   # one per product; the list grows
+
+# Each kind of BAU: how fast it is decided in Triage, the Linear SLA that measures it,
+# and the issue template that makes sure it arrives labelled.
+bau:
+  incident:
+    decide_within: immediately
+    sla: set by the team
+    template: {priority: Urgent, description: template-action}
+  vulnerability:
+    decide_within: 1 working day
+    sla_days_by_priority: {Urgent: 7, High: 30, Medium: 90}
+    template: {priority: by severity, description: template-action}
+  support:
+    decide_within: 1 working day
+    sla: set by the team
+    template: {description: template-action}
+  defect:
+    decide_within: 2 working days
+    template: {description: template-bug}
+  query:
+    decide_within: 2 working days
+    template: {description: template-analysis}
+  compliance:
+    decide_within: 2 working days
+    template: {description: template-action}
+  toil:
+    decide_within: 2 working days
+    template: {description: template-action}
+
+# Kinds of BAU that must carry an SLA. The doctor flags an open one that has none.
+sla_required: [incident, vulnerability, support]
+
+updates:
+  project: {every: week, while: [In Progress, Launching], channel: "#project-updates", by: project lead}
+  initiative: {every: month, while: [Active], channel: "#initiative-updates", by: initiative owner}
+  team_digest: {every: week, channel: the team's channel, by: the team}
+  announcements: {every: event, channel: "#announcements", by: whoever ships or responds}
+
+doctor:
+  # Days with no activity before an issue in this state is flagged. Backlog is never counted.
+  languishing_days: {Planning: 10, Todo: 14, In Review: 5}
+  # Days without an update before a project or initiative is flagged as stale.
+  stale_update_days: {project: 10, initiative: 35}

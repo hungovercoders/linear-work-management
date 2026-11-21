@@ -44,15 +44,20 @@ tasks:
     cmds:
       - "{{.PY}} scripts/check_diagrams.py"
 
+  model:check:
+    desc: Check the guide and skills agree with docs/model.yml, the one source of the model.
+    cmds:
+      - "{{.PY}} scripts/check_model.py"
+
   serve:
     desc: Live-preview the docs site locally.
-    deps: [setup, skills:index, diagrams:check]
+    deps: [setup, skills:index, diagrams:check, model:check]
     cmds:
       - "{{.MKDOCS}} serve"
 
   build:
     desc: Build the static site into ./site (fails on warnings).
-    deps: [setup, skills:index, diagrams:check]
+    deps: [setup, skills:index, diagrams:check, model:check]
     cmds:
       - "{{.MKDOCS}} build --strict"
 
