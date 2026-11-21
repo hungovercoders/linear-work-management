@@ -9,11 +9,16 @@ theme:
   name: material
   icon:
     logo: material/sitemap
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
   features:
     - navigation.instant
     - navigation.tracking
     - navigation.top
     - navigation.indexes
+    - navigation.tabs
+    - navigation.footer
     - content.code.copy
     - content.action.edit
     - search.suggest
@@ -22,15 +27,15 @@ theme:
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
@@ -38,11 +43,14 @@ theme:
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
   - md_in_html
   - tables
   - toc:
       permalink: true
   - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.superfences:
@@ -64,20 +72,24 @@ plugins:
   # Mermaid still renders client-side via the Material superfence above.
 
 nav:
-  - Start here: index.md
-  - Worked example: examples.md
-  - The hard rules: hard-rules.md
-  - Initiatives: initiatives.md
-  - Projects: projects.md
-  - Issues:
-      - issues/index.md
-      - Project work: issues/project-work.md
-      - Triage work: issues/triage.md
-  - Teams, states and labels: teams.md
-  - Communications: communications.md
-  - Dashboards: dashboards.md
-  - Flow: flow.md
-  - Integrations: integrations.md
-  - Setup checklist: setup.md
-  - Skills: skills/index.md
-  - Glossary: glossary.md
+  - Start here:
+      - index.md
+      - The five rules: hard-rules.md
+      - Worked example: examples.md
+  - Guides:
+      - Initiatives: initiatives.md
+      - Projects: projects.md
+      - Issues:
+          - issues/index.md
+          - Project work: issues/project-work.md
+          - Triage and BAU: issues/triage.md
+  - Staying on track:
+      - Updates: communications.md
+      - Dashboards: dashboards.md
+      - Flow: flow.md
+  - Reference:
+      - States and labels: teams.md
+      - Integrations: integrations.md
+      - Setup checklist: setup.md
+      - Skills: skills/index.md
+      - Glossary: glossary.md

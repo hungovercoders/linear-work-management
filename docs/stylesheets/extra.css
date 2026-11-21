@@ -1,69 +1,198 @@
-/* Linear Ways of Working — visual polish.
-   Ties the site to the operating-model diagram's palette:
-   slate = strategic / planned path, ox-red = BAU path. */
+/* Linear Ways of Working: site style.
+   Two colours carry meaning everywhere, including the diagrams:
+   slate = planned work (initiative, project, issue), ox-red = BAU work. */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap");
 
 :root {
-  --lwm-strategic: #3d4c6b;
-  --lwm-inbound:   #8c2f39;
+  --lwm-slate: #3d4c6b;
+  --lwm-red: #8c2f39;
+  --lwm-amber: #a8690f;
+  --lwm-green: #2f6b3a;
+  --lwm-paper: #fbfaf7;
+  --lwm-card: #ffffff;
+  --lwm-line: #e3dfd5;
+  --lwm-soft: #f1eee6;
+  --lwm-muted: #5f6675;
+  --md-primary-fg-color: #2b3550;
+  --md-primary-fg-color--light: #33415c;
+  --md-primary-fg-color--dark: #1f2740;
+  --md-accent-fg-color: #8c2f39;
+}
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: var(--lwm-paper);
+  --md-typeset-a-color: #7a2832;
 }
 [data-md-color-scheme="slate"] {
-  --lwm-strategic: #9db0d6;
-  --lwm-inbound:   #e39aa3;
+  --lwm-slate: #a9bbe0;
+  --lwm-red: #ec9aa4;
+  --lwm-amber: #e3b262;
+  --lwm-green: #8fce9b;
+  --lwm-paper: #171a22;
+  --lwm-card: #1f232e;
+  --lwm-line: #333948;
+  --lwm-soft: #242936;
+  --lwm-muted: #a4abba;
+  --md-default-bg-color: var(--lwm-paper);
+  --md-typeset-a-color: #ec9aa4;
+  --md-accent-fg-color: #ec9aa4;
 }
 
-/* Hero lead line under the H1 */
+/* ---------- reading comfort ---------- */
+.md-grid { max-width: 68rem; }
+.md-typeset { font-size: .82rem; line-height: 1.7; }
+.md-typeset p, .md-typeset li { max-width: 42rem; }
+.md-typeset h1, .md-typeset h2, .md-typeset h3 {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--md-default-fg-color);
+}
+.md-typeset h1 { font-size: 2.3rem; line-height: 1.15; margin-bottom: .6rem; }
+.md-typeset h2 { font-size: 1.5rem; margin-top: 2.8rem; }
+.md-typeset h3 { font-size: 1.1rem; }
+.md-typeset h1 .twemoji, .md-typeset h2 .twemoji { display: none; }
+.md-typeset hr { border-bottom-color: var(--lwm-line); margin: 2.4rem 0; }
+.md-typeset a { text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 35%, transparent); text-underline-offset: .18em; }
+.md-typeset a:hover { text-decoration-color: currentColor; }
+.md-tabs { background: var(--md-primary-fg-color--dark); }
+
+/* The line under a page title */
 .md-typeset .lwm-lead {
   font-size: 1.12rem;
-  line-height: 1.65;
-  color: var(--md-default-fg-color--light);
-  border-left: .3rem solid var(--lwm-strategic);
-  padding: .1rem 0 .1rem .9rem;
-  margin: .5rem 0 1.4rem;
+  line-height: 1.55;
+  color: var(--lwm-muted);
+  max-width: 40rem;
+  margin: 0 0 1.6rem;
 }
-.md-typeset .lwm-lead strong { color: var(--md-default-fg-color); }
-
-/* Section headings: accent bar + coloured icon */
-.md-typeset h2 {
-  border-left: .3rem solid var(--lwm-strategic);
-  padding-left: .6rem;
-  margin-top: 2.6rem;
-}
-.md-typeset h2 .twemoji {
-  color: var(--lwm-strategic);
-  margin-right: .3rem;
-  vertical-align: -.12em;
-}
-.md-typeset h2 .twemoji svg { fill: currentColor; }
-
-/* Tables: softer, branded header, gentle zebra + hover */
-.md-typeset table:not([class]) {
-  border: none;
-  border-radius: .5rem;
-  overflow: hidden;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .07);
-}
-.md-typeset table:not([class]) th {
-  background: var(--md-default-fg-color--lightest);
-  color: var(--lwm-strategic);
+.md-typeset .lwm-lead p { max-width: none; }
+.md-typeset .lwm-for {
+  display: inline-block;
+  font-size: .68rem;
   font-weight: 700;
-  border: none;
-  border-bottom: 2px solid var(--lwm-strategic);
-}
-.md-typeset table:not([class]) td { border: none; }
-.md-typeset table:not([class]) tbody tr:nth-child(2n) td {
-  background: var(--md-default-fg-color--lightest);
-}
-.md-typeset table:not([class]) tbody tr:hover td {
-  background: color-mix(in srgb, var(--lwm-strategic) 8%, transparent);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--lwm-red);
+  margin-bottom: .2rem;
 }
 
-/* Reusable path colour language */
-.lwm-strat   { color: var(--lwm-strategic); font-weight: 700; }
-.lwm-inbound { color: var(--lwm-inbound);   font-weight: 700; }
+/* ---------- hero (Start here) ---------- */
+.md-typeset .lwm-hero { padding: 1.5rem 0 .5rem; max-width: 44rem; }
+.md-typeset .lwm-hero h1 { font-size: 3rem; margin: 0 0 .8rem; }
+.md-typeset .lwm-hero h1 em { font-style: italic; color: var(--lwm-red); }
+.md-typeset .lwm-hero p { font-size: 1.15rem; line-height: 1.55; color: var(--lwm-muted); max-width: 36rem; }
+.md-typeset .lwm-hero .md-button { margin: .6rem .5rem 0 0; text-decoration: none; border-radius: 2rem; }
+.md-typeset .md-button { color: var(--md-default-fg-color); border-color: var(--lwm-slate); }
+.md-typeset .md-button:hover { background: var(--lwm-slate); border-color: var(--lwm-slate); color: var(--lwm-paper); }
+.md-typeset .md-button--primary, .md-typeset .md-button--primary:hover { background: #8c2f39; border-color: #8c2f39; color: #fff; }
+.md-typeset .md-button--primary:hover { background: #73252e; }
 
-/* Diagrams: pre-rendered D2 SVGs embedded as images — give them room + centring */
+/* ---------- the three levels ---------- */
+.lwm-levels { display: grid; grid-template-columns: 1fr; gap: .5rem; margin: 1.4rem 0; max-width: 46rem; }
+.lwm-level {
+  display: grid; grid-template-columns: 7.5rem 1fr; gap: 1rem; align-items: baseline;
+  background: var(--lwm-card); border: 1px solid var(--lwm-line); border-left: .3rem solid var(--lwm-slate);
+  border-radius: .5rem; padding: .9rem 1.1rem;
+}
+.lwm-level:nth-child(2) { margin-left: 1.5rem; }
+.lwm-level:nth-child(3) { margin-left: 3rem; }
+.lwm-level.is-bau { border-left-color: var(--lwm-red); margin-left: 3rem; }
+.lwm-level b, .md-typeset .lwm-level .lwm-name { font-family: "Fraunces", Georgia, serif; font-size: 1.05rem; color: var(--lwm-slate); }
+.lwm-level.is-bau b, .md-typeset .lwm-level.is-bau .lwm-name { color: var(--lwm-red); }
+.md-typeset .lwm-level .lwm-name { font-weight: 600; }
+.lwm-level span { display: block; }
+.lwm-level small { display: block; color: var(--lwm-muted); font-size: .74rem; margin-top: .15rem; }
+
+
+/* ---------- cards ---------- */
+.lwm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: .8rem; margin: 1.2rem 0; }
+.md-typeset a.lwm-card, .md-typeset div.lwm-card {
+  display: block; background: var(--lwm-card); border: 1px solid var(--lwm-line); border-radius: .6rem;
+  padding: 1rem 1.1rem; text-decoration: none; color: var(--md-default-fg-color);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.md-typeset a.lwm-card:hover { transform: translateY(-2px); border-color: var(--lwm-red); box-shadow: 0 6px 18px rgba(0,0,0,.08); }
+.lwm-card .lwm-kicker { display: block; font-size: .66rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--lwm-red); }
+.lwm-card b { display: block; font-family: "Fraunces", Georgia, serif; font-size: 1.1rem; margin: .1rem 0 .25rem; }
+.lwm-card span { color: var(--lwm-muted); font-size: .78rem; line-height: 1.5; display: block; }
+.lwm-card.is-slate { border-top: .25rem solid var(--lwm-slate); }
+.lwm-card.is-red { border-top: .25rem solid var(--lwm-red); }
+
+.md-typeset .lwm-cards > p { display: contents; }
+
+/* ---------- numbered rules ---------- */
+.lwm-rules { counter-reset: rule; display: grid; gap: .5rem; margin: 1.2rem 0; max-width: 46rem; }
+.lwm-rule {
+  counter-increment: rule; display: grid; grid-template-columns: 2.4rem 1fr; gap: .9rem; align-items: start;
+  background: var(--lwm-card); border: 1px solid var(--lwm-line); border-radius: .6rem; padding: .85rem 1.1rem;
+}
+.lwm-rule::before {
+  content: counter(rule); font-family: "Fraunces", Georgia, serif; font-size: 1.7rem; line-height: 1;
+  color: var(--lwm-red); text-align: center; padding-top: .1rem;
+}
+.lwm-rule b { display: block; font-size: .9rem; }
+.lwm-rule span { display: block; color: var(--lwm-muted); font-size: .78rem; }
+
+/* ---------- a strip of states ---------- */
+.md-typeset ol.lwm-flow { display: flex; flex-wrap: wrap; gap: .4rem .35rem; align-items: stretch; margin: 1.2rem 0 !important; padding: 0; list-style: none; }
+.md-typeset .lwm-flow li {
+  margin: 0 !important; max-width: none; flex: 1 1 6rem; position: relative;
+  background: var(--lwm-card); border: 1px solid var(--lwm-line); border-top: .22rem solid var(--lwm-slate);
+  border-radius: .45rem; padding: .55rem .7rem; font-size: .74rem; line-height: 1.4; color: var(--lwm-muted);
+}
+.lwm-flow li b { display: block; color: var(--md-default-fg-color); font-size: .82rem; }
+.lwm-flow li.is-gate { border-top-color: var(--lwm-amber); }
+.lwm-flow li.is-done { border-top-color: var(--lwm-green); }
+.lwm-flow li.is-bau { border-top-color: var(--lwm-red); }
+.lwm-flow li.is-quiet { border-top-color: var(--lwm-line); border-style: dashed; }
+
+/* ---------- "you need" checklists ---------- */
+.md-typeset .lwm-need ul { list-style: none; margin-left: 0; padding: 0; }
+.md-typeset .lwm-need ul li { margin-left: 0 !important; padding-left: 1.7rem; position: relative; }
+.md-typeset .lwm-need ul li::before {
+  content: "✓"; position: absolute; left: 0; top: .05rem; width: 1.15rem; height: 1.15rem; line-height: 1.15rem;
+  text-align: center; font-size: .7rem; font-weight: 700; color: #fff; background: var(--lwm-green); border-radius: 50%;
+}
+[data-md-color-scheme="slate"] .md-typeset .lwm-need ul li::before { color: #10240f; }
+
+/* ---------- definition lists stand in for most tables ---------- */
+.md-typeset dl { display: grid; grid-template-columns: minmax(8rem, 12rem) 1fr; gap: 0; margin: 1rem 0; max-width: 46rem; border-top: 1px solid var(--lwm-line); }
+.md-typeset dl dt { font-weight: 700; padding: .55rem .8rem .55rem 0; border-bottom: 1px solid var(--lwm-line); margin: 0; }
+.md-typeset dl dd { margin: 0 !important; padding: .55rem 0; border-bottom: 1px solid var(--lwm-line); color: var(--lwm-muted); }
+.md-typeset dl dd > p { margin: 0 !important; max-width: none; }
+.md-typeset dl dd > p + p { margin-top: .4rem !important; }
+@media (max-width: 40rem) {
+  .md-typeset dl { grid-template-columns: 1fr; }
+  .md-typeset dl dt { border-bottom: 0; padding-bottom: 0; }
+  .lwm-level { grid-template-columns: 1fr; gap: .2rem; }
+  .lwm-level:nth-child(n) { margin-left: 0; }
+  .md-typeset .lwm-hero h1 { font-size: 2.2rem; }
+}
+
+/* ---------- the tables that remain are lookups ---------- */
+.md-typeset table:not([class]) { border: 1px solid var(--lwm-line); border-radius: .5rem; box-shadow: none; font-size: .76rem; background: var(--lwm-card); }
+.md-typeset table:not([class]) th { background: var(--lwm-soft); color: var(--md-default-fg-color); font-weight: 700; border: 0; }
+.md-typeset table:not([class]) td { border-top: 1px solid var(--lwm-line); }
+
+/* ---------- callouts, quieter ---------- */
+.md-typeset .admonition, .md-typeset details {
+  border: 1px solid var(--lwm-line) !important; border-left: .25rem solid var(--lwm-slate) !important; border-radius: .5rem;
+  box-shadow: none !important; background: var(--lwm-card); font-size: .8rem; max-width: 46rem;
+}
+.md-typeset .admonition.warning, .md-typeset details.warning { border-left-color: var(--lwm-red) !important; }
+.md-typeset .admonition.tip, .md-typeset details.tip { border-left-color: var(--lwm-green) !important; }
+.md-typeset .admonition-title, .md-typeset summary { background: transparent !important; font-weight: 700; }
+.md-typeset .admonition-title::before, .md-typeset summary::before { background-color: var(--lwm-muted) !important; }
+
+/* ---------- label and state chips ---------- */
+.md-typeset code { background: var(--lwm-soft); border-radius: .3rem; font-size: .82em; padding: .1em .35em; }
+
+/* Path colour words */
+.lwm-strat { color: var(--lwm-slate); font-weight: 700; }
+.lwm-inbound { color: var(--lwm-red); font-weight: 700; }
+
+/* Diagrams: pre-rendered D2 SVGs on a white card so they read in dark mode too */
 .md-typeset img[src$=".svg"] {
-  display: block;
-  margin: .5rem auto 1rem;
-  max-width: 100%;
+  display: block; margin: 1rem auto 1.4rem; max-width: 100%;
+  background: #fff; border: 1px solid var(--lwm-line); border-radius: .6rem; padding: .6rem;
 }

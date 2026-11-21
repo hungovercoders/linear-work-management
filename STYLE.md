@@ -23,9 +23,25 @@ The aim is plain, varied, human writing. Not stiff, not breathless, not decorate
 | Aphoristic closers | Every section ending on a neat epigram | At most one memorable line per page; let the rest end on substance | — |
 | One register | The same confident cadence in every paragraph | Vary sentence length on purpose. A plain concession where one fits | not linted; read for it |
 
+## Layout
+
+A guide page should make its point in one screen. Lead with one or two plain sentences, then
+the least a reader needs, and put the rest in a collapsed `??? note`. Aim for under 600 words.
+
+Tables are for lookups only (label values, deadlines, thresholds). For everything else use the
+components styled in `docs/stylesheets/extra.css`:
+
+| For | Use |
+|---|---|
+| A term and its explanation | A definition list (`Term` then `:   explanation`) |
+| States in order | `<ol class="lwm-flow">` |
+| "You need…" lists | A list inside `<div class="lwm-need" markdown>` |
+| Links to other pages, or two to four options | `<div class="lwm-cards">` |
+| Skill or by hand | Content tabs (`=== "With the skill"`) |
+
 ## Keep
 
-Tables, the label and state enums, the five hard rules, the worked example's real numbers,
+The label and state values, the five hard rules, the worked example's real numbers,
 skill templates, cross-links, and the Linear-native state name **Canceled**. The tells are a
 prose problem, not a structure one.
 

@@ -71,6 +71,6 @@ Plus the operational layer:
 
 ## Related
 
-- [The hard rules](https://hungovercoders.github.io/linear-work-management/hard-rules/)
-- [Teams, states and labels](https://hungovercoders.github.io/linear-work-management/teams/) — the enums it tests against
+- [The five rules](https://hungovercoders.github.io/linear-work-management/hard-rules/)
+- [States and labels](https://hungovercoders.github.io/linear-work-management/teams/) — the enums it tests against
 - `task doctor` — the headless whole-workspace sweep (CI-friendly, covers initiatives)

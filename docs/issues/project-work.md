@@ -1,64 +1,60 @@
 # Project work
 
 <div class="lwm-lead" markdown>
-For delivery teams. Project work is the planned kind: an issue that lives inside a
-[project](../projects.md) and helps move its Key Result. Everything on the [Issues](index.md)
-page applies here too.
+<span class="lwm-for">For delivery teams</span>
+
+Project work is the planned kind: an issue inside a [project](../projects.md) that helps move
+its Key Result.
 </div>
 
-!!! abstract "In short"
-    - The issue sits in a project and takes that project's `product/*` label.
-    - Give it one `type/*` label. If you're unsure, use `action`.
-    - Give it a priority, so it's clear what gets picked up next.
-    - Take it through `Backlog`, `Planning` and `Todo` before anyone starts.
+## What a project issue needs
 
----
+<div class="lwm-need" markdown>
 
-## :material-tag-outline: Pick a type
+- A project. The issue takes that project's `product/*` label
+- One `type/*` label. If you're unsure, use `action`
+- A priority, so it's clear what gets picked up next
+- A description [someone could start from](index.md#the-body-is-the-prompt)
 
-The `type/*` label says what kind of work it is, and it decides which template the description
-uses.
+</div>
 
-| `type/*` | Use it for | The description covers |
-|---|---|---|
-| `action` | Anything that needs doing: a code change, upkeep, a reminder to yourself. This is the default | What needs doing, why, and when it's done |
-| `feature` | A new capability | What to add, the value to users, and acceptance criteria |
-| `bug` | Something broken | What's broken, steps to reproduce, expected against actual, and impact |
-| `analysis` | A data question or a report. The answer is the deliverable | The question, why it's needed, and what counts as answered |
-| `spike` | A time-boxed investigation | The question, what it unblocks, the time box, and notes |
+## Pick a type
 
-Every template also has room for background (Context, or Notes in a spike) and ends with an
-empty `## Plan` section, which gets
-[filled in when someone picks the issue up](index.md#the-body-is-the-prompt).
+The type decides which template the description uses.
+
+`action`
+:   Anything that needs doing: a code change, upkeep, a reminder to yourself. The default.
+
+`feature`
+:   A new capability. Write acceptance criteria.
+
+`bug`
+:   Something broken. Give steps to reproduce, and what you expected.
+
+`analysis`
+:   A data question or a report. The answer is the deliverable.
+
+`spike`
+:   A time-boxed investigation. Say what it unblocks and how long you'll spend.
 
 !!! tip "Feature or action?"
-    Ask whether someone gets a new capability when this ships. If they do, it's a `feature`, and
-    acceptance criteria are worth writing. Otherwise it's an `action`. If you pick wrong, just
-    change the label.
+    Does someone get a new capability when this ships? Then it's a `feature`. Otherwise it's an
+    `action`. If you pick wrong, change the label.
 
-The `product/*` label (`hungovercoders`, `dogadopt`, `woolwitch` and so on) comes from the
-project, so you never decide it per issue. A `bau/*` label never goes on a project issue,
-because that group is for [triage work](triage.md).
+## Create one
 
----
+=== "With the skill"
 
-## :material-plus-circle-outline: Create one
+    Ask Claude to "write up this issue". The [`linear-issue`](../skills/index.md) skill picks
+    the type, writes the description from the matching template and sets the fields.
 
-1. The quick way is the [`linear-issue`](../skills/index.md) skill. It picks the type, writes
-   the description from the matching template and sets the fields for you.
-2. To do it by hand, create the issue in the
-   [project's Linear view](https://linear.app/happydevs/projects/all). Set the project, the
-   `type/*` label and the project's `product/*` label, then paste in the matching template from
-   the [`linear-issue` skill folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue).
-   They're the same files the skill uses.
+=== "By hand"
 
-Set the assignee and a priority (Urgent to Low) in [Linear's fields](index.md#native-fields-not-prose). Then take
-the issue through [`Backlog`, `Planning` and `Todo`](index.md#backlog-planning-todo-commitment-then-readiness) before anyone starts.
+    1. Create the issue in the [project](https://linear.app/happydevs/projects/all).
+    2. Set the `type/*` label, the project's `product/*` label, an assignee and a priority.
+    3. Paste the matching template from the
+       [`linear-issue` folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue)
+       into the description.
 
----
-
-## Related
-
-- [Issues](index.md): what every issue has in common
-- [Projects](../projects.md): the project an issue lives in
-- [Triage work](triage.md): the other kind of issue
+Then take it through [Backlog, Planning and Todo](index.md#backlog-planning-todo-commitment-then-readiness)
+before anyone starts.

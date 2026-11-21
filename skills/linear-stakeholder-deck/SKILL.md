@@ -38,5 +38,5 @@ MCP; the data comes from the headless script).
 
 ## Related
 
-- [Communications](https://hungovercoders.github.io/linear-work-management/communications/) — the updates this rolls up
+- [Updates](https://hungovercoders.github.io/linear-work-management/communications/) — the updates this rolls up
 - [Dashboards](https://hungovercoders.github.io/linear-work-management/dashboards/) — the always-on counterpart
