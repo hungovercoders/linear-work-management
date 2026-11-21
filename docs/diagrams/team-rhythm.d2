@@ -11,7 +11,7 @@ start: "Start of the quarter" {
   grid-columns: 1
   grid-gap: 34
   scene: "Scene setting\nstrategy, mission, tenets" {class: plain}
-  create: "Choose objectives\nthree, plus objective zero" {class: gate}
+  create: "Choose three objectives\neach with three Key Results" {class: gate}
   plan: "Impact planning\nhypotheses become projects" {class: key}
   scene -> create: {class: to-gate}
   create -> plan: {class: to-planned}
@@ -24,7 +24,7 @@ cycle: "Every cycle, repeated" {
   grid-gap: 34
   planning: "Plan the cycle\none goal, tied to a Key Result" {class: key}
   daily: "Daily stand-up" {class: planned}
-  weekly: "Weekly: refinement\nand zero tolerance" {class: bau}
+  weekly: "Weekly: refinement\nand service level check" {class: bau}
   review: "Review and retrospective" {class: planned}
   planning -> daily: {class: to-planned}
   daily -> weekly: {class: to-planned}

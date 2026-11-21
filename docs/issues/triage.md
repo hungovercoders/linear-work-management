@@ -10,6 +10,13 @@ It arrives in Triage, and your job is to decide where it goes.
 ??? abstract "See it as a diagram"
     ![Triage on a page: work arrives from Slack, integrations and customers, whoever is on duty decides, and there are five outcomes.](../diagrams/triage-outcomes.svg)
 
+## Why BAU exists
+
+Every team keeps a few promises for as long as it exists: how fast it responds, how fast it
+fixes a vulnerability, how reliable its service is. BAU is the work of keeping those promises.
+That's how you judge an item in Triage. Ask which [service level](../team-setup.md#service-levels)
+it puts at risk.
+
 ## Your job on duty
 
 [Triage](https://linear.app/docs/triage) is Linear's inbox for each team. New issues from Slack,
