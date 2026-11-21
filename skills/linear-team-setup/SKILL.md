@@ -1,6 +1,7 @@
 ---
 name: linear-team-setup
 description: Check a Linear team against the recommended team setup and report what is still missing: a named owner, the shared issue states, Triage with someone on duty, an asks channel, an SLA rule and an issue template for each kind of BAU, steady cycles, and initiatives for this quarter's objectives. Reads what Linear exposes and asks the team owner about the rest. Use when setting up a new team, adopting the Ways of Working, or checking an existing team's setup.
+linear_skill: true
 ---
 
 <!-- doc: team-setup.md -->

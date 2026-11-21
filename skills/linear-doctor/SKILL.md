@@ -1,6 +1,7 @@
 ---
 name: linear-doctor
 description: Audit a scoped slice of the Linear workspace for drift from the Ways of Working: the five hard rules, the label taxonomy, stale initiative/project updates, issues languishing in Planning/Todo/In Review, and native fields buried in description prose. Reports (does not fix), grouped by rule with links. Scope it to a team, project or filter; whole-workspace sweeps run headless via task doctor instead. Use for a health check before a review or when drift is suspected.
+linear_skill: true
 ---
 
 <!-- doc: hard-rules.md -->

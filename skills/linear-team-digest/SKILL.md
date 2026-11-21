@@ -1,6 +1,7 @@
 ---
 name: linear-team-digest
 description: Draft the weekly team digest for a Linear team: current-cycle progress (done, in flight, stalled) plus the triage digest (what arrived, how it was routed, what's still waiting), ready to post to the team's channel. Rolls up from live issue and Triage state. Use weekly, at the team's cadence point.
+linear_skill: true
 ---
 
 <!-- doc: communications.md -->

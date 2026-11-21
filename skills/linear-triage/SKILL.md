@@ -1,6 +1,7 @@
 ---
 name: linear-triage
 description: Work a Linear team's Triage inbox to the Ways of Working standard: for each incoming issue give it one of the five outcomes (accept into a project · accept as BAU · redirect · merge · decline), set the single bau/* label and a priority, and act within the decision clock. Drives Linear's native Triage; reuses the linear-issue templates when accepting. Use when you're on triage duty and clearing the queue.
+linear_skill: true
 ---
 
 <!-- doc: issues/triage.md -->

@@ -1,6 +1,7 @@
 ---
 name: linear-project-update
 description: Post the weekly status update for an active Linear project to the shared #project-updates channel, covering what changed, a health claim (on track / at risk / off track) backed by evidence, and any risks. Rolls up from the project's issue and cycle progress and flags stale or missing movement. Uses Linear's project status updates. Use weekly while a project is In Progress or Launching.
+linear_skill: true
 ---
 
 <!-- doc: projects.md -->

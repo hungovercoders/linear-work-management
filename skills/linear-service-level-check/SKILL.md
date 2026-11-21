@@ -1,6 +1,7 @@
 ---
 name: linear-service-level-check
 description: Run a team's weekly service level check in Linear: BAU issues whose SLA is at risk or breached, BAU issues that should carry an SLA and don't, how many SLAs closed this week as achieved or failed, and the oldest item waiting in Triage. Asks about the measures Linear can't see, such as uptime and software near end of life, and proposes a BAU issue for each one that has slipped. Use weekly, or when someone asks how the team's BAU is doing.
+linear_skill: true
 ---
 
 <!-- doc: team-setup.md -->

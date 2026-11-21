@@ -1,6 +1,7 @@
 ---
 name: linear-objectives
 description: Help a team choose its objectives for the quarter and draft them as Linear initiatives: review the mission, look at eight areas with real numbers, pick three objectives, give each three Key Results that stretch, mark which are must-haves, and form a first hypothesis for each. Use at the start of a quarter, when a team is setting OKRs, or when its current objectives no longer fit.
+linear_skill: true
 ---
 
 <!-- doc: team-setup.md -->

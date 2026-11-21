@@ -52,6 +52,8 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
    single source of truth; `scripts/linear_skills_sync.py` inlines each companion template (Linear
    skills can't reach repo files) and upserts idempotently. `task linear:skills -- --check` reports
    drift from a manual Linear edit; `-- --dry-run` prints the generated body without publishing.
+   Every skill is marked except `linear-stakeholder-deck`, which runs a local script with an
+   API key and so can't work inside Linear.
 
 8. **Agent limits.** A skill never does more than [Working with agents](https://hungovercoders.github.io/linear-work-management/agents/)
    allows. It drafts and proposes. A person confirms a Triage outcome, a priority, a health

@@ -36,7 +36,8 @@ TEAM_KEY = os.environ.get("LINEAR_TEAM", "GRI")
 FRONTMATTER = re.compile(r"^---\s*\n(.*?)\n---\s*\n", re.DOTALL)
 DOC_MARKER = re.compile(r"^<!--\s*doc:\s*(?P<doc>\S+)\s*-->\s*$\n?", re.MULTILINE)
 LEADING_H1 = re.compile(r"\A\s*#\s+\S.*\n")
-TEMPLATE_LINK = re.compile(r"\[([^\]]+)\]\(template[^)]*\.md\)")
+# Links to repo files Linear can't reach: a companion template, or another skill.
+TEMPLATE_LINK = re.compile(r"\[([^\]]+)\]\((?:template[^)]*\.md|\.\./[^)]*)\)")
 
 
 def field(block: str, key: str) -> str:
