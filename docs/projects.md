@@ -63,6 +63,9 @@ A planned project then needs:
 
 </div>
 
+A project can be shared by several teams, each working its own issues. It still has one lead
+([how teams fit](how-teams-work.md)).
+
 Put all of these in Linear's own fields. The description is for what you're doing and how, the
 Key Result, and what's out of scope.
 

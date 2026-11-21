@@ -1,0 +1,28 @@
+# Where teams fit. Shown on the Teams page (see `task diagrams`).
+# Initiatives sit above teams, projects can span them, issues belong to exactly one.
+...@shared/classes
+direction: down
+
+initiative: "Initiative\nno team · one owner" {class: key}
+shared: "Project\ntwo teams · one lead" {class: key}
+solo: "Project\none team · one lead" {class: key}
+
+web: "Web team" {
+  class: band
+  label.near: top-left
+  w1: "Issue WEB-12\none assignee" {class: planned}
+  w2: "Issue WEB-19\none assignee" {class: planned}
+}
+data: "Data team" {
+  class: band
+  label.near: top-left
+  d1: "Issue DAT-7\none assignee" {class: planned}
+  d2: "Issue DAT-9\none assignee" {class: planned}
+}
+
+initiative -> shared: {class: to-planned}
+initiative -> solo: {class: to-planned}
+shared -> web.w1: {class: to-planned}
+shared -> web.w2: {class: to-planned}
+shared -> data.d1: {class: to-planned}
+solo -> data.d2: {class: to-planned}

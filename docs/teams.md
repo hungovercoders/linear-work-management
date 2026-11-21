@@ -87,6 +87,7 @@ None of these are required.
 
 ## Membership { #membership }
 
-Every team has a named owner and named members. We suggest each person has one home team, even
+Every team has a named owner and named members. [Teams](how-teams-work.md) explains what a team
+owns and what it doesn't. We suggest each person has one home team, even
 if they work across several projects. Manage teams in
 [Linear settings](https://linear.app/happydevs/settings/teams).

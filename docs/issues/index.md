@@ -24,6 +24,9 @@ Every issue is one or the other. Never both, never neither.
 
 </div>
 
+Every issue also belongs to exactly one team, whichever kind it is. A project can span teams,
+but an issue can't ([how teams fit](../how-teams-work.md)).
+
 ## Write it so someone can start { #the-body-is-the-prompt }
 
 Write the description for whoever picks it up, whether that's a colleague or an AI agent. Say
