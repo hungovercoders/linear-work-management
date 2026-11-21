@@ -1,0 +1,46 @@
+# The operating model. Shown on the Start here page (see `task diagrams`).
+# Planned work runs INITIATIVE -> PROJECT -> ISSUE. BAU arrives through TRIAGE.
+...@shared/classes
+
+grid-columns: 1
+grid-gap: 50
+
+strategy: "Why · leadership" {
+  class: band
+  label.near: top-left
+  grid-rows: 1
+  initiative: "Initiative\nAn outcome we want,\nand how we'll measure it" {class: key}
+}
+delivery: "How · one named lead" {
+  class: band
+  label.near: top-left
+  grid-rows: 1
+  grid-gap: 60
+  project: "Project\nA piece of work that moves\none of those measures" {class: key}
+  triage: "Triage\nWhere unplanned work arrives.\nWhoever is on duty decides" {class: bau}
+}
+execution: "The work · teams" {
+  class: band
+  label.near: top-left
+  grid-rows: 1
+  grid-gap: 50
+  issue1: "Issue\ntype/feature" {class: planned}
+  issue2: "Issue\ntype/bug\ncame in through Triage" {class: planned}
+  bauissue: "Issue\nbau/incident\nstays BAU, no project" {class: bau}
+}
+rule: "Every issue belongs somewhere" {
+  class: band
+  label.near: top-left
+  grid-rows: 1
+  grid-gap: 24
+  ok_project: "✓ In a project" {class: planned}
+  ok_bau: "✓ One bau/* label" {class: bau}
+  bad_both: "✗ Both" {class: quiet}
+  bad_neither: "✗ Neither" {class: quiet}
+}
+
+strategy.initiative -> delivery.project: {class: to-planned}
+delivery.project -> execution.issue1: {class: to-planned}
+delivery.project -> execution.issue2: {class: to-planned}
+delivery.triage -> execution.issue2: {class: to-bau; style.stroke-dash: 4}
+delivery.triage -> execution.bauissue: {class: to-bau}

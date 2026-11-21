@@ -1,0 +1,26 @@
+# Project lifecycle. Shown on the Projects page (see `task diagrams`).
+# Flat and acyclic so the layout stays one clean spine.
+...@shared/classes
+direction: down
+
+idea: "Idea\nsomeone's thought of it" {class: quiet}
+scoping: "Scoping\nworking out cost and value" {class: quiet}
+gate: "Ready to plan?\ndecide what the idea turned into" {class: gate}
+graduate: "Graduate\njoin an initiative,\nor start a new one" {class: planned}
+standalone: "Go standalone\nno initiative,\nexpect to be asked why" {class: plain}
+drop: "Drop\ncanceled, reason recorded" {class: quiet}
+planned: "Planned\nagreed and dated, says which\nKey Result it moves" {class: key}
+inprogress: "In Progress\nbeing built" {class: planned}
+launching: "Launching\nrolling out" {class: planned}
+completed: "Completed\ndelivered, and the Key Result moved" {class: done}
+
+idea -> scoping: {class: to-quiet}
+scoping -> gate: {class: to-gate}
+gate -> graduate: {class: to-planned}
+gate -> standalone: {class: to-quiet}
+gate -> drop: {class: to-quiet}
+graduate -> planned: {class: to-planned}
+standalone -> planned: {class: to-quiet}
+planned -> inprogress: {class: to-planned}
+inprogress -> launching: {class: to-planned}
+launching -> completed: {class: to-done}

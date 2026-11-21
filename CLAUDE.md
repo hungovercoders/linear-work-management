@@ -18,10 +18,19 @@ task doctor        # audit the Linear workspace against the hard rules
 
 ## Diagrams
 
-There are no image diagrams. Pictures are built from the page components in
-`docs/stylesheets/extra.css` (cards, state strips, chains and arrows), so they match the site,
-follow dark mode and work on a phone. `STYLE.md` lists the components. Mermaid is still
-available via ` ```mermaid ` for a sequence or gantt chart.
+Each guide page has one summary diagram, in a collapsed `??? abstract "See it as a diagram"` block
+under the lead. It shows the whole page in one picture, so it should add something the text and
+cards don't: the branches, the order, what feeds what.
+
+Diagrams are **D2** in `docs/diagrams/*.d2`, pre-rendered to committed SVGs with `task diagrams`
+(offline via the d2 CLI) and embedded as images (`![alt](diagrams/<name>.svg)`; use
+`../diagrams/…` from pages in subfolders). Edit the `.d2`, run `task diagrams`, commit the SVG
+beside it. `task diagrams:check` (and CI) verifies every source has a committed SVG.
+
+Every diagram imports `docs/diagrams/shared/classes.d2` (`...@shared/classes`) and styles its
+nodes and arrows with those classes, so the colours match the site: use a class, never a one-off
+colour. Text is set in IBM Plex Sans from `docs/diagrams/fonts/`. Mermaid is available via
+` ```mermaid ` for sequence/gantt (client-side).
 
 ## Writing
 

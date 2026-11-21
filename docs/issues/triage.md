@@ -7,6 +7,9 @@ BAU (business as usual) is the work nobody planned: an incident, a request, a re
 It arrives in Triage, and your job is to decide where it goes.
 </div>
 
+??? abstract "See it as a diagram"
+    ![Triage on a page: work arrives from Slack, integrations and customers, whoever is on duty decides, and there are five outcomes.](../diagrams/triage-outcomes.svg)
+
 ## Your job on duty
 
 [Triage](https://linear.app/docs/triage) is Linear's inbox for each team. New issues from Slack, integrations and

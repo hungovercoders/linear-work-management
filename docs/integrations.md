@@ -5,6 +5,9 @@ GitHub moves issues along as code ships. Slack carries updates out and brings re
 [Linear settings](https://linear.app/happydevs/settings/integrations).
 </div>
 
+??? abstract "See it as a diagram"
+    ![GitHub to Linear: pushing, opening a pull request and merging each move the issue along.](diagrams/github-flow.svg)
+
 ## GitHub
 
 The [GitHub integration](https://linear.app/docs/github-integration) is connected to the

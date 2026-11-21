@@ -41,8 +41,9 @@ components styled in `docs/stylesheets/extra.css`:
 | One thing leading to several, or several to one | `lwm-node`, `lwm-arrow` and `lwm-cards` together |
 | A short top-to-bottom chain | `<ol class="lwm-chain">` |
 
-Don't add image diagrams. A picture built from these parts matches the site, follows dark mode
-and reads on a phone.
+Each page also has one summary diagram in a collapsed `See it as a diagram` block under the
+lead. The components carry the detail in the text. The diagram is the one-glance summary, so it
+should show what the text can't: branches, order, and what feeds what.
 
 ## Keep
 

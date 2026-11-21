@@ -1,0 +1,25 @@
+# Triage on a page: where work comes from, who decides, and the five outcomes.
+# Shown on the Triage and BAU page (see `task diagrams`).
+...@shared/classes
+direction: down
+
+slack: "A team's asks channel\nin Slack" {class: plain}
+tools: "Integrations\nSentry, GitHub, Zendesk" {class: plain}
+people: "Customers,\nor anyone by hand" {class: plain}
+triage: "Triage\nthe team's inbox" {class: bau}
+decision: "Whoever is on duty decides\nat once for incidents, a day or two otherwise" {class: gate}
+accept_project: "Accept into a project\nit becomes project work" {class: planned}
+accept_bau: "Accept as BAU\none bau/* label,\nno project" {class: bau}
+redirect: "Redirect\nanother team's Triage" {class: plain}
+merge: "Merge\nalready covered" {class: plain}
+decline: "Decline\nwith a reason" {class: quiet}
+
+slack -> triage: {class: to-bau}
+tools -> triage: {class: to-bau}
+people -> triage: {class: to-bau}
+triage -> decision: {class: to-gate}
+decision -> accept_project: {class: to-planned}
+decision -> accept_bau: {class: to-bau}
+decision -> redirect: {class: to-quiet}
+decision -> merge: {class: to-quiet}
+decision -> decline: {class: to-quiet}

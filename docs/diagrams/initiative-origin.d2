@@ -1,0 +1,16 @@
+# Where an initiative comes from. Shown on the Initiatives page (see `task diagrams`).
+...@shared/classes
+direction: down
+
+strat: "Leadership names an outcome\nno project behind it yet" {class: plain}
+grad: "One exploratory project\ngrows into an outcome of its own" {class: planned}
+agg1: "Exploratory project" {class: planned}
+agg2: "Exploratory project" {class: planned}
+initiative: "Initiative\nKey Results · one owner · a target date" {class: key}
+delivery: "Projects move its Key Results\nthe ones that fed it carry on, or close" {class: plain}
+
+strat -> initiative: spontaneous {class: to-quiet}
+grad -> initiative: graduation {class: to-planned}
+agg1 -> initiative: aggregation {class: to-planned}
+agg2 -> initiative: aggregation {class: to-planned}
+initiative -> delivery: {class: to-planned}

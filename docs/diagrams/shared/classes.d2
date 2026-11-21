@@ -1,0 +1,22 @@
+# Shared look for every diagram, matching docs/stylesheets/extra.css.
+# Imported with `...@shared/classes`. Not rendered on its own.
+# slate = planned work, ox-red = BAU, amber = a decision or commitment, green = done.
+
+style: {fill: "#FFFFFF"}
+
+classes: {
+  planned: {style: {fill: "#FFFFFF"; stroke: "#3D4C6B"; stroke-width: 2; border-radius: 10; font-color: "#1B2030"; font-size: 17; bold: false}}
+  key: {style: {fill: "#EEF1F7"; stroke: "#3D4C6B"; stroke-width: 2; border-radius: 10; font-color: "#1B2030"; font-size: 17; bold: true}}
+  bau: {style: {fill: "#FBF1F2"; stroke: "#8C2F39"; stroke-width: 2; border-radius: 10; font-color: "#1B2030"; font-size: 17; bold: false}}
+  gate: {style: {fill: "#FDF8EE"; stroke: "#A8690F"; stroke-width: 2; border-radius: 10; font-color: "#1B2030"; font-size: 17; bold: false}}
+  done: {style: {fill: "#F1F7F1"; stroke: "#2F6B3A"; stroke-width: 2; border-radius: 10; font-color: "#1B2030"; font-size: 17; bold: false}}
+  quiet: {style: {fill: "#FBFAF7"; stroke: "#9C9482"; stroke-width: 1; stroke-dash: 4; border-radius: 10; font-color: "#5F6675"; font-size: 17; bold: false}}
+  plain: {style: {fill: "#FBFAF7"; stroke: "#D9D4C7"; stroke-width: 1; border-radius: 10; font-color: "#1B2030"; font-size: 16; bold: false}}
+  band: {style: {fill: "#FBFAF7"; stroke: "#E3DFD5"; stroke-width: 1; border-radius: 12; font-color: "#5F6675"; font-size: 16}}
+
+  to-planned: {style: {stroke: "#3D4C6B"; stroke-width: 2; font-color: "#5F6675"; font-size: 15}}
+  to-bau: {style: {stroke: "#8C2F39"; stroke-width: 2; font-color: "#5F6675"; font-size: 15}}
+  to-gate: {style: {stroke: "#A8690F"; stroke-width: 2; font-color: "#5F6675"; font-size: 15}}
+  to-done: {style: {stroke: "#2F6B3A"; stroke-width: 2; font-color: "#5F6675"; font-size: 15}}
+  to-quiet: {style: {stroke: "#9C9482"; stroke-width: 1; stroke-dash: 4; font-color: "#5F6675"; font-size: 15}}
+}

@@ -1,0 +1,23 @@
+# Who posts what, and how updates feed each other. Shown on the Updates page (see `task diagrams`).
+...@shared/classes
+direction: down
+
+evidence: "How issues and the cycle are moving" {class: plain}
+projupd: "Project update\nweekly, by the project lead" {class: key}
+iniupd: "Initiative update\nmonthly, by the initiative owner" {class: key}
+digest: "Team digest\nweekly, the cycle and Triage" {class: planned}
+announce: "Launch or incident\nwhen it happens" {class: bau}
+ch_proj: "#project-updates" {class: plain}
+ch_ini: "#initiative-updates" {class: plain}
+ch_team: "team channel" {class: plain}
+ch_ann: "#announcements" {class: plain}
+pulse: "Pulse\ncatch up in your own feed" {class: gate}
+
+evidence -> projupd: feeds {class: to-planned}
+projupd -> iniupd: feeds {class: to-planned}
+projupd -> ch_proj: {class: to-planned}
+iniupd -> ch_ini: {class: to-planned}
+digest -> ch_team: {class: to-planned}
+announce -> ch_ann: {class: to-bau}
+projupd -> pulse: {class: to-gate; style.stroke-dash: 4}
+iniupd -> pulse: {class: to-gate; style.stroke-dash: 4}

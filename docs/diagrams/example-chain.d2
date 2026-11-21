@@ -1,0 +1,18 @@
+# The worked example as a picture. Shown on the Worked example page (see `task diagrams`).
+...@shared/classes
+direction: down
+
+initiative: "Initiative · Effortless rescue-dog adoption\nKey Result: Welsh rescues in the portal, 0% → 100%" {class: key}
+project: "Project · Onboard Welsh rescues\nmoves that Key Result from 0% to 100%" {class: key}
+consent: "Project · Consent process\nhas to finish first" {class: plain}
+feature: "type/feature · Todo\nShow a rescue's dogs on search" {class: planned}
+bug: "type/bug · Urgent\nRefresh drops dogs with no photo" {class: planned}
+action: "type/action · In Progress\nNightly confirmation email" {class: planned}
+arrived: "Arrives in Triage as bau/defect\n\"Your site shows a dog we rehomed\"" {class: bau}
+
+initiative -> project: {class: to-planned}
+consent -> project: blocks {class: to-quiet}
+project -> feature: {class: to-planned}
+project -> bug: {class: to-planned}
+project -> action: {class: to-planned}
+arrived -> project: accepted as a bug {class: to-bau}
