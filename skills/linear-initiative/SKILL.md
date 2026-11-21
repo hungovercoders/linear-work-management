@@ -66,7 +66,9 @@ Challenge each one:
    until it has Key Results (step 3), so don't stop at the objective.
 3. **Key Results.** 3–5 of them. For each, ask measured or committed, then prompt for
    baseline → target (measured) or the Definition of Done (committed), plus an evidence source.
-4. Owner. One named person, strategic seniority.
+4. Owner. One named person, strategic seniority. A team can lead the initiative too (Linear's
+   Business and Enterprise plans), but its projects may sit in other teams, so the named owner
+   is still required.
 5. Timeframe. A target date. Often a quarter; some run a year or more. Set it now.
 6. **State.** `Proposed` if not yet agreed; `Planned` once leadership agrees and the owner, KRs
    and date are all set. (`Active` comes later, when work starts against the date.)

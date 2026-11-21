@@ -51,7 +51,8 @@ When two people own something, each assumes the other has it. So it's always one
 name.
 
 An initiative's owner can say why it matters and how we'll know it worked. A project's lead is
-the person delivering it. Teams still own issues, and a project can use several teams.
+the person delivering it. Teams still own issues, and a project can use several teams. An agent can do the work, but it
+can't be the owner ([working with agents](agents.md)).
 
 ## 5. Initiatives and projects have dates once they're planned
 

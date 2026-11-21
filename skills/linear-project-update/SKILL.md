@@ -1,6 +1,7 @@
 ---
 name: linear-project-update
 description: Post the weekly status update for an active Linear project to the shared #project-updates channel, covering what changed, a health claim (on track / at risk / off track) backed by evidence, and any risks. Rolls up from the project's issue and cycle progress and flags stale or missing movement. Uses Linear's project status updates. Use weekly while a project is In Progress or Launching.
+linear_skill: true
 ---
 
 <!-- doc: projects.md -->
@@ -36,7 +37,8 @@ with evidence, and the issue and cycle progress is that evidence.
 4. Decide **health** (on track / at risk / off track), justified by that movement. A project
    can't be greener than the issues moving its KR, so if work has stalled or the cycle slipped,
    temper the health and say why.
-5. Post with `save_status_update` (`type: project`, `project: <name or id>`, `health`, `body`).
+5. Show the lead the draft and the health you propose. Health is their claim, so post only once
+   they confirm. Post with `save_status_update` (`type: project`, `project: <name or id>`, `health`, `body`).
 
 ## The update template
 

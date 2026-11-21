@@ -52,6 +52,12 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
    single source of truth; `scripts/linear_skills_sync.py` inlines each companion template (Linear
    skills can't reach repo files) and upserts idempotently. `task linear:skills -- --check` reports
    drift from a manual Linear edit; `-- --dry-run` prints the generated body without publishing.
+   Every skill is marked except `linear-stakeholder-deck`, which runs a local script with an
+   API key and so can't work inside Linear.
+
+8. **Agent limits.** A skill never does more than [Working with agents](https://hungovercoders.github.io/linear-work-management/agents/)
+   allows. It drafts and proposes. A person confirms a Triage outcome, a priority, a health
+   claim and anything that commits the team, and a person owns every initiative and project.
 
 ## The skills
 
@@ -65,4 +71,7 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
 | `linear-triage` | A routing decision per inbound issue (five outcomes) | [Triage and BAU](https://hungovercoders.github.io/linear-work-management/issues/triage/) |
 | `linear-team-digest` | The weekly team digest (cycle + triage roll-up) | [Updates](https://hungovercoders.github.io/linear-work-management/communications/) |
 | `linear-doctor` | A drift report — hard rules, taxonomy, stale updates | [The five rules](https://hungovercoders.github.io/linear-work-management/hard-rules/) |
+| `linear-team-setup` | A setup report: what a team has in place and what is missing | [Team setup](https://hungovercoders.github.io/linear-work-management/team-setup/) |
+| `linear-objectives` | A quarter's three objectives and their Key Results | [Team setup](https://hungovercoders.github.io/linear-work-management/team-setup/) |
+| `linear-service-level-check` | The weekly report of BAU against its SLAs | [Team setup](https://hungovercoders.github.io/linear-work-management/team-setup/) |
 | `linear-stakeholder-deck` | A Marp slide deck of the live portfolio | [Updates](https://hungovercoders.github.io/linear-work-management/communications/) |

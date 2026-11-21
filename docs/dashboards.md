@@ -29,7 +29,9 @@ conversation.
 :   Projects whose [dependency lines](projects.md#dependencies-native-never-prose) have turned
     red.
 
-Views can't read descriptions, so they can't check rules 1 and 2. The doctor does that: run
+Views can't read descriptions, so they can't check rules 1 and 2. The doctor does that, and it
+also lists any incident, vulnerability or support issue that has no SLA and so isn't being
+measured. Run
 the [`linear-doctor`](skills/index.md) skill on one team or project, or `task doctor` for
 everything.
 

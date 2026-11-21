@@ -1,6 +1,7 @@
 ---
 name: linear-initiative-update
 description: Post the monthly status update for an active Linear initiative to #initiative-updates, covering Key Result movement, a health claim (on track / at risk / off track) backed by evidence, and any risks. Uses Linear's initiative status updates. Use monthly while an initiative is Active.
+linear_skill: true
 ---
 
 <!-- doc: initiatives.md -->
@@ -36,7 +37,8 @@ Key Result movement is that evidence.
 4. Decide **health** (on track / at risk / off track), justified by the KR movement. An
    initiative can't be greener than the projects moving its KRs, so if feeding projects are
    silent or stale, temper the health and say why.
-5. Post with `save_status_update` (`type: initiative`, `initiative: <name or id>`, `health`,
+5. Show the owner the draft and the health you propose. Health is their claim, so post only
+   once they confirm. Post with `save_status_update` (`type: initiative`, `initiative: <name or id>`, `health`,
    `body`).
 
 ## The update template

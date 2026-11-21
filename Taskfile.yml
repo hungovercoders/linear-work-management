@@ -44,15 +44,25 @@ tasks:
     cmds:
       - "{{.PY}} scripts/check_diagrams.py"
 
+  llms:
+    desc: Generate docs/llms.txt and docs/llms-full.txt, the guide as plain text for agents.
+    cmds:
+      - "{{.PY}} scripts/gen_llms.py"
+
+  model:check:
+    desc: Check the guide and skills agree with docs/model.yml, the one source of the model.
+    cmds:
+      - "{{.PY}} scripts/check_model.py"
+
   serve:
     desc: Live-preview the docs site locally.
-    deps: [setup, skills:index, diagrams:check]
+    deps: [setup, skills:index, diagrams:check, model:check, llms]
     cmds:
       - "{{.MKDOCS}} serve"
 
   build:
     desc: Build the static site into ./site (fails on warnings).
-    deps: [setup, skills:index, diagrams:check]
+    deps: [setup, skills:index, diagrams:check, model:check, llms]
     cmds:
       - "{{.MKDOCS}} build --strict"
 
@@ -60,6 +70,11 @@ tasks:
     desc: Audit the Linear workspace against the documented rules (see GRI-77).
     cmds:
       - "{{.PY}} scripts/linear_doctor.py"
+
+  doctor:test:
+    desc: Exercise the doctor's per-issue checks without a Linear workspace.
+    cmds:
+      - "{{.PY}} scripts/test_doctor.py"
 
   lint:prose:
     desc: Flag AI-generated-text tells in the guide prose (see STYLE.md).

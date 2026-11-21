@@ -26,7 +26,8 @@ integrations and customers arrive there before they join the team's work.
 One named person owns it at a time. You decide what happens to each item. You don't have to do
 the work yourself.
 
-The [`linear-triage`](../skills/index.md) skill will go through the inbox with you.
+The [`linear-triage`](../skills/index.md) skill will go through the inbox with you. An agent can
+prepare each item, but [the decision stays yours](../agents.md).
 
 ## How work arrives
 

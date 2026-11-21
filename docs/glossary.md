@@ -22,6 +22,9 @@ Lead team
 Service level
 :   A standing promise a team keeps. In Linear it's an SLA rule on a kind of BAU work, such as incidents or vulnerabilities. It doesn't reset each quarter, and BAU work exists to keep it. [Team setup](team-setup.md#service-levels)
 
+Delegate
+:   The agent doing the work on an issue. The assignee is always a person, and stays accountable. [Working with agents](agents.md)
+
 Key Result (KR)
 :   How an initiative is measured. Either measured (a number with a baseline and a target) or committed (done or not done, with a definition of done)
 
