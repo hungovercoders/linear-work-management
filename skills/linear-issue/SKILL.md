@@ -38,8 +38,8 @@ The skill's first job is to classify, and that fork decides everything after it:
 - A project issue sits in a project and ladders to its KR. It gets a `type/*`, inherits the
   project's `product/*`, and carries no `bau/*`.
 - A BAU issue arrived through Triage. It carries one `bau/*` label and no project, no
-  `type/*`. Where BAU work arrives, the five outcomes and the SLA clocks live in **BAU &
-  Triage** (GRI-74); this skill just sets the issue up correctly.
+  `type/*`. Where BAU work arrives, the five outcomes and the SLAs are on the
+  [Triage and BAU](https://hungovercoders.github.io/linear-work-management/issues/triage/) page; this skill just sets the issue up correctly.
 
 ## Flow
 
@@ -72,11 +72,15 @@ a project issue or a BAU issue. One or the other, never both.
   Linear label names are unique across groups.
 - Write the body from the template that matches the kind where one exists:
   [`template-bug.md`](template-bug.md) for `bau/defect`, [`template-analysis.md`](template-analysis.md)
-  for `bau/query`, otherwise the general [`template-action.md`](template-action.md). Bespoke
-  shapes for incident, vulnerability and the rest arrive with BAU & Triage (GRI-74). Triage
-  decides its fate; see BAU & Triage.
+  for `bau/query`, otherwise the general [`template-action.md`](template-action.md). Triage decides
+  its fate, which is the `linear-triage` skill's job.
+- Start from the team's issue template for that kind where one exists. It sets the `bau/*` label
+  and a default priority, and those two are what make the team's Linear SLA rule match. A BAU
+  issue of a kind that carries an SLA (`incident`, `vulnerability`, `support`) with no priority
+  set goes unmeasured.
 
-3. Set the native fields. On the issue itself, never in the description: **assignee**,
+3. Set the native fields. On the issue itself, never in the description: the **team** (an issue
+belongs to exactly one, even when its project spans several), **assignee**,
 **priority** (Urgent → Low), **status** (Backlog for new work), the project *or* `bau/*`
 classification, the `type/*` (project issues) and the inherited `product/*`. Use `save_issue`.
 

@@ -22,8 +22,10 @@ have their own skills.
   project, accepted as BAU, redirected, merged, declined), and what's still waiting, with the
   oldest item's age (the decision clock is watching).
 - Queue ages: the oldest item in Planning, Todo and In Review, the
-  [bottleneck evidence](https://hungovercoders.github.io/linear-work-management/bau/) the digest carries
+  [bottleneck evidence](https://hungovercoders.github.io/linear-work-management/flow/) the digest carries
   weekly. Backlog is the unmeasured pool and doesn't feature.
+- BAU against its SLAs: issues whose SLA is at high risk or breached, and how many SLAs closed
+  this week as achieved or failed. That share is how the team's BAU is measured.
 - Anything the team should flag upward, such as a slipped milestone or a blocked dependency.
 
 ## Flow

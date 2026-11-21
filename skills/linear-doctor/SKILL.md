@@ -38,7 +38,7 @@ Plus the operational layer:
   initiative with none in about 35 ([the cadence](https://hungovercoders.github.io/linear-work-management/communications/)).
 - Native fields written into prose: owner, dates or priority put in a description body instead
   of set as fields.
-- Languishing issues ([Flow](https://hungovercoders.github.io/linear-work-management/bau/)): no activity for
+- Languishing issues ([Flow](https://hungovercoders.github.io/linear-work-management/flow/)): no activity for
   10 days in Planning, 14 in Todo, or 5 in In Review. Backlog is exempt by design, the
   unmeasured pool.
 

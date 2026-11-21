@@ -71,7 +71,9 @@ The gate checklist (Routes B & C, rules 2 · 4 · 5):
 
 - Key Result(s) + delta: for each initiative served, name which KR and the delta
   (baseline → target). This is rule 2. Serving several initiatives means a row per initiative.
-- Lead: one named deliverer (rule 4).
+- Lead: one named deliverer (rule 4). Set the project's lead team as well, and add any teams
+  that will contribute issues. A lead team says which team drives the work. It doesn't replace
+  the named lead.
 - Dates: start + target-end (rule 5).
 - Priority & labels: a priority (Urgent → Low) to sequence it; `spend/*` (capex/opex) at
   planning; `product/*` for the product it serves (carries onto its issues).
