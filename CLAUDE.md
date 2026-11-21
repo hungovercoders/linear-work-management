@@ -16,6 +16,7 @@ task lint:prose    # AI-tell gate on the guide + skill prose
 task model:check   # the guide and skills agree with docs/model.yml
 task llms          # generate llms.txt and llms-full.txt, the guide as plain text
 task doctor        # audit the Linear workspace against the hard rules
+task doctor:test   # exercise the doctor's checks without a workspace
 ```
 
 ## The model file

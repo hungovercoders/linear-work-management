@@ -3,7 +3,7 @@
 
 The headless, whole-workspace sweep: paginates the Linear GraphQL API directly, so it
 covers what the interactive `linear-doctor` skill can't (initiatives; full-workspace scale)
-and runs the same five hard rules + taxonomy/staleness/languishing checks in CI or from
+and runs the same five hard rules + taxonomy/staleness/languishing/SLA checks in CI or from
 `task doctor`.
 
 Requires LINEAR_API_KEY in the environment. Exits 1 if violations are found, 0 if clean —
@@ -33,6 +33,9 @@ INITIATIVE_STALE_DAYS = MODEL["doctor"]["stale_update_days"]["initiative"]  # mo
 # the only way to tell Planning from Backlog (both backlog-type) or Todo from a
 # team's local unstarted state. Backlog is deliberately absent — the unmeasured pool.
 LANGUISHING_DAYS = MODEL["doctor"]["languishing_days"]
+
+# Kinds of BAU that must carry a Linear SLA. One without is unmeasured.
+SLA_REQUIRED = set(MODEL["sla_required"])
 
 # Prose that belongs in a native field, not the description body.
 NATIVE_FIELD_PROSE = re.compile(
@@ -87,6 +90,33 @@ def has_kr_delta(description: str | None) -> bool:
     # Measured KRs carry a delta arrow; committed KRs a Definition of Done — both satisfy rule 2.
     return ("→" in description or "->" in description
             or re.search(r"committed|definition of done", description, re.IGNORECASE) is not None)
+
+
+def issue_findings(issue: dict) -> list[tuple[str, str]]:
+    """Rule-3 and SLA findings for one open issue, as (rule, message) pairs.
+
+    Pure, so it can be tested without a workspace (scripts/test_doctor.py). Issues still
+    in Triage are skipped: they are waiting for a decision, not misclassified.
+    """
+    if issue["state"]["type"] == "triage":
+        return []
+    label = f"{issue['identifier']} {issue['title']} <{issue['url']}>"
+    bau = [lb["name"] for lb in issue["labels"]["nodes"]
+           if lb["parent"] and lb["parent"]["name"] == "bau"]
+    rule3 = "rule 3 — every issue is classified"
+    if issue["project"] and bau:
+        return [(rule3, f"BOTH project and bau/*: {label}")]
+    if not issue["project"] and not bau:
+        return [(rule3, f"unclassified: {label}")]
+    out = []
+    if len(bau) > 1:
+        out.append((rule3, f"multiple bau/* labels: {label}"))
+    missing = sorted(set(bau) & SLA_REQUIRED) if not issue.get("slaBreachesAt") else []
+    if missing:
+        out.append(("BAU with no SLA",
+                    f"bau/{missing[0]} has no SLA, so it isn't measured "
+                    f"(check its label and priority against the SLA rules): {label}"))
+    return out
 
 
 def main() -> int:
@@ -173,7 +203,7 @@ def main() -> int:
         """query($after: String) {
              issues(first: 100, after: $after,
                     filter: { state: { type: { nin: ["completed", "canceled"] } } }) {
-               nodes { identifier title url updatedAt
+               nodes { identifier title url updatedAt slaBreachesAt
                        state { name type }
                        project { id }
                        labels { nodes { name parent { name } } } }
@@ -198,16 +228,8 @@ def main() -> int:
 
         if not taxonomy_present:
             continue
-        if issue["state"]["type"] == "triage":
-            continue  # in-flight at the front door, not a rule-3 violation
-        bau = [lb["name"] for lb in issue["labels"]["nodes"]
-                if lb["parent"] and lb["parent"]["name"] == "bau"]
-        if issue["project"] and bau:
-            flag("rule 3 — every issue is classified", f"BOTH project and bau/*: {label}")
-        elif not issue["project"] and not bau:
-            flag("rule 3 — every issue is classified", f"unclassified: {label}")
-        elif len(bau) > 1:
-            flag("rule 3 — every issue is classified", f"multiple bau/* labels: {label}")
+        for rule, message in issue_findings(issue):
+            flag(rule, message)
 
     # ---- Report -----------------------------------------------------------------------
     print("linear-doctor — reports drift; does not fix.\n")

@@ -42,6 +42,9 @@ jobs:
       - name: Check the guide against the model file
         run: python scripts/check_model.py
 
+      - name: Test the doctor's checks
+        run: python scripts/test_doctor.py
+
       - name: Lint prose (AI-tell gate)
         run: python scripts/prose_lint.py
 

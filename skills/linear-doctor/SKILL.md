@@ -38,6 +38,9 @@ Plus the operational layer:
   initiative with none in about 35 ([the cadence](https://hungovercoders.github.io/linear-work-management/communications/)).
 - Native fields written into prose: owner, dates or priority put in a description body instead
   of set as fields.
+- BAU with no SLA: an open `bau/incident`, `bau/vulnerability` or `bau/support` issue that
+  carries no SLA. BAU is measured by its SLAs, so one without is unmeasured. The usual cause is
+  a missing priority, or a label added after the SLA rule ran.
 - Languishing issues ([Flow](https://hungovercoders.github.io/linear-work-management/flow/)): no activity for
   10 days in Planning, 14 in Todo, or 5 in In Review. Backlog is exempt by design, the
   unmeasured pool.
