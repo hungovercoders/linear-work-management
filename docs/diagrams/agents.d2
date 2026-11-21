@@ -1,0 +1,36 @@
+# What an agent may do, in three bands. Shown on the Working with agents page (see `task diagrams`).
+...@shared/classes
+
+grid-columns: 3
+grid-gap: 40
+
+free: "An agent does this unasked" {
+  class: band
+  label.near: top-left
+  grid-columns: 1
+  grid-gap: 22
+  a: "Read and report" {class: planned}
+  b: "Draft issues, updates\nand digests" {class: planned}
+  c: "Write the plan,\nthen do delegated work" {class: planned}
+  d: "Label and move\nits own issues" {class: planned}
+}
+confirm: "An agent proposes, a person confirms" {
+  class: band
+  label.near: top-left
+  grid-columns: 1
+  grid-gap: 22
+  a: "A Triage outcome" {class: gate}
+  b: "A priority" {class: gate}
+  c: "Committing work:\nBacklog to Planning" {class: gate}
+  d: "Posting an update\nwith its health" {class: gate}
+}
+person: "A person only" {
+  class: band
+  label.near: top-left
+  grid-columns: 1
+  grid-gap: 22
+  a: "Owning an initiative\nor a project" {class: key}
+  b: "Key Results, dates\nand SLA promises" {class: key}
+  c: "Accepting finished work" {class: key}
+  d: "Changing the shared\nstates and labels" {class: key}
+}

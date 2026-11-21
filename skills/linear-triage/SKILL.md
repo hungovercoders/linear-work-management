@@ -58,7 +58,8 @@ Medium 90). So after you set the label and priority, check the issue shows an SL
 that should carry one (`incident`, `vulnerability`, `support`) has none, fix the label or
 priority, or set `slaBreachesAt` directly (with `slaType: onlyBusinessDays`).
 
-**6. Apply it.** Use `save_issue` for the state, team, project, `bau/*` or `type/*` labels,
+**6. Apply it.** The outcome and the priority are the duty person's call, so propose each one
+and apply it once they agree. Use `save_issue` for the state, team, project, `bau/*` or `type/*` labels,
 priority, `duplicateOf` and (for vulnerabilities) `slaBreachesAt`. One decision per item, then
 move on.
 

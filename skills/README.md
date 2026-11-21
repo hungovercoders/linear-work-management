@@ -53,6 +53,10 @@ The generated catalogue at `docs/skills/index.md` is built from each `SKILL.md` 
    skills can't reach repo files) and upserts idempotently. `task linear:skills -- --check` reports
    drift from a manual Linear edit; `-- --dry-run` prints the generated body without publishing.
 
+8. **Agent limits.** A skill never does more than [Working with agents](https://hungovercoders.github.io/linear-work-management/agents/)
+   allows. It drafts and proposes. A person confirms a Triage outcome, a priority, a health
+   claim and anything that commits the team, and a person owns every initiative and project.
+
 ## The skills
 
 | Skill | Produces | Companion page |

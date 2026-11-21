@@ -71,3 +71,30 @@ doctor:
   languishing_days: {Planning: 10, Todo: 14, In Review: 5}
   # Days without an update before a project or initiative is flagged as stale.
   stale_update_days: {project: 10, initiative: 35}
+
+# What an agent may do. A person is always accountable: issues are assigned to people and
+# delegated to agents. See docs/agents.md.
+agents:
+  roles:
+    initiative owner: person
+    project lead: person
+    issue assignee: person, who may delegate to an agent
+    triage duty: person, with an agent preparing each item
+    checks and reports: agent
+  unasked:
+    - read and report
+    - draft issues, updates and digests
+    - write the plan on a delegated issue, then do the work
+    - label an issue it creates
+    - move its own issue to In Progress and In Review
+  propose_for_confirmation:
+    - a Triage outcome
+    - a priority
+    - moving an issue from Backlog to Planning
+    - posting an update and its health
+    - creating a project or an initiative
+  never:
+    - own an initiative or a project
+    - set or change Key Results, dates or SLA promises
+    - mark work Done that a person hasn't accepted
+    - rename or remove a shared state or label

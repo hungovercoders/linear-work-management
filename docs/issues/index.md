@@ -29,7 +29,7 @@ under one lead team, but an issue can't ([how teams fit](../how-teams-work.md)).
 
 ## Write it so someone can start { #the-body-is-the-prompt }
 
-Write the description for whoever picks it up, whether that's a colleague or an AI agent. Say
+Write the description for whoever picks it up, whether that's a colleague or an [AI agent](../agents.md). Say
 what the problem is and what done looks like. If they'd have to come and ask you something, it
 isn't finished.
 

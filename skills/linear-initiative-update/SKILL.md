@@ -36,7 +36,8 @@ Key Result movement is that evidence.
 4. Decide **health** (on track / at risk / off track), justified by the KR movement. An
    initiative can't be greener than the projects moving its KRs, so if feeding projects are
    silent or stale, temper the health and say why.
-5. Post with `save_status_update` (`type: initiative`, `initiative: <name or id>`, `health`,
+5. Show the owner the draft and the health you propose. Health is their claim, so post only
+   once they confirm. Post with `save_status_update` (`type: initiative`, `initiative: <name or id>`, `health`,
    `body`).
 
 ## The update template

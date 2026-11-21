@@ -36,7 +36,8 @@ with evidence, and the issue and cycle progress is that evidence.
 4. Decide **health** (on track / at risk / off track), justified by that movement. A project
    can't be greener than the issues moving its KR, so if work has stalled or the cycle slipped,
    temper the health and say why.
-5. Post with `save_status_update` (`type: project`, `project: <name or id>`, `health`, `body`).
+5. Show the lead the draft and the health you propose. Health is their claim, so post only once
+   they confirm. Post with `save_status_update` (`type: project`, `project: <name or id>`, `health`, `body`).
 
 ## The update template
 
