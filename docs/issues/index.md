@@ -40,8 +40,8 @@ the plan there, so the approach can be reviewed before any code is.
 
 Assignee, priority, status, labels and links all have their own
 [fields in Linear](https://linear.app/docs/issue-properties). Put them
-there and keep them out of the description. Fields can be filtered, sorted and reported on.
-Text in a description can't.
+there and keep them out of the description. Linear can filter, sort and report on fields. It
+can't do that with text in a description.
 
 ## The states { #the-shared-lifecycle }
 
@@ -67,7 +67,7 @@ Backlog
 
 Planning
 :   The team has said yes and is sharpening it: requirements, what done means, size, blockers.
-    Time here is counted, because a growing Planning column means refinement can't keep up.
+    We count time here, because a growing Planning column means refinement can't keep up.
 
 Todo
 :   Ready. Someone can start without coming back to ask what it means.

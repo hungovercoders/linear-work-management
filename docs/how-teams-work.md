@@ -18,14 +18,13 @@ Linear gets stricter about teams the further down you go.
 <div class="lwm-levels">
   <div class="lwm-level"><b>Initiative</b><span>Can have a lead team. Its projects can come from anywhere in the company.<small>One owner · one lead team at most · any number of teams involved</small></span></div>
   <div class="lwm-level"><b>Project</b><span>Has a lead team. Other teams can contribute, and it holds issues from each of them.<small>One lead · one lead team · any number of contributing teams</small></span></div>
-  <div class="lwm-level"><b>Issue</b><span>Belongs to exactly one team. It can't be shared.<small>One assignee · one team, full stop</small></span></div>
+  <div class="lwm-level"><b>Issue</b><span>Belongs to exactly one team. It can't be shared.<small>One assignee · one team only</small></span></div>
 </div>
 
 That's deliberate. Outcomes don't follow the org chart: "Effortless rescue-dog adoption" needs
-web, data and partnerships work. So an initiative or a project names one team as its lead, which says who drives it, and
-still takes work from others. Leading something doesn't make it yours alone. The one-to-one
-rule arrives at the issue, because that's where one person in one team has to do
-something.
+web, data and partnerships work. So an initiative or a project names one team as its lead, which
+says who drives it, and still takes work from others. Leading something doesn't make it yours alone.
+The one-to-one rule arrives at the issue, because that's where one person in one team does the work.
 
 ## What a team owns
 
@@ -54,8 +53,8 @@ Initiatives
     projects can belong to other teams.
 
 Labels
-:   Our [label groups](teams.md#the-label-taxonomy) are set for the whole workspace, so `bau/support`
-    means the same in every team.
+:   Our [label groups](teams.md#the-label-taxonomy) are set for the whole workspace, so
+    `bau/support` means the same in every team.
 
 ## So who is accountable?
 

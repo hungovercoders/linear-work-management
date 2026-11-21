@@ -38,7 +38,7 @@ The type decides which [template](https://linear.app/docs/issue-templates) the d
 :   A time-boxed investigation. Say what it unblocks and how long you'll spend.
 
 !!! tip "Feature or action?"
-    Does someone get a new capability when this ships? Then it's a `feature`. Otherwise it's an
+    If someone gets a new capability when this ships, it's a `feature`. Otherwise it's an
     `action`. If you pick wrong, change the label.
 
 ## Create one
@@ -56,5 +56,5 @@ The type decides which [template](https://linear.app/docs/issue-templates) the d
        [`linear-issue` folder](https://github.com/hungovercoders/linear-work-management/tree/main/skills/linear-issue)
        into the description.
 
-Then take it through [Backlog, Planning and Todo](index.md#backlog-planning-todo-commitment-then-readiness)
-before anyone starts.
+Then take it through [Backlog, Planning and
+Todo](index.md#backlog-planning-todo-commitment-then-readiness) before anyone starts.

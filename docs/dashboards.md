@@ -1,7 +1,8 @@
 # Dashboards
 
 <div class="lwm-lead" markdown>
-Shared [Linear views](https://linear.app/docs/custom-views) that show when something has slipped, so nobody has to go hunting.
+Shared [Linear views](https://linear.app/docs/custom-views) that show when something has slipped, so
+nobody has to go hunting.
 </div>
 
 ## Is anything breaking the rules?

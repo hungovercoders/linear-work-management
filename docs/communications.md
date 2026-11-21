@@ -1,8 +1,9 @@
 # Updates
 
 <div class="lwm-lead" markdown>
-Who posts which [update](https://linear.app/docs/initiative-and-project-updates), where and how often. The aim is that people hear how things are going without
-having to ask, and without being buried in messages.
+Who posts which [update](https://linear.app/docs/initiative-and-project-updates), where and how
+often. People should hear how things are going without having to ask, and without being buried in
+messages.
 </div>
 
 ??? abstract "See it as a diagram"

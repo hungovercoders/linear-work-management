@@ -3,8 +3,9 @@
 <div class="lwm-lead" markdown>
 <span class="lwm-for">For leadership</span>
 
-An [initiative](https://linear.app/docs/initiatives) is an outcome we want, and the measures that tell us whether we got it. You say
-why it matters. The [projects](projects.md) underneath work out how.
+An [initiative](https://linear.app/docs/initiatives) is an outcome we want, and the measures that
+tell us whether we got it. You say why it matters. The [projects](projects.md) underneath work out
+how.
 </div>
 
 [Open the initiatives list in Linear](https://linear.app/happydevs/initiatives){ .md-button }
@@ -34,7 +35,7 @@ Measured
     *Activation rate: 22% → 30%, from signups reaching first value in 7 days.*
 
 Committed
-:   For work that simply has to happen. Give a definition of done.
+:   For work that has to happen. Give a definition of done.
     *SOC 2 Type II: report issued with no exceptions.*
 
 Every project underneath picks one of these and says how far it will move it. At the end, you
@@ -58,11 +59,11 @@ there's nothing to set up.
 
 ## Every month while it's active { #keep-everyone-posted }
 
-The owner posts an [update](https://linear.app/docs/initiative-and-project-updates) to `#initiative-updates`: how the Key Results have moved, whether
-it's on track, and any risks. Write it on the initiative in Linear, or let the
-`linear-initiative-update` skill draft it.
+The owner posts an [update](https://linear.app/docs/initiative-and-project-updates) to
+`#initiative-updates`: how the Key Results have moved, whether it's on track, and any risks. Write
+it on the initiative in Linear, or let the `linear-initiative-update` skill draft it.
 
-Your update is built from the weekly project updates beneath it. If a project has gone quiet,
+You build your update from the weekly project updates beneath it. If a project has gone quiet,
 say so. Don't report green on top of silence.
 
 ## Create one
@@ -95,6 +96,6 @@ say so. Don't report green on top of silence.
 
 ??? note "Sub-initiatives (Enterprise plan only)"
     On Linear's Enterprise plan you can nest initiatives as
-    [sub-initiatives](https://linear.app/docs/sub-initiatives), up to five levels deep. A parent rolls
-    up its children's projects and progress, while each child keeps its own owner and Key
+    [sub-initiatives](https://linear.app/docs/sub-initiatives), up to five levels deep. A parent
+    rolls up its children's projects and progress, while each child keeps its own owner and Key
     Results. Use them when one objective spans several teams or phases. Otherwise keep it flat.

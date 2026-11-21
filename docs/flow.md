@@ -30,10 +30,11 @@ hunch.
 You only need a few shared views in Linear.
 
 1. One view each for `Planning`, `Todo` and `In Review`. Filter to open issues, sort oldest
-   first and turn on **time in status** in the [display options](https://linear.app/docs/display-options). The top issue is your longest wait.
+   first and turn on **time in status** in the [display
+   options](https://linear.app/docs/display-options). The top issue is your longest wait.
 2. A board of open issues grouped by state, to see how deep each queue is.
-3. With [Linear Insights](https://linear.app/docs/insights), chart open issues by state with average age and watch the
-   trend.
+3. With [Linear Insights](https://linear.app/docs/insights), chart open issues by state with average
+   age and watch the trend.
 
 ## What the doctor flags
 
