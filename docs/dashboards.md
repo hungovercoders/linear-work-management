@@ -5,9 +5,10 @@ Shared [Linear views](https://linear.app/docs/custom-views) that show when somet
 nobody has to go hunting.
 </div>
 
-## Is anything breaking the rules?
+## Views that should be empty
 
-Each of these should be empty. Anything in one is worth a conversation.
+Each of these lists something that breaks a rule. Anything that appears in one needs a
+conversation.
 
 [Unclassified issues](https://linear.app/happydevs/view/af5ea30a-d34e-4175-8410-8be8337441f8)
 :   Open issues with no project and no `bau/*` label. Issues still in Triage don't count.
@@ -32,7 +33,7 @@ Views can't read descriptions, so they can't check rules 1 and 2. The doctor doe
 the [`linear-doctor`](skills/index.md) skill on one team or project, or `task doctor` for
 everything.
 
-## How is the work going?
+## Views for running the work
 
 [SLA health](https://linear.app/happydevs/view/c51ef229-df32-4d64-970e-335c369c81ac)
 :   Open issues with an [SLA](https://linear.app/docs/sla) deadline.

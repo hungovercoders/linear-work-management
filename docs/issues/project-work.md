@@ -23,7 +23,7 @@ its Key Result.
 The type decides which [template](https://linear.app/docs/issue-templates) the description uses.
 
 `action`
-:   Anything that needs doing: a code change, upkeep, a reminder to yourself. The default.
+:   Anything that needs doing: a code change, upkeep, a reminder to yourself. This is the default.
 
 `feature`
 :   A new capability. Write acceptance criteria.

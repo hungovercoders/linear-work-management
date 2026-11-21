@@ -22,8 +22,7 @@ In Review
 
 Backlog is left out on purpose. An old item there is an idea someone parked, and that's allowed.
 
-The numbers matter less than the conversation they let you have, with evidence in place of a
-hunch.
+Use the numbers to start a conversation with evidence behind it.
 
 ## Set up the views
 
